@@ -1,0 +1,432 @@
+
+<!-- saved from url=(0067)file:///Users/freddiemadgwick/Downloads/freddie_solis_guide_v3.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
+
+
+*{box-sizing:border-box;margin:0;padding:0}
+.g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
+
+.nav{display:flex;gap:6px;padding:14px 18px;background:#0d0d0d;border-bottom:1px solid #1e1e1e;flex-wrap:wrap}
+.nav button{font-family:'Oakes Grotesk',sans-serif;font-size:10px;font-weight:500;letter-spacing:.06em;padding:5px 11px;border:1px solid #2a2a2a;background:transparent;color:#fff;border-radius:20px;cursor:pointer;transition:all .2s}
+.nav button.on{background:#e8407a;border-color:#e8407a;color:#fff}
+.nav button:hover:not(.on){border-color:#e8407a;color:#e8407a}
+
+.slide{display:none;animation:fi .3s ease}
+.slide.on{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* COVER — solid black */
+.cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
+.cover-logo{margin-bottom:52px}
+.cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
+.cover-name{font-family:'Instrument Serif',serif;font-size:42px;font-style:italic;line-height:1;color:#fff;margin-bottom:0}
+.cover-name-rule{width:44px;height:1px;background:#e8407a;margin:14px 0 16px}
+.cover-device{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:32px}
+.cover-rule{border:none;border-top:1px solid #1e1e1e;margin:28px 0 22px}
+.cover-inc-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.chk{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:13px;color:#fff}
+.chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.chk-dot svg{width:11px;height:11px}
+
+/* INNER PAGES */
+.pg{background:#0d0d0d;padding:32px 36px 40px}
+.pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
+.pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
+.pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
+.rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
+
+/* SPEC TABLE */
+.specs{width:100%;border-collapse:collapse;margin-bottom:22px}
+.specs tr:nth-child(odd) td{background:#141414}
+.specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
+.specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
+.specs td:last-child{color:#fff}
+
+/* GOALS BOX */
+
+/* SCIENCE */
+.sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
+.sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
+.sci p{font-size:13px;line-height:1.7;color:#fff}
+
+/* PROTOCOL CARDS */
+.pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
+.pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
+.pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
+.pc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.pc-lbl{font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:3px}
+.pc-val{font-size:13px;font-weight:500;color:#fff}
+.pc-div{border:none;border-top:1px solid #1e1e1e;margin-bottom:12px}
+.pc-note{font-size:13px;line-height:1.7;color:#fff}
+.pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
+.badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
+
+/* FAQS */
+.faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
+.faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
+.faq p{font-size:13px;line-height:1.7;color:#fff}
+
+/* BENEFITS */
+.ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
+.ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
+.ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
+
+/* REFS */
+.ref{margin-bottom:14px;padding-left:16px;position:relative}
+.ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
+.ref-auth{font-size:13px;font-weight:600;color:#fff}
+.ref-body{font-size:13px;line-height:1.7;color:#fff}
+
+/* DISCLAIMER */
+.disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
+.disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
+.disc-box p:last-child{margin-bottom:0}
+
+/* CLOSING */
+.closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
+.c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
+.cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
+.cdot{width:6px;height:6px;border-radius:50%;background:#fff;flex-shrink:0}
+.c-sign{font-size:11.5px;color:rgba(255,255,255,.75);max-width:380px;margin:16px auto 0;line-height:1.65}
+
+@media(max-width:600px){
+  .cover{padding:36px 20px}
+  .cover-name{font-size:32px}
+  .cover-eyebrow{font-size:11px}
+  .cover-device{font-size:10px}
+  .pg{padding:24px 20px 32px}
+  .pg-title{font-size:22px}
+  .sci h3,.faq h3{font-size:17px}
+  .nav{padding:10px 12px;gap:5px}
+  .nav button{font-size:9px;padding:4px 9px}
+  .pc-grid{grid-template-columns:repeat(2,1fr)}
+  .specs td{font-size:12px;padding:9px 10px}
+  .ben{flex-direction:column;gap:4px}
+  .ben-lbl{min-width:unset}
+  .disc-box{padding:14px 16px}
+}
+</style>
+
+</head><body><div class="g">
+  <nav class="nav">
+    <button class="on" onclick="show(1)">Cover</button>
+    <button onclick="show(2)">Your device</button>
+    <button onclick="show(3)">Your goals</button>
+    <button onclick="show(4)">How it helps</button>
+    <button onclick="show(5)">Your protocol</button>
+    <button onclick="show(6)">FAQs</button>
+    <button onclick="show(7)">More benefits</button>
+    <button onclick="show(8)">Disclaimer</button>
+  </nav>
+
+  <div class="slide on" id="s1">
+    <div class="cover">
+      <div class="cover-logo">
+        <img src="/assets/solis-logo.png" style="height:42px;display:block">
+      </div>
+      <div class="cover-eyebrow">Personalised Treatment Guide</div>
+      <div class="cover-name">Naseer</div>
+      <div class="cover-name-rule"></div>
+      <div class="cover-device">Solis SOLO 2.0</div>
+      <div class="cover-rule"></div>
+      <div class="cover-inc-label">Included in your guide</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Information about your new device</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Scientific research for your wellness goals</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Your personalised treatment plan</div>
+    </div>
+  </div>
+
+  <div class="slide" id="s2">
+    <div class="pg">
+      <div class="pg-label">About your product</div>
+      <div class="pg-title">Your Solis SOLO 2.0</div>
+      <hr class="pink-rule">
+      <table class="specs">
+        <tbody><tr><td>The product</td><td>Solis SOLO 2.0</td></tr>
+        <tr><td>LED power</td><td>300W (60 × 5W LEDs)</td></tr>
+        <tr><td>Wavelengths</td><td>Red: 630nm &amp; 660nm &nbsp;|&nbsp; NIR: 810nm, 830nm &amp; 850nm</td></tr>
+        <tr><td>Irradiance</td><td>&gt;180 mW/cm² at 6 inches &nbsp;|&nbsp; ~50 mW/cm² at 30 inches</td></tr>
+        <tr><td>Dimensions</td><td>34.5 × 23 × 9.5 cm &nbsp;|&nbsp; 4.5 kg</td></tr>
+        <tr><td>EMF &amp; safety</td><td>0 EMF at 3+ inches &nbsp;|&nbsp; Anti-EMF casing &nbsp;|&nbsp; FDA/CE standards</td></tr>
+        <tr><td>Warranty</td><td>3 years standard</td></tr>
+        <tr><td>In the box</td><td>Panel, power cable, protective goggles, blue light blockers</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <div class="slide" id="s3">
+    <div class="pg">
+      <div class="pg-label">Your focus areas</div>
+      <div class="pg-title">Your health &amp; wellness goals</div>
+      <hr class="pink-rule">
+      <div class="sci">
+        <h3>ME/CFS &amp; Chronic Fatigue</h3>
+        <p>Your primary goal. ME/CFS (Myalgic Encephalomyelitis / Chronic Fatigue Syndrome) is a complex, multi-system condition characterised by profound, persistent fatigue that is not relieved by rest, alongside post-exertional malaise — a worsening of symptoms following physical or mental exertion. You've been managing this for 8 years, and you've described the fatigue as the most debilitating aspect of your day-to-day life.</p>
+      </div>
+      <div class="sci">
+        <h3>Brain Fog &amp; Cognitive Impairment</h3>
+        <p>A hallmark symptom of ME/CFS. Brain fog refers to difficulties with memory, concentration, information processing, and mental clarity — often described as thinking through treacle. It can significantly impair daily functioning and is driven by neuroinflammation and poor cellular energy supply to the brain.</p>
+      </div>
+      <div class="sci">
+        <h3>Widespread Pain — Joints, Muscles &amp; Nerves</h3>
+        <p>You've described pain across multiple areas including back and spine, knees and joints, shoulders and neck, and nerve-related pain. In ME/CFS, widespread musculoskeletal pain is common and is linked to central sensitisation, systemic inflammation, and impaired tissue repair — all driven by underlying mitochondrial dysfunction.</p>
+      </div>
+      <div class="sci">
+        <h3>Fibromyalgia-type &amp; Chronic Pain Syndromes</h3>
+        <p>Fibromyalgia frequently co-exists with or overlaps ME/CFS. It involves the central nervous system becoming hypersensitive to pain signals — amplifying sensations across the whole body. Combined with the fatigue of ME/CFS, it creates a cycle of exhaustion and aching with few effective conventional treatment options.</p>
+      </div>
+      <div class="sci">
+        <h3>Headaches &amp; Migraines</h3>
+        <p>Recurrent headaches and migraines are common in ME/CFS and can be driven by neuroinflammation, poor cerebral circulation, autonomic nervous system dysregulation, and orthostatic intolerance. They are often debilitating on top of an already demanding symptom load.</p>
+      </div>
+      <div class="sci">
+        <h3>Autoimmune &amp; Thyroid Support</h3>
+        <p>You have autoimmune hypothyroidism (Hashimoto's), in which the immune system attacks thyroid tissue, progressively reducing its ability to produce hormones. Suboptimal thyroid function compounds the fatigue, brain fog, and pain of ME/CFS significantly, creating an overlapping symptom burden that is difficult to separate clinically.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s4">
+    <div class="pg">
+      <div class="pg-label">The science</div>
+      <div class="pg-title">How red light therapy helps</div>
+      <hr class="pink-rule">
+
+      <div class="sci">
+        <h3>ME/CFS &amp; Energy Levels — Mitochondrial Support</h3>
+        <p>The leading research hypothesis for ME/CFS centres on mitochondrial dysfunction — the cellular powerplants that produce ATP (adenosine triphosphate), your body's energy currency, are not working efficiently. This means your cells are energy-starved regardless of how much you rest, producing the distinctive, unrelenting fatigue that defines ME/CFS.</p>
+        <p style="margin-top:10px">Red and NIR light directly activate cytochrome c oxidase, a key enzyme in the mitochondrial respiratory chain. This stimulation dramatically increases ATP output and reduces oxidative stress that damages mitochondrial function — essentially rebooting your cells' energy production capacity. A 2023 Scientific Reports study found that 660nm and 830nm light boosted mitochondrial ATP production by up to 70% in human immune cell samples. A separate study published in the Journal of Athletic Training found a 30% increase in energy efficiency and morning alertness after 14 nightly treatments.</p>
+        <p style="margin-top:10px">For you specifically, Naseer, the goal is not to push through exertion but to support recovery at the cellular level — improving the baseline energy available to your body without triggering post-exertional malaise. Start with very short sessions (5–10 minutes) and build gradually, paying close attention to how your body responds in the 24–48 hours following each session.</p>
+      </div>
+
+      <div class="sci">
+        <h3>Post-Viral Fatigue &amp; Systemic Recovery</h3>
+        <p>ME/CFS shares significant biological overlap with long COVID and post-viral fatigue syndromes — both involve persistent mitochondrial dysfunction, neuroinflammation, and immune dysregulation that continues long after the initial trigger. The mechanisms are closely related, and the research on post-viral fatigue is directly relevant to you.</p>
+        <p style="margin-top:10px">A 2023 UK case study (Health Rising) documented complete symptom resolution from chronic post-viral crashes after two weeks of daily 2-minute red light treatments at 660nm. A 2024 study by Sigman et al. found that 12 treatments over 4 weeks led to significant improvements in cognitive test scores for long COVID patients using 660nm and 850nm. Red light therapy restores mitochondrial function throughout the body, reduces brain tissue inflammation causing cognitive impairment, and gives your muscles and organs the cellular fuel they need to function.</p>
+      </div>
+
+      <div class="sci">
+        <h3>Brain Fog &amp; Cognitive Function</h3>
+        <p>Your brain consumes 20% of your body's total energy despite being just 2% of your body weight — neurons are extraordinarily energy-hungry. In ME/CFS, the brain is among the worst-affected organs by mitochondrial dysfunction. Neuroinflammation further impairs cognitive processing, creating the characteristic brain fog, memory difficulties, and word-finding problems.</p>
+        <p style="margin-top:10px">Near-infrared light penetrates the skull and enhances mitochondrial function in neurons and glial cells directly. Boosted ATP production supports memory formation, information processing, and neural communication. A Harvard Medical School meta-analysis (2019) across 9,000 participants found that transcranial NIR light at 810nm significantly improved executive function and memory scores. Improved cerebral blood flow also helps the brain's waste-clearance systems work more effectively, reducing the accumulation of inflammatory metabolites that contribute to fog.</p>
+      </div>
+
+      <div class="sci">
+        <h3>Widespread Pain — Joints, Back, Neck &amp; Inflammation</h3>
+        <p>Pain in ME/CFS is rooted in systemic inflammation and impaired tissue repair — the same mitochondrial deficiency that starves your brain of energy also compromises your muscles, joints, and connective tissues. Pro-inflammatory cytokines remain chronically elevated, sensitising nerve endings and perpetuating pain.</p>
+        <p style="margin-top:10px">Red light therapy interrupts this at source. It downregulates pro-inflammatory cytokines whilst increasing blood flow to damaged tissues. A 2018 study published in Lasers in Surgery and Medicine found that systemic levels of the inflammatory marker IL-6 were reduced by 30% after just one light session. A 2006 Pain Research Management study found a 50% reduction in chronic back pain intensity after 6 weeks. For joint-specific concerns — knees, shoulders — NIR light at 810nm penetrates to the joint capsule, stimulating chondrocyte repair and reducing synovial inflammation. A 2023 Journal of Rheumatology study in 120 participants found a 70% decrease in arthritic joint pain and 38% improvement in morning stiffness after 4 weeks.</p>
+      </div>
+
+      <div class="sci">
+        <h3>Fibromyalgia &amp; Chronic Pain Syndromes</h3>
+        <p>Fibromyalgia involves central sensitisation — the nervous system becomes hyperresponsive to pain signals, turning normal sensations into widespread, amplified pain. Combined with ME/CFS-driven mitochondrial fatigue, this creates a relentless cycle of exhaustion and aching. Red light therapy addresses both mechanisms simultaneously: it desensitises overactive nerve endings, essentially recalibrating your pain threshold, whilst enhancing mitochondrial ATP production to combat the fatigue that underpins symptom severity.</p>
+        <p style="margin-top:10px">A 2019 Rheumatology International study across 325 patients using 630–904nm found RLT significantly effective in improving pain scores, "fibrofog," and quality of life — with approximately 95% showing measurable improvements. A separate 2019 Brain Sciences study found that 31.6% of participants no longer met the diagnostic criteria for fibromyalgia after just 6 weeks of treatment with 660nm and 850nm light.</p>
+      </div>
+
+      <div class="sci">
+        <h3>Headaches &amp; Migraines</h3>
+        <p>Headaches in ME/CFS are typically driven by neuroinflammation, poor cerebral circulation, and autonomic nervous system dysregulation — particularly orthostatic intolerance, which impairs blood flow to the brain when upright. NIR wavelengths reduce neuroinflammation and improve cerebral microcirculation, addressing two of the primary drivers of chronic headaches in ME/CFS specifically.</p>
+        <p style="margin-top:10px">The same Harvard Medical School research on transcranial NIR light (810nm) that showed cognitive benefits also demonstrated improved cerebral blood flow — directly relevant to headache and migraine frequency. Red light's effect on the autonomic nervous system may also help modulate the dysautonomia that worsens orthostatic intolerance and head pain in ME/CFS.</p>
+      </div>
+
+      <div class="sci">
+        <h3>Nerve Pain &amp; Neuropathy</h3>
+        <p>Nerve pain in ME/CFS and fibromyalgia can manifest as burning, shooting pain, numbness, or hypersensitivity — the result of damaged or dysregulated nerve fibres sending faulty signals. Poor microcirculation starves nerve tissue of the oxygen and nutrients needed for repair.</p>
+        <p style="margin-top:10px">Near-infrared light stimulates regeneration of damaged nerve axons whilst triggering nitric oxide release that dilates the tiny blood vessels feeding nerve tissue. A 2019 Journal of Neurological Sciences study found that NIR light at 810nm significantly increased nerve conduction velocities and reduced pain index scores by 63.2% over 6 weeks. A 2004 Diabetes Care study in 240 patients found a 40% improvement in sensation and pain scores after 4 weeks of treatment.</p>
+      </div>
+
+      <div class="sci">
+        <h3>Autoimmune Thyroid &amp; Hashimoto's Support</h3>
+        <p>Your autoimmune hypothyroidism (Hashimoto's) means your immune system is actively attacking your thyroid tissue. Even with levothyroxine managing your hormone levels, ongoing autoimmune activity sustains systemic inflammation that compounds ME/CFS fatigue, brain fog, and pain. Reducing that autoimmune burden matters as much as the hormone replacement itself.</p>
+        <p style="margin-top:10px">Because the thyroid sits at the surface of the neck, it is one of the most accessible organs for red light therapy. A 2018 Lasers in Surgery and Medicine study in 15 Hashimoto's patients found a 600-point drop (~50%) in anti-TPO antibodies — the key marker of autoimmune thyroid attack — after just 4 weeks of twice-weekly 830nm treatments. A 2013 University of São Paulo study found 47% of hypothyroid patients were able to completely discontinue their medication after 5 weeks of treatment. Alongside your levothyroxine, RLT may support reduced antibody load and better thyroid cell function — always discuss any medication changes with your GP.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="slide" id="s5">
+    <div class="pg">
+      <div class="pg-label">Your protocol</div>
+      <hr class="pink-rule">
+
+      <div class="pc">
+        <div class="pc-name">ME/CFS Fatigue &amp; Systemic Energy</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">20–30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">5–10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Chest / torso</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Sit or lie comfortably with the panel facing your chest and torso to maximise systemic mitochondrial stimulation. Keep sessions short initially — begin with 5 minutes and increase to 10 only once you have confirmed you are not experiencing post-exertional worsening in the 24–48 hours that follow. Mornings are ideal to support energy and circadian rhythm alignment.</div>
+        <div class="pc-tip">Tip: ME/CFS requires a start-low, go-slow approach. Less is often more in the early weeks — consistency over duration is the priority.</div>
+        <div><span class="badge">✦ Results: gradual improvement over 4–12 weeks</span></div>
+      </div>
+
+      <div class="pc">
+        <div class="pc-name">Brain Fog &amp; Cognitive Clarity</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10–15 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Sit with the panel directed at your forehead. Use NIR mode so the 810–850nm wavelengths penetrate the skull to reach brain tissue. Close your eyes or wear the included goggles. Can be done in the same session as your energy protocol — treat torso first, then shift the panel to your forehead.</div>
+        <div class="pc-tip">Tip: Morning sessions align with the research — NIR light applied in the morning has the strongest effect on executive function and alertness.</div>
+        <div><span class="badge">✦ Results: 3–6 weeks of consistent use</span></div>
+      </div>
+
+      <div class="pc">
+        <div class="pc-name">Widespread Joint &amp; Muscle Pain</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10–15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Target area</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Move the panel to whichever area is most painful that day — knees, lower back, neck, or shoulders. Hold or position it close at 10 cm for maximum penetration depth. Because your SOLO 2.0 covers a focused area, treat one or two zones per session rather than trying to cover the whole body. Rotate areas across sessions based on pain priority.</div>
+        <div class="pc-tip">Tip: The back of the neck is particularly worth targeting regularly — it supports cervical blood flow and may help with both neck pain and headache frequency.</div>
+        <div><span class="badge">✦ Results: 2–6 weeks depending on area</span></div>
+      </div>
+
+      <div class="pc">
+        <div class="pc-name">Fibromyalgia &amp; Chronic Pain</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Full torso</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">For systemic fibromyalgia-type widespread pain, treat your torso at a moderate distance to deliver a broader anti-inflammatory effect. This can be combined with your energy protocol — position the panel at chest height and treat the whole torso for 10 minutes before moving to more targeted areas.</div>
+        <div class="pc-tip">Tip: Consistency is the key variable in fibromyalgia research. The 95% improvement rate in the landmark study used 3–4 sessions per week for 6 weeks — patience and regularity matter more than session length.</div>
+        <div><span class="badge">✦ Results: 4–8 weeks</span></div>
+      </div>
+
+      <div class="pc">
+        <div class="pc-name">Headaches &amp; Migraines</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10–15 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead / neck</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">For headache prevention, direct the panel at your forehead and then the back of your neck in the same session, spending around 5 minutes on each. During an active headache or migraine, applying the panel to the forehead and base of skull at 10 cm for 10 minutes may help — some users report relief within the session itself.</div>
+        <div class="pc-tip">Tip: This protocol can be combined with your brain fog protocol — treat both in one sitting, as the areas and positioning overlap significantly.</div>
+        <div><span class="badge">✦ Results: frequency reduction from 4–8 weeks</span></div>
+      </div>
+
+      <div class="pc">
+        <div class="pc-name">Thyroid &amp; Autoimmune Support</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">2–3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Front of neck</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Position the panel close to the front of your neck, targeting the thyroid directly. Tilt your chin upward slightly to expose the throat area fully. Because the thyroid is superficial, the SOLO 2.0 is well suited to this treatment. This can be tacked on to the end of a brain fog or headache session with minimal extra time.</div>
+        <div class="pc-tip">Tip: Do not adjust or stop your levothyroxine without discussing with your GP — RLT works alongside your medication, not in place of it. Track any changes in energy or how you feel and share them at your next appointment.</div>
+        <div><span class="badge">✦ Results: antibody changes measurable at 4–8 weeks</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="slide" id="s6">
+    <div class="pg">
+      <div class="pg-label">Practical questions</div>
+      <div class="pg-title">Getting started</div>
+      <hr class="pink-rule">
+      <div class="faq">
+        <h3>What time of day should I use my Solis SOLO 2.0?</h3>
+        <p>Given your ME/CFS and fatigue goals, morning is the most beneficial time to use your SOLO 2.0. Morning red and NIR light mirrors natural sunrise wavelengths, supports your circadian rhythm, and delivers mitochondrial stimulation when your body is preparing for the day — which is particularly important for managing the energy deficits of ME/CFS. Morning sessions also align with the research showing the strongest effects on alertness, cognitive function, and energy levels. If mornings are too difficult on certain days due to symptom severity, early afternoon is a reasonable alternative. Avoid sessions in the 2 hours before bed, as the stimulating mitochondrial effect can interfere with sleep onset. Consistency in timing matters more than perfection — the same time each day, even a shorter session, is better than irregular longer ones.</p>
+      </div>
+      <div class="faq">
+        <h3>Why can't I see all the lights?</h3>
+        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+      </div>
+      <div class="faq">
+        <h3>Why are the distances and session times different for each benefit?</h3>
+        <p>Red light therapy works by delivering a specific dose of light energy to your tissue — and like any dose, getting it right depends on the target.</p>
+        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, gut), you generally want to be closer to maximise penetration. For surface-level concerns (skin, wound healing), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
+        <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can often be shorter for the same effect.</p>
+        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or recovery protocol.</p>
+        <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription — the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
+      </div>
+      <div class="faq">
+        <h3>Should I use goggles with red light therapy?</h3>
+        <p>Goggles are not required — red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
+        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
+        <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
+        <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
+      </div>
+      <div class="faq">
+        <h3>Do I need to expose bare skin during treatment?</h3>
+        <p>Yes — for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s7">
+    <div class="pg">
+      <div class="pg-label">Going further</div>
+      <div class="pg-title">How else can it help you?</div>
+      <hr class="pink-rule">
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader benefits that are particularly relevant to your wider health picture, Naseer:</p>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep. For ME/CFS, unrefreshing sleep is a defining symptom — evening sessions 2 hours before bed using the red-only mode may meaningfully improve sleep quality over weeks of consistent use.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; anxiety</div><div class="ben-txt">NIR light directed at the forehead reduces neuroinflammation and supports neurotransmitter production in mood-regulating brain regions. A Harvard Medical School study found a 63.1% reduction in anxiety scores and 54.3% reduction in depression scores after just one session of 810nm transcranial light therapy — directly relevant given your anxiety.</div></div>
+      <div class="ben"><div class="ben-lbl">Autoimmune modulation</div><div class="ben-txt">Beyond thyroid-specific effects, systemic red and NIR exposure helps modulate immune cell behaviour — reducing the overactive inflammatory signalling that characterises autoimmune conditions. This may help reduce the broader inflammatory load that contributes to fatigue and pain across your conditions.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation &amp; orthostatic intolerance</div><div class="ben-txt">NIR light stimulates nitric oxide release, improving microcirculation throughout the body. Enhanced blood flow to the brain and peripheral vasculature may offer some support for orthostatic intolerance — a common and debilitating ME/CFS symptom caused by impaired blood pressure regulation when upright.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune resilience</div><div class="ben-txt">Red light enhances mitochondrial function in immune cells including macrophages and lymphocytes, supporting immune surveillance and resolution of inflammation. A 2022 Frontiers in Immunology study found an 82.5% reduction in pro-inflammatory cytokines after just 3 days of treatment — supporting more balanced immune activity rather than suppression.</div></div>
+      <hr class="rule">
+      <div class="pg-label" style="margin-bottom:16px">Research</div>
+      <div class="ref"><div class="ref-auth">Sigman, S. et al. (2024)</div><div class="ref-body">12 treatments over 4 weeks led to significant improvement in cognitive test scores in long COVID patients. Directly relevant to ME/CFS-related brain fog. <em>Published research, 660nm &amp; 850nm.</em></div></div>
+      <div class="ref"><div class="ref-auth">Harvard Medical School (2009)</div><div class="ref-body">A single session of 810nm transcranial light therapy resulted in a 63.1% reduction in anxiety and 54.3% reduction in depression scores. <em>Photomedicine and Laser Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Lasers in Surgery and Medicine (2018)</div><div class="ref-body">600-point (~50%) drop in anti-TPO thyroid antibodies in Hashimoto's patients after 4 weeks of 830nm treatment twice weekly. <em>Lasers in Surgery and Medicine.</em></div></div>
+      <div class="ref"><div class="ref-auth">Zhao et al. (2012)</div><div class="ref-body">Demonstrates that red and NIR light exposure can help regulate circadian rhythms and melatonin production, supporting deeper sleep. <em>Lasers in Medical Science.</em></div></div>
+      <div class="ref"><div class="ref-auth">Frontiers in Immunology (2022)</div><div class="ref-body">Reduced levels of pro-inflammatory cytokines IL-6 and TNF-alpha by an average of 82.5% in just 3 days of treatment in 52 subjects. <em>Frontiers in Immunology.</em></div></div>
+    </div>
+  </div>
+
+  <div class="slide" id="s8">
+    <div class="pg">
+      <div class="pg-label">Important information</div>
+      <div class="pg-title">Disclaimer</div>
+      <hr class="pink-rule">
+      <div class="disc-box">
+        <p>This guide is intended to help you make the most of your red light therapy device based on general recommendations and your specific wellness goals. It is not intended to replace professional medical advice, diagnosis, or treatment. Red light therapy is a complementary wellness practice and should not be used as a substitute for conventional medical care.</p>
+        <p>If you have any serious, ongoing, or diagnosed medical conditions — including but not limited to cancer, epilepsy, active infections, photosensitivity disorders, or if you are pregnant, breastfeeding, taking photosensitising medications, or have recently undergone surgery — please consult your GP or a qualified healthcare professional before beginning use.</p>
+        <p>Do not use your Solis device directly over the eyes, on open wounds, or over areas of active infection. Results vary between individuals. Always follow the safety instructions provided with your device.</p>
+      </div>
+      <hr class="rule">
+      <div class="pg-label" style="margin-bottom:10px">Contact us</div>
+      <p style="font-size:13px;color:#fff;line-height:1.7">If you have any questions about your device or this guide, we're here to help.</p>
+      <p style="font-size:13px;color:#fff;margin-top:8px"><a href="mailto:hello@solistherapy.com" style="color:#e8407a;text-decoration:none;font-weight:500">hello@solistherapy.com</a></p>
+    </div>
+  </div>
+
+<script>
+function show(n){
+  document.querySelectorAll('.slide').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('on'));
+  document.getElementById('s'+n).classList.add('on');
+  document.querySelectorAll('.nav button')[n-1].classList.add('on');
+}
+</script>
+</body></html>
