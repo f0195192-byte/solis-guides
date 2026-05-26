@@ -783,7 +783,6 @@ const _params = new URLSearchParams(window.location.search);
 const ORDER_REF    = _params.get('ref')    || '';
 const CUSTOMER_NAME = decodeURIComponent(_params.get('name') || '');
 const DEVICE_PARAM  = _params.get('device') || '';
-const EMAIL_PARAM   = decodeURIComponent(_params.get('email') || '');
 
 // ── Device parsing ────────────────────────────────────────────
 const DEVICE_MAP = [
@@ -876,7 +875,6 @@ async function submitForm() {
     devices: DEVICES.join(', '),
     forWhom: document.querySelector('input[name="forWhom"]:checked')?.value || (isMultiPerson ? 'multiple people' : ''),
     names: allPeople.map(p => p.name).filter(Boolean).join(', '),
-    email: EMAIL_PARAM,
   };
 
   // Build a plain-text summary for each person
