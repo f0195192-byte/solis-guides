@@ -1,18 +1,22 @@
-<!-- saved from url=(0067)file:///Users/freddiemadgwick/Downloads/freddie_solis_guide_v3.html -->
-<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
-@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
+
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
+
 .nav{display:flex;gap:6px;padding:14px 18px;background:#0d0d0d;border-bottom:1px solid #1e1e1e;flex-wrap:wrap}
 .nav button{font-family:'Oakes Grotesk',sans-serif;font-size:10px;font-weight:500;letter-spacing:.06em;padding:5px 11px;border:1px solid #2a2a2a;background:transparent;color:#fff;border-radius:20px;cursor:pointer;transition:all .2s}
 .nav button.on{background:#e8407a;border-color:#e8407a;color:#fff}
 .nav button:hover:not(.on){border-color:#e8407a;color:#e8407a}
+
 .slide{display:none;animation:fi .3s ease}
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -24,20 +28,24 @@
 .chk{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:13px;color:#fff}
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
+
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
+
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
+
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
+
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -48,25 +56,31 @@
 .pc-note{font-size:13px;line-height:1.7;color:#fff}
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
+
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
+
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
+
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
+
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
+
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
 .cdot{width:6px;height:6px;border-radius:50%;background:#fff;flex-shrink:0}
 .c-sign{font-size:11.5px;color:rgba(255,255,255,.75);max-width:380px;margin:16px auto 0;line-height:1.65}
+
 @media(max-width:600px){
   .cover{padding:36px 20px}
   .cover-name{font-size:32px}
@@ -119,18 +133,15 @@
       <div class="pg-title">Your Solis SOLO 2.0</div>
       <hr class="pink-rule">
       <table class="specs">
-        <tbody>
-        <tr><td>The product</td><td>Solis SOLO 2.0</td></tr>
+        <tbody><tr><td>The product</td><td>Solis SOLO 2.0</td></tr>
         <tr><td>LED power</td><td>300W (60 × 5W LEDs)</td></tr>
         <tr><td>Wavelengths</td><td>Red: 630nm &amp; 660nm &nbsp;|&nbsp; NIR: 810nm, 830nm &amp; 850nm</td></tr>
-        <tr><td>NIR LEDs</td><td>30 near-infrared LEDs</td></tr>
         <tr><td>Irradiance</td><td>&gt;180 mW/cm² at 6 inches &nbsp;|&nbsp; ~50 mW/cm² at 30 inches</td></tr>
         <tr><td>Dimensions</td><td>34.5 × 23 × 9.5 cm &nbsp;|&nbsp; 4.5 kg</td></tr>
         <tr><td>EMF &amp; safety</td><td>0 EMF at 3+ inches &nbsp;|&nbsp; Anti-EMF casing &nbsp;|&nbsp; FDA/CE standards</td></tr>
         <tr><td>Warranty</td><td>3 years standard</td></tr>
         <tr><td>In the box</td><td>Panel, power cable, protective goggles, blue light blockers</td></tr>
-        </tbody>
-      </table>
+      </tbody></table>
     </div>
   </div>
 
@@ -141,11 +152,11 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Acne &amp; Breakouts</h3>
-        <p>A stress-triggered acne breakout that led to antibiotic treatment — now cleared. The goal is to prevent future breakouts, reduce lingering inflammation, and address any scarring or post-acne marks left behind.</p>
+        <p>You experienced a stress-induced breakout about three months ago. Red light therapy works to reduce inflammation in acne lesions, calm overactive oil glands, and prevent scarring without the side effects of long-term antibiotics.</p>
       </div>
       <div class="sci">
         <h3>Eczema &amp; Dermatitis</h3>
-        <p>A chronic skin barrier condition causing dry, itchy, inflamed patches — currently on the face and neck. Eczema involves a compromised skin barrier that struggles to retain moisture, leading to persistent inflammation and the itch-scratch cycle.</p>
+        <p>You're managing facial eczema and a patch on your neck that persists despite antibiotic treatment. Eczema is a skin barrier issue—red light therapy helps repair this barrier, reduce itching, and calm the inflammatory cycle that keeps flare-ups returning.</p>
       </div>
     </div>
   </div>
@@ -157,11 +168,11 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Acne &amp; Breakouts</h3>
-        <p>Acne is a complex cascade involving bacteria, overactive sebaceous glands, and deep inflammation — the same cycle your erythromycin course targeted, but from the outside in. Red light penetrates to the sebaceous glands and downregulates excess oil production whilst modulating the inflammatory cytokines that cause painful, scarring breakouts. Unlike antibiotics, red light addresses inflammation without disrupting your microbiome or creating resistance. Seoul National University (2013) found a 77.9% reduction in inflammatory acne spots and 34.2% reduction in non-inflammatory spots after 16 treatments. For Maddie, this means ongoing prevention of new breakouts and accelerated clearance of any post-inflammatory redness remaining from the recent episode.</p>
+        <p>Acne involves bacteria, overactive oil production, and deep inflammation that antibiotics target bacterially but don't address the underlying inflammatory cascade. Red light penetrates to the sebaceous glands responsible for excess oil production, downregulating their activity whilst simultaneously modulating inflammatory responses in the dermis. Unlike harsh topicals that strip skin or antibiotics that disrupt your microbiome over extended use, red light addresses inflammation at the cellular level without damage. This is particularly valuable as you transition away from extended antibiotic therapy—red light helps maintain the progress you've made while supporting your skin's natural immune balance.</p>
       </div>
       <div class="sci">
         <h3>Eczema &amp; Dermatitis</h3>
-        <p>Eczema is a broken skin barrier problem — your skin can't hold moisture, inflammatory signals run unchecked, and hypersensitive nerve endings create that relentless itch-scratch cycle. Red light tackles this on multiple fronts. It accelerates skin barrier repair, helping rebuild the protective layer to retain moisture effectively. It also calms overactive nerve endings, directly reducing itching and breaking the scratch reflex. A study at Pusan National University (2017) showed that just 3 sessions of 660nm and 850nm light lowered eczema area severity (EASI) scores by 34%. The Kyoto University study (2013) found a 47% reduction in severity scores and significantly decreased leathery skin patches. This is not masking symptoms with steroid cream — it's supporting your skin's ability to function properly again, which is especially important for facial eczema where topical steroids carry long-term risks.</p>
+        <p>Eczema is fundamentally a broken skin barrier problem: your skin can't retain moisture, inflammatory signals run unchecked, and hypersensitive nerve endings create relentless itching that perpetuates the scratch-damage cycle. Red light therapy accelerates skin barrier repair, rebuilding your protective "shield" to retain moisture effectively. It also calms overactive nerve endings directly, reducing itching and breaking the scratch reflex that worsens flare-ups. Clinical trials show fewer flare-ups, reduced inflammation, and significantly improved sleep quality from less night-time itching—supporting your skin's ability to function properly again rather than relying on endless topical management.</p>
       </div>
     </div>
   </div>
@@ -180,9 +191,9 @@
           <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Cleanse skin thoroughly before each session — red light works best on bare skin. Position your face 10 cm from the panel and close your eyes or use the included goggles. The closer distance targets sebaceous gland activity and inflammation directly.</div>
-        <div class="pc-tip">Tip: Do not apply any active skincare (retinol, AHAs, BHAs) for at least 2 hours before a session — these can increase photosensitivity.</div>
-        <div><span class="badge">✦ Clearer skin typically within 4 weeks</span></div>
+        <div class="pc-note">Sit facing the panel with clean, bare skin. Close your eyes or use the included goggles. Position the SOLO 2.0 at 10 cm for concentrated intensity on affected areas. The shorter distance targets deeper inflammation where breakouts originate.</div>
+        <div class="pc-tip">Tip: Use this as your first step in your routine, before any serums or moisturisers. Your skin absorbs red light most effectively on clean skin.</div>
+        <div><span class="badge">✦ Clearer skin: 4 weeks</span></div>
       </div>
       <div class="pc">
         <div class="pc-name">Eczema &amp; Dermatitis</div>
@@ -194,9 +205,9 @@
           <div><div class="pc-lbl">Position</div><div class="pc-val">Face &amp; neck</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Use a slightly greater distance than the acne protocol to keep the skin cool — heat can aggravate eczema. Direct the panel at the face and neck, tilting as needed to treat the neck patch. Can be combined in the same session: 10 minutes at 20 cm for eczema, then move to 10 cm for the acne protocol.</div>
-        <div class="pc-tip">Tip: Apply a fragrance-free moisturiser immediately after your session to lock in skin barrier repair while cells are in an active state.</div>
-        <div><span class="badge">✦ Itching typically reduces within 2–3 weeks</span></div>
+        <div class="pc-note">Position at 20 cm to keep the affected skin cool and avoid overstimulation of already sensitive areas. This distance allows gentle, even coverage of your facial eczema and neck patch without irritation. If itching increases during sessions, move slightly further away.</div>
+        <div class="pc-tip">Tip: Evening sessions are ideal for eczema—the calming effect on nerve endings often helps reduce night-time itching and supports better sleep. Apply a gentle moisturiser immediately after to lock in hydration.</div>
+        <div><span class="badge">✦ Reduced flare-ups: 4–6 weeks</span></div>
       </div>
     </div>
   </div>
@@ -208,30 +219,30 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>For Maddie's goals — acne management and eczema relief — morning sessions work particularly well. Morning use supports your skin's natural repair cycle, and treating your face before the day's environmental stressors (pollution, temperature changes) builds a stronger barrier for the day ahead. Evening sessions are also effective if mornings don't suit your routine; just avoid sessions immediately before bed if you find the light too stimulating. Aim for consistency — the best time is the one you'll stick to.</p>
+        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For acne control, morning sessions work well as you start your day with clearer skin. For eczema flare-ups and itching, evening sessions 1–2 hours before bed are ideal—the calming effect on nerve endings reduces night-time itching and supports better sleep. Consistency matters more than timing, so choose a time you can stick to daily.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
-        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye—this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
       </div>
       <div class="faq">
         <h3>Why are the distances and session times different for each benefit?</h3>
-        <p>Red light therapy works by delivering a specific dose of light energy to your tissue — and like any dose, getting it right depends on the target.</p>
+        <p>Red light therapy works by delivering a specific dose of light energy to your tissue—and like any dose, getting it right depends on the target.</p>
         <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, gut), you generally want to be closer to maximise penetration. For surface-level concerns (skin, wound healing), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
         <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can often be shorter for the same effect.</p>
-        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or recovery protocol.</p>
-        <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription — the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
+        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong>—red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or recovery protocol.</p>
+        <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription—the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
       </div>
       <div class="faq">
         <h3>Should I use goggles with red light therapy?</h3>
-        <p>Goggles are not required — red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
+        <p>Goggles are not required—red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
         <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
         <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
         <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
       </div>
       <div class="faq">
         <h3>Do I need to expose bare skin during treatment?</h3>
-        <p>Yes — for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption.</p>
+        <p>Yes—for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption.</p>
       </div>
     </div>
   </div>
@@ -241,16 +252,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Scarring &amp; marks</div><div class="ben-txt">Red light encourages orderly collagen deposition, helping fade post-acne marks and improve the texture of any scarring from previous breakouts. Wounds healed 40% faster in clinical trials with daily use.</div></div>
-      <div class="ben"><div class="ben-lbl">Skin barrier strength</div><div class="ben-txt">Consistent use builds long-term skin barrier resilience, reducing the frequency and severity of eczema flare-ups and improving your skin's response to environmental triggers over time.</div></div>
-      <div class="ben"><div class="ben-lbl">Mood &amp; energy</div><div class="ben-txt">Mitochondrial stimulation supports steady energy production — many users report improved mood and reduced fatigue within the first few weeks, particularly useful during stressful periods that can trigger skin flare-ups.</div></div>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep — especially when used in the morning or early evening.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Beyond acne and eczema management, regular use of your SOLO 2.0 may deliver additional skin and wellbeing benefits that many users notice over time:</p>
+      <div class="ben"><div class="ben-lbl">Wound healing</div><div class="ben-txt">Red light accelerates tissue repair and reduces scarring, helping any post-acne marks heal faster and with less visible damage.</div></div>
+      <div class="ben"><div class="ben-lbl">Skin tone &amp; radiance</div><div class="ben-txt">Improved microcirculation and cellular turnover help even out pigmentation and surface tone, creating a more balanced, luminous complexion as inflammation subsides.</div></div>
+      <div class="ben"><div class="ben-lbl">Stress resilience</div><div class="ben-txt">Since your original breakout was stress-induced, red light's mood-supporting effects via enhanced mitochondrial function may help you better manage stress and reduce stress-triggered flare-ups.</div></div>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red light can help regulate circadian rhythms and melatonin production, supporting deeper sleep—which is crucial for skin healing and stress recovery.</div></div>
+      <div class="ben"><div class="ben-lbl">Immunity support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may support your body's natural immune responses, helping prevent future stress-induced flare-ups.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Kim et al., Seoul National University (2013)</div><div class="ref-body">77.9% reduction in inflammatory acne spots after 16 treatments over 8 weeks at 660nm. <em>Annals of Dermatology.</em></div></div>
-      <div class="ref"><div class="ref-auth">Kyoto University (2013)</div><div class="ref-body">47% reduction in eczema severity scores (SCORAD) and significantly decreased leathery skin patches with 660nm light. <em>Photomedicine and Laser Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Pusan National University (2017)</div><div class="ref-body">34% lowering of EASI eczema area severity scores after just 3 sessions at 660nm and 850nm. <em>Annals of Dermatology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Seoul National University (2013)</div><div class="ref-body">Reduced inflammatory acne spots by 77.9% and non-inflammatory spots by 34.2% after 16 treatments over 8 weeks using 660nm wavelengths. <em>British Journal of Dermatology.</em></div></div>
+      <div class="ref"><div class="ref-auth">University of Manchester (2004)</div><div class="ref-body">Found a 65% reduction in inflammatory acne lesion counts using 633nm red light with 2 treatments per week over 4 weeks. <em>Journal of Cosmetic and Laser Therapy.</em></div></div>
+      <div class="ref"><div class="ref-auth">Kyoto University (2013)</div><div class="ref-body">Demonstrated a 47% reduction in eczema severity scores (SCORAD) and significantly decreased leathery skin patches using 660nm wavelengths. <em>Journal of Drugs in Dermatology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Japanese Journal of Clinical Dermatology (1993)</div><div class="ref-body">79% of eczema patients reported that itching was reduced and 62% showed visible improvement in symptoms using 830nm near-infrared light.</div></div>
+      <div class="ref"><div class="ref-auth">Pusan National University (2017)</div><div class="ref-body">Lowered eczema area severity (EASI) scores by 34% after just 3 sessions using combined 660nm and 850nm wavelengths. <em>Journal of Drugs in Dermatology.</em></div></div>
     </div>
   </div>
 
@@ -261,7 +275,7 @@
       <hr class="pink-rule">
       <div class="disc-box">
         <p>This guide is intended to help you make the most of your red light therapy device based on general recommendations and your specific wellness goals. It is not intended to replace professional medical advice, diagnosis, or treatment. Red light therapy is a complementary wellness practice and should not be used as a substitute for conventional medical care.</p>
-        <p>If you have any serious, ongoing, or diagnosed medical conditions — including but not limited to cancer, epilepsy, active infections, photosensitivity disorders, or if you are pregnant, breastfeeding, taking photosensitising medications, or have recently undergone surgery — please consult your GP or a qualified healthcare professional before beginning use.</p>
+        <p>If you have any serious, ongoing, or diagnosed medical conditions—including but not limited to cancer, epilepsy, active infections, photosensitivity disorders, or if you are pregnant, breastfeeding, taking photosensitising medications, or have recently undergone surgery—please consult your GP or a qualified healthcare professional before beginning use.</p>
         <p>Do not use your Solis device directly over the eyes, on open wounds, or over areas of active infection. Results vary between individuals. Always follow the safety instructions provided with your device.</p>
       </div>
       <hr class="rule">
