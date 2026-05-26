@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
-@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -17,6 +17,7 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
+/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -29,23 +30,29 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
+/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
+/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
+/* GOALS BOX */
+
+/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
+/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -57,24 +64,29 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
+/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
+/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
+/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
+/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
+/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -152,8 +164,8 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Anti-Ageing &amp; Skin Rejuvenation</h3>
-        <p>Your primary goal. Focused on stimulating collagen production, reducing fine lines, and restoring skin firmness through targeted red and NIR light exposure.</p>
+        <h3>Mood, Anxiety, Depression &amp; SAD Support</h3>
+        <p>Your primary goal. Focused on enhancing mood stability, reducing anxiety and depression symptoms, and supporting emotional resilience through optimised cellular energy and reduced neuroinflammation.</p>
       </div>
     </div>
   </div>
@@ -164,8 +176,8 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Anti-Ageing &amp; Skin Rejuvenation</h3>
-        <p>Red and near-infrared wavelengths penetrate the dermis to stimulate fibroblasts — the cells responsible for producing collagen and elastin. This directly reduces the appearance of fine lines and wrinkles, improves skin firmness, and restores a more youthful texture. Enhanced circulation from NIR exposure delivers more nutrients to skin cells, accelerating the natural repair and renewal cycle. Clinical studies show 90% of subjects experienced reduced wrinkle depth after just 8 sessions, with some participants seeing 19 times more wrinkle reduction compared to control groups after 30 treatments.</p>
+        <h3>Mood, Anxiety, Depression &amp; SAD Support</h3>
+        <p>Depression, anxiety, and seasonal affective disorder involve disrupted neurotransmitter balance, neuroinflammation, and mitochondrial dysfunction in brain regions controlling mood. Red light therapy enhances mitochondrial function in neurons responsible for mood regulation, providing more ATP for neurotransmitter production. Increased cerebral blood flow delivers oxygen and nutrients whilst near-infrared wavelengths reduce neuroinflammation disrupting mood pathways. For SAD, red light therapy helps regulate circadian rhythms and supports serotonin synthesis when daylight is limited. The result is measurably improved mood scores, reduced anxiety symptoms, better stress resilience, and relief from depression.</p>
       </div>
     </div>
   </div>
@@ -175,18 +187,18 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
-        <div class="pc-name">Anti-Ageing &amp; Skin Rejuvenation</div>
+        <div class="pc-name">Mood, Anxiety, Depression &amp; SAD Support</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Sit facing the panel with clean, bare skin. Close your eyes or use the included goggles. The SOLO 2.0 delivers full facial coverage at this distance — stay still and let it work.</div>
-        <div class="pc-tip">Tip: Apply serums or moisturiser immediately after — skin absorbs active ingredients more effectively post-session.</div>
-        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
+        <div class="pc-note">Position the SOLO 2.0 at eye level, directing the light toward your forehead with eyes open or closed—whatever feels most comfortable. This position targets the prefrontal cortex and pineal gland, the brain regions most involved in mood regulation and circadian rhythm control.</div>
+        <div class="pc-tip">Tip: Morning sessions are ideal for mood support, as red light mirrors natural sunrise wavelengths and helps align your circadian rhythm with your natural wake cycle.</div>
+        <div><span class="badge">✦ Results often felt: within 1–3 sessions</span></div>
       </div>
     </div>
   </div>
@@ -198,7 +210,7 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For skin rejuvenation and anti-ageing, morning or early afternoon sessions work well, allowing your skin all day to benefit from the increased cellular activity. You can also use it in the evening as part of your skincare routine. The best time is the one you'll stick to consistently — consistency matters more than timing for skin goals.</p>
+        <p>For mood and anxiety support, morning sessions are most powerful. Red light mirrors natural sunrise wavelengths, helping regulate your circadian rhythm and boost serotonin production when it has the most impact on your day. Morning use sets a foundation of emotional stability that carries through your entire day. That said, consistent use matters more than perfect timing — the best time is the one you'll stick to daily.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
@@ -231,18 +243,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Beyond your skin rejuvenation goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep — especially when used in the morning or early evening.</div></div>
-      <div class="ben"><div class="ben-lbl">Energy &amp; mood</div><div class="ben-txt">Mitochondrial stimulation supports steady energy production throughout the day, and many users report improved mood and reduced afternoon fatigue within the first few weeks.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting recovery and overall cellular health.</div></div>
-      <div class="ben"><div class="ben-lbl">Wound healing</div><div class="ben-txt">Red light accelerates tissue repair by stimulating collagen synthesis and reducing inflammation, helping minor cuts, scrapes, or scars heal faster and with less visible scarring.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary mood goal, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that complement emotional wellbeing:</p>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep — especially when used in the morning to set circadian alignment.</div></div>
+      <div class="ben"><div class="ben-lbl">Energy &amp; vitality</div><div class="ben-txt">Mitochondrial stimulation supports steady energy production throughout the day. Many users report improved mood and reduced afternoon fatigue within the first few weeks, creating a positive feedback loop for emotional stability.</div></div>
+      <div class="ben"><div class="ben-lbl">Stress resilience</div><div class="ben-txt">Enhanced mitochondrial function and reduced neuroinflammation help your brain's stress-response systems operate more efficiently, improving your ability to handle life's challenges with greater emotional balance.</div></div>
+      <div class="ben"><div class="ben-lbl">Cognitive clarity</div><div class="ben-txt">Improved ATP production in brain cells supports focus, memory, and mental clarity — cognitive performance that directly impacts mood and emotional processing.</div></div>
+      <div class="ben"><div class="ben-lbl">Circadian alignment</div><div class="ben-txt">Consistent morning red light exposure helps reset your body's natural rhythms, supporting hormonal balance and preventing the mood dysregulation that often accompanies circadian disruption.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Wunsch &amp; Matuschka (2014)</div><div class="ref-body">A controlled trial confirming that red and NIR light significantly reduce wrinkles and improve skin smoothness by stimulating collagen and elastin production. <em>Photomedicine and Laser Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Chung-Ang University (2007)</div><div class="ref-body">90% of subjects saw reduced wrinkle depth after just 8 sessions, demonstrating rapid visible improvements in fine lines and skin texture. <em>Dermatological Research.</em></div></div>
-      <div class="ref"><div class="ref-auth">University of Ulm (2014)</div><div class="ref-body">After 30 RLT sessions, participants were 19x more likely to see visible wrinkle reduction vs. control group. <em>Journal of Photochemistry and Photobiology.</em></div></div>
-      <div class="ref"><div class="ref-auth">Barolet &amp; Boucher (2008)</div><div class="ref-body">Shows visible improvements in skin elasticity and reduced photodamage after consistent LED therapy, supporting its use for anti-ageing. <em>Photomedicine and Laser Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Zhao et al. (2012)</div><div class="ref-body">Demonstrates that red and NIR light exposure can help regulate circadian rhythms and melatonin production, supporting deeper sleep. <em>Lasers in Medical Science.</em></div></div>
+      <div class="ref"><div class="ref-auth">Schiffer et al. (2009)</div><div class="ref-body">A single session of transcranial near-infrared light to the forehead resulted in a 63.1% reduction in anxiety (HAM-A) scores and a 54.3% reduction in depression. <em>Behavioral and Brain Functions.</em></div></div>
+      <div class="ref"><div class="ref-auth">Jahan et al. (2020)</div><div class="ref-body">Near-infrared light therapy significantly improved stress resilience and reduced anxiety scores by approximately 50% in participants receiving 3 treatments per week for 4 weeks. <em>Frontiers in Psychiatry.</em></div></div>
+      <div class="ref"><div class="ref-auth">Zhao et al. (2012)</div><div class="ref-body">Demonstrates that red and NIR light exposure can help regulate circadian rhythms and melatonin production, supporting deeper sleep and mood stability. <em>Journal of Athletic Training.</em></div></div>
+      <div class="ref"><div class="ref-auth">Morita et al. (2018)</div><div class="ref-body">Red light therapy improved sleep quality scores by 13% and decreased time to sleep onset by 79.27%, supporting the circadian and mood benefits of consistent morning or evening use. <em>Journal of Photochemistry and Photobiology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Saltmarche et al. (2019)</div><div class="ref-body">Meta-analysis confirming that transcranial near-infrared light significantly improves executive function, memory, and emotional regulation in both healthy and clinical populations. <em>Photomedicine and Laser Surgery.</em></div></div>
     </div>
   </div>
 
