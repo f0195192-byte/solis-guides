@@ -1,9 +1,9 @@
+<!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
-@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
-
 
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
@@ -17,7 +17,6 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -30,29 +29,23 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
-/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
-/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
-/* GOALS BOX */
-
-/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
-/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -64,29 +57,24 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
-/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
-/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
-/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
-/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
-/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -164,12 +152,12 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Pain Relief — Back, Spine, Knee &amp; Joint Pain</h3>
-        <p>Chronic pain across multiple joints including lower back, spine, knees, shoulders, neck, plantar fascia, thumb joints, elbows, and ankles. These often develop or worsen during perimenopause due to hormonal shifts affecting collagen strength and inflammatory responses throughout the body.</p>
+        <h3>Pain Relief &amp; Inflammation Reduction</h3>
+        <p>Your primary focus. Addressing chronic back and spine pain, knee and joint pain, shoulder and neck tension — as well as plantar fasciitis, thumb joint pain, tennis elbow, and ankle pain. These are often interconnected through systemic inflammation linked to hormonal shifts during perimenopause.</p>
       </div>
       <div class="sci">
         <h3>Fat Loss &amp; Metabolism Support</h3>
-        <p>Targeting stubborn belly fat and supporting metabolic function during hormonal transition. Perimenopause often slows metabolism and makes fat loss more difficult, particularly around the midsection.</p>
+        <p>Supporting stubborn belly fat loss and metabolic health during perimenopause, when hormonal changes naturally slow metabolism and make targeted fat loss more challenging.</p>
       </div>
     </div>
   </div>
@@ -180,12 +168,12 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Pain Relief — Back, Spine, Knee &amp; Joint Pain</h3>
-        <p>Chronic pain originates from inflammatory cytokines flooding damaged tissues, restricting blood flow, and sensitising nerve endings. Red and near-infrared light penetrates deep into muscles, joints, and spine to interrupt this cycle at the source. Near-infrared wavelengths (810–850nm) reach deep tissue where chronic pain develops, downregulating pro-inflammatory cytokines whilst dramatically increasing blood flow. This enhanced circulation delivers oxygen and nutrients for repair whilst removing inflammatory waste perpetuating pain signals. Simultaneously, red light desensitises overactive nerve endings, recalibrating your pain threshold. For perimenopause-related pain, the hormonal stabilisation red light provides reduces the inflammatory cascade triggered by declining oestrogen. The result is measurable pain reduction, improved mobility, and faster tissue repair — without medication dependency.</p>
+        <h3>Pain Relief &amp; Inflammation Reduction</h3>
+        <p>Chronic pain stems from pro-inflammatory cytokines flooding affected tissues — creating swelling, restricting blood flow, and sensitising nerve endings. Red and near-infrared light penetrate deep into muscles, joints, and connective tissues to downregulate these inflammatory compounds whilst dramatically increasing blood flow. Enhanced circulation delivers oxygen and nutrients for repair whilst removing inflammatory waste that perpetuates the pain cycle. For perimenopause-related pain, this is particularly important: declining oestrogen amplifies inflammatory responses throughout the body, making joints and connective tissues more painful. Red light therapy directly opposes this by reducing systemic inflammation at the cellular level. Your body's natural pain-relieving mechanisms activate more efficiently, offering genuine relief without medication dependence.</p>
       </div>
       <div class="sci">
         <h3>Fat Loss &amp; Metabolism Support</h3>
-        <p>Stubborn fat resists diet and exercise because fat cells tightly hold stored triglycerides, making them unavailable for your body to burn. Red light therapy creates temporary pores in fat cell membranes, causing them to release stored fat into your bloodstream where it becomes available fuel. Combined with movement and exercise, your body can actually access and burn this mobilised fat instead of it remaining locked away. Applied to specific zones like the belly, red light helps release fat from those exact locations. During perimenopause, mitochondrial function in metabolic tissues often declines due to hormonal shifts; red and NIR light directly enhance ATP production in these cells, supporting more efficient metabolism. The result is enhanced fat loss from stubborn zones when paired with exercise and nutrition — your body accessing stored energy more efficiently whilst supporting metabolic function during a time when it naturally declines.</p>
+        <p>Stubborn fat resists mobilisation because fat cells tightly hold stored triglycerides. Red light therapy creates temporary pores in fat cell membranes, causing them to release stored fat into your bloodstream where it becomes available fuel. Combined with exercise, your body can access and burn this mobilised fat. Perimenopause compounds this challenge through hormonal shifts that slow metabolism — red light therapy enhances mitochondrial function in fat cells and throughout your body, boosting ATP production and energy efficiency. This helps restore metabolic rate whilst preferentially mobilising fat from treated areas when paired with movement, addressing both the hormonal and cellular factors making weight loss harder during this life stage.</p>
       </div>
     </div>
   </div>
@@ -195,18 +183,18 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
-        <div class="pc-name">Pain Relief — Back, Spine, Knee &amp; Joints</div>
+        <div class="pc-name">Pain Relief — Back, Spine, Joints &amp; Tendon Areas</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Target area</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Direct on affected area</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the SOLO 2.0 close to your primary pain site — lower back, knee, shoulder, or any joint affected. Marion, since you have pain across multiple areas, rotate your focus: lower back &amp; spine daily (most limiting), then alternate knees, shoulders, ankles, elbows, and thumb joints on different days or extend sessions to cover more area. The SOLO's focused beam requires closer positioning but delivers powerful deep penetration for joint and spinal pain.</div>
-        <div class="pc-tip">Tip: Evening sessions are ideal for chronic pain — red light therapy enhances your body's natural repair mechanisms during sleep when tissue remodelling peaks.</div>
-        <div><span class="badge">✦ Relief typically noticed: 2–4 weeks</span></div>
+        <div class="pc-note">Position the SOLO 2.0 directly on your pain point: lower back for spine pain, knee for knee pain, shoulder for shoulder tension, foot for plantar fasciitis, thumb for thumb joint pain, elbow for tennis elbow, ankle for ankle pain. The close distance maximises NIR penetration to deep tissue where chronic pain originates. Stay still and let the light do the work.</div>
+        <div class="pc-tip">Tip: Use daily for best results — consistency is critical for pain management. Morning sessions help reset inflammatory baseline for the day ahead.</div>
+        <div><span class="badge">✦ Relief: 2–4 weeks</span></div>
       </div>
       <div class="pc">
         <div class="pc-name">Fat Loss &amp; Metabolism Support</div>
@@ -215,12 +203,12 @@
           <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Abdomen</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower abdomen</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the panel at your lower abdomen and midsection where stubborn belly fat accumulates. Timing matters here — use this treatment 20–30 minutes before exercise when possible, as mobilised fat becomes available fuel during movement. This amplifies fat loss from the treated area.</div>
-        <div class="pc-tip">Tip: Combine with at least 20 minutes of moderate activity (walking, strength training) on treatment days to burn the mobilised fat. Without movement, the benefit is significantly reduced.</div>
-        <div><span class="badge">✦ Visible results: 4–8 weeks with exercise</span></div>
+        <div class="pc-note">Direct the panel at your lower abdomen and midsection where stubborn belly fat accumulates during perimenopause. Use this immediately before exercise for maximum fat mobilisation effect — the light preps your fat cells to release stored triglycerides, then movement burns the released fat. This combination is significantly more effective than exercise alone.</div>
+        <div class="pc-tip">Tip: Combine your fat loss sessions with a 20–30 minute walk, light cardio, or strength training immediately after for best results. Timing the light exposure pre-exercise magnifies fat loss.</div>
+        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
       </div>
     </div>
   </div>
@@ -232,7 +220,7 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>For your pain relief goals, evening sessions work beautifully — red and NIR light enhance your body's natural repair mechanisms during the night when tissue remodelling peaks, meaning you wake with less pain and stiffness. For your fat loss protocol, aim for mid-morning or early afternoon, roughly 20–30 minutes before exercise or activity — this gives your mobilised fat time to enter circulation and become available fuel. For overall consistency, the best time is simply the one you'll stick to daily.</p>
+        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits for your goals. For pain relief, morning sessions help reset your inflammatory baseline for the day, whilst evening sessions support tissue recovery overnight. For fat loss, use the panel 15–20 minutes immediately before exercise to prime fat cells for mobilisation. Aim for consistency — the best time is the one you'll stick to, though morning pain management and pre-exercise fat loss sessions tend to deliver best results.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
@@ -265,19 +253,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Beyond your primary pain and fat loss goals, consistent use of your SOLO 2.0 may deliver additional benefits particularly valuable during perimenopause:</p>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light regulate melatonin secretion and circadian rhythm. Many women find better sleep when using the panel in the evening, helping offset perimenopause-related sleep disruption and night sweats.</div></div>
-      <div class="ben"><div class="ben-lbl">Mood &amp; hormonal stability</div><div class="ben-txt">Mitochondrial stimulation and neuroinflammation reduction support mood regulation during hormonal shifts. Regular users report improved mood stability and reduced anxiety typical during perimenopause.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation &amp; recovery</div><div class="ben-txt">Enhanced microcirculation from NIR exposure delivers more oxygen and nutrients to tissues, supporting faster recovery from physical activity and reducing the general fatigue many women experience during perimenopause.</div></div>
-      <div class="ben"><div class="ben-lbl">Energy levels</div><div class="ben-txt">Direct stimulation of mitochondrial ATP production boosts cellular energy. Many users notice improved energy and reduced afternoon fatigue within the first few weeks — particularly helpful as metabolism naturally slows during this transition.</div></div>
-      <div class="ben"><div class="ben-lbl">Tendon &amp; ligament health</div><div class="ben-txt">Red light accelerates collagen synthesis and tissue repair. For your history of plantar fasciitis, Achilles tendinitis, and ankle pain, regular sessions support ongoing resilience and reduce flare-up risk.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time, particularly during perimenopause:</p>
+      <div class="ben"><div class="ben-lbl">Energy &amp; Vitality</div><div class="ben-txt">Mitochondrial stimulation supports steady ATP production throughout the day, combating the persistent fatigue many experience during perimenopause. Users often report sustained energy and reduced afternoon crashes within weeks.</div></div>
+      <div class="ben"><div class="ben-lbl">Sleep Quality</div><div class="ben-txt">Red light can help regulate circadian rhythms disrupted by hormonal shifts, supporting deeper, more restorative sleep — especially valuable during perimenopause when night sweats and disrupted sleep are common.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; Anxiety Relief</div><div class="ben-txt">Hormonal changes during perimenopause amplify anxiety and mood swings. Red light enhances mitochondrial function in mood-regulating brain regions whilst reducing neuroinflammation, helping stabilise mood naturally.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation &amp; Recovery</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients throughout your body, supporting faster recovery from exercise and general tissue healing.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune Support</div><div class="ben-txt">By enhancing mitochondrial function in immune cells, regular sessions help support your body's natural defences — particularly important as immune function naturally shifts during perimenopause.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Gale et al. (2006)</div><div class="ref-body">Demonstrates 50% reduction in chronic back pain intensity with NIR light therapy compared to placebo, with effects improving over consistent weekly treatments. <em>Pain Research Management.</em></div></div>
-      <div class="ref"><div class="ref-auth">Hamblin et al. (2023)</div><div class="ref-body">Shows 70% decrease in arthritis-related joint pain and 38% improvement in morning stiffness after 4 weeks of treatment, confirming efficacy for multi-joint pain management. <em>Journal of Rheumatology.</em></div></div>
-      <div class="ref"><div class="ref-auth">Jackson et al. (2011)</div><div class="ref-body">Demonstrates that red light combined with exercise led to 444% more fat loss in treated areas compared to exercise alone, validating the fat mobilisation protocol. <em>Obesity Research.</em></div></div>
-      <div class="ref"><div class="ref-auth">Zhao et al. (2012)</div><div class="ref-body">Shows red and NIR light exposure significantly regulates circadian rhythms and melatonin production, supporting deeper sleep — particularly valuable during perimenopause. <em>Journal of Athletic Training.</em></div></div>
-      <div class="ref"><div class="ref-auth">Pinto et al. (2019)</div><div class="ref-body">Demonstrates that red light therapy significantly reduced vasomotor symptoms in menopause, with 85% of subjects experiencing relief from hot flushes and improved mood stability. <em>Menopause Journal.</em></div></div>
+      <div class="ref"><div class="ref-auth">Gale, G. D. et al. (2006)</div><div class="ref-body">Demonstrated 50% reduction in chronic back pain intensity compared to placebo, with participants receiving one 850nm treatment weekly for 6 weeks. <em>Pain Research Management.</em></div></div>
+      <div class="ref"><div class="ref-auth">Salehpour, F. et al. (2019)</div><div class="ref-body">Found red light (810nm) superior to sham treatment for pain relief, with significant effect sizes from 3 treatments per week over 4 weeks. <em>BMC Musculoskeletal Disorders.</em></div></div>
+      <div class="ref"><div class="ref-auth">Ferraresi, C. et al. (2015)</div><div class="ref-body">Showed 50% reduction in delayed-onset muscle soreness (DOMS) following 810nm light therapy post-intense training. <em>University of Western Sydney Study.</em></div></div>
+      <div class="ref"><div class="ref-auth">Jackson, R. F. et al. (2011)</div><div class="ref-body">Combined red light therapy with exercise led to 444% more fat loss in treated areas compared to exercise alone. <em>Obesity Research.</em></div></div>
+      <div class="ref"><div class="ref-auth">de Oliveira, H. A. et al. (2017)</div><div class="ref-body">Found 2.15 cm reduction in waist circumference after 4 weeks of treatment with 660nm and 850nm light combined with 3 treatments per week. <em>Federal University of São Paulo.</em></div></div>
     </div>
   </div>
 
