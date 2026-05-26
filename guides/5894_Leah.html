@@ -2,8 +2,9 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
-@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
+
 
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
@@ -17,6 +18,7 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
+/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -29,23 +31,29 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
+/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
+/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
+/* GOALS BOX */
+
+/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
+/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -57,24 +65,29 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
+/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
+/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
+/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
+/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
+/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -152,8 +165,12 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Rosacea &amp; Redness</h3>
-        <p>Your skin experiences persistent facial redness and reactive blood vessel response to triggers like stress, temperature changes, and environmental factors. Rosacea involves hypersensitive facial blood vessels that dilate excessively, creating visible flushing and that uncomfortable burning sensation.</p>
+        <h3>Fat Loss — Stubborn Belly Fat</h3>
+        <p>Your primary goal. Targeting mobilisation and reduction of stubborn adipose tissue in the abdominal area through enhanced cellular energy and fat cell membrane permeability.</p>
+      </div>
+      <div class="sci">
+        <h3>Skin Health</h3>
+        <p>Supporting skin quality, firmness, and overall complexion through stimulated collagen production and improved microcirculation.</p>
       </div>
     </div>
   </div>
@@ -164,8 +181,12 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Rosacea &amp; Redness</h3>
-        <p>Red light therapy is uniquely effective for rosacea because it's a "cold" therapy—no heat, no thermal damage, no aggravating already-sensitive skin. Instead, it works at the cellular level by balancing reactive oxygen species and modulating the inflammatory mediators responsible for flaring. Your facial blood vessels become less reactive whilst your skin's inflammatory threshold increases, meaning everyday triggers have less impact. Clinical studies show 75% of rosacea patients experienced significant reduction in facial redness within just 5 weeks, with many noticing improved skin calmness and reduced burning sensations within the first two weeks.</p>
+        <h3>Fat Loss — Stubborn Belly Fat</h3>
+        <p>Stubborn fat resists diet and exercise because fat cells tightly hold stored triglycerides — your body struggles to access and burn them. Red and near-infrared light creates temporary pores in fat cell membranes, causing them to release stored fat into your bloodstream where it becomes available as fuel. Combined with exercise, your body can access and burn this mobilised fat instead of it remaining locked away. Applied to specific zones like the abdomen, red light helps release fat from those exact locations. When paired with movement and nutrition, this creates genuine fat loss from treated areas.</p>
+      </div>
+      <div class="sci">
+        <h3>Skin Health</h3>
+        <p>Red and near-infrared wavelengths penetrate the dermis to stimulate fibroblasts — the cells responsible for producing collagen and elastin. This improves skin firmness, reduces fine lines, and restores a more youthful texture. Enhanced circulation from NIR exposure delivers more nutrients to skin cells, accelerating the natural repair and renewal cycle. The 630nm wavelength in particular helps improve overall skin tone and radiance by promoting even cellular turnover.</p>
       </div>
     </div>
   </div>
@@ -175,18 +196,32 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
-        <div class="pc-name">Rosacea &amp; Redness</div>
+        <div class="pc-name">Fat Loss — Stubborn Belly Fat</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Abdomen</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Position the SOLO 2.0 15 cm from your bare abdomen. Sit comfortably and keep the panel steady for the full 20 minutes. For best results, use this session immediately before light exercise — a 15–20 minute walk or gentle movement allows your body to mobilise and burn the released fat.</div>
+        <div class="pc-tip">Tip: Consistency is key. The best results come from regular sessions paired with movement. Even a short walk after each session significantly enhances fat mobilisation.</div>
+        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Skin Health</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">8 min</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">2–3× / week</div></div>
           <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Sit facing the panel at 30 cm distance with clean, bare skin. Close your eyes or use the included goggles. This distance is key for rosacea—it delivers therapeutic intensity without generating heat that could trigger flaring. Stay still and let the light work its calming effect.</div>
-        <div class="pc-tip">Tip: Use your SOLO 2.0 in the morning or early evening, not when your skin is already flushed from heat or stress. Consistency is crucial for calming reactive vessels over time.</div>
-        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
+        <div class="pc-note">Sit facing the panel with clean, bare skin. Close your eyes or use the included goggles. The SOLO 2.0 delivers full facial coverage at this distance. Can be combined with your abdominal fat loss sessions on the same day — complete your belly fat protocol first, then move to facial treatment.</div>
+        <div class="pc-tip">Tip: Apply serums or moisturiser immediately after — skin absorbs active ingredients more effectively post-session.</div>
+        <div><span class="badge">✦ Results visible: 6–8 weeks</span></div>
       </div>
     </div>
   </div>
@@ -198,11 +233,11 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>For rosacea management, morning or early evening works best—avoid using the panel during times when your skin is already flushed or triggered. Morning sessions can help prime your skin's inflammatory response for the day ahead. Early evening (1–2 hours before bed) gives your skin time to benefit without heat from bedding or sleeping environment triggering flares. Avoid late afternoon or post-exercise sessions when your face is already warm. The key is consistency—choose a time you can stick to daily or several times weekly.</p>
+        <p>For fat loss goals, morning or early afternoon sessions are ideal — they give your body time to mobilise and burn the released fat throughout the day with natural activity. For skin health, any consistent time works well. The best time is the one you'll stick to regularly. Aim for consistency — regular sessions deliver far better results than sporadic use.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
-        <p>Your SOLO 2.0 has 30 near-infrared LEDs (810nm, 830nm, 850nm) that emit light completely invisible to the human eye—this is entirely normal and expected. These NIR lights are working powerfully beneath your skin's surface, reducing inflammation and calming reactive blood vessels. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
       </div>
       <div class="faq">
         <h3>Why are the distances and session times different for each benefit?</h3>
@@ -231,17 +266,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Beyond managing your rosacea and facial redness, regular use of your SOLO 2.0 may deliver additional wellness benefits that complement your skin health goals:</p>
-      <div class="ben"><div class="ben-lbl">Mood &amp; stress resilience</div><div class="ben-txt">Red and NIR light enhance mitochondrial function in brain regions controlling mood and stress response. Many users report improved emotional balance and reduced anxiety, which can help reduce trigger responses that typically worsen rosacea.</div></div>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red light supports natural melatonin production and circadian rhythm regulation, helping you sleep more deeply. Better sleep strengthens your skin barrier and reduces inflammatory responses that aggravate rosacea.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation &amp; blood flow</div><div class="ben-txt">Improved microcirculation from NIR exposure supports healthier skin perfusion and more stable blood vessel function, creating a calmer complexion over time.</div></div>
-      <div class="ben"><div class="ben-lbl">Energy &amp; vitality</div><div class="ben-txt">Boosted mitochondrial ATP production gives your cells more energy for natural repair and maintenance, supporting overall skin health and resilience.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
+      <div class="ben"><div class="ben-lbl">Energy levels</div><div class="ben-txt">Red and NIR light boost mitochondrial ATP production, supporting sustained energy throughout the day and reducing afternoon fatigue — particularly beneficial when combined with regular movement.</div></div>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep — especially when used in the morning or early evening.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting overall cellular health and recovery.</div></div>
+      <div class="ben"><div class="ben-lbl">Muscle tone</div><div class="ben-txt">Enhanced ATP production in muscle tissue supports strength and definition, particularly when combined with regular exercise and resistance training.</div></div>
+      <div class="ben"><div class="ben-lbl">Joint comfort</div><div class="ben-txt">Near-infrared penetration supports healthy joint function and comfort by reducing inflammation and enhancing cellular repair in joint tissues.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Weiss et al. (2005)</div><div class="ref-body">75% of rosacea patients experienced a significant reduction in facial redness after 10 treatments with 633nm light over 5 weeks. <em>Laser Medical Science.</em></div></div>
-      <div class="ref"><div class="ref-auth">Shahid Beheshti University (2019)</div><div class="ref-body">Demonstrated that 660nm red light reduced the intensity of facial burning and persistent erythema by more than 50% within a month using 3 treatments per week. <em>Study published peer-reviewed.</em></div></div>
-      <div class="ref"><div class="ref-auth">Salgado et al. (2015)</div><div class="ref-body">Confirms that low-level light therapy significantly enhances sleep quality and reduces disturbances, supporting the mood and stress benefits important for managing rosacea triggers. <em>Lasers in Medical Science.</em></div></div>
-      <div class="ref"><div class="ref-auth">Jahan et al. (2020)</div><div class="ref-body">Shows that near-infrared light therapy significantly improves stress resilience and reduces anxiety scores by approximately 50% in just 4 weeks. <em>Frontiers in Psychiatry.</em></div></div>
+      <div class="ref"><div class="ref-auth">Jackson, R. F. et al. (2011)</div><div class="ref-body">Combining red light therapy with exercise led to 444% more fat loss in treated areas compared to exercise alone over 20 weeks. <em>Obesity Research.</em></div></div>
+      <div class="ref"><div class="ref-auth">de Oliveira, H. A. et al. (2017)</div><div class="ref-body">Found a 2.15 cm reduction in waist circumference after 4 weeks of red light treatment with 3 sessions per week. <em>Federal University of São Paulo.</em></div></div>
+      <div class="ref"><div class="ref-auth">Wunsch &amp; Matuschka (2014)</div><div class="ref-body">A controlled trial confirming that red and NIR light significantly reduce wrinkles and improve skin smoothness by stimulating collagen and elastin production. <em>Photomedicine and Laser Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Avci et al. (2013)</div><div class="ref-body">Demonstrates how red and NIR light therapy enhances collagen and elastin production, improving skin tone, reducing fine lines, and smoothing texture. <em>Seminars in Cutaneous Medicine and Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Barolet &amp; Boucher (2008)</div><div class="ref-body">Shows visible improvements in skin elasticity and reduced photodamage after consistent LED therapy, supporting its use for skin rejuvenation. <em>Photomedicine and Laser Surgery.</em></div></div>
     </div>
   </div>
 
