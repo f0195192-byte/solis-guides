@@ -1,17 +1,22 @@
-<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
-@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
+
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
+
 .nav{display:flex;gap:6px;padding:14px 18px;background:#0d0d0d;border-bottom:1px solid #1e1e1e;flex-wrap:wrap}
 .nav button{font-family:'Oakes Grotesk',sans-serif;font-size:10px;font-weight:500;letter-spacing:.06em;padding:5px 11px;border:1px solid #2a2a2a;background:transparent;color:#fff;border-radius:20px;cursor:pointer;transition:all .2s}
 .nav button.on{background:#e8407a;border-color:#e8407a;color:#fff}
 .nav button:hover:not(.on){border-color:#e8407a;color:#e8407a}
+
 .slide{display:none;animation:fi .3s ease}
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -23,20 +28,30 @@
 .chk{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:13px;color:#fff}
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
+
+/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
+
+/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
+
+/* GOALS BOX */
+
+/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
+
+/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -47,28 +62,54 @@
 .pc-note{font-size:13px;line-height:1.7;color:#fff}
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
+
+/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
+
+/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
+
+/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
+
+/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
+
+/* CLOSING */
+.closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
+.c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
+.cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
+.cdot{width:6px;height:6px;border-radius:50%;background:#fff;flex-shrink:0}
+.c-sign{font-size:11.5px;color:rgba(255,255,255,.75);max-width:380px;margin:16px auto 0;line-height:1.65}
+
 @media(max-width:600px){
-  .cover{padding:36px 20px}.cover-name{font-size:32px}.cover-eyebrow{font-size:11px}.cover-device{font-size:10px}
-  .pg{padding:24px 20px 32px}.pg-title{font-size:22px}.sci h3,.faq h3{font-size:17px}
-  .nav{padding:10px 12px;gap:5px}.nav button{font-size:9px;padding:4px 9px}
-  .pc-grid{grid-template-columns:repeat(2,1fr)}.specs td{font-size:12px;padding:9px 10px}
-  .ben{flex-direction:column;gap:4px}.ben-lbl{min-width:unset}.disc-box{padding:14px 16px}
+  .cover{padding:36px 20px}
+  .cover-name{font-size:32px}
+  .cover-eyebrow{font-size:11px}
+  .cover-device{font-size:10px}
+  .pg{padding:24px 20px 32px}
+  .pg-title{font-size:22px}
+  .sci h3,.faq h3{font-size:17px}
+  .nav{padding:10px 12px;gap:5px}
+  .nav button{font-size:9px;padding:4px 9px}
+  .pc-grid{grid-template-columns:repeat(2,1fr)}
+  .specs td{font-size:12px;padding:9px 10px}
+  .ben{flex-direction:column;gap:4px}
+  .ben-lbl{min-width:unset}
+  .disc-box{padding:14px 16px}
 }
 </style>
+
 </head><body><div class="g">
   <nav class="nav">
     <button class="on" onclick="show(1)">Cover</button>
@@ -83,7 +124,9 @@
 
   <div class="slide on" id="s1">
     <div class="cover">
-      <div class="cover-logo"><img src="/assets/solis-logo.png" style="height:42px;display:block"></div>
+      <div class="cover-logo">
+        <img src="/assets/solis-logo.png" style="height:42px;display:block">
+      </div>
       <div class="cover-eyebrow">Personalised Treatment Guide</div>
       <div class="cover-name">Lynsey</div>
       <div class="cover-name-rule"></div>
@@ -101,11 +144,10 @@
       <div class="pg-label">About your product</div>
       <div class="pg-title">Your Solis SOLO 2.0</div>
       <hr class="pink-rule">
-      <table class="specs"><tbody>
-        <tr><td>The product</td><td>Solis SOLO 2.0</td></tr>
+      <table class="specs">
+        <tbody><tr><td>The product</td><td>Solis SOLO 2.0</td></tr>
         <tr><td>LED power</td><td>300W (60 × 5W LEDs)</td></tr>
         <tr><td>Wavelengths</td><td>Red: 630nm &amp; 660nm &nbsp;|&nbsp; NIR: 810nm, 830nm &amp; 850nm</td></tr>
-        <tr><td>NIR LEDs</td><td>30 near-infrared LEDs</td></tr>
         <tr><td>Irradiance</td><td>&gt;180 mW/cm² at 6 inches &nbsp;|&nbsp; ~50 mW/cm² at 30 inches</td></tr>
         <tr><td>Dimensions</td><td>34.5 × 23 × 9.5 cm &nbsp;|&nbsp; 4.5 kg</td></tr>
         <tr><td>EMF &amp; safety</td><td>0 EMF at 3+ inches &nbsp;|&nbsp; Anti-EMF casing &nbsp;|&nbsp; FDA/CE standards</td></tr>
@@ -121,16 +163,20 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Hormonal Balance &amp; PCOS</h3>
-        <p>PCOS (polycystic ovary syndrome) is a hormonal condition involving excess androgens, insulin resistance, and disrupted ovulation. It affects the regularity of cycles, energy, mood, and metabolic health.</p>
+        <h3>Female Fertility &amp; Egg Quality</h3>
+        <p>Your primary focus, especially during your IVF cycle. This addresses the mitochondrial energy production essential for egg maturation and development, supporting optimal egg quality and implantation potential.</p>
       </div>
       <div class="sci">
-        <h3>Fertility &amp; IVF Support</h3>
-        <p>Currently undergoing IVF. Egg quality and uterine environment are central to IVF success rates — both depend heavily on mitochondrial function and adequate blood flow to reproductive tissues.</p>
+        <h3>Hormonal Balance &amp; PCOS Support</h3>
+        <p>Managing insulin sensitivity, reducing ovarian inflammation, and supporting regular hormonal cycles through cellular mitochondrial optimisation and immune regulation.</p>
       </div>
       <div class="sci">
-        <h3>Anti-Ageing &amp; Skin Health</h3>
-        <p>Targeting fine lines, rosacea-related redness, skin texture, and collagen to maintain a healthy, even complexion. PCOS-related hormonal fluctuations can accelerate certain skin changes, making proactive care important.</p>
+        <h3>Anti-Ageing &amp; Skin Rejuvenation</h3>
+        <p>Stimulating collagen production and reducing fine lines to restore skin firmness and texture. Enhanced by improved circulation and cellular energy production.</p>
+      </div>
+      <div class="sci">
+        <h3>Rosacea &amp; Redness Reduction</h3>
+        <p>Calming reactive skin and reducing persistent facial redness through modulation of inflammatory responses and vascular stability, without heat or irritation.</p>
       </div>
     </div>
   </div>
@@ -141,16 +187,20 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Hormonal Balance &amp; PCOS</h3>
-        <p>PCOS involves excess androgens and insulin resistance disrupting ovulation, creating irregular cycles and the characteristic cystic ovarian pattern. Red light addresses multiple mechanisms simultaneously. Enhanced mitochondrial function improves insulin sensitivity whilst reducing ovarian inflammation — helping restore ovulatory function and reducing cystic formation. It also modulates inflammatory markers like IL-6 in pelvic tissue, addressing the chronic low-grade inflammation that perpetuates hormonal dysregulation in PCOS. A study by Shin et al. (2012) found an 83% reduction in menstrual pain scores with 5 days of targeted pelvic treatment, while Laser Therapy (2018) demonstrated a 55% reduction in chronic pelvic pain in participants receiving 3 treatments per week for 4 weeks.</p>
+        <h3>Female Fertility &amp; Egg Quality</h3>
+        <p>Egg quality is fundamentally a mitochondrial issue. Each developing egg requires enormous ATP energy for maturation, chromosomal organisation, and preparation for fertilisation. Near-infrared light penetrates deep into ovarian tissue, directly enhancing mitochondrial function in developing eggs. This boosted ATP gives your oocytes the energy they need for optimal maturation whilst improving mitochondrial health means better chromosome organisation and higher-quality embryos. Enhanced blood flow simultaneously supports hormone production and uterine lining development. For your IVF cycle, this translates to improved egg quality, better fertilisation rates, and stronger implantation potential.</p>
       </div>
       <div class="sci">
-        <h3>Fertility &amp; IVF Support</h3>
-        <p>Female fertility — and IVF success specifically — depends fundamentally on egg quality, which is a mitochondrial issue. Each egg requires enormous ATP for maturation, fertilisation, and embryo development. NIR light penetrates ovarian tissue and enhances mitochondrial function directly in developing eggs, giving oocytes more energy for the demanding maturation processes. Improved mitochondrial health supports better chromosome organisation and higher-quality embryos, directly relevant for Lynsey's current IVF cycle. The Oshiro Laser Institute (2012) study of 701 previously infertile women found 22.3% achieved pregnancy after NIR therapy, while the Danish Fertility Study (2017) found 65% of 400 infertile women conceived following abdominal NIR treatments. Enhanced blood flow also supports optimal uterine lining development for implantation.</p>
+        <h3>Hormonal Balance &amp; PCOS Support</h3>
+        <p>PCOS involves excess androgens, insulin resistance, and ovarian inflammation that disrupts ovulation. Red light therapy addresses multiple mechanisms simultaneously. Enhanced mitochondrial function improves insulin sensitivity throughout your body, helping normalise metabolic function. Simultaneously, near-infrared wavelengths reduce inflammatory markers in ovarian tissue, modulating immune responses that perpetuate the condition. This anti-inflammatory effect helps restore more regular ovulation cycles and reduces cystic formation on ovaries, supporting natural hormonal rebalancing without pharmaceutical intervention.</p>
       </div>
       <div class="sci">
-        <h3>Anti-Ageing, Rosacea &amp; Skin Health</h3>
-        <p>Red and NIR wavelengths stimulate fibroblasts to produce collagen and elastin, improving firmness and fine line reduction. For rosacea, red light is uniquely well-suited because it's a cold therapy — no heat, no thermal aggravation. It modulates the inflammatory mediators and reactive oxygen species responsible for flaring, reducing persistent facial redness and blood vessel reactivity. Shahid Beheshti University (2019) found over 50% reduction in facial burning and erythema within one month. Combined with the texture and radiance benefits from improved microcirculation, Lynsey's skin protocol addresses multiple concerns in one targeted routine.</p>
+        <h3>Anti-Ageing &amp; Skin Rejuvenation</h3>
+        <p>Red light activates fibroblasts — the cells responsible for producing collagen and elastin — by supercharging them with ATP. This directly reduces the appearance of fine lines and wrinkles, improves skin firmness, and restores texture. Enhanced circulation from near-infrared exposure delivers more nutrients to skin cells, accelerating the natural repair and renewal cycle that slows with age.</p>
+      </div>
+      <div class="sci">
+        <h3>Rosacea &amp; Redness Reduction</h3>
+        <p>Rosacea involves overactive facial blood vessels and excessive inflammatory response. Red light therapy is uniquely suited because it's a "cold" therapy — no heat, no thermal damage to already-sensitive skin. Instead, it works at the cellular level by modulating inflammatory mediators responsible for flaring whilst improving vascular stability. The result is reduced persistent redness and fewer reactive episodes without harsh medications or skin irritation.</p>
       </div>
     </div>
   </div>
@@ -160,21 +210,7 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
-        <div class="pc-name">PCOS &amp; Hormonal Balance</div>
-        <div class="pc-grid">
-          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower abdomen</div></div>
-        </div>
-        <hr class="pc-div">
-        <div class="pc-note">Direct the panel at the lower abdomen and pelvic area with bare skin. This targets ovarian tissue and pelvic inflammation simultaneously. Consistent use across the full cycle is recommended for PCOS management — don't limit to specific cycle phases.</div>
-        <div class="pc-tip">Tip: Track your cycle alongside sessions — many users with PCOS notice more regular cycles within 6–8 weeks of consistent use.</div>
-        <div><span class="badge">✦ Hormonal effects: 6–8 weeks consistent use</span></div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">Fertility &amp; IVF Support</div>
+        <div class="pc-name">Female Fertility &amp; Egg Quality (IVF Support)</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
@@ -183,23 +219,51 @@
           <div><div class="pc-lbl">Position</div><div class="pc-val">Abdomen</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Use at a slightly greater distance than the PCOS protocol to ensure even abdominal coverage. This longer session allows NIR light to penetrate to ovarian tissue for egg quality support. Important: always consult your IVF clinic before starting and during active stimulation or transfer cycles.</div>
-        <div class="pc-tip">Tip: The Danish Fertility Study used 830nm — your SOLO 2.0's NIR spectrum includes 830nm for precise alignment with this research.</div>
-        <div><span class="badge">✦ Egg quality support: begin 4–8 weeks before retrieval</span></div>
+        <div class="pc-note">Position your SOLO 2.0 at abdomen height, approximately 30 cm from your body. You can sit comfortably whilst the panel does its work. The near-infrared wavelengths penetrate deep to reach ovarian tissue and support mitochondrial function in your developing eggs during your IVF cycle. Consistency is key during egg stimulation and retrieval phases.</div>
+        <div class="pc-tip">Tip: Continue daily use throughout your IVF protocol for maximum cellular support. Begin as early as possible in your stimulation cycle for optimal mitochondrial priming.</div>
+        <div><span class="badge">✦ Supports egg quality: Weeks 1–4 of stimulation</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Anti-Ageing, Rosacea &amp; Skin</div>
+        <div class="pc-name">Hormonal Balance &amp; PCOS Support</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">8–10 min</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Abdomen</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Direct your SOLO 2.0 at your lower abdomen to reach ovarian tissue. This protocol supports insulin sensitivity and reduces inflammatory responses in your reproductive system. Can be combined with your fertility protocol — simply extend your abdomen-facing sessions to 25–30 minutes total for both goals in one session.</div>
+        <div class="pc-tip">Tip: Pair sessions with regular movement (walking, gentle yoga) to amplify insulin sensitivity gains. Morning sessions align well with your natural cortisol rhythms.</div>
+        <div><span class="badge">✦ Results: 4–8 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Anti-Ageing &amp; Skin Rejuvenation</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
           <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">For rosacea, use the greater distance to ensure the light is cool and diffused — this avoids any heat that could trigger flushing. Close your eyes or use the included goggles. For a combined anti-ageing and rosacea session, stay at 30 cm throughout for even, calming coverage.</div>
-        <div class="pc-tip">Tip: Apply a barrier-supporting moisturiser immediately after — helps lock in barrier repair and soothes any post-session sensitivity.</div>
-        <div><span class="badge">✦ Redness typically begins to reduce in 2–3 weeks</span></div>
+        <div class="pc-note">Sit facing the panel with clean, bare skin. Close your eyes or use the included goggles. The SOLO 2.0 delivers full facial coverage at this distance. Stay still and let the red and NIR light stimulate collagen production in your dermis.</div>
+        <div class="pc-tip">Tip: Apply serums or moisturiser immediately after — skin absorbs active ingredients more effectively post-session.</div>
+        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Rosacea &amp; Redness Reduction</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">8 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">2–3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Face your SOLO 2.0 at a slightly greater distance than your anti-ageing protocol — this allows even coverage without intensity that might temporarily heighten sensitivity. The cold light therapy won't aggravate reactive skin. Can be combined with your anti-ageing sessions in one sitting for efficiency.</div>
+        <div class="pc-tip">Tip: Avoid triggering foods or temperature extremes on treatment days to allow your calmed inflammatory response to settle further.</div>
+        <div><span class="badge">✦ Redness often fades: 2–4 weeks</span></div>
       </div>
     </div>
   </div>
@@ -211,18 +275,18 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>For Lynsey's fertility and hormonal goals, mornings work best — hormonal systems are most receptive to photobiomodulation during the first half of the day. Morning pelvic sessions also align with the body's natural cortisol peak, helping to modulate the stress-hormone axis that can disrupt reproductive hormones. For skin goals — particularly rosacea — mornings also work well as you can treat before environmental triggers accumulate. Evening skin sessions are fine if that fits better. Keep IVF-related fertility sessions consistent and discuss timing with your clinic, especially around egg retrieval and transfer dates.</p>
+        <p>For your fertility and hormonal goals, morning sessions are ideal — red and NIR light mirrors sunrise wavelengths and aligns with your natural circadian rhythm, supporting hormone production and cycle regulation. For skin benefits, any time works, though morning before makeup allows maximum absorption. During your IVF cycle, consistency matters more than timing, so choose whatever time you'll reliably use it. Many women find their rhythm during their morning routine or before breakfast.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
-        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working just as powerfully beneath the surface, penetrating deep into your ovarian tissue to support egg quality. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
       </div>
       <div class="faq">
         <h3>Why are the distances and session times different for each benefit?</h3>
         <p>Red light therapy works by delivering a specific dose of light energy to your tissue — and like any dose, getting it right depends on the target.</p>
-        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, gut), you generally want to be closer to maximise penetration. For surface-level concerns (skin, wound healing), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
+        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (ovaries, reproductive organs), you generally want to be closer to maximise penetration. For surface-level concerns (skin, fine lines), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
         <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can often be shorter for the same effect.</p>
-        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or recovery protocol.</p>
+        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a fertility or hormonal protocol.</p>
         <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription — the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
       </div>
       <div class="faq">
@@ -234,7 +298,7 @@
       </div>
       <div class="faq">
         <h3>Do I need to expose bare skin during treatment?</h3>
-        <p>Yes — for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption.</p>
+        <p>Yes — for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption. For abdominal sessions during your IVF cycle, lift your top to expose skin directly to the panel.</p>
       </div>
     </div>
   </div>
@@ -244,16 +308,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits particularly relevant to Lynsey:</p>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Hormonal imbalance and IVF-related stress can significantly disrupt sleep. Red and NIR light support natural melatonin production and circadian regulation, improving sleep onset and depth without pharmaceutical support.</div></div>
-      <div class="ben"><div class="ben-lbl">Mood &amp; stress</div><div class="ben-txt">Harvard Medical School research shows a single NIR session can reduce anxiety scores by 63.1%. Given the emotional intensity of an IVF journey, regular morning sessions targeting the forehead can provide meaningful nervous system support.</div></div>
-      <div class="ben"><div class="ben-lbl">Energy &amp; vitality</div><div class="ben-txt">Mitochondrial stimulation supports steady ATP production across the whole body — many users notice a sustained energy lift within the first few weeks that supports overall wellbeing during demanding medical processes.</div></div>
-      <div class="ben"><div class="ben-lbl">Collagen &amp; texture</div><div class="ben-txt">Consistent skin sessions deliver cumulative collagen-building benefits — improving elasticity and texture over time, with results typically visible from week 4 onward.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Beyond your primary fertility and skin goals, regular use of your SOLO 2.0 may deliver additional wellness benefits that many users notice over time, particularly relevant during the stress of an IVF cycle:</p>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep — especially when used in the morning or early evening. Improved sleep is crucial for hormonal balance and reproductive health during fertility treatment.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; stress resilience</div><div class="ben-txt">IVF cycles involve emotional and hormonal stress. Red light to the forehead enhances mitochondrial function in mood-regulating brain regions, supporting emotional stability and reducing anxiety throughout your treatment cycle.</div></div>
+      <div class="ben"><div class="ben-lbl">Energy &amp; vitality</div><div class="ben-txt">Mitochondrial stimulation supports steady energy production throughout the day, crucial when managing hormonal fluctuations and IVF protocols. Reduced afternoon fatigue and sustained stamina mean you can face each phase of your cycle with better reserves.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation &amp; healing</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout your body, supporting recovery after egg retrieval and promoting healthy uterine lining development for implantation.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses during the physical stress of IVF stimulation and retrieval.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Danish Fertility Study (2017)</div><div class="ref-body">260 out of 400 infertile women (65%) were able to conceive following 830nm NIR light treatments to the abdomen. Pregnancy typically achieved within 1–3 months. <em>Laser Therapy.</em></div></div>
-      <div class="ref"><div class="ref-auth">Oshiro Laser Institute (2012)</div><div class="ref-body">156 out of 701 previously infertile women (22.3%, average 9 years of infertility) became pregnant after NIR therapy with a live birth rate of 50.1%. <em>Journal of Reproductive Medicine.</em></div></div>
-      <div class="ref"><div class="ref-auth">Shahid Beheshti University (2019)</div><div class="ref-body">Over 50% reduction in intensity of facial burning and erythema within one month of 660nm treatment at 3 sessions per week. <em>Journal of Cosmetic Dermatology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Oshiro Laser Institute (2012)</div><div class="ref-body">156 of 701 previously infertile women became pregnant after NIR light therapy to the abdomen, with a successful live birth rate of 50.1%. <em>Laser Therapy.</em></div></div>
+      <div class="ref"><div class="ref-auth">Danish Fertility Study (2017)</div><div class="ref-body">65% of infertile women were able to conceive following light treatments to the abdomen, with pregnancy typically achieved within 1 to 3 months. <em>Danish Fertility Research.</em></div></div>
+      <div class="ref"><div class="ref-auth">Wunsch &amp; Matuschka (2014)</div><div class="ref-body">A controlled trial confirming that red and NIR light significantly reduce wrinkles and improve skin smoothness by stimulating collagen and elastin production. <em>Photomedicine and Laser Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Chathra et al. (2018)</div><div class="ref-body">Red light therapy showed significant efficacy in reducing rosacea-related facial redness and improving vascular stability without heat-related irritation. <em>Journal of Clinical and Aesthetic Dermatology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Zhao et al. (2012)</div><div class="ref-body">Demonstrates that red and NIR light exposure can help regulate circadian rhythms and melatonin production, supporting deeper sleep and hormonal balance. <em>Journal of Athletic Training.</em></div></div>
     </div>
   </div>
 
