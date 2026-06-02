@@ -5,6 +5,7 @@
 @font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
+
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
 
@@ -17,6 +18,7 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
+/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -29,23 +31,29 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
+/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
+/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
+/* GOALS BOX */
+
+/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
+/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -57,24 +65,29 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
+/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
+/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
+/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
+/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
+/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -152,8 +165,8 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Pain Relief &amp; Inflammation Reduction</h3>
-        <p>Your primary goal. Chronic back and spine pain driven by inflammation and poor tissue repair. Red and near-infrared light targets deep spinal tissues to reduce inflammatory cytokines and accelerate healing.</p>
+        <h3>Pain Relief — Back &amp; Spine Pain</h3>
+        <p>Chronic or acute back and spinal pain driven by inflammation, tissue damage, or reduced blood flow. Your goal is to reduce pain intensity, improve mobility, and support underlying tissue repair through targeted light therapy.</p>
       </div>
     </div>
   </div>
@@ -164,8 +177,8 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Pain Relief &amp; Inflammation Reduction</h3>
-        <p>Chronic back and spine pain originates from pro-inflammatory cytokines flooding damaged tissues, restricting blood flow and sensitising nerve endings. Red and near-infrared light downregulates these inflammatory signals whilst enhancing blood flow to deep spinal structures. Near-infrared wavelengths penetrate to reach the vertebral discs, facet joints, and paraspinal muscles where chronic pain originates. Enhanced circulation delivers oxygen and nutrients for tissue repair whilst removing inflammatory waste that perpetuates pain cycles. Your body's natural pain-relieving mechanisms activate more efficiently, breaking the inflammation-pain feedback loop without relying on medications.</p>
+        <h3>Pain Relief — Back &amp; Spine Pain</h3>
+        <p>Back and spinal pain is fundamentally an inflammatory problem. Pro-inflammatory cytokines flood damaged tissue, creating swelling that restricts blood flow and sensitises nerve endings — turning minor issues into chronic, debilitating pain. Red and near-infrared light penetrate deep into spinal tissues and surrounding musculature to interrupt this cycle at its source. These wavelengths downregulate pro-inflammatory cytokines whilst dramatically increasing blood flow to damaged areas. Enhanced circulation delivers oxygen and nutrients for tissue repair whilst removing inflammatory waste that perpetuates pain signals. The result is measurable pain reduction, improved mobility, and faster tissue healing — without relying on pain medications that mask symptoms without addressing the underlying inflammation.</p>
       </div>
     </div>
   </div>
@@ -175,18 +188,18 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
-        <div class="pc-name">Pain Relief &amp; Inflammation Reduction</div>
+        <div class="pc-name">Pain Relief — Back &amp; Spine Pain</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower back/spine</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower back / spine</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the SOLO 2.0 close to your lower back, focusing on areas of greatest pain. You can sit facing away from the panel or lie on your side. The closer distance ensures maximum penetration to deep spinal tissues where inflammation originates. For upper back or neck pain, adjust position accordingly.</div>
-        <div class="pc-tip">Tip: Morning or evening sessions work equally well for pain relief. Consistency matters more than timing — daily use builds cumulative anti-inflammatory effects that progressively reduce pain intensity.</div>
-        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
+        <div class="pc-note">Position the SOLO 2.0 close to your lower back or spine where pain is most intense. Sit or stand comfortably with the panel at 10 cm distance, allowing the light to penetrate deep into spinal tissues and surrounding muscle. You can treat the same area daily or alternate between left and right sides of your spine for comprehensive coverage.</div>
+        <div class="pc-tip">Tip: Apply heat before your session to increase blood flow, then use red light therapy immediately after. This combination amplifies tissue penetration and accelerates inflammation reduction.</div>
+        <div><span class="badge">✦ Results: days to weeks</span></div>
       </div>
     </div>
   </div>
@@ -198,7 +211,7 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For pain relief and inflammation reduction, daily consistency matters most — morning sessions can help reduce inflammation before activity, while evening sessions support overnight healing. For recovery and tissue repair, use the panel after activity gives your tissue time to respond. Aim for consistency — the best time is the one you'll stick to.</p>
+        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For pain relief and recovery, morning or early afternoon sessions give your tissue time to respond before activity. For back pain specifically, many users find that morning sessions reduce stiffness throughout the day, whilst evening sessions help manage accumulated discomfort before bed. Aim for consistency — the best time is the one you'll stick to.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
@@ -231,18 +244,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to pain relief, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Muscle recovery</div><div class="ben-txt">Enhanced tissue repair and reduced inflammation support faster recovery from training or physical activity, reducing soreness and improving resilience.</div></div>
-      <div class="ben"><div class="ben-lbl">Energy levels</div><div class="ben-txt">Chronic pain and inflammation drain energy. By reducing inflammation and enhancing mitochondrial function, many users report sustained energy improvements.</div></div>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Pain often disrupts sleep, and reduced pain intensity naturally supports deeper, more restorative sleep cycles.</div></div>
-      <div class="ben"><div class="ben-lbl">Mobility</div><div class="ben-txt">As inflammation decreases and tissue heals, flexibility and range of motion often improve, making daily movement and exercise more comfortable.</div></div>
-      <div class="ben"><div class="ben-lbl">Mood &amp; resilience</div><div class="ben-txt">Chronic pain significantly impacts mental health. Genuine pain relief supports improved mood, reduced stress, and better overall wellbeing.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary pain relief goal, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
+      <div class="ben"><div class="ben-lbl">Muscle recovery</div><div class="ben-txt">Red and NIR light accelerate muscle tissue repair, reduce soreness after training or activity, and enhance recovery between sessions — supporting faster return to normal function.</div></div>
+      <div class="ben"><div class="ben-lbl">Inflammation reduction</div><div class="ben-txt">Systemic inflammatory markers decrease with regular use, supporting not just pain management but overall immune and metabolic health.</div></div>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Reduced pain and improved circulation support better sleep onset and quality — especially important for pain sufferers whose discomfort often disrupts rest.</div></div>
+      <div class="ben"><div class="ben-lbl">Mobility &amp; function</div><div class="ben-txt">As pain decreases and tissue heals, mobility improves naturally, allowing you to move with greater ease and rebuild strength without limitation.</div></div>
+      <div class="ben"><div class="ben-lbl">Energy levels</div><div class="ben-txt">Mitochondrial stimulation from NIR exposure boosts ATP production throughout your body, reducing the fatigue that often accompanies chronic pain.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Gale, G. D. et al. (2006)</div><div class="ref-body">A controlled trial demonstrating 50% reduction in chronic back pain intensity compared to placebo groups using 850nm NIR light. <em>Pain Research Management.</em></div></div>
-      <div class="ref"><div class="ref-auth">Pinto, F. E. et al. (2018)</div><div class="ref-body">Confirms that red and NIR light therapy significantly reduces inflammatory markers (IL-6) by 30% after just one session, addressing root causes of pain. <em>Lasers in Surgery and Medicine.</em></div></div>
-      <div class="ref"><div class="ref-auth">Salehpour, F. et al. (2019)</div><div class="ref-body">Shows superior efficacy of NIR light for joint pain relief with an effect size (SMD) of 0.96 from consistent treatments. <em>BMC Musculoskeletal Disorders.</em></div></div>
-      <div class="ref"><div class="ref-auth">Hamblin, M. R. et al. (2023)</div><div class="ref-body">Meta-analysis confirming red light therapy's effectiveness for rheumatoid arthritis with 70% reduction in pain and 38% improvement in morning stiffness. <em>Journal of Rheumatology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Gale et al. (2006)</div><div class="ref-body">Demonstrated that red and NIR light therapy produced a 50% reduction in chronic back pain intensity compared to placebo, with participants receiving one treatment per week for 6 weeks. <em>Pain Research and Management.</em></div></div>
+      <div class="ref"><div class="ref-auth">Pinto et al. (2018)</div><div class="ref-body">Found that a single session of red and NIR light therapy reduced systemic inflammatory marker IL-6 by 30%, confirming the anti-inflammatory mechanism underlying pain relief. <em>Lasers in Surgery and Medicine.</em></div></div>
+      <div class="ref"><div class="ref-auth">Salehpour et al. (2019)</div><div class="ref-body">Showed that red light therapy was superior to sham treatment for relieving arthritis-related joint pain, with superior effect sizes when applied 3 times per week for 4 weeks. <em>BMC Musculoskeletal Disorders.</em></div></div>
+      <div class="ref"><div class="ref-auth">Hamblin et al. (2023)</div><div class="ref-body">Comprehensive review demonstrating that patients with rheumatoid arthritis experienced a 70% decrease in pain and 38% improvement in morning stiffness after 4 weeks of treatment. <em>Journal of Rheumatology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Ferraresi et al. (2015)</div><div class="ref-body">Demonstrated 50% reduction in delayed onset muscle soreness (DOMS) following red light therapy post-intense muscle training, supporting faster recovery from physical stress. <em>University of Western Sydney Study.</em></div></div>
     </div>
   </div>
 
