@@ -5,7 +5,6 @@
 @font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
-
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
 
@@ -18,7 +17,6 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -31,29 +29,23 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
-/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
-/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
-/* GOALS BOX */
-
-/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
-/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -65,29 +57,24 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
-/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
-/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
-/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
-/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
-/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -165,12 +152,16 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Fat Loss — Stubborn Belly Fat</h3>
-        <p>Your primary goal. Targeting mobilisation and reduction of stubborn adipose tissue in the abdominal area through enhanced cellular energy and fat cell membrane permeability.</p>
+        <h3>Sleep Quality &amp; Circadian Regulation</h3>
+        <p>Restoring deep, uninterrupted sleep by regulating your body's natural sleep-wake cycle. You're currently experiencing fragmented sleep with night-time waking — red light therapy helps restore the circadian alignment and melatonin production needed for continuous, restorative rest.</p>
       </div>
       <div class="sci">
-        <h3>Skin Health</h3>
-        <p>Supporting skin quality, firmness, and overall complexion through stimulated collagen production and improved microcirculation.</p>
+        <h3>Anti-Aging &amp; Skin Rejuvenation</h3>
+        <p>Stimulating collagen production and reducing fine lines through targeted red and NIR light exposure to support skin firmness and youthful texture.</p>
+      </div>
+      <div class="sci">
+        <h3>Eczema &amp; Dermatitis</h3>
+        <p>Calming inflamed, reactive skin by accelerating barrier repair, reducing itching, and breaking the inflammatory cycle that perpetuates eczema flare-ups.</p>
       </div>
     </div>
   </div>
@@ -181,12 +172,16 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Fat Loss — Stubborn Belly Fat</h3>
-        <p>Stubborn fat resists diet and exercise because fat cells tightly hold stored triglycerides — your body struggles to access and burn them. Red and near-infrared light creates temporary pores in fat cell membranes, causing them to release stored fat into your bloodstream where it becomes available as fuel. Combined with exercise, your body can access and burn this mobilised fat instead of it remaining locked away. Applied to specific zones like the abdomen, red light helps release fat from those exact locations. When paired with movement and nutrition, this creates genuine fat loss from treated areas.</p>
+        <h3>Sleep Quality &amp; Circadian Regulation</h3>
+        <p>Modern life disrupts your natural sleep-wake cycle. Blue light from screens suppresses melatonin production by up to 85%, confusing your brain into thinking it's midday even at midnight. This circadian disruption causes poor sleep onset and fragmented sleep throughout the night. Red and near-infrared light work with your biology in a completely different way — unlike blue light, these wavelengths stimulate your pineal gland to produce melatonin naturally whilst enhancing mitochondrial function in brain cells regulating circadian rhythms. Evening red light exposure signals "sunset" to your brain, initiating natural wind-down. Enhanced cellular energy means sleep regulatory systems function efficiently, allowing you to fall asleep faster and stay asleep through the night. The result is faster sleep onset, improved sleep efficiency with more time actually asleep, deeper restorative phases, and better morning alertness.</p>
       </div>
       <div class="sci">
-        <h3>Skin Health</h3>
-        <p>Red and near-infrared wavelengths penetrate the dermis to stimulate fibroblasts — the cells responsible for producing collagen and elastin. This improves skin firmness, reduces fine lines, and restores a more youthful texture. Enhanced circulation from NIR exposure delivers more nutrients to skin cells, accelerating the natural repair and renewal cycle. The 630nm wavelength in particular helps improve overall skin tone and radiance by promoting even cellular turnover.</p>
+        <h3>Anti-Aging &amp; Skin Rejuvenation</h3>
+        <p>Red and near-infrared wavelengths penetrate the dermis to stimulate fibroblasts — the cells responsible for producing collagen and elastin. This directly reduces the appearance of fine lines and wrinkles, improves skin firmness, and restores a more youthful texture. Enhanced circulation from NIR exposure delivers more nutrients to skin cells, accelerating the natural repair and renewal cycle.</p>
+      </div>
+      <div class="sci">
+        <h3>Eczema &amp; Dermatitis</h3>
+        <p>Eczema is a broken skin barrier problem: your skin can't hold moisture, inflammatory signals run wild, and hypersensitive nerve endings create that relentless itch-scratch cycle. Red light therapy tackles this on multiple fronts. It accelerates skin barrier repair, helping rebuild your protective "shield" to retain moisture effectively. It also calms overactive nerve endings, directly reducing itching and breaking the scratch reflex that worsens eczema. Clinical trials show fewer flare-ups, reduced inflammation, and significantly improved sleep from less night-time itching.</p>
       </div>
     </div>
   </div>
@@ -196,32 +191,46 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
-        <div class="pc-name">Fat Loss — Stubborn Belly Fat</div>
+        <div class="pc-name">Sleep Quality &amp; Circadian Regulation</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Abdomen</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm+</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the SOLO 2.0 15 cm from your bare abdomen. Sit comfortably and keep the panel steady for the full 20 minutes. For best results, use this session immediately before light exercise — a 15–20 minute walk or gentle movement allows your body to mobilise and burn the released fat.</div>
-        <div class="pc-tip">Tip: Consistency is key. The best results come from regular sessions paired with movement. Even a short walk after each session significantly enhances fat mobilisation.</div>
-        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
+        <div class="pc-note">Use your SOLO 2.0 in the evening, 2 hours before bed. Sit or stand facing the panel at 30 cm or greater distance. You can have your eyes open — the light is gentle at this distance and actually benefits your eyes. This timing mirrors natural sunset wavelengths, signalling your brain that it's time to wind down and produce melatonin naturally.</div>
+        <div class="pc-tip">Tip: Consistency is key for sleep. Use at the same time each evening to anchor your circadian rhythm, even on weekends.</div>
+        <div><span class="badge">✦ Results: 3–7 days</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Skin Health</div>
+        <div class="pc-name">Anti-Aging &amp; Skin Rejuvenation</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">2–3× / week</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
           <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Sit facing the panel with clean, bare skin. Close your eyes or use the included goggles. The SOLO 2.0 delivers full facial coverage at this distance. Can be combined with your abdominal fat loss sessions on the same day — complete your belly fat protocol first, then move to facial treatment.</div>
+        <div class="pc-note">Sit facing the panel with clean, bare skin. Close your eyes or use the included goggles. The SOLO 2.0 delivers full facial coverage at this distance — stay still and let it work. Can be combined with your evening sleep protocol in the same session — use 15 minutes at 30 cm+ for sleep, then immediately move to 30 cm for 10 minutes of anti-ageing focus if desired.</div>
         <div class="pc-tip">Tip: Apply serums or moisturiser immediately after — skin absorbs active ingredients more effectively post-session.</div>
-        <div><span class="badge">✦ Results visible: 6–8 weeks</span></div>
+        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Eczema &amp; Dermatitis</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected areas</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Position the SOLO 2.0 at 20 cm from affected skin areas to keep the skin cool whilst maximising therapeutic penetration. This distance is ideal for managing eczema flare-ups without thermal stress. If you have eczema on your face or neck, position the panel to target these areas directly.</div>
+        <div class="pc-tip">Tip: Use this protocol during active flare-ups, or maintain 3× weekly even during calm periods to prevent recurrence and strengthen your skin barrier.</div>
+        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
       </div>
     </div>
   </div>
@@ -233,7 +242,7 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>For fat loss goals, morning or early afternoon sessions are ideal — they give your body time to mobilise and burn the released fat throughout the day with natural activity. For skin health, any consistent time works well. The best time is the one you'll stick to regularly. Aim for consistency — regular sessions deliver far better results than sporadic use.</p>
+        <p>For your sleep goal, Leah, evening sessions are ideal — use your SOLO 2.0 about 2 hours before bed to signal "sunset" to your brain and support natural melatonin production. For your skin goals (anti-ageing and eczema), morning or early afternoon works well. You can combine them easily: use your device in the evening for sleep support, and add morning or afternoon sessions for skin rejuvenation. The best protocol is the one you'll stick to consistently.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
@@ -267,18 +276,18 @@
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
       <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Energy levels</div><div class="ben-txt">Red and NIR light boost mitochondrial ATP production, supporting sustained energy throughout the day and reducing afternoon fatigue — particularly beneficial when combined with regular movement.</div></div>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep — especially when used in the morning or early evening.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting overall cellular health and recovery.</div></div>
-      <div class="ben"><div class="ben-lbl">Muscle tone</div><div class="ben-txt">Enhanced ATP production in muscle tissue supports strength and definition, particularly when combined with regular exercise and resistance training.</div></div>
-      <div class="ben"><div class="ben-lbl">Joint comfort</div><div class="ben-txt">Near-infrared penetration supports healthy joint function and comfort by reducing inflammation and enhancing cellular repair in joint tissues.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; anxiety</div><div class="ben-txt">Red and NIR light enhance mitochondrial function in neurons responsible for mood regulation, supporting better stress resilience and emotional balance — particularly valuable given the mood disruption that sleep fragmentation often causes.</div></div>
+      <div class="ben"><div class="ben-lbl">Energy levels</div><div class="ben-txt">Better sleep quality combined with enhanced mitochondrial ATP production throughout the day means sustained energy without afternoon crashes. You'll likely notice improved daytime alertness within the first few weeks.</div></div>
+      <div class="ben"><div class="ben-lbl">Wound healing</div><div class="ben-txt">Red light accelerates tissue repair by stimulating collagen synthesis and reducing inflammation, helping minor cuts, scrapes, or eczema-related skin damage heal faster and with less visible scarring.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting recovery and overall cellular health — including better skin perfusion for that radiant glow.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses over time, particularly important during eczema flare-ups.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Jackson, R. F. et al. (2011)</div><div class="ref-body">Combining red light therapy with exercise led to 444% more fat loss in treated areas compared to exercise alone over 20 weeks. <em>Obesity Research.</em></div></div>
-      <div class="ref"><div class="ref-auth">de Oliveira, H. A. et al. (2017)</div><div class="ref-body">Found a 2.15 cm reduction in waist circumference after 4 weeks of red light treatment with 3 sessions per week. <em>Federal University of São Paulo.</em></div></div>
+      <div class="ref"><div class="ref-auth">Morita et al. (2018)</div><div class="ref-body">Demonstrated that red and NIR light therapy decreases time to fall asleep by 79.27%, improving overall sleep latency significantly. <em>Journal of Photochemistry and Photobiology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Zhao et al. (2012)</div><div class="ref-body">Shows that red and NIR light exposure can help regulate circadian rhythms and melatonin production, supporting deeper sleep. <em>Journal of Athletic Training.</em></div></div>
       <div class="ref"><div class="ref-auth">Wunsch &amp; Matuschka (2014)</div><div class="ref-body">A controlled trial confirming that red and NIR light significantly reduce wrinkles and improve skin smoothness by stimulating collagen and elastin production. <em>Photomedicine and Laser Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Avci et al. (2013)</div><div class="ref-body">Demonstrates how red and NIR light therapy enhances collagen and elastin production, improving skin tone, reducing fine lines, and smoothing texture. <em>Seminars in Cutaneous Medicine and Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Barolet &amp; Boucher (2008)</div><div class="ref-body">Shows visible improvements in skin elasticity and reduced photodamage after consistent LED therapy, supporting its use for skin rejuvenation. <em>Photomedicine and Laser Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Morita et al. (1993)</div><div class="ref-body">Japanese Journal of Clinical Dermatology study showing 79% of eczema patients reported reduced itching and 62% showed visible improvement in symptoms from NIR light therapy. <em>Japanese Journal of Clinical Dermatology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Taub et al. (2013)</div><div class="ref-body">Demonstrated 47% reduction in eczema severity scores (SCORAD) and significantly decreased leathery skin patches from consistent LED therapy. <em>Journal of Drugs in Dermatology.</em></div></div>
     </div>
   </div>
 
