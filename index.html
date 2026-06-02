@@ -252,6 +252,7 @@
     .cat-grid, .sub-grid, .slider-row { grid-template-columns:1fr; }
   }
 </style>
+<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=YeanvQ"></script>
 </head>
 <body>
 
@@ -928,6 +929,22 @@ async function submitForm() {
     });
   } catch (e) {
     console.warn('Sheets submission failed, saved to sessionStorage as fallback.', e);
+  }
+
+  // Track Guide Submitted in Klaviyo
+  try {
+    var _learnq = window._learnq || [];
+    if (EMAIL_PARAM) {
+      _learnq.push(['identify', { '$email': EMAIL_PARAM }]);
+    }
+    _learnq.push(['track', 'Guide Submitted', {
+      order_ref: ORDER_REF,
+      customer_name: CUSTOMER_NAME,
+      devices: DEVICES.join(', '),
+      email: EMAIL_PARAM
+    }]);
+  } catch (kErr) {
+    console.warn('Klaviyo tracking failed:', kErr);
   }
 
   // Show success
