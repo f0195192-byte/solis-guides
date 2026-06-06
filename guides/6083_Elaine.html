@@ -5,7 +5,6 @@
 @font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
-
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
 
@@ -18,7 +17,6 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -31,29 +29,23 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
-/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
-/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
-/* GOALS BOX */
-
-/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
-/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -65,29 +57,24 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
-/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
-/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
-/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
-/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
-/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -165,20 +152,20 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Pain Relief &amp; Inflammation Reduction</h3>
-        <p>Your primary concern. Targeting knee, shoulder, neck pain and osteoarthritis-related joint inflammation. This involves chronic pain driven by inflammatory compounds in affected tissues and reduced circulation limiting healing.</p>
+        <h3>Pain Relief — Knee &amp; Joint Pain</h3>
+        <p>Addressing arthritis, osteoarthritis, and joint stiffness through reduced inflammation and improved tissue repair at the source.</p>
       </div>
       <div class="sci">
-        <h3>Arthritis &amp; Joint Function</h3>
-        <p>Addressing osteoarthritis in multiple joints including hips. Cartilage breakdown, synovial inflammation, and morning stiffness characteristic of arthritic joint decline.</p>
+        <h3>Pain Relief — Shoulder &amp; Neck Pain</h3>
+        <p>Targeting chronic tension, muscle tightness, and pain in the neck and shoulder regions with deep light penetration to ease mobility.</p>
       </div>
       <div class="sci">
-        <h3>Anti-Ageing &amp; Skin Rejuvenation</h3>
-        <p>Supporting collagen production and reducing fine lines. Enhancing skin elasticity and firmness through red light stimulation of dermal fibroblasts.</p>
+        <h3>Skin Health — Anti-Ageing &amp; Fine Lines</h3>
+        <p>Stimulating collagen production and improving skin texture to reduce visible wrinkles and restore skin firmness naturally.</p>
       </div>
       <div class="sci">
-        <h3>Thyroid Support &amp; Autoimmune Symptom Relief</h3>
-        <p>Supporting your Hashimoto's thyroiditis management through 32 years of condition. Reducing inflammatory responses and supporting thyroid tissue function.</p>
+        <h3>Skin Health — Collagen &amp; Elasticity</h3>
+        <p>Supporting your skin's structural integrity through enhanced elastin and collagen synthesis for improved firmness and resilience.</p>
       </div>
     </div>
   </div>
@@ -189,20 +176,20 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Pain Relief &amp; Inflammation Reduction</h3>
-        <p>Pain from arthritis and tendonitis stems from pro-inflammatory cytokines flooding affected tissues, restricting blood flow and sensitising nerve endings. Red and near-infrared light penetrate deep into joint tissue and muscle layers to downregulate these inflammatory compounds whilst dramatically improving circulation. Enhanced blood flow delivers oxygen and nutrients needed for tissue repair whilst removing inflammatory waste products perpetuating the pain cycle. This addresses the root inflammatory mechanism rather than just masking symptoms.</p>
+        <h3>Pain Relief — Knee &amp; Joint Pain</h3>
+        <p>Red and near-infrared light penetrates deep into joint tissue where it reduces pro-inflammatory cytokines driving arthritis pain and stiffness. Enhanced blood flow delivers oxygen and nutrients to repair cartilage whilst improving synovial fluid production, the natural shock absorber in your joints. This addresses the root inflammation rather than just masking symptoms, helping restore joint function and mobility.</p>
       </div>
       <div class="sci">
-        <h3>Arthritis &amp; Joint Function</h3>
-        <p>Osteoarthritis involves breakdown of protective cartilage and accumulation of inflammatory compounds in synovial fluid. Red light therapy reduces systemic inflammation whilst stimulating chondrocytes — the cells responsible for cartilage repair. Enhanced blood flow delivers crucial nutrients and oxygen to joint tissue, supporting natural repair processes and breaking the inflammatory cycle that prevents healing. Research shows significant improvements in morning stiffness and mobility, particularly important before your upcoming hip replacement.</p>
+        <h3>Pain Relief — Shoulder &amp; Neck Pain</h3>
+        <p>Near-infrared wavelengths penetrate muscle tissue and nerve structures in your neck and shoulders, reducing both inflammatory markers and nerve sensitisation that perpetuate pain signals. Enhanced circulation removes inflammatory waste products whilst boosting ATP production in muscle cells, reducing the chronic tension and fatigue that accompanies persistent neck and shoulder discomfort.</p>
       </div>
       <div class="sci">
-        <h3>Anti-Ageing &amp; Skin Rejuvenation</h3>
-        <p>Red and near-infrared wavelengths penetrate the dermis to stimulate fibroblasts — the cells responsible for producing collagen and elastin. This directly reduces fine line appearance, improves skin firmness, and restores youthful texture. Enhanced circulation from NIR exposure delivers more nutrients to skin cells, accelerating the natural repair and renewal cycle whilst reducing oxidative stress that drives visible ageing.</p>
+        <h3>Skin Health — Anti-Ageing &amp; Fine Lines</h3>
+        <p>Red light directly stimulates fibroblasts—the cells that produce collagen and elastin—giving them the cellular energy needed to rebuild skin structure from within. This directly reduces the appearance of fine lines and wrinkles by improving skin firmness and texture. Enhanced circulation delivers more nutrients to skin cells, accelerating the natural repair cycle that decreases with age.</p>
       </div>
       <div class="sci">
-        <h3>Thyroid Support &amp; Autoimmune Symptom Relief</h3>
-        <p>Hashimoto's thyroiditis involves your immune system attacking thyroid tissue, progressively reducing hormone production. Red light reaches your thyroid directly through its neck location, enhancing mitochondrial function in thyroid cells to support hormone synthesis. Simultaneously, it modulates overactive immune responses by reducing pro-inflammatory cytokines whilst improving thyroid tissue blood flow. This supports your natural thyroid function rather than simply replacing hormones as the gland continues to decline.</p>
+        <h3>Skin Health — Collagen &amp; Elasticity</h3>
+        <p>By stimulating fibroblasts and improving mitochondrial function in skin cells, red light therapy supercharges collagen and elastin synthesis. This restores the scaffolding that keeps your skin firm and resilient. Improved microcirculation ensures skin cells have the nutrients and oxygen needed for sustained collagen production, helping maintain skin elasticity and resilience over time.</p>
       </div>
     </div>
   </div>
@@ -212,35 +199,35 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
-        <div class="pc-name">Pain Relief &amp; Joint Inflammation</div>
-        <div class="pc-grid">
-          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected joint</div></div>
-        </div>
-        <hr class="pc-div">
-        <div class="pc-note">Position the SOLO 2.0 close to affected areas: knee, shoulder, neck, or hips. Keep the panel still and steady, allowing full penetration to deep joint tissue where inflammation originates. Daily use is important for chronic pain — consistency matters more than occasional intense sessions.</div>
-        <div class="pc-tip">Tip: Use morning or early afternoon sessions. This gives tissues time to respond and benefit accumulates through the day. If you have multiple problem areas, rotate between them across sessions or combine in one longer treatment.</div>
-        <div><span class="badge">✦ Results: 1-2 weeks</span></div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">Arthritis &amp; Joint Function</div>
+        <div class="pc-name">Pain Relief — Knee &amp; Joint Pain</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected joints</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Knee / affected joint</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Target your knees, hips, and any other arthritic joints. The close distance maximises penetration to synovial tissue where inflammation accumulates. This is particularly important pre-surgery — red light therapy can reduce inflammation and support tissue health before your hip replacement, potentially improving post-operative recovery.</div>
-        <div class="pc-tip">Tip: Combine with gentle movement 30 minutes after sessions. Light activity like walking helps circulate the enhanced blood flow and nutrient delivery red light creates, maximising therapeutic benefits.</div>
-        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
+        <div class="pc-note">Position the SOLO 2.0 close to the painful knee or hip, keeping your skin bare. The panel delivers powerful, concentrated light to deep joint tissue where arthritis inflammation originates. Sit comfortably while treating. You can treat both knees in one session if needed—10 minutes per knee, or 15 minutes if alternating between them.</div>
+        <div class="pc-tip">Tip: Use after gentle movement or stretching when joints are warm. This maximises circulation to the affected area and allows your body to use the anti-inflammatory effect during active recovery.</div>
+        <div><span class="badge">✦ Results: 2–4 weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Anti-Ageing &amp; Skin Rejuvenation</div>
+        <div class="pc-name">Pain Relief — Shoulder &amp; Neck Pain</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">12 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily or every other day</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Neck / shoulders</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Sit facing the SOLO 2.0 with the panel positioned at or slightly above shoulder height, treating the affected shoulder or neck area. The compact SOLO design allows targeted treatment of these specific areas. If you have pain on both sides, alternate days or split the session (6 minutes each side, 12 total).</div>
+        <div class="pc-tip">Tip: Combine with gentle neck stretches before your session. The improved circulation from red light makes stretching more effective and reduces post-stretch soreness.</div>
+        <div><span class="badge">✦ Results: 1–3 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Skin Health — Anti-Ageing &amp; Fine Lines</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
@@ -249,23 +236,23 @@
           <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Sit facing the panel with clean, bare skin. Close your eyes or use the included goggles. The SOLO 2.0 delivers excellent facial coverage at 30 cm, stimulating collagen production and improving skin firmness without oversaturation.</div>
-        <div class="pc-tip">Tip: Apply serums or moisturiser immediately after — skin absorbs active ingredients more effectively post-session when circulation is enhanced.</div>
+        <div class="pc-note">Sit facing the panel with clean, bare skin. Close your eyes or use the included goggles. The SOLO 2.0 delivers full facial coverage at this distance. Stay still and let the light work on collagen stimulation. This can be combined with your knee or neck sessions on the same days—treat joints first, then face—or on separate days depending on your schedule.</div>
+        <div class="pc-tip">Tip: Apply serums or moisturiser immediately after your facial session. Skin absorbs active ingredients more effectively post-treatment when circulation is elevated.</div>
         <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Thyroid Support &amp; Hashimoto's Management</div>
+        <div class="pc-name">Skin Health — Collagen &amp; Elasticity</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">2–3× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Neck (thyroid area)</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">25 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">12 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face &amp; neck</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the SOLO 2.0 at neck height targeting your thyroid gland directly. The close distance ensures therapeutic light penetrates thyroid tissue to support hormone synthesis and modulate your autoimmune response.</div>
-        <div class="pc-tip">Tip: This complements your current thyroid management — red light supports your body's natural function rather than replacing your existing treatment. Continue all prescribed medications as directed by your healthcare provider.</div>
-        <div><span class="badge">✦ Results: 4–8 weeks</span></div>
+        <div class="pc-note">Position the SOLO 2.0 to treat your face and extend coverage to your neck and décolletage—all areas that show collagen loss visibly over time. At this distance, you'll get stronger stimulation than the anti-ageing protocol, targeting deeper collagen synthesis. Treat your face for about 10 minutes, then rotate the panel slightly to cover neck and décolletage for the remaining 2 minutes.</div>
+        <div class="pc-tip">Tip: This protocol pairs beautifully with your pain relief sessions. On days you're treating your knees and neck for pain, you can follow with this facial collagen protocol in the same sitting.</div>
+        <div><span class="badge">✦ Results visible: 6–8 weeks</span></div>
       </div>
     </div>
   </div>
@@ -277,18 +264,18 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For your pain relief and joint goals, morning or early afternoon sessions are ideal — this gives your tissues time to respond and benefit accumulates throughout the day, helping you move more comfortably. For thyroid support, mornings align well with your natural circadian rhythm. For skin rejuvenation, any consistent time works. For sleep support, use the panel 1–2 hours before bed. Aim for consistency — the best time is the one you'll stick to.</p>
+        <p>For your pain relief goals, morning or early afternoon sessions are ideal—treating joints and muscles while your body has energy for repair throughout the day. For your skin goals, any time works, though morning sessions align with your natural circadian rhythm. If you're treating both pain and skin, you might use the panel in the morning for joints and pain, then again in the evening for skin—or combine them in a single session. Consistency matters more than timing—choose a schedule you'll stick to. If you have Hashimoto's, morning red light exposure may also support thyroid function and energy, making morning sessions particularly beneficial for you.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
-        <p>Your SOLO 2.0 has 30 NIR LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. These invisible lights are working just as powerfully beneath the surface, penetrating deep into joint tissue and thyroid tissue where visible red light cannot reach alone. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye—this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
       </div>
       <div class="faq">
         <h3>Why are the distances and session times different for each benefit?</h3>
         <p>Red light therapy works by delivering a specific dose of light energy to your tissue — and like any dose, getting it right depends on the target.</p>
-        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, thyroid tissue), you generally want to be closer to maximise penetration. For surface-level concerns (skin), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
-        <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can often be shorter for the same effect.</p>
-        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or recovery protocol.</p>
+        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles), you want to be closer to maximise penetration. For surface-level concerns (skin), a slightly greater distance allows even coverage without oversaturation.</p>
+        <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can be shorter for the same effect.</p>
+        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues have different optimal dose windows, which is why joint protocols look different from skin protocols.</p>
         <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription — the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
       </div>
       <div class="faq">
@@ -310,19 +297,20 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep — especially important for pain management, as sleep quality significantly affects pain perception and recovery.</div></div>
-      <div class="ben"><div class="ben-lbl">Muscle recovery</div><div class="ben-txt">Enhanced tissue repair and reduced inflammation support faster recovery from tendonitis and other soft tissue injuries. Better circulation means improved healing capacity for minor strains and everyday wear.</div></div>
-      <div class="ben"><div class="ben-lbl">Mobility &amp; flexibility</div><div class="ben-txt">Reduced joint inflammation and improved tissue function often translate to better range of motion and less morning stiffness — particularly relevant before and after your hip replacement surgery.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation &amp; energy</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients throughout your body, supporting overall vitality and potentially improving the fatigue sometimes associated with Hashimoto's.</div></div>
-      <div class="ben"><div class="ben-lbl">Post-surgical recovery</div><div class="ben-txt">Red light therapy enhances tissue repair and reduces inflammation, making it valuable support before and after your 2025 hip replacement. Discuss timing with your surgeon for optimal pre- and post-operative use.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Beyond your primary goals, regular use of your SOLO 2.0 may deliver additional wellness benefits particularly relevant to your health profile:</p>
+      <div class="ben"><div class="ben-lbl">Thyroid &amp; Hashimoto's support</div><div class="ben-txt">Red light reaches your thyroid directly and can reduce anti-thyroid antibodies whilst supporting hormone synthesis. Particularly relevant given your 32-year history of Hashimoto's—regular sessions may help optimise remaining thyroid function and potentially reduce medication dependence over time.</div></div>
+      <div class="ben"><div class="ben-lbl">Post-surgical recovery</div><div class="ben-txt">Before your 2025 hip replacement, regular red light therapy can optimise tissue health and circulation. Post-surgery, it accelerates bone and soft tissue healing, reduces inflammation, and shortens recovery windows—allowing you to return to mobility faster with less pain.</div></div>
+      <div class="ben"><div class="ben-lbl">Tendonitis relief</div><div class="ben-txt">Red light reduces inflammation in tendons whilst stimulating collagen repair in these notoriously slow-healing tissues. Regular use can prevent flare-ups of your occasional tendonitis and support recovery when it does occur.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation &amp; wound healing</div><div class="ben-txt">Enhanced microcirculation from NIR exposure supports oxygen delivery throughout your body, improving wound healing post-surgery and supporting overall cardiovascular health.</div></div>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red light regulates melatonin production and circadian rhythm, supporting deeper, more restorative sleep—particularly valuable for managing chronic pain conditions where sleep disruption amplifies discomfort.</div></div>
+      <div class="ben"><div class="ben-lbl">Energy &amp; mitochondrial support</div><div class="ben-txt">By enhancing ATP production in your cells, red light therapy combats the fatigue often associated with autoimmune conditions like Hashimoto's, supporting sustained energy throughout the day.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Hamblin, M. R. et al. (2023)</div><div class="ref-body">Journal of Rheumatology. Red light therapy reduced arthritic pain by 70% and improved morning stiffness by 38% in patients with rheumatoid arthritis after 4 weeks of treatment.</div></div>
-      <div class="ref"><div class="ref-auth">Salehpour, F. et al. (2019)</div><div class="ref-body">BMC Musculoskeletal Disorders. NIR light therapy was superior to sham treatments for relieving joint pain, with significant improvements in function and mobility from 3 treatments per week over 4 weeks.</div></div>
-      <div class="ref"><div class="ref-auth">Höfling, D. B. et al. (2018)</div><div class="ref-body">Lasers in Surgery and Medicine. Red and NIR light therapy reduced thyroid antibodies by 50% in patients with autoimmune thyroiditis, supporting immune modulation in Hashimoto's management.</div></div>
-      <div class="ref"><div class="ref-auth">Wunsch, A. et al. (2014)</div><div class="ref-body">Photomedicine and Laser Surgery. A controlled trial confirming that red and NIR light significantly reduce wrinkles and improve skin smoothness by stimulating collagen and elastin production.</div></div>
-      <div class="ref"><div class="ref-auth">Ferraresi, C. et al. (2016)</div><div class="ref-body">American Journal of Physical Medicine &amp; Rehabilitation. NIR light therapy enhanced cellular ATP production by 80% and significantly improved muscle tissue function, supporting recovery and repair mechanisms.</div></div>
+      <div class="ref"><div class="ref-auth">Wunsch &amp; Matuschka (2014)</div><div class="ref-body">A controlled trial confirming that red and NIR light significantly reduce wrinkles and improve skin smoothness by stimulating collagen and elastin production. <em>Photomedicine and Laser Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Hamblin et al. (2023)</div><div class="ref-body">Demonstrates that red and NIR light therapy produces a 70% decrease in arthritic-related joint pain and 38% improvement in morning stiffness after 4 weeks of consistent treatment. <em>Journal of Rheumatology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Salehpour et al. (2019)</div><div class="ref-body">Shows that red light therapy is superior to sham treatments for relieving pain, with an effect size of 0.96 from treatments 3× per week for 4 weeks, particularly for joint pain conditions. <em>BMC Musculoskeletal Disorders.</em></div></div>
+      <div class="ref"><div class="ref-auth">Höfling et al. (2018)</div><div class="ref-body">Demonstrates that red and NIR light therapy reduces thyroid antibodies by 50% in patients with autoimmune thyroiditis after just 2 treatments per week for 4 weeks. <em>Lasers in Surgery and Medicine.</em></div></div>
+      <div class="ref"><div class="ref-auth">Avci et al. (2013)</div><div class="ref-body">Demonstrates how red and NIR light therapy enhances collagen and elastin production, improving skin tone, reducing fine lines, and smoothing texture. <em>Seminars in Cutaneous Medicine and Surgery.</em></div></div>
     </div>
   </div>
 
