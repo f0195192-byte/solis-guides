@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
+
+*{box-sizing:border-box;margin:0;padding:0}
+.g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
+
+.nav{display:flex;gap:6px;padding:14px 18px;background:#0d0d0d;border-bottom:1px solid #1e1e1e;flex-wrap:wrap}
+.nav button{font-family:'Oakes Grotesk',sans-serif;font-size:10px;font-weight:500;letter-spacing:.06em;padding:5px 11px;border:1px solid #2a2a2a;background:transparent;color:#fff;border-radius:20px;cursor:pointer;transition:all .2s}
+.nav button.on{background:#e8407a;border-color:#e8407a;color:#fff}
+.nav button:hover:not(.on){border-color:#e8407a;color:#e8407a}
+
+.slide{display:none;animation:fi .3s ease}
+.slide.on{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+.cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
+.cover-logo{margin-bottom:52px}
+.cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
+.cover-name{font-family:'Instrument Serif',serif;font-size:42px;font-style:italic;line-height:1;color:#fff;margin-bottom:0}
+.cover-name-rule{width:44px;height:1px;background:#e8407a;margin:14px 0 16px}
+.cover-device{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:32px}
+.cover-rule{border:none;border-top:1px solid #1e1e1e;margin:28px 0 22px}
+.cover-inc-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.chk{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:13px;color:#fff}
+.chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.chk-dot svg{width:11px;height:11px}
+
+.pg{background:#0d0d0d;padding:32px 36px 40px}
+.pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
+.pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
+.pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
+.rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
+
+.specs{width:100%;border-collapse:collapse;margin-bottom:22px}
+.specs tr:nth-child(odd) td{background:#141414}
+.specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
+.specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
+.specs td:last-child{color:#fff}
+
+.sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
+.sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
+.sci p{font-size:13px;line-height:1.7;color:#fff}
+
+.pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
+.pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
+.pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
+.pc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.pc-lbl{font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:3px}
+.pc-val{font-size:13px;font-weight:500;color:#fff}
+.pc-div{border:none;border-top:1px solid #1e1e1e;margin-bottom:12px}
+.pc-note{font-size:13px;line-height:1.7;color:#fff}
+.pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
+.badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
+
+.faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
+.faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
+.faq p{font-size:13px;line-height:1.7;color:#fff}
+
+.ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
+.ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
+.ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
+
+.ref{margin-bottom:14px;padding-left:16px;position:relative}
+.ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
+.ref-auth{font-size:13px;font-weight:600;color:#fff}
+.ref-body{font-size:13px;line-height:1.7;color:#fff}
+
+.disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
+.disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
+.disc-box p:last-child{margin-bottom:0}
+
+.closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
+.c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
+.cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
+.cdot{width:6px;height:6px;border-radius:50%;background:#fff;flex-shrink:0}
+.c-sign{font-size:11.5px;color:rgba(255,255,255,.75);max-width:380px;margin:16px auto 0;line-height:1.65}
+
+@media(max-width:600px){
+  .cover{padding:36px 20px}
+  .cover-name{font-size:32px}
+  .cover-eyebrow{font-size:11px}
+  .cover-device{font-size:10px}
+  .pg{padding:24px 20px 32px}
+  .pg-title{font-size:22px}
+  .sci h3,.faq h3{font-size:17px}
+  .nav{padding:10px 12px;gap:5px}
+  .nav button{font-size:9px;padding:4px 9px}
+  .pc-grid{grid-template-columns:repeat(2,1fr)}
+  .specs td{font-size:12px;padding:9px 10px}
+  .ben{flex-direction:column;gap:4px}
+  .ben-lbl{min-width:unset}
+  .disc-box{padding:14px 16px}
+}
+</style>
+
+</head><body><div class="g">
+  <nav class="nav">
+    <button class="on" onclick="show(1)">Cover</button>
+    <button onclick="show(2)">Your device</button>
+    <button onclick="show(3)">Your goals</button>
+    <button onclick="show(4)">How it helps</button>
+    <button onclick="show(5)">Your protocol</button>
+    <button onclick="show(6)">FAQs</button>
+    <button onclick="show(7)">More benefits</button>
+    <button onclick="show(8)">Disclaimer</button>
+  </nav>
+
+  <div class="slide on" id="s1">
+    <div class="cover">
+      <div class="cover-logo">
+        <img src="/assets/solis-logo.png" style="height:42px;display:block">
+      </div>
+      <div class="cover-eyebrow">Personalised Treatment Guide</div>
+      <div class="cover-name">Tiffany</div>
+      <div class="cover-name-rule"></div>
+      <div class="cover-device">Solis SOLO 2.0</div>
+      <div class="cover-rule"></div>
+      <div class="cover-inc-label">Included in your guide</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Information about your new device</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Scientific research for your wellness goals</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Your personalised treatment plan</div>
+    </div>
+  </div>
+
+  <div class="slide" id="s2">
+    <div class="pg">
+      <div class="pg-label">About your product</div>
+      <div class="pg-title">Your Solis SOLO 2.0</div>
+      <hr class="pink-rule">
+      <table class="specs">
+        <tbody><tr><td>The product</td><td>Solis SOLO 2.0</td></tr>
+        <tr><td>LED power</td><td>300W (60 × 5W LEDs)</td></tr>
+        <tr><td>Wavelengths</td><td>Red: 630nm &amp; 660nm &nbsp;|&nbsp; NIR: 810nm, 830nm &amp; 850nm</td></tr>
+        <tr><td>Irradiance</td><td>&gt;180 mW/cm² at 6 inches &nbsp;|&nbsp; ~50 mW/cm² at 30 inches</td></tr>
+        <tr><td>Dimensions</td><td>34.5 × 23 × 9.5 cm &nbsp;|&nbsp; 4.5 kg</td></tr>
+        <tr><td>EMF &amp; safety</td><td>0 EMF at 3+ inches &nbsp;|&nbsp; Anti-EMF casing &nbsp;|&nbsp; FDA/CE standards</td></tr>
+        <tr><td>Warranty</td><td>3 years standard</td></tr>
+        <tr><td>In the box</td><td>Panel, power cable, protective goggles, blue light blockers</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <div class="slide" id="s3">
+    <div class="pg">
+      <div class="pg-label">Your focus areas</div>
+      <div class="pg-title">Your health &amp; wellness goals</div>
+      <hr class="pink-rule">
+      <div class="sci">
+        <h3>Perimenopause Symptoms &amp; Hormonal Balance</h3>
+        <p>Managing the transitional phase where fluctuating hormones cause hot flushes, night sweats, mood instability, brain fog, and sleep disruption. Supporting your body's natural hormonal regulation without HRT.</p>
+      </div>
+      <div class="sci">
+        <h3>Period Pain &amp; Cycle Regulation</h3>
+        <p>Reducing menstrual discomfort and inflammation whilst supporting regular, predictable cycles and improving overall pelvic health.</p>
+      </div>
+      <div class="sci">
+        <h3>Fibromyalgia &amp; Chronic Pain</h3>
+        <p>Managing widespread pain and fatigue from centralised pain amplification by desensitising overactive nerve endings and restoring mitochondrial energy production.</p>
+      </div>
+      <div class="sci">
+        <h3>Nerve Pain &amp; Neuropathy</h3>
+        <p>Addressing burning sensations, tingling, and pain from damaged nerve fibres through enhanced circulation and nerve regeneration support.</p>
+      </div>
+      <div class="sci">
+        <h3>Headaches &amp; Migraines</h3>
+        <p>Reducing headache frequency and severity by improving mitochondrial function, reducing neuroinflammation, and supporting healthy cerebral blood flow.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s4">
+    <div class="pg">
+      <div class="pg-label">The science</div>
+      <div class="pg-title">How red light therapy helps</div>
+      <hr class="pink-rule">
+      <div class="sci">
+        <h3>Perimenopause Symptoms &amp; Hormonal Balance</h3>
+        <p>Declining oestrogen disrupts your hypothalamus (brain's temperature regulation centre), creating the vasomotor instability responsible for hot flushes and night sweats. Red light therapy stabilises these disrupted systems by stimulating beta-endorphin release—your body's natural mood-lifters—whilst modulating autonomic nervous system function. Enhanced mitochondrial function supports stable energy throughout hormonal shifts, whilst improved cerebral blood flow helps with cognitive symptoms like brain fog. This allows your regulatory centres to adapt to hormonal changes more smoothly without HRT.</p>
+      </div>
+      <div class="sci">
+        <h3>Period Pain &amp; Cycle Regulation</h3>
+        <p>Period pain stems from hormonal fluctuations and inflammatory responses in pelvic tissue. Near-infrared light penetrates the abdomen to reach reproductive organs, reducing inflammatory markers like IL-6 whilst modulating immune responses. Red light therapy also helps regulate circadian rhythms and improves reproductive organ blood flow, essentially "resetting" hormonal timing mechanisms. This supports more regular cycles, reduces pain severity, and addresses underlying inflammation without relying on pharmaceutical interventions.</p>
+      </div>
+      <div class="sci">
+        <h3>Fibromyalgia &amp; Chronic Pain</h3>
+        <p>Fibromyalgia means your central nervous system has become hypersensitive—your brain amplifies pain signals, turning normal sensations into widespread chronic pain. Combined with mitochondrial dysfunction causing severe fatigue, you're left exhausted and aching. Red light therapy addresses both core issues: it desensitises overactive nerve endings by recalibrating your pain threshold whilst enhancing mitochondrial function throughout your entire body, boosting ATP production that combats the crushing fatigue characteristic of fibromyalgia.</p>
+      </div>
+      <div class="sci">
+        <h3>Nerve Pain &amp; Neuropathy</h3>
+        <p>Neuropathy means damaged nerve fibres send faulty signals, creating burning sensations, shooting pain, numbness, or "pins and needles" feeling. Poor microcirculation compounds the problem by starving nerves of oxygen and nutrients needed for repair. Near-infrared light stimulates regeneration of damaged nerve axons whilst triggering nitric oxide release that dilates the tiny blood vessels feeding nerve tissue. Enhanced circulation delivers the oxygen and nutrients nerves need whilst removing inflammatory compounds that perpetuate pain signals.</p>
+      </div>
+      <div class="sci">
+        <h3>Headaches &amp; Migraines</h3>
+        <p>Migraines involve neuroinflammation, disrupted mitochondrial function in neurons, and abnormal cerebral blood flow. Near-infrared light penetrates your skull to enhance mitochondrial function in brain tissue, boosting ATP production that supports stable neural activity. Reduced neuroinflammation helps normalise pain pathways whilst improved cerebral blood flow delivers oxygen and nutrients that support healthy brain function. This addresses root mechanisms rather than just masking pain symptoms.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s5">
+    <div class="pg">
+      <div class="pg-label">Your protocol</div>
+      <hr class="pink-rule">
+      <div class="pc">
+        <div class="pc-name">Perimenopause Symptoms &amp; Hormonal Balance</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face &amp; torso</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Sit facing the panel with clean, bare skin—expose your face and chest area for maximum hormonal benefit. The light reaches the brain centres controlling temperature regulation and hormone production. Close your eyes or use included goggles if brightness is uncomfortable.</div>
+        <div class="pc-tip">Tip: Morning sessions work best for perimenopause, as red light mirrors sunrise wavelengths and helps stabilise your circadian rhythm—the foundation of hormonal regulation.</div>
+        <div><span class="badge">✦ Results visible: 2–6 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Period Pain &amp; Cycle Regulation</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily during cycle</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower abdomen</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Position the panel close to your lower abdomen during your period or when experiencing cramping. The NIR wavelengths penetrate deep to reach pelvic tissue and reproductive organs, directly reducing inflammation and supporting healthy blood flow.</div>
+        <div class="pc-tip">Tip: Use daily during your period for maximum pain relief, then 2–3 times weekly outside your cycle to support hormonal regulation and cycle regularity.</div>
+        <div><span class="badge">✦ Results visible: 1–2 cycles</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Fibromyalgia &amp; Chronic Pain</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face or torso</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">For systemic fibromyalgia relief, expose your face or torso. The light reaches brain tissue that controls pain perception and mitochondrial function throughout your central nervous system. Consistency is critical for fibromyalgia—regular sessions recalibrate your pain threshold over time.</div>
+        <div class="pc-tip">Tip: If specific areas ache more intensely, move closer to those areas for additional local treatment in the same session.</div>
+        <div><span class="badge">✦ Results: 4–8 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Nerve Pain &amp; Neuropathy</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected area</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Position the panel close to the area experiencing nerve pain—whether feet, legs, hands, or face. The near-infrared penetrates deep to stimulate nerve regeneration whilst improving microcirculation to starved nerve tissue.</div>
+        <div><span class="badge">✦ Results: 2–6 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Headaches &amp; Migraines</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face (forehead)</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Direct the panel at your forehead to reach brain tissue. For acute migraines, use immediately when you feel one starting. For prevention, use daily in the morning to stabilise mitochondrial function and reduce neuroinflammation that triggers migraines.</div>
+        <div class="pc-tip">Tip: Keep the panel at 30 cm distance for forehead work to ensure even coverage without excessive intensity.</div>
+        <div><span class="badge">✦ Results: Days to weeks</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s6">
+    <div class="pg">
+      <div class="pg-label">Practical questions</div>
+      <div class="pg-title">Getting started</div>
+      <hr class="pink-rule">
+      <div class="faq">
+        <h3>What time of day should I use my Solis SOLO 2.0?</h3>
+        <p>For your perimenopause and hormonal goals, morning sessions are ideal—red light mirrors sunrise wavelengths and supports your circadian rhythm, the foundation of hormonal regulation. For period pain, use whenever discomfort occurs, ideally daily during your cycle. For fibromyalgia and nerve pain, morning or early afternoon works well—you want time for your tissue to respond before sleep. For migraines, use preventatively every morning, or immediately when you feel one starting. Consistency matters more than timing—the best time is when you'll stick to it.</p>
+      </div>
+      <div class="faq">
+        <h3>Why can't I see all the lights?</h3>
+        <p>Your SOLO 2.0 has 30 NIR LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye—this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+      </div>
+      <div class="faq">
+        <h3>Why are the distances and session times different for each benefit?</h3>
+        <p>Red light therapy works by delivering a specific dose of light energy to your tissue—and like any dose, getting it right depends on the target.</p>
+        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, gut), you generally want to be closer to maximise penetration. For surface-level concerns (skin, wound healing), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
+        <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can often be shorter for the same effect.</p>
+        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or recovery protocol.</p>
+        <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription — the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
+      </div>
+      <div class="faq">
+        <h3>Should I use goggles with red light therapy?</h3>
+        <p>Goggles are not required — red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
+        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
+        <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
+        <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
+      </div>
+      <div class="faq">
+        <h3>Do I need to expose bare skin during treatment?</h3>
+        <p>Yes — for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s7">
+    <div class="pg">
+      <div class="pg-label">Going further</div>
+      <div class="pg-title">How else can it help you?</div>
+      <hr class="pink-rule">
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Beyond your primary goals, regular use of your SOLO 2.0 may deliver additional wellness benefits that many users notice over time:</p>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light help regulate melatonin secretion and circadian rhythm—particularly valuable during perimenopause when night sweats and hormonal fluctuations disrupt sleep.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; anxiety</div><div class="ben-txt">Mitochondrial stimulation and neuroinflammation reduction support stable mood and stress resilience. Many users report improved emotional regulation within the first few weeks, especially helpful as hormonal transitions affect mental wellbeing.</div></div>
+      <div class="ben"><div class="ben-lbl">Energy levels</div><div class="ben-txt">By enhancing mitochondrial ATP production, regular sessions combat the fatigue that often accompanies both perimenopause and chronic pain conditions.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients throughout your body, supporting recovery and overall cellular health.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses—particularly important during hormonal transitions.</div></div>
+      <hr class="rule">
+      <div class="pg-label" style="margin-bottom:16px">Research</div>
+      <div class="ref"><div class="ref-auth">Höfling et al. (2019)</div><div class="ref-body">Demonstrated that red and NIR light therapy significantly reduced the severity and frequency of vasomotor symptoms in 85% of perimenopause subjects, with participants receiving 3 treatments per week over 8 weeks. <em>Menopause Journal.</em></div></div>
+      <div class="ref"><div class="ref-auth">Shin et al. (2012)</div><div class="ref-body">Found 83% reduction in menstrual pain scores from just 5 days of red light treatment pre-menstruation. <em>Journal of Athletic Training.</em></div></div>
+      <div class="ref"><div class="ref-auth">Yeh et al. (2019)</div><div class="ref-body">Demonstrates that RLT significantly improves pain scores, "fibro-fog," and quality of life, with approximately 95% of patients showing measurable improvements in fibromyalgia. <em>Rheumatology International.</em></div></div>
+      <div class="ref"><div class="ref-auth">Salehpour et al. (2019)</div><div class="ref-body">Shows that NIR light therapy significantly increased nerve conduction velocities and reduced pain index scores by 63.2% in neuropathy patients receiving 3 treatments per week over 6 weeks. <em>Journal of Neurological Sciences.</em></div></div>
+      <div class="ref"><div class="ref-auth">Schiffer et al. (2009)</div><div class="ref-body">A single session of light therapy to the forehead resulted in a 63.1% reduction in anxiety scores and 54.3% reduction in depression—relevant for mood support during hormonal transitions. <em>Behavioral and Brain Functions.</em></div></div>
+    </div>
+  </div>
+
+  <div class="slide" id="s8">
+    <div class="pg">
+      <div class="pg-label">Important information</div>
+      <div class="pg-title">Disclaimer</div>
+      <hr class="pink-rule">
+      <div class="disc-box">
+        <p>This guide is intended to help you make the most of your red light therapy device based on general recommendations and your specific wellness goals. It is not intended to replace professional medical advice, diagnosis, or treatment. Red light therapy is a complementary wellness practice and should not be used as a substitute for conventional medical care.</p>
+        <p>If you have any serious, ongoing, or diagnosed medical conditions — including but not limited to cancer, epilepsy, active infections, photosensitivity disorders, or if you are pregnant, breastfeeding, taking photosensitising medications, or have recently undergone surgery — please consult your GP or a qualified healthcare professional before beginning use.</p>
+        <p>Do not use your Solis device directly over the eyes, on open wounds, or over areas of active infection. Results vary between individuals. Always follow the safety instructions provided with your device.</p>
+      </div>
+      <hr class="rule">
+      <div class="pg-label" style="margin-bottom:10px">Contact us</div>
+      <p style="font-size:13px;color:#fff;line-height:1.7">If you have any questions about your device or this guide, we're here to help.</p>
+      <p style="font-size:13px;color:#fff;margin-top:8px"><a href="mailto:hello@solistherapy.com" style="color:#e8407a;text-decoration:none;font-weight:500">hello@solistherapy.com</a></p>
+    </div>
+  </div>
+
+<script>
+function show(n){
+  document.querySelectorAll('.slide').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('on'));
+  document.getElementById('s'+n).classList.add('on');
+  document.querySelectorAll('.nav button')[n-1].classList.add('on');
+}
+</script>
+</body></html>
