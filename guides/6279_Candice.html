@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
+
+*{box-sizing:border-box;margin:0;padding:0}
+.g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
+
+.nav{display:flex;gap:6px;padding:14px 18px;background:#0d0d0d;border-bottom:1px solid #1e1e1e;flex-wrap:wrap}
+.nav button{font-family:'Oakes Grotesk',sans-serif;font-size:10px;font-weight:500;letter-spacing:.06em;padding:5px 11px;border:1px solid #2a2a2a;background:transparent;color:#fff;border-radius:20px;cursor:pointer;transition:all .2s}
+.nav button.on{background:#e8407a;border-color:#e8407a;color:#fff}
+.nav button:hover:not(.on){border-color:#e8407a;color:#e8407a}
+
+.slide{display:none;animation:fi .3s ease}
+.slide.on{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+.cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
+.cover-logo{margin-bottom:52px}
+.cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
+.cover-name{font-family:'Instrument Serif',serif;font-size:42px;font-style:italic;line-height:1;color:#fff;margin-bottom:0}
+.cover-name-rule{width:44px;height:1px;background:#e8407a;margin:14px 0 16px}
+.cover-device{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:32px}
+.cover-rule{border:none;border-top:1px solid #1e1e1e;margin:28px 0 22px}
+.cover-inc-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.chk{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:13px;color:#fff}
+.chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.chk-dot svg{width:11px;height:11px}
+
+.pg{background:#0d0d0d;padding:32px 36px 40px}
+.pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
+.pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
+.pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
+.rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
+
+.specs{width:100%;border-collapse:collapse;margin-bottom:22px}
+.specs tr:nth-child(odd) td{background:#141414}
+.specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
+.specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
+.specs td:last-child{color:#fff}
+
+.sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
+.sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
+.sci p{font-size:13px;line-height:1.7;color:#fff}
+
+.pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
+.pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
+.pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
+.pc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.pc-lbl{font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:3px}
+.pc-val{font-size:13px;font-weight:500;color:#fff}
+.pc-div{border:none;border-top:1px solid #1e1e1e;margin-bottom:12px}
+.pc-note{font-size:13px;line-height:1.7;color:#fff}
+.pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
+.badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
+
+.faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
+.faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
+.faq p{font-size:13px;line-height:1.7;color:#fff}
+
+.ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
+.ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
+.ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
+
+.ref{margin-bottom:14px;padding-left:16px;position:relative}
+.ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
+.ref-auth{font-size:13px;font-weight:600;color:#fff}
+.ref-body{font-size:13px;line-height:1.7;color:#fff}
+
+.disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
+.disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
+.disc-box p:last-child{margin-bottom:0}
+
+.closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
+.c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
+.cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
+.cdot{width:6px;height:6px;border-radius:50%;background:#fff;flex-shrink:0}
+.c-sign{font-size:11.5px;color:rgba(255,255,255,.75);max-width:380px;margin:16px auto 0;line-height:1.65}
+
+@media(max-width:600px){
+  .cover{padding:36px 20px}
+  .cover-name{font-size:32px}
+  .cover-eyebrow{font-size:11px}
+  .cover-device{font-size:10px}
+  .pg{padding:24px 20px 32px}
+  .pg-title{font-size:22px}
+  .sci h3,.faq h3{font-size:17px}
+  .nav{padding:10px 12px;gap:5px}
+  .nav button{font-size:9px;padding:4px 9px}
+  .pc-grid{grid-template-columns:repeat(2,1fr)}
+  .specs td{font-size:12px;padding:9px 10px}
+  .ben{flex-direction:column;gap:4px}
+  .ben-lbl{min-width:unset}
+  .disc-box{padding:14px 16px}
+}
+</style>
+
+</head><body><div class="g">
+  <nav class="nav">
+    <button class="on" onclick="show(1)">Cover</button>
+    <button onclick="show(2)">Your device</button>
+    <button onclick="show(3)">Your goals</button>
+    <button onclick="show(4)">How it helps</button>
+    <button onclick="show(5)">Your protocol</button>
+    <button onclick="show(6)">FAQs</button>
+    <button onclick="show(7)">More benefits</button>
+    <button onclick="show(8)">Disclaimer</button>
+  </nav>
+
+  <div class="slide on" id="s1">
+    <div class="cover">
+      <div class="cover-logo">
+        <img src="/assets/solis-logo.png" style="height:42px;display:block">
+      </div>
+      <div class="cover-eyebrow">Personalised Treatment Guide</div>
+      <div class="cover-name">Candice</div>
+      <div class="cover-name-rule"></div>
+      <div class="cover-device">Solis SOLO 2.0</div>
+      <div class="cover-rule"></div>
+      <div class="cover-inc-label">Included in your guide</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Information about your new device</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Scientific research for your wellness goals</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Your personalised treatment plan</div>
+    </div>
+  </div>
+
+  <div class="slide" id="s2">
+    <div class="pg">
+      <div class="pg-label">About your product</div>
+      <div class="pg-title">Your Solis SOLO 2.0</div>
+      <hr class="pink-rule">
+      <table class="specs">
+        <tbody><tr><td>The product</td><td>Solis SOLO 2.0</td></tr>
+        <tr><td>LED power</td><td>300W (60 × 5W LEDs)</td></tr>
+        <tr><td>Wavelengths</td><td>Red: 630nm &amp; 660nm &nbsp;|&nbsp; NIR: 810nm, 830nm &amp; 850nm</td></tr>
+        <tr><td>Irradiance</td><td>&gt;180 mW/cm² at 6 inches &nbsp;|&nbsp; ~50 mW/cm² at 30 inches</td></tr>
+        <tr><td>Dimensions</td><td>34.5 × 23 × 9.5 cm &nbsp;|&nbsp; 4.5 kg</td></tr>
+        <tr><td>EMF &amp; safety</td><td>0 EMF at 3+ inches &nbsp;|&nbsp; Anti-EMF casing &nbsp;|&nbsp; FDA/CE standards</td></tr>
+        <tr><td>Warranty</td><td>3 years standard</td></tr>
+        <tr><td>In the box</td><td>Panel, power cable, protective goggles, blue light blockers</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <div class="slide" id="s3">
+    <div class="pg">
+      <div class="pg-label">Your focus areas</div>
+      <div class="pg-title">Your health &amp; wellness goals</div>
+      <hr class="pink-rule">
+      <div class="sci">
+        <h3>Mood, Anxiety &amp; Stress</h3>
+        <p>Managing stress responses and anxiety through enhanced mitochondrial function in mood-regulating brain regions, supporting emotional resilience and nervous system balance.</p>
+      </div>
+      <div class="sci">
+        <h3>Seasonal Affective Disorder (SAD)</h3>
+        <p>Supporting natural melatonin and serotonin regulation during darker months when reduced sunlight disrupts mood and circadian rhythm.</p>
+      </div>
+      <div class="sci">
+        <h3>Brain Fog &amp; Mental Clarity</h3>
+        <p>Boosting cognitive function and mental sharpness by enhancing ATP production in neurons and improving cerebral blood flow.</p>
+      </div>
+      <div class="sci">
+        <h3>Energy &amp; Motivation</h3>
+        <p>Restoring sustained energy and drive through optimised mitochondrial function and reduced oxidative stress at the cellular level.</p>
+      </div>
+      <div class="sci">
+        <h3>Anti-Ageing &amp; Fine Lines</h3>
+        <p>Stimulating collagen and elastin production to reduce fine lines, improve skin firmness, and restore youthful texture and radiance.</p>
+      </div>
+      <div class="sci">
+        <h3>Acne &amp; Breakouts</h3>
+        <p>Reducing inflammatory markers and regulating oil production for clearer skin without the irritation of conventional treatments.</p>
+      </div>
+      <div class="sci">
+        <h3>Hyperpigmentation &amp; Dark Spots</h3>
+        <p>Evening skin tone by improving microcirculation, accelerating cellular turnover, and addressing inflammatory triggers of uneven pigmentation.</p>
+      </div>
+      <div class="sci">
+        <h3>Collagen &amp; Elasticity</h3>
+        <p>Enhancing skin's structural support through stimulated fibroblast activity and improved nutrient delivery to skin layers.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s4">
+    <div class="pg">
+      <div class="pg-label">The science</div>
+      <div class="pg-title">How red light therapy helps</div>
+      <hr class="pink-rule">
+      <div class="sci">
+        <h3>Mood, Anxiety &amp; Stress</h3>
+        <p>Red and NIR light penetrate to reach neurons in brain regions responsible for mood regulation. These wavelengths enhance mitochondrial function in these neurons, boosting ATP production and supporting optimal neurotransmitter synthesis, including serotonin and dopamine. Enhanced cerebral blood flow delivers more oxygen and nutrients to these critical regions, whilst reduced neuroinflammation helps restore balanced mood pathways. This cellular energy boost directly improves stress resilience and emotional regulation.</p>
+      </div>
+      <div class="sci">
+        <h3>Seasonal Affective Disorder (SAD)</h3>
+        <p>SAD occurs when reduced winter sunlight disrupts circadian rhythms and suppresses serotonin and melatonin production. Red light therapy works by stimulating your pineal gland to produce melatonin naturally whilst supporting the brain regions that synthesise serotonin. Unlike blue light which suppresses melatonin, red wavelengths signal "sunset" to your circadian system, helping restore normal rhythms even during limited daylight. Enhanced mitochondrial function in mood-regulating neurons further supports the serotonin boost you need to manage winter mood changes.</p>
+      </div>
+      <div class="sci">
+        <h3>Brain Fog &amp; Mental Clarity</h3>
+        <p>Brain fog reflects mitochondrial inefficiency in neurons—your brain is energy-hungry and fog occurs when ATP production can't keep pace with cognitive demands. Near-infrared light penetrates your skull to reach neurons directly, activating cytochrome c oxidase and dramatically boosting ATP production in brain cells. Enhanced energy means your brain's executive function improves, memory recall sharpens, and mental processing accelerates. Improved cerebral blood flow simultaneously delivers more oxygen and removes metabolic waste that accumulates during cognitive fatigue.</p>
+      </div>
+      <div class="sci">
+        <h3>Energy &amp; Motivation</h3>
+        <p>Chronic fatigue is often mitochondrial dysfunction—your cellular powerplants aren't producing sufficient ATP. Red and NIR light directly activate cytochrome c oxidase, a key enzyme in the mitochondrial energy production pathway, dramatically increasing ATP output. This cellular energy boost translates directly to noticeable improvements in daily stamina, reduced afternoon crashes, and restored motivation. Reduced oxidative stress simultaneously protects mitochondrial function from further damage, supporting sustained energy production.</p>
+      </div>
+      <div class="sci">
+        <h3>Anti-Ageing &amp; Fine Lines</h3>
+        <p>Red and near-infrared wavelengths penetrate the dermis to stimulate fibroblasts—the cells responsible for producing collagen and elastin. This directly reduces the appearance of fine lines and wrinkles, improves skin firmness, and restores a more youthful texture. Enhanced circulation from NIR exposure delivers more nutrients to skin cells, accelerating the natural repair and renewal cycle and restoring radiance.</p>
+      </div>
+      <div class="sci">
+        <h3>Acne &amp; Breakouts</h3>
+        <p>Acne involves bacteria, overactive oil glands, and deep inflammation. Red light penetrates to the sebaceous glands where it downregulates excess oil production whilst modulating inflammatory responses, effectively calming angry, painful spots from within. Unlike harsh topicals that strip skin or antibiotics that disrupt your microbiome, red light addresses inflammation without damage, resulting in faster healing and fewer breakouts.</p>
+      </div>
+      <div class="sci">
+        <h3>Hyperpigmentation &amp; Dark Spots</h3>
+        <p>Uneven pigmentation stems from sluggish cell turnover and poor blood flow to your skin's surface. Red light therapy stimulates the formation of new blood vessels in your skin, dramatically boosting oxygen and nutrient delivery to every layer. With better circulation, your cells have the fuel they need to regenerate faster. Old, pigmented cells from sun damage get cleared away quickly, replaced by fresh, clear cells, resulting in a more even, radiant complexion.</p>
+      </div>
+      <div class="sci">
+        <h3>Collagen &amp; Elasticity</h3>
+        <p>Collagen provides your skin's structural support—without it, skin loses firmness and develops wrinkles. Red light directly stimulates fibroblasts to increase collagen production whilst enhancing elastin synthesis. The wavelengths penetrate deep into skin layers where this essential structural protein is manufactured, whilst improved blood flow delivers the amino acids and nutrients fibroblasts need to build new collagen efficiently. This restores the skin's natural elasticity and firmness.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s5">
+    <div class="pg">
+      <div class="pg-label">Your protocol</div>
+      <hr class="pink-rule">
+      <div class="pc">
+        <div class="pc-name">Mood, Anxiety &amp; Stress</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Direct the panel at your forehead to target mood-regulating brain regions. Sit comfortably and let the light work—this distance allows the SOLO 2.0 to deliver consistent coverage to the prefrontal cortex where mood is controlled.</div>
+        <div class="pc-tip">Tip: Morning sessions work best to align with your natural circadian rhythm and set a calm, clear tone for the day ahead.</div>
+        <div><span class="badge">✦ Results: within 1–3 sessions</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Seasonal Affective Disorder (SAD)</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead &amp; chest</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Start with 10 minutes on the forehead, then move the panel to your chest for the remaining 5 minutes. This targets both mood centres and the broader systemic energy support your body needs during darker months.</div>
+        <div class="pc-tip">Tip: Use in the morning during darker months to replace the natural sunlight cues your body is missing—this helps reset your circadian rhythm and boost serotonin production naturally.</div>
+        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Brain Fog &amp; Mental Clarity</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Direct the light at your forehead to enhance ATP production in the prefrontal cortex and executive function regions. Use before demanding cognitive work for maximum mental clarity.</div>
+        <div class="pc-tip">Tip: Morning or early afternoon sessions work best—this aligns with your peak cognitive windows and prevents afternoon brain fog crashes.</div>
+        <div><span class="badge">✦ Results: immediately after session</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Energy &amp; Motivation</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Chest/torso</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Stand or sit with your chest and torso facing the panel at chest height. This systemic approach maximises mitochondrial stimulation throughout your body for sustained energy production.</div>
+        <div class="pc-tip">Tip: Morning sessions mirror sunrise wavelengths and support your natural circadian rhythm, which aligns with and enhances energy production throughout the day.</div>
+        <div><span class="badge">✦ Results: days to weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Anti-Ageing &amp; Fine Lines</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Sit facing the panel with clean, bare skin. Close your eyes or use the included goggles. The SOLO 2.0 delivers full facial coverage at this distance—stay still and let it work.</div>
+        <div class="pc-tip">Tip: Apply serums or moisturiser immediately after—skin absorbs active ingredients more effectively post-session.</div>
+        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Acne &amp; Breakouts</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Position the panel closer to your face for more intensive treatment of active breakouts. The light penetrates deeper to reach sebaceous glands and reduce inflammation from within.</div>
+        <div class="pc-tip">Tip: Use on clean skin before applying any serums or treatments—the light works most effectively on bare skin.</div>
+        <div><span class="badge">✦ Results visible: 4 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Hyperpigmentation &amp; Dark Spots</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">2–3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Move closer than your anti-ageing sessions to target surface pigmentation and circulation directly. Can be combined in the same sitting—start at 30 cm for 10 min, then move to 15 cm for a further 5–10 min. Both goals, one session.</div>
+        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Collagen &amp; Elasticity</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face &amp; neck</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">This protocol overlaps with your anti-ageing sessions and can be performed together. Direct the light at your entire face and neck to support the fibroblasts responsible for collagen and elastin production across all skin areas.</div>
+        <div class="pc-tip">Tip: Consistency matters more than intensity for collagen-building—keep a regular schedule and you'll see progressive improvement in skin firmness and texture.</div>
+        <div><span class="badge">✦ Results visible: 6–8 weeks</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s6">
+    <div class="pg">
+      <div class="pg-label">Practical questions</div>
+      <div class="pg-title">Getting started</div>
+      <hr class="pink-rule">
+      <div class="faq">
+        <h3>What time of day should I use my Solis SOLO 2.0?</h3>
+        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For mood, energy, and SAD support, morning sessions mirror natural sunrise wavelengths and support your circadian rhythm—this is particularly important for you given your focus on mood and energy. For skin rejuvenation goals, any consistent time works, though many prefer evening sessions so they can apply skincare immediately after. For sleep support, use the panel 1–2 hours before bed when the melatonin-supporting effect is most powerful. Aim for consistency—the best time is the one you'll stick to, but morning sessions will give you the most benefit for your mood and energy goals.</p>
+      </div>
+      <div class="faq">
+        <h3>Why can't I see all the lights?</h3>
+        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye—this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+      </div>
+      <div class="faq">
+        <h3>Why are the distances and session times different for each benefit?</h3>
+        <p>Red light therapy works by delivering a specific dose of light energy to your tissue—and like any dose, getting it right depends on the target.</p>
+        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, gut), you generally want to be closer to maximise penetration. For surface-level concerns (skin, wound healing), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
+        <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can often be shorter for the same effect.</p>
+        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or recovery protocol.</p>
+        <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription—the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
+      </div>
+      <div class="faq">
+        <h3>Should I use goggles with red light therapy?</h3>
+        <p>Goggles are not required—red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
+        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
+        <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
+        <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
+      </div>
+      <div class="faq">
+        <h3>Do I need to expose bare skin during treatment?</h3>
+        <p>Yes—for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s7">
+    <div class="pg">
+      <div class="pg-label">Going further</div>
+      <div class="pg-title">How else can it help you?</div>
+      <hr class="pink-rule">
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep—especially when used in the morning or early evening, which naturally helps your mood goals too.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood resilience</div><div class="ben-txt">Beyond anxiety relief, consistent sessions support long-term emotional balance and stress management, reducing your overall susceptibility to mood crashes.</div></div>
+      <div class="ben"><div class="ben-lbl">Wound healing</div><div class="ben-txt">Red light accelerates tissue repair by stimulating collagen synthesis and reducing inflammation, helping minor cuts, scrapes, or scars heal faster and with less visible scarring.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting recovery and overall cellular health—which benefits both your skin and general wellness.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses over time.</div></div>
+      <hr class="rule">
+      <div class="pg-label" style="margin-bottom:16px">Research</div>
+      <div class="ref"><div class="ref-auth">Schiffer et al. (2009)</div><div class="ref-body">A study conducted at Harvard Medical School found that a single session of transcranial NIR light resulted in a 63.1% reduction in anxiety (HAM-A) scores and a 54.3% reduction in depression, demonstrating rapid mood improvement. <em>Behavioral and Brain Functions.</em></div></div>
+      <div class="ref"><div class="ref-auth">Jahan et al. (2020)</div><div class="ref-body">Frontiers in Psychiatry study showing that NIR light therapy significantly improved stress resilience and reduced anxiety scores by approximately 50% in participants receiving 3 treatments per week for 4 weeks. <em>Frontiers in Psychiatry.</em></div></div>
+      <div class="ref"><div class="ref-auth">Wunsch &amp; Matuschka (2014)</div><div class="ref-body">A controlled trial confirming that red and NIR light significantly reduce wrinkles and improve skin smoothness by stimulating collagen and elastin production. <em>Photomedicine and Laser Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Saltmarche et al. (2019)</div><div class="ref-body">A meta-analysis of transcranial NIR light therapy found significant improvements in executive function and memory scores, supporting cognitive clarity and brain health. <em>Photomedicine and Laser Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Lee et al. (2013)</div><div class="ref-body">Demonstrates how red and NIR light therapy enhances collagen and elastin production, improving skin tone, reducing fine lines, and smoothing texture. <em>Seminars in Cutaneous Medicine and Surgery.</em></div></div>
+    </div>
+  </div>
+
+  <div class="slide" id="s8">
+    <div class="pg">
+      <div class="pg-label">Important information</div>
+      <div class="pg-title">Disclaimer</div>
+      <hr class="pink-rule">
+      <div class="disc-box">
+        <p>This guide is intended to help you make the most of your red light therapy device based on general recommendations and your specific wellness goals. It is not intended to replace professional medical advice, diagnosis, or treatment. Red light therapy is a complementary wellness practice and should not be used as a substitute for conventional medical care.</p>
+        <p>If you have any serious, ongoing, or diagnosed medical conditions—including but not limited to cancer, epilepsy, active infections, photosensitivity disorders, or if you are pregnant, breastfeeding, taking photosensitising medications, or have recently undergone surgery—please consult your GP or a qualified healthcare professional before beginning use.</p>
+        <p>Do not use your Solis device directly over the eyes, on open wounds, or over areas of active infection. Results vary between individuals. Always follow the safety instructions provided with your device.</p>
+      </div>
+      <hr class="rule">
+      <div class="pg-label" style="margin-bottom:10px">Contact us</div>
+      <p style="font-size:13px;color:#fff;line-height:1.7">If you have any questions about your device or this guide, we're here to help.</p>
+      <p style="font-size:13px;color:#fff;margin-top:8px"><a href="mailto:hello@solistherapy.com" style="color:#e8407a;text-decoration:none;font-weight:500">hello@solistherapy.com</a></p>
+    </div>
+  </div>
+
+<script>
+function show(n){
+  document.querySelectorAll('.slide').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('on'));
+  document.getElementById('s'+n).classList.add('on');
+  document.querySelectorAll('.nav button')[n-1].classList.add('on');
+}
+</script>
+</body></html>
