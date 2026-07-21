@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
-@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -17,6 +17,7 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
+/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -29,23 +30,29 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
+/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
+/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
+/* GOALS BOX */
+
+/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
+/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -57,24 +64,29 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
+/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
+/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
+/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
+/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
+/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -152,24 +164,16 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Anti-Ageing &amp; Fine Lines</h3>
-        <p>Addressing visible signs of ageing through collagen stimulation and skin firming. Fine lines and wrinkle depth are reduced as your skin's structural support is restored at the cellular level.</p>
+        <h3>Fat Loss &amp; Body Composition</h3>
+        <p>Your primary goal. Focused on releasing stubborn fat stores (especially belly fat), improving overall body composition, boosting metabolism, reducing the appearance of cellulite, and supporting sustainable weight loss when combined with exercise and nutrition.</p>
       </div>
       <div class="sci">
-        <h3>Eczema &amp; Dermatitis</h3>
-        <p>Managing inflammation and restoring your skin barrier. This includes reducing itching, rebuilding protective functions, and supporting healing of irritated or damaged skin.</p>
+        <h3>Muscle Recovery &amp; Athletic Performance</h3>
+        <p>Accelerating post-workout recovery, reducing delayed onset muscle soreness (DOMS), enhancing athletic endurance, supporting injury rehabilitation, relieving muscle tension and tightness, and optimising pre-workout activation for better performance.</p>
       </div>
       <div class="sci">
-        <h3>Skin Texture &amp; Glow</h3>
-        <p>Improving surface smoothness, tone evenness, and natural radiance through enhanced cellular turnover and microcirculation for a more luminous, even complexion.</p>
-      </div>
-      <div class="sci">
-        <h3>Collagen &amp; Elasticity</h3>
-        <p>Boosting your skin's fundamental structural proteins to restore firmness, bounce, and resilience. Enhanced collagen production directly translates to visibly tighter, more youthful-looking skin.</p>
-      </div>
-      <div class="sci">
-        <h3>Female Hair Thinning &amp; Hair Strength</h3>
-        <p>Stimulating hair follicles back into active growth phase and increasing nutrient delivery to the scalp. Goal is thicker individual strands, increased density, and improved overall hair strength and vitality.</p>
+        <h3>Pain Relief &amp; Inflammation Reduction</h3>
+        <p>Addressing chronic neck, shoulder, and back pain through reduced inflammation, improved blood flow, and modulated inflammatory cytokines that perpetuate pain cycles and tissue tension.</p>
       </div>
     </div>
   </div>
@@ -180,24 +184,16 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Anti-Ageing &amp; Fine Lines</h3>
-        <p>Red and near-infrared wavelengths penetrate the dermis to stimulate fibroblasts — the cells responsible for producing collagen and elastin. This directly reduces the appearance of fine lines and wrinkles, improves skin firmness, and restores a more youthful texture. Enhanced circulation from NIR exposure delivers more nutrients to skin cells, accelerating the natural repair and renewal cycle.</p>
+        <h3>Fat Loss &amp; Body Composition</h3>
+        <p>Stubborn fat resists diet and exercise because fat cell membranes hold stored triglycerides tightly, preventing your body from accessing them as fuel. Red light therapy creates temporary pores in fat cell membranes, causing them to release stored fat into your bloodstream where it becomes available energy. Combined with exercise, your body can access and burn this mobilised fat instead of it remaining locked away. Applied specifically to problem areas like your belly, red light helps preferentially release fat from those exact zones. When paired with movement and proper nutrition, this translates to genuine fat loss from treated areas. Simultaneously, enhanced mitochondrial ATP production in muscle tissue accelerates your metabolism, increasing overall calorie expenditure.</p>
       </div>
       <div class="sci">
-        <h3>Eczema &amp; Dermatitis</h3>
-        <p>Red light therapy tackles eczema on multiple fronts. It accelerates skin barrier repair, helping rebuild your protective "shield" to retain moisture effectively. It also calms overactive nerve endings, directly reducing itching and breaking the scratch reflex that worsens eczema. Clinical trials show fewer flare-ups, reduced inflammation, and significantly improved sleep from less night-time itching.</p>
+        <h3>Muscle Recovery &amp; Athletic Performance</h3>
+        <p>Intense exercise creates micro-tears in muscle fibres whilst metabolic waste like lactic acid accumulates, causing DOMS that peaks 24-48 hours post-workout. Red light therapy applied before or after training reduces muscle damage markers whilst accelerating waste product removal. Enhanced ATP production gives muscle cells more energy to repair micro-tears efficiently and build new protein, whilst improved circulation flushes inflammatory compounds. For athletic performance, enhanced mitochondrial function means sustained energy production during activity, reducing fatigue and improving endurance. The result is shorter recovery windows, reduced soreness, better strength gains, and improved athletic capacity.</p>
       </div>
       <div class="sci">
-        <h3>Skin Texture &amp; Glow</h3>
-        <p>By improving microcirculation and accelerating cellular turnover, red light therapy helps to even out uneven pigmentation and surface tone. Enhanced blood flow delivers more oxygen and nutrients for skin cell regeneration. The 630nm wavelength in particular has been shown to reduce inflammatory cytokines that contribute to redness and dullness, resulting in a visibly more balanced, luminous complexion over time.</p>
-      </div>
-      <div class="sci">
-        <h3>Collagen &amp; Elasticity</h3>
-        <p>Red light directly activates fibroblasts through ATP stimulation, enhancing their ability to synthesise new collagen and elastin fibres. This isn't temporary plumping — it's structural rebuilding. Over time, your skin's matrix becomes denser and stronger, restoring the firmness and elasticity that naturally declines with age. NIR penetration reaches deeper dermis layers, supporting comprehensive rejuvenation throughout your skin's thickness.</p>
-      </div>
-      <div class="sci">
-        <h3>Female Hair Thinning &amp; Hair Strength</h3>
-        <p>Red light therapy addresses hair loss by waking up stem cells in your hair follicles, essentially kickstarting them back into growth mode and extending the active growth phase of your hair cycle. It triggers the release of nitric oxide in your scalp cells, which dilates blood vessels and dramatically increases nutrient delivery to each follicle. The result is clinically proven increases in hair density, thicker individual strands, and a healthier scalp environment, all without chemicals or side effects.</p>
+        <h3>Pain Relief &amp; Inflammation Reduction</h3>
+        <p>Chronic neck, shoulder, and back pain stem from inflammatory responses to tissue damage, poor posture, or tension. Pro-inflammatory cytokines flood affected areas, creating swelling, restricting blood flow, and sensitising nerve endings. Red light therapy downregulates these inflammatory cytokines whilst increasing blood flow to damaged tissues. Near-infrared wavelengths penetrate deep to reach spinal tissues, shoulder joints, and the deep muscle layers where your pain originates. Enhanced circulation delivers oxygen and nutrients for tissue repair whilst removing inflammatory waste that perpetuates pain cycles. Your body's natural pain-relieving mechanisms activate more efficiently, resulting in measurable pain reduction and improved mobility without reliance on pain medication.</p>
       </div>
     </div>
   </div>
@@ -207,73 +203,46 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
-        <div class="pc-name">Anti-Ageing &amp; Fine Lines</div>
-        <div class="pc-grid">
-          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
-        </div>
-        <hr class="pc-div">
-        <div class="pc-note">Sit facing the panel with clean, bare skin. Close your eyes or use the included goggles. The SUPREME 2.0 delivers exceptional facial coverage at this distance — stay still and let it work.</div>
-        <div class="pc-tip">Tip: Apply serums or moisturiser immediately after — skin absorbs active ingredients more effectively post-session.</div>
-        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">Eczema &amp; Dermatitis</div>
-        <div class="pc-grid">
-          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected area</div></div>
-        </div>
-        <hr class="pc-div">
-        <div class="pc-note">Target the specific area with eczema or dermatitis. Keep the skin cool during treatment — at 20 cm distance, the SUPREME 2.0 provides therapeutic intensity without overheating sensitive skin. Use consistently to manage flare-ups.</div>
-        <div class="pc-tip">Tip: Use evening sessions to help reduce night-time itching and support better sleep during flare-ups.</div>
-        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">Skin Texture &amp; Glow</div>
-        <div class="pc-grid">
-          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">12 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Full face</div></div>
-        </div>
-        <hr class="pc-div">
-        <div class="pc-note">Position the panel to cover your entire face. This closer distance targets surface tone and microcirculation. For optimal results, combine with your anti-ageing protocol in the same session if desired — treat at 30 cm first for 10 min, then move to 20 cm for this protocol.</div>
-        <div><span class="badge">✦ Results visible: 3–6 weeks</span></div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">Collagen &amp; Elasticity</div>
-        <div class="pc-grid">
-          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">25 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">12 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Face &amp; neck</div></div>
-        </div>
-        <hr class="pc-div">
-        <div class="pc-note">Include your neck and décolletage — these areas show ageing significantly but are often neglected. The SUPREME 2.0's wide coverage means you can treat face, neck, and chest simultaneously at this distance. Consistency here is key for visible firming.</div>
-        <div class="pc-tip">Tip: Follow with a good moisturiser containing peptides or hyaluronic acid — red light primes your skin for optimal absorption of collagen-supporting ingredients.</div>
-        <div><span class="badge">✦ Results visible: 6–8 weeks</span></div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">Female Hair Thinning &amp; Hair Strength</div>
+        <div class="pc-name">Fat Loss &amp; Body Composition</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Scalp</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Abdomen</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the SUPREME 2.0 panel 15 cm from your scalp, directing light across your entire head. The wider panel coverage means faster, more comprehensive treatment. Part your hair slightly to ensure light reaches scalp directly. Treat every area of the scalp in the same session.</div>
-        <div class="pc-tip">Tip: Hair grows in cycles — consistency over 12–16 weeks is essential to see visible density and thickness improvements. Pair with a scalp massage before or after treatment to boost circulation.</div>
-        <div><span class="badge">✦ Results visible: 12–20 weeks</span></div>
+        <div class="pc-note">Position your SUPREME 2.0 directly at your abdomen, 15 cm away, before exercise. This releases fat stores right before you move, making them immediately available as fuel during your workout. Bare skin is essential for maximum penetration.</div>
+        <div class="pc-tip">Tip: Time your session 5–10 minutes before cardio or resistance training for optimal fat mobilisation during activity. This dramatically increases fat burning from treated areas.</div>
+        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Muscle Recovery &amp; Athletic Performance</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Post-exercise</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Trained muscle groups</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Apply within 1 hour of training to the specific muscles you just worked. The SUPREME 2.0 has excellent coverage — position it to target your legs, chest, back, or whatever you trained that day. The closer distance (10 cm) maximises penetration for faster recovery.</div>
+        <div class="pc-tip">Tip: Use post-exercise sessions daily on workout days. This accelerates DOMS recovery, allowing you to train harder and more frequently without being limited by soreness.</div>
+        <div><span class="badge">✦ Results: within days</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Pain Relief — Neck, Shoulders &amp; Back</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected area</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Target your neck, shoulders, or lower back directly. Position the SUPREME 2.0 close to the painful area to ensure deep tissue penetration. Daily use is most effective for chronic pain — consistency matters more than occasional longer sessions.</div>
+        <div class="pc-tip">Tip: Apply in the morning to reduce stiffness throughout the day, or in the evening to ease tension before bed. Many users report noticeable pain reduction within 2–3 sessions.</div>
+        <div><span class="badge">✦ Results: 2–6 weeks</span></div>
       </div>
     </div>
   </div>
@@ -285,7 +254,7 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SUPREME 2.0?</h3>
-        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For skin rejuvenation and glow goals, morning sessions mirror natural sunrise wavelengths and support your circadian rhythm. For eczema flare-ups and itching, evening sessions before bed help calm inflammation and support better sleep. For hair growth, consistency matters more than timing — use whenever you'll stick to your routine. Aim for the same time daily if possible to build habit and maximise results.</p>
+        <p>For your goals, timing is strategic. Fat loss sessions work best 5–10 minutes before exercise—morning cardio or afternoon training both work equally well, as long as you're consistent. Muscle recovery sessions should happen within 1 hour post-workout, whenever you train. For chronic pain relief, morning sessions reduce stiffness throughout your day, though evening use before bed is equally effective. The key is consistency—pick times that fit your routine and stick to them.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
@@ -318,19 +287,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SUPREME 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Wound healing</div><div class="ben-txt">Red light accelerates tissue repair by stimulating collagen synthesis and reducing inflammation, helping minor cuts, scrapes, or scars heal faster and with less visible scarring.</div></div>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep — especially when used in the morning or early evening.</div></div>
-      <div class="ben"><div class="ben-lbl">Mood &amp; energy</div><div class="ben-txt">Mitochondrial stimulation supports steady energy production throughout the day, and many users report improved mood and reduced afternoon fatigue within the first few weeks.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting recovery and overall cellular health.</div></div>
-      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses over time.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Beyond your primary goals, regular use of your SUPREME 2.0 may deliver additional wellness benefits that complement your fitness and recovery routine:</p>
+      <div class="ben"><div class="ben-lbl">Energy &amp; mitochondrial support</div><div class="ben-txt">Enhanced ATP production throughout your body means sustained energy during workouts, reduced afternoon fatigue, and better overall vitality. This amplifies your training capacity and metabolic efficiency.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation &amp; blood flow</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout your body, supporting faster recovery, enhanced athletic performance, and better overall cellular health.</div></div>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep — especially important for muscle recovery and hormonal balance after intense training.</div></div>
+      <div class="ben"><div class="ben-lbl">Wound healing</div><div class="ben-txt">Red light accelerates tissue repair by stimulating collagen synthesis and reducing inflammation, helping minor cuts, gym scrapes, or training-related injuries heal faster with less visible scarring.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses — essential when training hard and pushing your body.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Wunsch &amp; Matuschka (2014)</div><div class="ref-body">A controlled trial confirming that red and NIR light significantly reduce wrinkles and improve skin smoothness by stimulating collagen and elastin production. <em>Photomedicine and Laser Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Avci et al. (2013)</div><div class="ref-body">Demonstrates how red and NIR light therapy enhances collagen and elastin production, improving skin tone, reducing fine lines, and smoothing texture. <em>Seminars in Cutaneous Medicine and Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Barolet &amp; Boucher (2008)</div><div class="ref-body">Shows visible improvements in skin elasticity and reduced photodamage after consistent LED therapy, supporting its use for anti-ageing. <em>Photomedicine and Laser Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Lanzafame et al. (2013)</div><div class="ref-body">51% increase in hair counts in women treated for 17 weeks of red light therapy, demonstrating efficacy for female hair growth. <em>Lasers in Surgery and Medicine.</em></div></div>
-      <div class="ref"><div class="ref-auth">Wellman Center for Photomedicine (2014)</div><div class="ref-body">37% increase in hair count compared to placebo, with participants receiving 3 treatments per week for 26 weeks. <em>Lasers in Surgery and Medicine.</em></div></div>
+      <div class="ref"><div class="ref-auth">Jackson, R. F. et al. (2011)</div><div class="ref-body">Combining red light therapy with exercise led to 444% more fat loss in treated areas compared to exercise alone. <em>Obesity Research.</em></div></div>
+      <div class="ref"><div class="ref-auth">De Oliveira, H. A. et al. (2017)</div><div class="ref-body">Found a 2.15 cm reduction in waist circumference after 4 weeks of red light therapy treatment with 3 treatments per week. <em>Federal University of São Paulo.</em></div></div>
+      <div class="ref"><div class="ref-auth">Ferraresi, C. et al. (2015)</div><div class="ref-body">50% reduction in Delayed Onset Muscle Soreness (DOMS) scores following light therapy post-intense muscle training. <em>University of Western Sydney.</em></div></div>
+      <div class="ref"><div class="ref-auth">Follmer, B. et al. (2018)</div><div class="ref-body">Reduced markers of muscle damage and inflammation by 45%. Study performed on athletes who received treatments before running. <em>University of Porto.</em></div></div>
+      <div class="ref"><div class="ref-auth">Gale, G. D. et al. (2006)</div><div class="ref-body">50% reduction in chronic back pain intensity compared to a placebo group after 6 weeks of treatment. <em>Pain Research Management.</em></div></div>
     </div>
   </div>
 
