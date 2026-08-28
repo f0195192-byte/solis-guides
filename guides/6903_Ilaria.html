@@ -5,7 +5,6 @@
 @font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
-
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
 
@@ -18,7 +17,6 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -31,29 +29,23 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
-/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
-/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
-/* GOALS BOX */
-
-/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
-/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -65,29 +57,24 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
-/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
-/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
-/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
-/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
-/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -166,11 +153,11 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Psoriasis</h3>
-        <p>Your primary goal. Psoriasis is an autoimmune skin condition where skin cells multiply at 10 times the normal rate, creating thick, scaly plaques. Red light therapy works by normalising skin cell proliferation and reducing the inflammatory immune response driving the condition.</p>
+        <p>An autoimmune condition where skin cells multiply excessively, creating thick, scaly plaques. You're experiencing this on your scalp and stomach with characteristic redness and inflammation that's persisted for five years.</p>
       </div>
       <div class="sci">
         <h3>Hair Growth &amp; Thickness</h3>
-        <p>Supporting natural hair density and thickness. Hair loss occurs when follicles stall in the resting phase due to poor circulation and reduced cellular energy. Red light therapy reactivates dormant follicles and improves scalp blood flow for stronger, thicker growth.</p>
+        <p>Supporting scalp health and hair follicle function through improved circulation and cellular energy, particularly important where psoriasis affects your scalp.</p>
       </div>
     </div>
   </div>
@@ -182,11 +169,11 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Psoriasis</h3>
-        <p>Psoriasis is fundamentally a dysregulation of skin cell proliferation and immune activity. Red and near-infrared light normalises the growth cycle of skin cells, essentially telling overactive cells to slow down to healthy rates. Simultaneously, it reduces the infiltration of inflammatory T-cells responsible for the autoimmune attack. Clinical studies show significant clearance of the thick, scaly plaques that define the condition, with improvements appearing within 4 weeks and continuing with consistent use.</p>
+        <p>Psoriasis occurs when your immune system mistakenly attacks healthy skin cells, causing them to multiply at 10 times the normal rate. Red and near-infrared light normalise this hyperproliferation, essentially telling overactive skin cells to return to a healthy growth cycle. Simultaneously, red light reduces the infiltration of inflammatory T-cells—the immune cells driving the attack on your skin. Clinical research shows red light therapy reduces inflammatory markers whilst directly normalising your skin's cellular behaviour, offering genuine disease modification rather than temporary suppression with steroids.</p>
       </div>
       <div class="sci">
         <h3>Hair Growth &amp; Thickness</h3>
-        <p>Hair loss in female pattern thinning results from poor blood flow to the scalp and hair follicles becoming stuck in the resting phase. Red light therapy wakes up stem cells in your hair follicles, kickstarting them back into active growth mode and extending the growth phase of your hair cycle. It also triggers nitric oxide release in scalp cells, which dilates blood vessels and dramatically increases nutrient delivery to each follicle. The result is clinically proven increases in hair density and thicker individual strands, typically visible within 12-20 weeks of consistent treatment.</p>
+        <p>Hair follicles get stuck in the resting phase when they lack energy and nutrients. Red light wakes up stem cells in your hair follicles, kickstarting them back into the growth phase and extending the active growth period of your hair cycle. Near-infrared light triggers nitric oxide release in scalp cells, dilating blood vessels and dramatically increasing nutrient delivery to each follicle. This is particularly valuable on psoriatic scalps where inflammation has suppressed follicle function—enhanced blood flow combined with reduced inflammation creates an environment where healthy hair growth can resume.</p>
       </div>
     </div>
   </div>
@@ -202,12 +189,12 @@
           <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected areas</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Scalp &amp; stomach</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Target the panel directly at affected psoriatic plaques — whether on your scalp, elbows, knees, or other areas. Keep the skin clean and bare. The SOLO 2.0 provides concentrated coverage at this distance, allowing focused treatment on problem zones.</div>
-        <div class="pc-tip">Tip: Consistency matters more than intensity. Three reliable sessions weekly outperforms sporadic longer sessions. Track which plaques flatten and lighten to see progress week by week.</div>
-        <div><span class="badge">✦ Results visible: 4 weeks</span></div>
+        <div class="pc-note">Treat both affected areas in each session. For scalp: part your hair and position the panel close to your scalp, keeping it 20 cm from the skin surface. For stomach: sit comfortably with bare skin facing the panel. The SOLO 2.0 covers focused areas effectively at this distance, allowing you to treat one location for 7–8 minutes, then move to the next area.</div>
+        <div class="pc-tip">Tip: Consistency is key with psoriasis. Three sessions weekly helps normalise your skin's inflammatory response over time. Keep the treated skin clean and bare—no creams or ointments immediately before, as these can reduce light penetration.</div>
+        <div><span class="badge">✦ Results visible: 4–8 weeks</span></div>
       </div>
       <div class="pc">
         <div class="pc-name">Hair Growth &amp; Thickness</div>
@@ -219,8 +206,8 @@
           <div><div class="pc-lbl">Position</div><div class="pc-val">Scalp</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the SOLO 2.0 close to your scalp, moving it across different areas to ensure full coverage. Part your hair if needed to expose the scalp directly. Can be combined with your psoriasis protocol in the same session if plaques are on your scalp.</div>
-        <div class="pc-tip">Tip: Hair growth is a slow biological process. Take photos every 4 weeks to track density improvements — changes are often subtle but accumulate steadily. Morning sessions work well for establishing a consistent routine.</div>
+        <div class="pc-note">Position the panel 10 cm directly above your scalp. Part your hair to allow direct light contact with the skin, then move slowly across your scalp to ensure even coverage. You can combine this with your psoriasis protocol—after treating your stomach for 8 minutes, move closer to your scalp and continue for your hair growth session.</div>
+        <div class="pc-tip">Tip: Hair growth takes time. Results typically appear after 12–20 weeks of consistent treatment. Think of this as part of your daily wellness routine rather than a quick fix.</div>
         <div><span class="badge">✦ Results visible: 12–20 weeks</span></div>
       </div>
     </div>
@@ -233,7 +220,7 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For psoriasis management and hair health, morning or afternoon sessions work well. For skin and scalp goals, aim for consistency — the best time is the one you'll stick to three to four times per week. Some users prefer morning routines to start the day with a dedicated wellness habit, whilst others fit sessions around work or exercise schedules.</p>
+        <p>For psoriasis and hair health, morning or early afternoon sessions work best. Red light therapy in the morning mirrors natural sunrise wavelengths, supporting your circadian rhythm and immune regulation—particularly valuable for psoriasis, which is influenced by circadian disruption. For hair growth, any consistent time works, but pairing it with your psoriasis protocol ensures you stay on schedule. Avoid using it immediately before bed, as the light could interfere with sleep onset. Aim for the same time each day for best results.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
@@ -266,19 +253,18 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Skin radiance</div><div class="ben-txt">Beyond psoriasis management, red light improves overall skin tone, microcirculation, and cellular turnover, supporting a more luminous, even complexion.</div></div>
-      <div class="ben"><div class="ben-lbl">Reduced redness</div><div class="ben-txt">Red light naturally calms inflammatory responses in skin. Many users with rosacea or general facial redness notice significant improvements as chronic inflammatory markers decrease.</div></div>
-      <div class="ben"><div class="ben-lbl">Wound healing</div><div class="ben-txt">If you have any cuts, scrapes, or minor skin injuries, red light accelerates tissue repair by stimulating collagen synthesis and reducing inflammation, helping wounds heal faster with less scarring.</div></div>
-      <div class="ben"><div class="ben-lbl">Energy &amp; mood</div><div class="ben-txt">Enhanced mitochondrial function from regular sessions supports steady energy production and mood stability throughout the day, with many users reporting improved mental clarity.</div></div>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red light can help regulate circadian rhythms and melatonin production, supporting deeper, more restorative sleep when used in the evening.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Beyond your primary psoriasis and hair health goals, regular use of your SOLO 2.0 may deliver additional wellness benefits that many users notice over time:</p>
+      <div class="ben"><div class="ben-lbl">Skin tone &amp; radiance</div><div class="ben-txt">Improved circulation and cellular turnover help even out uneven pigmentation and surface inflammation on treated areas, supporting a more balanced complexion as your skin barrier heals.</div></div>
+      <div class="ben"><div class="ben-lbl">Wound healing</div><div class="ben-txt">Red light accelerates tissue repair, which is valuable if psoriasis causes open areas or minor skin damage. Enhanced collagen synthesis and reduced inflammation support faster, cleaner healing.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation &amp; immunity</div><div class="ben-txt">Improved microcirculation delivers more oxygen and nutrients to affected areas, whilst red light modulates your immune response—reducing the overactive inflammation driving psoriasis.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; wellbeing</div><div class="ben-txt">Regular light therapy supports circadian rhythm regulation and mitochondrial function, which many users report improves mood and reduces the emotional stress often associated with chronic skin conditions.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Oshiro Laser Institute (2010)</div><div class="ref-body">Demonstrated 60-100% clearance rate of psoriatic plaques within 4 weeks using red and NIR light at 2 treatments per week. <em>Photomedicine and Laser Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">University of Nice (2012)</div><div class="ref-body">Found 72% improvement in Psoriasis Area and Severity Index (PASI) scores after 10 treatments over 5 weeks. <em>Photomedicine and Laser Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Lanzafame et al. (2013)</div><div class="ref-body">Demonstrated 35-39% increase in hair count in women after 16 weeks of LED therapy at 660nm. <em>Lasers in Surgery and Medicine.</em></div></div>
-      <div class="ref"><div class="ref-auth">University of Murcia (2017)</div><div class="ref-body">Showed 51% increase in terminal hair counts versus sham treatment after 17 weeks of consistent red light exposure. <em>Journal of Cosmetic and Laser Therapy.</em></div></div>
-      <div class="ref"><div class="ref-auth">Wunsch &amp; Matuschka (2014)</div><div class="ref-body">Confirmed that red and NIR light significantly improve overall skin health, texture, and inflammatory conditions by stimulating collagen production. <em>Photomedicine and Laser Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Oshiro Laser Institute (2010)</div><div class="ref-body">Patients saw clearance rates of scaly plaques ranging from 60% to 100% from 2 treatments per week over 4 weeks using 633nm and 830nm wavelengths. <em>Laser Therapy.</em></div></div>
+      <div class="ref"><div class="ref-auth">University of Nice (2012)</div><div class="ref-body">Improved the Psoriasis Area and Severity Index (PASI) score by 72% from 10 treatments over 5 weeks using 633nm red light. <em>Dermatological Research.</em></div></div>
+      <div class="ref"><div class="ref-auth">Lanzafame et al. (2013)</div><div class="ref-body">Demonstrated a 35–39% increase in hair counts in men after 16 weeks of 660nm red light treatment. <em>Lasers in Surgery and Medicine.</em></div></div>
+      <div class="ref"><div class="ref-auth">Wellman Center for Photomedicine (2014)</div><div class="ref-body">Showed a 37% increase in hair count compared to placebo group. Participants received 3 treatments per week for 26 weeks using 655nm wavelength. <em>Lasers in Surgery and Medicine.</em></div></div>
+      <div class="ref"><div class="ref-auth">University of Murcia (2017)</div><div class="ref-body">Found a 51% increase in terminal hair counts vs. sham treatment using 660nm red light. Participants received treatments every other day for 17 weeks. <em>Dermatologic Surgery.</em></div></div>
     </div>
   </div>
 
