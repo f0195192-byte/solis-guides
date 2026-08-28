@@ -2,8 +2,9 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
-@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
+
 
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
@@ -17,6 +18,7 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
+/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -29,23 +31,29 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
+/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
+/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
+/* GOALS BOX */
+
+/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
+/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -57,24 +65,29 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
+/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
+/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
+/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
+/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
+/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -153,15 +166,11 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Eczema &amp; Atopic Dermatitis</h3>
-        <p>Your primary goal. Eczema is a condition where your skin barrier function breaks down, leading to intense itching, inflammation, and painful flare-ups. You've been managing this with systemic immunosuppressants — red light therapy offers a complementary approach to support skin barrier repair and reduce the inflammatory cycle driving symptoms.</p>
+        <p>A chronic inflammatory skin condition characterised by intense itching, red patches, and a compromised skin barrier. Eczema creates an itch-scratch cycle where breaking the skin leads to further inflammation and irritation.</p>
       </div>
       <div class="sci">
-        <h3>Shoulder &amp; Neck Pain</h3>
-        <p>Chronic pain and stiffness in your shoulder and neck region, including recovery from post-surgical trauma. Red light penetrates deep into muscle and soft tissue to reduce inflammation and support the healing process at the cellular level.</p>
-      </div>
-      <div class="sci">
-        <h3>Post-Surgical Pain &amp; Recovery</h3>
-        <p>Supporting faster healing and pain management following surgical intervention. Red light therapy accelerates tissue repair by enhancing cellular energy production and reducing inflammatory response that can delay recovery.</p>
+        <h3>Mood, Anxiety &amp; Stress</h3>
+        <p>Chronic stress and anxiety involve disrupted neurotransmitter balance, neuroinflammation, and mitochondrial dysfunction in brain regions controlling mood and emotional regulation.</p>
       </div>
     </div>
   </div>
@@ -173,15 +182,11 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Eczema &amp; Atopic Dermatitis</h3>
-        <p>Eczema is fundamentally a broken skin barrier problem — your skin cannot hold moisture, inflammatory signals run wild, and hypersensitive nerve endings create that relentless itch-scratch cycle. Red light therapy addresses this on multiple fronts. It accelerates skin barrier repair by stimulating fibroblasts to rebuild your protective "shield" to retain moisture effectively. Simultaneously, it calms overactive nerve endings, directly reducing itching and breaking the scratch reflex that worsens eczema. The 630nm and 660nm wavelengths reduce pro-inflammatory cytokines whilst improving microcirculation. Near-infrared penetration reaches deeper inflammatory markers. Clinical trials show fewer flare-ups, reduced inflammation, and significantly improved sleep from less night-time itching — not masking symptoms, actually supporting your skin's ability to function properly again.</p>
+        <p>Red light therapy tackles eczema on multiple fronts. It accelerates your skin barrier repair by stimulating fibroblasts to rebuild the protective lipid layer that holds moisture effectively. Simultaneously, it calms overactive nerve endings responsible for that relentless itching sensation, directly breaking the itch-scratch cycle that worsens eczema. Clinical trials demonstrate fewer flare-ups, reduced inflammation markers, and significantly improved sleep quality from reduced night-time itching. Rather than masking symptoms with steroids, red light supports your skin's ability to function properly again.</p>
       </div>
       <div class="sci">
-        <h3>Shoulder &amp; Neck Pain</h3>
-        <p>Pain in your shoulder and neck region is your body's inflammatory response to tissue damage or chronic stress. Pro-inflammatory cytokines flood the area, creating swelling, restricting blood flow, and sensitising nerve endings. Near-infrared wavelengths (810nm, 830nm, 850nm) penetrate deep into your muscle and connective tissue where chronic pain originates. Red light therapy downregulates pro-inflammatory cytokines whilst increasing blood flow to damaged tissues, delivering oxygen and nutrients for repair whilst removing inflammatory waste that perpetuates the pain cycle. The result is measurable pain reduction, improved mobility, and faster tissue repair without reliance on pain medication.</p>
-      </div>
-      <div class="sci">
-        <h3>Post-Surgical Pain &amp; Recovery</h3>
-        <p>After surgery, your body initiates tissue repair but this process is energy-intensive and can be sluggish. Red light enhances mitochondrial function in healing tissue, dramatically boosting ATP production — the cellular fuel needed for efficient repair. Simultaneously, it reduces post-surgical inflammation and swelling whilst improving microcirculation to deliver the oxygen and nutrients tissues need to rebuild. Enhanced cellular energy means your body can complete the repair process faster with less pain, reducing the extended recovery period that typically follows surgical intervention.</p>
+        <h3>Mood, Anxiety &amp; Stress</h3>
+        <p>Red and near-infrared light enhance mitochondrial function in neurons responsible for mood regulation, providing more ATP for neurotransmitter production and synthesis. Increased cerebral blood flow delivers oxygen and nutrients whilst NIR wavelengths reduce neuroinflammation disrupting mood pathways. Red light also stimulates beta-endorphin release—your body's natural mood-lifters—whilst modulating your autonomic nervous system function, helping you develop better stress resilience. The result is measurable improvement in anxiety and depression scores, often noticeable within just one or two sessions.</p>
       </div>
     </div>
   </div>
@@ -197,40 +202,26 @@
           <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected skin areas</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected areas</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position your SOLO 2.0 at 20 cm from affected areas to keep the skin cool while allowing deep penetration. Treat any active eczema patches directly. Keep skin clean and bare — no lotions or products beforehand. Use the protective goggles if treating facial eczema.</div>
-        <div class="pc-tip">Tip: Use red light therapy in the morning or early afternoon. Some eczema improves within days; consistent use over weeks yields the best results. If you experience any temporary irritation, increase your distance to 25-30 cm.</div>
-        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
+        <div class="pc-note">Position the SOLO 2.0 at 20 cm from affected skin areas. Keep the area clean and bare — no moisturisers or creams beforehand. The cooler distance helps manage inflammation without heat stress on sensitive skin.</div>
+        <div class="pc-tip">Tip: Use this session before applying any topical treatments or moisturisers, as the light absorbs more effectively on bare skin. Apply soothing creams immediately after.</div>
+        <div><span class="badge">✦ Results visible: 3–4 weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Shoulder &amp; Neck Pain</div>
+        <div class="pc-name">Mood, Anxiety &amp; Stress</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Shoulder &amp; neck</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face / forehead</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position yourself so the panel directly targets your shoulder and neck area — the area causing you pain. Bring the device closer (10 cm) than your eczema sessions to maximise deep tissue penetration where chronic pain originates. Sit or stand comfortably, keeping treated areas bare and still throughout the session.</div>
-        <div class="pc-tip">Tip: Evening sessions work well for pain relief, allowing time for inflammation to reduce before sleep. Daily use provides consistent pain management. Many users report noticeable improvement within the first week of consistent use.</div>
+        <div class="pc-note">Direct the panel at your face and forehead. Close your eyes comfortably or use the included protective goggles. Morning sessions are ideal — red and NIR light mirrors sunrise wavelengths, aligning with your natural circadian rhythm and supporting mood regulation throughout the day.</div>
+        <div class="pc-tip">Tip: Many users notice a mood lift within the first few sessions. Consistency is key — daily use will compound benefits over weeks.</div>
         <div><span class="badge">✦ Results: days to 2 weeks</span></div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">Post-Surgical Pain &amp; Recovery</div>
-        <div class="pc-grid">
-          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Surgical site area</div></div>
-        </div>
-        <hr class="pc-div">
-        <div class="pc-note">Position your SOLO 2.0 at 10 cm from the post-surgical area to deliver maximum intensity for accelerated healing. Treat bare skin only — ensure the area is clean and free from bandages (once cleared by your healthcare provider). Daily sessions optimise cellular energy production needed for efficient tissue repair.</div>
-        <div class="pc-tip">Tip: Begin red light therapy once your surgeon has cleared wound exposure — typically 2-3 weeks post-op depending on your procedure. Daily use accelerates recovery timelines and reduces post-operative pain more effectively than sporadic sessions.</div>
-        <div><span class="badge">✦ Results: 1–4 weeks</span></div>
       </div>
     </div>
   </div>
@@ -242,7 +233,7 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>For your eczema and pain relief goals, timing enhances specific benefits. Morning sessions support skin barrier repair and circadian rhythm alignment. For shoulder and neck pain, early afternoon or evening sessions allow your tissue time to respond before sleep, helping you rest more comfortably. For post-surgical recovery, daily consistency matters more than timing — use whenever fits your schedule. Aim for consistency — the best time is the one you'll stick to. Avoid using red light therapy within 2 hours of your immunosuppressant medications if you take them orally, to avoid any potential interaction timing concerns.</p>
+        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For your anxiety and mood goals, morning sessions mirror natural sunrise wavelengths and support your circadian rhythm — this is optimal. For eczema flare-ups and skin management, afternoon or evening sessions work well. Consistency matters most — the best time is the one you'll stick to daily.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
@@ -275,19 +266,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Beyond your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time, particularly relevant to your situation:</p>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Reduced pain and itching from your eczema and shoulder pain often translate to better sleep quality. Red light also regulates melatonin, supporting deeper, more restorative sleep when used in the evening.</div></div>
-      <div class="ben"><div class="ben-lbl">Wound healing</div><div class="ben-txt">Red light accelerates tissue repair by stimulating collagen synthesis and reducing inflammation, helping post-surgical wounds, minor cuts, and skin damage heal faster with less visible scarring.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout your shoulders, neck, and skin, supporting recovery and overall cellular health.</div></div>
-      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support balanced immune responses — particularly beneficial if managing autoimmune-driven eczema.</div></div>
-      <div class="ben"><div class="ben-lbl">Muscle recovery</div><div class="ben-txt">If you exercise, red light therapy enhances post-workout muscle recovery, reduces soreness, and supports tissue repair — allowing you to train more consistently without extended downtime.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep — especially beneficial when eczema flare-ups have disrupted your rest.</div></div>
+      <div class="ben"><div class="ben-lbl">Energy &amp; vitality</div><div class="ben-txt">Mitochondrial stimulation supports steady energy production throughout the day. Enhanced cellular energy means better resilience to stress and improved daytime alertness.</div></div>
+      <div class="ben"><div class="ben-lbl">Wound healing</div><div class="ben-txt">Red light accelerates tissue repair and reduces inflammation, helping any minor cuts, scrapes, or eczema-related skin breaks heal faster with less visible scarring.</div></div>
+      <div class="ben"><div class="ben-lbl">Stress resilience</div><div class="ben-txt">Improved mitochondrial function and reduced neuroinflammation support your body's natural stress response systems, helping you stay calm under pressure.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses — particularly beneficial for inflammatory skin conditions.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Morita et al. (1993)</div><div class="ref-body">Found that 79% of eczema patients reported reduced itching and 62% showed visible improvement in symptoms after red and NIR light therapy. <em>Japanese Journal of Clinical Dermatology.</em></div></div>
-      <div class="ref"><div class="ref-auth">Kyoto University (2013)</div><div class="ref-body">Demonstrated a 47% reduction in eczema severity scores (SCORAD) and significantly decreased leathery skin patches after consistent LED therapy. <em>Journal of Dermatology.</em></div></div>
-      <div class="ref"><div class="ref-auth">Pain Research Management (2006)</div><div class="ref-body">Showed a 50% reduction in chronic back pain intensity compared to placebo, demonstrating red and NIR light's effectiveness for deep tissue pain. <em>Pain Research Management.</em></div></div>
-      <div class="ref"><div class="ref-auth">Wunsch &amp; Matuschka (2014)</div><div class="ref-body">A controlled trial confirming that red and NIR light significantly reduce inflammation and accelerate tissue repair through collagen and elastin stimulation. <em>Photomedicine and Laser Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">University of Alabama (2013)</div><div class="ref-body">Found that wounds healed 40% faster with daily red light therapy, particularly relevant for post-surgical recovery acceleration. <em>Lasers in Medical Science.</em></div></div>
+      <div class="ref"><div class="ref-auth">Morita et al. (1993)</div><div class="ref-body">79% of eczema patients reported that itching was significantly reduced, with 62% showing visible improvement in symptoms. <em>Japanese Journal of Clinical Dermatology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Kyoto University (2013)</div><div class="ref-body">47% reduction in eczema severity scores (SCORAD) and significantly decreased leathery skin patches after consistent light therapy. <em>Journal of Dermatological Treatment.</em></div></div>
+      <div class="ref"><div class="ref-auth">Schiffer et al. (2009)</div><div class="ref-body">A single session of transcranial NIR light therapy resulted in a 63.1% reduction in anxiety scores and 54.3% reduction in depression within one treatment. <em>Behavioral and Brain Functions.</em></div></div>
+      <div class="ref"><div class="ref-auth">Jahan et al. (2020)</div><div class="ref-body">Significantly improved stress resilience and reduced anxiety scores by approximately 50% after consistent treatment. <em>Frontiers in Psychiatry.</em></div></div>
+      <div class="ref"><div class="ref-auth">Morita et al. (2018)</div><div class="ref-body">Demonstrated improved sleep quality and circadian regulation through red and NIR light exposure, supporting better mood and stress recovery. <em>Journal of Photochemistry and Photobiology.</em></div></div>
     </div>
   </div>
 
