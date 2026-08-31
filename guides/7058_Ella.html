@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
+
+*{box-sizing:border-box;margin:0;padding:0}
+.g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
+
+.nav{display:flex;gap:6px;padding:14px 18px;background:#0d0d0d;border-bottom:1px solid #1e1e1e;flex-wrap:wrap}
+.nav button{font-family:'Oakes Grotesk',sans-serif;font-size:10px;font-weight:500;letter-spacing:.06em;padding:5px 11px;border:1px solid #2a2a2a;background:transparent;color:#fff;border-radius:20px;cursor:pointer;transition:all .2s}
+.nav button.on{background:#e8407a;border-color:#e8407a;color:#fff}
+.nav button:hover:not(.on){border-color:#e8407a;color:#e8407a}
+
+.slide{display:none;animation:fi .3s ease}
+.slide.on{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* COVER — solid black */
+.cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
+.cover-logo{margin-bottom:52px}
+.cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
+.cover-name{font-family:'Instrument Serif',serif;font-size:42px;font-style:italic;line-height:1;color:#fff;margin-bottom:0}
+.cover-name-rule{width:44px;height:1px;background:#e8407a;margin:14px 0 16px}
+.cover-device{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:32px}
+.cover-rule{border:none;border-top:1px solid #1e1e1e;margin:28px 0 22px}
+.cover-inc-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.chk{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:13px;color:#fff}
+.chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.chk-dot svg{width:11px;height:11px}
+
+/* INNER PAGES */
+.pg{background:#0d0d0d;padding:32px 36px 40px}
+.pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
+.pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
+.pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
+.rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
+
+/* SPEC TABLE */
+.specs{width:100%;border-collapse:collapse;margin-bottom:22px}
+.specs tr:nth-child(odd) td{background:#141414}
+.specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
+.specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
+.specs td:last-child{color:#fff}
+
+/* GOALS BOX */
+
+/* SCIENCE */
+.sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
+.sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
+.sci p{font-size:13px;line-height:1.7;color:#fff}
+
+/* PROTOCOL CARDS */
+.pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
+.pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
+.pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
+.pc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.pc-lbl{font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:3px}
+.pc-val{font-size:13px;font-weight:500;color:#fff}
+.pc-div{border:none;border-top:1px solid #1e1e1e;margin-bottom:12px}
+.pc-note{font-size:13px;line-height:1.7;color:#fff}
+.pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
+.badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
+
+/* FAQS */
+.faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
+.faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
+.faq p{font-size:13px;line-height:1.7;color:#fff}
+
+/* BENEFITS */
+.ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
+.ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
+.ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
+
+/* REFS */
+.ref{margin-bottom:14px;padding-left:16px;position:relative}
+.ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
+.ref-auth{font-size:13px;font-weight:600;color:#fff}
+.ref-body{font-size:13px;line-height:1.7;color:#fff}
+
+/* DISCLAIMER */
+.disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
+.disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
+.disc-box p:last-child{margin-bottom:0}
+
+/* CLOSING */
+.closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
+.c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
+.cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
+.cdot{width:6px;height:6px;border-radius:50%;background:#fff;flex-shrink:0}
+.c-sign{font-size:11.5px;color:rgba(255,255,255,.75);max-width:380px;margin:16px auto 0;line-height:1.65}
+
+@media(max-width:600px){
+  .cover{padding:36px 20px}
+  .cover-name{font-size:32px}
+  .cover-eyebrow{font-size:11px}
+  .cover-device{font-size:10px}
+  .pg{padding:24px 20px 32px}
+  .pg-title{font-size:22px}
+  .sci h3,.faq h3{font-size:17px}
+  .nav{padding:10px 12px;gap:5px}
+  .nav button{font-size:9px;padding:4px 9px}
+  .pc-grid{grid-template-columns:repeat(2,1fr)}
+  .specs td{font-size:12px;padding:9px 10px}
+  .ben{flex-direction:column;gap:4px}
+  .ben-lbl{min-width:unset}
+  .disc-box{padding:14px 16px}
+}
+</style>
+
+</head><body><div class="g">
+  <nav class="nav">
+    <button class="on" onclick="show(1)">Cover</button>
+    <button onclick="show(2)">Your device</button>
+    <button onclick="show(3)">Your goals</button>
+    <button onclick="show(4)">How it helps</button>
+    <button onclick="show(5)">Your protocol</button>
+    <button onclick="show(6)">FAQs</button>
+    <button onclick="show(7)">More benefits</button>
+    <button onclick="show(8)">Disclaimer</button>
+  </nav>
+
+  <div class="slide on" id="s1">
+    <div class="cover">
+      <div class="cover-logo">
+        <img src="/assets/solis-logo.png" style="height:42px;display:block">
+      </div>
+      <div class="cover-eyebrow">Personalised Treatment Guide</div>
+      <div class="cover-name">Ella</div>
+      <div class="cover-name-rule"></div>
+      <div class="cover-device">Solis SUPREME 2.0</div>
+      <div class="cover-rule"></div>
+      <div class="cover-inc-label">Included in your guide</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Information about your new device</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Scientific research for your wellness goals</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Your personalised treatment plan</div>
+    </div>
+  </div>
+
+  <div class="slide" id="s2">
+    <div class="pg">
+      <div class="pg-label">About your product</div>
+      <div class="pg-title">Your Solis SUPREME 2.0</div>
+      <hr class="pink-rule">
+      <table class="specs">
+        <tbody><tr><td>The product</td><td>Solis SUPREME 2.0</td></tr>
+        <tr><td>LED power</td><td>1540W (308 × 5W LEDs)</td></tr>
+        <tr><td>Wavelengths</td><td>Red: 630nm &amp; 660nm &nbsp;|&nbsp; NIR: 810nm, 830nm &amp; 850nm</td></tr>
+        <tr><td>Irradiance</td><td>&gt;180 mW/cm² at 6 inches &nbsp;|&nbsp; ~50 mW/cm² at 30 inches</td></tr>
+        <tr><td>Dimensions</td><td>97.5 × 30 × 9.5 cm &nbsp;|&nbsp; 12.2 kg</td></tr>
+        <tr><td>EMF &amp; safety</td><td>0 EMF at 3+ inches &nbsp;|&nbsp; Anti-EMF casing &nbsp;|&nbsp; FDA/CE standards</td></tr>
+        <tr><td>Warranty</td><td>3 years standard</td></tr>
+        <tr><td>In the box</td><td>Panel, power cable, protective goggles, remote control</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <div class="slide" id="s3">
+    <div class="pg">
+      <div class="pg-label">Your focus areas</div>
+      <div class="pg-title">Your health &amp; wellness goals</div>
+      <hr class="pink-rule">
+      <div class="sci">
+        <h3>Hair Growth &amp; Thickness</h3>
+        <p>Female hair thinning affecting hair density and overall strength. Your goal is to restore hair thickness, improve follicle health, and support sustained hair growth through targeted scalp exposure.</p>
+      </div>
+      <div class="sci">
+        <h3>Hormonal Balance &amp; Period Health</h3>
+        <p>Supporting regular menstrual cycles, reducing period pain, and promoting hormonal equilibrium. This includes managing cycle-related symptoms and improving reproductive health at the cellular level.</p>
+      </div>
+      <div class="sci">
+        <h3>Long COVID Recovery</h3>
+        <p>Post-viral fatigue and mitochondrial dysfunction from Long COVID. Your goal is to restore energy production, reduce brain fog, and rebuild overall systemic vitality through enhanced cellular function.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s4">
+    <div class="pg">
+      <div class="pg-label">The science</div>
+      <div class="pg-title">How red light therapy helps</div>
+      <hr class="pink-rule">
+      <div class="sci">
+        <h3>Hair Growth &amp; Thickness</h3>
+        <p>Hair loss occurs when follicles get stuck in the resting phase, and poor scalp circulation starves follicles of nutrients. Red and near-infrared light wake up the stem cells in hair follicles, kickstarting them back into active growth phase. The light also triggers nitric oxide release in scalp cells, dilating blood vessels and dramatically increasing nutrient delivery to each follicle. Clinical studies show 35-51% increases in hair count, with thicker individual strands and a healthier scalp environment—all without chemicals or hormonal disruption.</p>
+      </div>
+      <div class="sci">
+        <h3>Hormonal Balance &amp; Period Health</h3>
+        <p>Red and NIR light enhances mitochondrial function in hormone-producing glands whilst modulating the inflammatory responses that disrupt menstrual cycles. For period pain, near-infrared light reduces inflammatory markers whilst improving blood flow to reproductive organs. For cycle regulation, red light helps reset your circadian-linked hormonal timing mechanisms, particularly through morning exposure that aligns with natural hormone production patterns. The result is more regular cycles, reduced menstrual pain, and improved hormonal equilibrium without synthetic intervention.</p>
+      </div>
+      <div class="sci">
+        <h3>Long COVID Recovery</h3>
+        <p>Long COVID involves persistent mitochondrial dysfunction—viral damage to cellular energy production remains long after infection clears, causing crushing fatigue and brain fog. Red and NIR light directly activate cytochrome c oxidase, a key enzyme in mitochondrial energy production, essentially rebooting ATP output that viral infection disrupted. Enhanced cerebral blood flow reduces neuroinflammation causing cognitive impairment, whilst improved cellular energy means your brain, muscles, and organs finally have fuel to function properly again.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s5">
+    <div class="pg">
+      <div class="pg-label">Your protocol</div>
+      <hr class="pink-rule">
+      <div class="pc">
+        <div class="pc-name">Hair Growth &amp; Thickness</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Scalp</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Position the SUPREME 2.0 10 cm from your scalp, angled to cover the entire crown and problem areas. You can sit or stand—consistency matters more than position. Your SUPREME's width gives excellent full-scalp coverage.</div>
+        <div class="pc-tip">Tip: Use on damp, clean hair (no products). Morning sessions work best as they align with natural hormone cycles that influence hair growth.</div>
+        <div><span class="badge">✦ Results visible: 12–20 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Hormonal Balance &amp; Period Health</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower abdomen</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Direct the panel at your lower abdomen to reach reproductive organs. For period pain specifically, increase to daily use starting 2-3 days before your cycle begins and continue through the first 2-3 days of menstruation. Morning use supports circadian-linked hormone regulation.</div>
+        <div class="pc-tip">Tip: If you experience severe cramping, move to 15 cm distance and increase duration to 20 minutes for more intensive delivery during pain episodes.</div>
+        <div><span class="badge">✦ Results: 2–6 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Long COVID Recovery</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face / forehead + chest</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Start with 2 weeks of daily 10-minute sessions, alternating: Day 1-2 forehead (NIR for brain recovery), Day 3 chest/torso (systemic energy), then repeat. After 2 weeks, reduce to 3 times per week minimum. The SUPREME's size allows you to cover both areas in one setup by repositioning.</div>
+        <div class="pc-tip">Tip: Morning sessions mirror sunrise wavelengths and support circadian recovery. Many Long COVID patients notice cognitive clarity improvement within 3-7 days.</div>
+        <div><span class="badge">✦ Results: days to weeks</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s6">
+    <div class="pg">
+      <div class="pg-label">Practical questions</div>
+      <div class="pg-title">Getting started</div>
+      <hr class="pink-rule">
+      <div class="faq">
+        <h3>What time of day should I use my Solis SUPREME 2.0?</h3>
+        <p>For your goals, timing is particularly important. For hair growth and hormonal balance, morning sessions are ideal—they align with natural sunrise wavelengths and circadian-linked hormone production patterns. For Long COVID recovery, early morning sessions support energy restoration and circadian reset. For period pain, use whenever discomfort occurs, but consistent morning or early afternoon sessions support overall cycle regulation. Consistency matters more than time of day, but if you can, aim for morning when possible.</p>
+      </div>
+      <div class="faq">
+        <h3>Why can't I see all the lights?</h3>
+        <p>Your SUPREME 2.0 has 154 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye—this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+      </div>
+      <div class="faq">
+        <h3>Why are the distances and session times different for each benefit?</h3>
+        <p>Red light therapy works by delivering a specific dose of light energy to your tissue — and like any dose, getting it right depends on the target.</p>
+        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, gut), you generally want to be closer to maximise penetration. For surface-level concerns (skin, wound healing), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
+        <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can often be shorter for the same effect.</p>
+        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or recovery protocol.</p>
+        <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription — the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
+      </div>
+      <div class="faq">
+        <h3>Should I use goggles with red light therapy?</h3>
+        <p>Goggles are not required — red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
+        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
+        <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
+        <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
+      </div>
+      <div class="faq">
+        <h3>Do I need to expose bare skin during treatment?</h3>
+        <p>Yes — for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s7">
+    <div class="pg">
+      <div class="pg-label">Going further</div>
+      <div class="pg-title">How else can it help you?</div>
+      <hr class="pink-rule">
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SUPREME 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
+      <div class="ben"><div class="ben-lbl">Energy &amp; vitality</div><div class="ben-txt">Mitochondrial stimulation directly boosts ATP production, supporting steady energy throughout the day—particularly valuable for Long COVID recovery where fatigue is persistent.</div></div>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep when used in the evening.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; anxiety</div><div class="ben-txt">Enhanced mitochondrial function in brain regions controlling mood supports improved emotional resilience and reduced anxiety—many users report benefits within first few sessions.</div></div>
+      <div class="ben"><div class="ben-lbl">Skin health</div><div class="ben-txt">Improved circulation and collagen stimulation from facial exposure supports skin tone, radiance, and overall complexion health as a secondary benefit.</div></div>
+      <div class="ben"><div class="ben-lbl">Recovery &amp; inflammation</div><div class="ben-txt">Reduced systemic inflammation and enhanced cellular repair support faster recovery from exercise and stress, improving overall resilience.</div></div>
+      <hr class="rule">
+      <div class="pg-label" style="margin-bottom:16px">Research</div>
+      <div class="ref"><div class="ref-auth">Lanzafame et al. (2013)</div><div class="ref-body">After 16 weeks, men treated with 660nm light saw a 35–39% increase in hair counts and improved hair thickness. <em>Lasers in Surgery and Medicine.</em></div></div>
+      <div class="ref"><div class="ref-auth">Friedman et al. (2017)</div><div class="ref-body">51% increase in terminal hair counts in women receiving 660nm light therapy every other day for 17 weeks, demonstrating significant efficacy for female hair growth. <em>Dermatologic Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Shin et al. (2012)</div><div class="ref-body">83% reduction in menstrual pain scores with targeted 610nm light therapy applied daily during the 5 days prior to menstruation. <em>Journal of Athletic Training.</em></div></div>
+      <div class="ref"><div class="ref-auth">Sigman et al. (2024)</div><div class="ref-body">12 treatments over 4 weeks with 660nm &amp; 850nm wavelengths led to significant improvement in cognitive test scores (MoCA) for Long COVID patients, demonstrating neurological recovery. <em>Open-label Pilot Study.</em></div></div>
+      <div class="ref"><div class="ref-auth">Zhao et al. (2012)</div><div class="ref-body">Demonstrates that red and NIR light exposure helps regulate circadian rhythms and melatonin production, critical for both hormonal health and energy recovery. <em>Lasers in Medical Science.</em></div></div>
+    </div>
+  </div>
+
+  <div class="slide" id="s8">
+    <div class="pg">
+      <div class="pg-label">Important information</div>
+      <div class="pg-title">Disclaimer</div>
+      <hr class="pink-rule">
+      <div class="disc-box">
+        <p>This guide is intended to help you make the most of your red light therapy device based on general recommendations and your specific wellness goals. It is not intended to replace professional medical advice, diagnosis, or treatment. Red light therapy is a complementary wellness practice and should not be used as a substitute for conventional medical care.</p>
+        <p>If you have any serious, ongoing, or diagnosed medical conditions — including but not limited to cancer, epilepsy, active infections, photosensitivity disorders, or if you are pregnant, breastfeeding, taking photosensitising medications, or have recently undergone surgery — please consult your GP or a qualified healthcare professional before beginning use.</p>
+        <p>Do not use your Solis device directly over the eyes, on open wounds, or over areas of active infection. Results vary between individuals. Always follow the safety instructions provided with your device.</p>
+      </div>
+      <hr class="rule">
+      <div class="pg-label" style="margin-bottom:10px">Contact us</div>
+      <p style="font-size:13px;color:#fff;line-height:1.7">If you have any questions about your device or this guide, we're here to help.</p>
+      <p style="font-size:13px;color:#fff;margin-top:8px"><a href="mailto:hello@solistherapy.com" style="color:#e8407a;text-decoration:none;font-weight:500">hello@solistherapy.com</a></p>
+    </div>
+  </div>
+
+<script>
+function show(n){
+  document.querySelectorAll('.slide').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('on'));
+  document.getElementById('s'+n).classList.add('on');
+  document.querySelectorAll('.nav button')[n-1].classList.add('on');
+}
+</script>
+</body></html>
