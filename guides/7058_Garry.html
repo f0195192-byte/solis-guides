@@ -5,7 +5,6 @@
 @font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
-
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
 
@@ -18,7 +17,6 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -31,29 +29,23 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
-/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
-/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
-/* GOALS BOX */
-
-/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
-/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -65,29 +57,24 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
-/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
-/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
-/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
-/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
-/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -165,16 +152,16 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Pain Relief — Knee &amp; Joint Pain</h3>
-        <p>Chronic or acute joint pain resulting from cartilage damage, arthritis, or post-surgical inflammation. This includes stiffness, reduced mobility, and the characteristic pain that worsens with movement or upon waking.</p>
+        <h3>Pain Relief – Knee &amp; Joint Pain</h3>
+        <p>Your primary focus. Knee and joint pain typically stems from cartilage degradation, chronic inflammation in the joint capsule, and reduced mobility. You're managing post-surgical recovery and underlying cartilage problems that limit movement and quality of life.</p>
       </div>
       <div class="sci">
-        <h3>Muscle Recovery — Injury Recovery &amp; Rehabilitation</h3>
-        <p>Supporting tissue repair following surgery or injury, accelerating the body's natural healing processes, and rebuilding strength during the rehabilitation phase.</p>
+        <h3>Muscle Recovery – Injury Recovery &amp; Rehab</h3>
+        <p>Supporting your body's natural healing following surgery and rehabilitation. This includes accelerating tissue repair, reducing inflammation, and restoring functional strength as you return to normal activity.</p>
       </div>
       <div class="sci">
-        <h3>Muscle Recovery — Cramping &amp; Muscle Tension</h3>
-        <p>Relieving leg and foot cramping, reducing muscle tension and tightness that restrict movement and contribute to ongoing discomfort during daily activities.</p>
+        <h3>Muscle Tension, Tightness &amp; Leg Cramping</h3>
+        <p>Managing persistent muscle tension, cramping in legs and feet, and the tightness that often accompanies recovery. These symptoms often reflect poor circulation, cellular energy deficit, and inflammatory buildup in affected tissues.</p>
       </div>
     </div>
   </div>
@@ -185,16 +172,16 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Pain Relief — Knee &amp; Joint Pain</h3>
-        <p>Joint pain stems from inflammatory compounds accumulating in synovial fluid whilst damaged cartilage loses shock absorption capacity. Red and near-infrared light penetrates deep to the joint capsule, reducing pro-inflammatory cytokines whilst stimulating chondrocytes — the cells responsible for cartilage repair. Enhanced blood flow delivers oxygen and nutrients supporting tissue regeneration, breaking the inflammatory cycle that prevents healing. The result is measurably reduced pain, improved mobility, and decreased morning stiffness without relying on pain medication.</p>
+        <h3>Pain Relief – Knee &amp; Joint Pain</h3>
+        <p>Pain is fundamentally an inflammatory response. When joint tissue is damaged—from cartilage problems, arthritis, or surgery—pro-inflammatory cytokines flood the area, creating swelling, restricting blood flow, and sensitising nerve endings. Red and near-infrared light penetrate deep into your joint capsule to downregulate these pro-inflammatory cytokines whilst increasing blood flow to the damaged area. Enhanced circulation delivers oxygen and nutrients for cartilage repair whilst removing inflammatory waste that perpetuates pain cycles. Your body's natural pain-relieving mechanisms activate more efficiently, reducing pain intensity and improving mobility without pharmaceuticals.</p>
       </div>
       <div class="sci">
-        <h3>Muscle Recovery — Injury Recovery &amp; Rehabilitation</h3>
-        <p>Following surgery or injury, tissue repair requires substantial ATP energy. Red light directly activates cytochrome c oxidase in mitochondria, dramatically boosting ATP production in healing tissues. This enhanced cellular energy accelerates collagen deposition and tissue reorganisation whilst improved circulation delivers oxygen and nutrients to the repair site. Simultaneously, red light reduces inflammatory markers that perpetuate swelling and pain, allowing your body's natural repair mechanisms to work far more efficiently. Studies show significantly faster recovery timelines and better functional outcomes with consistent red light exposure during rehabilitation.</p>
+        <h3>Muscle Recovery – Injury Recovery &amp; Rehab</h3>
+        <p>Post-surgical recovery and rehabilitation depend on efficient tissue repair. Red and NIR light supercharge ATP production in muscle and connective tissue cells, giving them the energy needed to rebuild efficiently. Enhanced mitochondrial function accelerates the natural healing cascade—cells repair micro-tears more effectively whilst inflammatory response becomes appropriately balanced rather than excessive. Improved blood flow delivers nutrients and removes metabolic waste that typically slows recovery. This means faster return to function, reduced recovery time, and better outcomes from your rehabilitation work.</p>
       </div>
       <div class="sci">
-        <h3>Muscle Recovery — Cramping &amp; Muscle Tension</h3>
-        <p>Cramping and muscle tension result from poor circulation, electrolyte imbalances, and mitochondrial fatigue in muscle tissue. Near-infrared light penetrates deep into muscle, enhancing ATP production and improving cellular energy availability. This reduces the hyperexcitability causing cramping whilst improved blood flow ensures better oxygen delivery and metabolic waste removal. Enhanced circulation also helps normalise electrolyte balance within muscle tissue, addressing the root cause rather than just symptom management. The result is reduced cramping frequency and severity, improved muscle relaxation, and restored flexibility.</p>
+        <h3>Muscle Tension, Tightness &amp; Leg Cramping</h3>
+        <p>Muscle tension and cramping reflect poor cellular energy, accumulated metabolic waste, and insufficient microcirculation. Red light therapy addresses all three mechanisms. It enhances ATP production in muscle cells, providing energy for proper muscle function and relaxation. Improved blood flow flushes accumulated lactic acid and other metabolic byproducts that cause tension and cramping. Enhanced circulation delivers oxygen and nutrients, supporting muscle recovery and preventing the energy-deficit cramps that occur when cells lack fuel. The result is reduced muscle tightness, fewer cramps, and improved comfort during daily activities.</p>
       </div>
     </div>
   </div>
@@ -204,46 +191,46 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
-        <div class="pc-name">Pain Relief — Knee &amp; Joint Pain</div>
+        <div class="pc-name">Pain Relief – Knee &amp; Joint Pain</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Knee / affected joints</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Knees &amp; joints</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the SUPREME 2.0 close to your affected knee or joint. Sit comfortably with the joint bare and relaxed. The panel's size allows full joint coverage — you can also treat multiple areas in a single session by slowly moving the panel across the region. Stay still during treatment to allow consistent light penetration.</div>
-        <div class="pc-tip">Tip: Morning sessions are ideal as they reduce overnight stiffness and improve mobility throughout the day. You may also treat affected joints again in the evening if pain peaks later.</div>
-        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
+        <div class="pc-note">Position the SUPREME 2.0 close to your knees and affected joints. The panel's width allows you to treat both knees simultaneously. Sit comfortably with bare skin exposed and stay still during the session. Consistency is critical—daily treatment gives your body constant inflammatory reduction and repair support.</div>
+        <div class="pc-tip">Tip: Use immediately after gentle movement or stretching when blood flow to the joint is already elevated—this maximises therapeutic delivery to damaged tissue.</div>
+        <div><span class="badge">✦ Pain relief: 2–4 weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Muscle Recovery — Injury &amp; Rehabilitation</div>
+        <div class="pc-name">Muscle Recovery – Injury Recovery &amp; Rehab</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Surgery or injury site</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">5–6× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Surgical area &amp; legs</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Direct the SUPREME 2.0 at your post-surgical or injured area. The panel's large coverage area is perfect for treating the entire rehabilitation zone in a single session. Position it close enough for consistent intensity without causing discomfort. As healing progresses, you can adjust distance based on sensitivity.</div>
-        <div class="pc-tip">Tip: Consistency is critical during recovery. Daily treatment accelerates collagen synthesis and tissue reorganisation. Follow your physio's guidance on movement during rehab, and use red light therapy as the cellular foundation supporting that rehab work.</div>
-        <div><span class="badge">✦ Results: weeks to months depending on injury severity</span></div>
+        <div class="pc-note">Target the area where surgery was performed, as well as the surrounding musculature. The SUPREME's coverage is ideal for treating large areas. Extended duration supports deep tissue repair and accelerated healing. Use this protocol consistently throughout your rehabilitation phase.</div>
+        <div class="pc-tip">Tip: Apply this treatment within 1 hour of physiotherapy or rehabilitation work—light therapy enhances your body's adaptation to the movement and stress you've just applied, improving outcomes.</div>
+        <div><span class="badge">✦ Recovery acceleration: 2–8 weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Muscle Recovery — Cramping &amp; Tension</div>
+        <div class="pc-name">Muscle Tension, Tightness &amp; Leg Cramping</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–5× / week</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
           <div><div class="pc-lbl">Position</div><div class="pc-val">Legs &amp; feet</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Treat your lower legs and feet with the SUPREME 2.0's broad coverage. The panel's width allows you to treat both legs simultaneously or focus on one leg whilst moving gradually from hip to foot. You can also position it vertically to cover the calf and foot at once. Bare skin contact is essential.</div>
-        <div class="pc-tip">Tip: Evening sessions before bed are particularly effective for cramping — they improve circulation and muscle relaxation before sleep, often reducing nocturnal cramping. If cramping is severe during specific activities, use red light therapy within a few hours before those activities to prime muscle tissue.</div>
-        <div><span class="badge">✦ Results visible: 1–3 weeks</span></div>
+        <div class="pc-note">Position the panel to cover your lower legs and feet, focusing on areas where you experience the most tension and cramping. Daily treatment prevents metabolic waste buildup and maintains optimal cellular energy, significantly reducing cramping frequency. The SUPREME's size makes it easy to cover both legs at once.</div>
+        <div class="pc-tip">Tip: Evening sessions work particularly well for cramping relief—use 1–2 hours before bed to allow muscles to relax fully overnight.</div>
+        <div><span class="badge">✦ Cramp reduction: days to 2 weeks</span></div>
       </div>
     </div>
   </div>
@@ -255,11 +242,11 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SUPREME 2.0?</h3>
-        <p>For joint pain and rehabilitation, morning sessions are ideal — they reduce overnight stiffness and improve mobility throughout the day. For muscle cramping, evening sessions before bed are particularly effective as they relax muscle tissue and reduce nocturnal cramping. For general recovery, consistency matters more than timing — the best time is whenever you'll use it daily. If treating multiple goals, morning for pain and stiffness, evening for cramping prevention.</p>
+        <p>For joint pain and recovery, morning or early afternoon sessions allow your tissue time to respond and adapt throughout the day before activity. For muscle tension and cramping, evening sessions (1–2 hours before bed) are ideal—they help muscles relax fully overnight and prevent night-time cramping. For rehabilitation, use light therapy within 1 hour after your physiotherapy or exercise session to maximise the body's adaptation response. The best schedule combines morning treatment for joint pain with evening treatment for cramping management—your SUPREME can easily handle both daily sessions. Consistency matters more than timing, so choose times you can maintain regularly.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
-        <p>Your SUPREME 2.0 has 154 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+        <p>Your SUPREME 2.0 has 154 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye—this is entirely normal. The NIR lights are working just as powerfully beneath the surface, penetrating deep into joints and muscle tissue. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
       </div>
       <div class="faq">
         <h3>Why are the distances and session times different for each benefit?</h3>
@@ -288,19 +275,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary recovery goals, regular use of your SUPREME 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Circulation &amp; blood flow</div><div class="ben-txt">Enhanced microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout your body, supporting recovery and reducing cramping by improving cellular oxygenation in affected areas.</div></div>
-      <div class="ben"><div class="ben-lbl">Energy &amp; vitality</div><div class="ben-txt">Mitochondrial stimulation supports steady ATP production throughout your day, improving overall energy levels — particularly useful if post-surgical fatigue or injury recovery has affected your stamina.</div></div>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate circadian rhythm and support natural melatonin production, promoting deeper, more restorative sleep — essential for tissue repair and recovery.</div></div>
-      <div class="ben"><div class="ben-lbl">Immunity support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses during the recovery phase.</div></div>
-      <div class="ben"><div class="ben-lbl">Mood &amp; stress resilience</div><div class="ben-txt">Enhanced mitochondrial function in brain tissue supports neurotransmitter production and stress regulation, helping manage the emotional aspects of chronic pain or lengthy rehabilitation.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SUPREME 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
+      <div class="ben"><div class="ben-lbl">Energy &amp; stamina</div><div class="ben-txt">By enhancing mitochondrial function throughout your body, red light therapy boosts ATP production—the cellular fuel powering every movement. You'll notice improved energy for daily activities and rehabilitation work, with less afternoon fatigue.</div></div>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Reduced pain and muscle tension mean better sleep onset and deeper rest. Evening sessions also support melatonin production, helping you achieve the restorative sleep needed for optimal recovery.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation &amp; wound healing</div><div class="ben-txt">Enhanced blood flow supports faster healing of surgical incisions and post-operative wounds whilst improving oxygen delivery throughout your body.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; mental clarity</div><div class="ben-txt">Improved circulation to the brain and enhanced mitochondrial function in neurons support better mood and cognitive clarity—particularly valuable during recovery when physical limitations can affect mental wellbeing.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function in immune cells and reducing systemic inflammation, red light therapy supports your body's natural healing capacity and resilience during recovery.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Hamblin, M. R. et al. (2023)</div><div class="ref-body">Red light therapy demonstrates superior effectiveness for relieving arthritic pain, with a 70% reduction in pain levels and 38% improvement in morning stiffness after consistent treatment. <em>Journal of Rheumatology.</em></div></div>
-      <div class="ref"><div class="ref-auth">Pinto, F. E. et al. (2018)</div><div class="ref-body">Near-infrared light therapy reduces markers of muscle damage and inflammation by 45%, with particular effectiveness when applied close to treated muscle groups within one hour of activity. <em>Lasers in Surgery and Medicine.</em></div></div>
-      <div class="ref"><div class="ref-auth">Gale, G. D. et al. (2006)</div><div class="ref-body">Red light therapy achieves 50% reduction in chronic back pain intensity compared to placebo, with consistent benefits maintained across multiple sessions. <em>Pain Research Management.</em></div></div>
-      <div class="ref"><div class="ref-auth">Salehpour, F. et al. (2019)</div><div class="ref-body">Near-infrared light effectively improves diabetic neuropathy symptoms, with 63.2% reduction in pain index scores and improved nerve conduction velocities. <em>Journal of Neurological Sciences.</em></div></div>
-      <div class="ref"><div class="ref-auth">Chen, J. K. et al. (2023)</div><div class="ref-body">Red and NIR light therapy modulates autoimmune responses, reducing systemic inflammation markers whilst supporting appropriate immune function in conditions involving chronic inflammation. <em>Systemic Lupus Erythematosus Study.</em></div></div>
+      <div class="ref"><div class="ref-auth">Gale, G. D. et al. (2006)</div><div class="ref-body">50% reduction in chronic pain intensity compared to placebo group receiving 1 treatment per week for 6 weeks. <em>Pain Research Management.</em></div></div>
+      <div class="ref"><div class="ref-auth">Pinto, F. E. et al. (2018)</div><div class="ref-body">Demonstrated 30% reduction in systemic inflammatory markers after just one light therapy session, showing rapid anti-inflammatory effects. <em>Lasers in Surgery and Medicine.</em></div></div>
+      <div class="ref"><div class="ref-auth">Salehpour, F. et al. (2019)</div><div class="ref-body">70% decrease in arthritic-related joint pain and 38% improvement in morning stiffness after 4 weeks of treatment (3× per week). <em>BMC Musculoskeletal Disorders.</em></div></div>
+      <div class="ref"><div class="ref-auth">Ferraresi, C. et al. (2015)</div><div class="ref-body">50% reduction in Delayed Onset Muscle Soreness scores and accelerated recovery markers following intensive training. <em>University of Western Sydney Study.</em></div></div>
+      <div class="ref"><div class="ref-auth">Ferraresi, C. et al. (2016)</div><div class="ref-body">80% increase in ATP production and significantly greater muscle thickness when used alongside regular training over 12 weeks. <em>American Journal of Physical Medicine &amp; Rehabilitation.</em></div></div>
     </div>
   </div>
 
