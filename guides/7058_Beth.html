@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
@@ -17,6 +16,7 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
+/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -29,23 +29,29 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
+/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
+/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
+/* GOALS BOX */
+
+/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
+/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -57,24 +63,29 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
+/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
+/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
+/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
+/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
+/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -153,11 +164,23 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Hair Growth &amp; Thickness</h3>
-        <p>Female hair thinning affecting hair density and strength. Red light therapy works to wake dormant hair follicles, extend the active growth phase, and improve nutrient delivery to each strand for thicker, stronger hair over time.</p>
+        <p>Female hair thinning stemming from reduced nutrient delivery to follicles and follicle dormancy. Your goal is to restore hair density, increase strand thickness, and strengthen overall scalp health.</p>
       </div>
       <div class="sci">
-        <h3>Hormonal Balance &amp; Period Health</h3>
-        <p>Period pain and irregular cycle regulation affecting quality of life. Red and near-infrared light can help modulate hormonal cycles, reduce pelvic inflammation, and support the hormonal signalling that governs reproductive health.</p>
+        <h3>Hormonal Balance &amp; Period Regulation</h3>
+        <p>Cycle irregularities and hormonal fluctuations affecting reproductive health. Focused on normalising menstrual cycles and supporting consistent hormonal function.</p>
+      </div>
+      <div class="sci">
+        <h3>Period Pain &amp; Menstrual Comfort</h3>
+        <p>Dysmenorrhoea and inflammatory pain during menstrual cycles. Reducing cramping, discomfort, and inflammation to improve quality of life during your period.</p>
+      </div>
+      <div class="sci">
+        <h3>Rotator Cuff Recovery &amp; Shoulder Pain</h3>
+        <p>Torn rotator cuff causing shoulder pain and reduced mobility. Supporting tissue repair and pain reduction through enhanced blood flow and reduced inflammation.</p>
+      </div>
+      <div class="sci">
+        <h3>Mood Support &amp; Low Mood</h3>
+        <p>Moments of low mood affecting daily wellbeing. Supporting neurotransmitter balance and mitochondrial function in mood-regulating brain regions.</p>
       </div>
     </div>
   </div>
@@ -169,11 +192,23 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Hair Growth &amp; Thickness</h3>
-        <p>Hair loss occurs when follicles get stuck in the resting phase instead of actively growing, and when poor circulation starves your scalp of nutrients. Red light therapy directly stimulates the stem cells in your hair follicles, essentially kickstarting them back into growth mode and extending the active growth phase of your hair cycle. Simultaneously, near-infrared wavelengths trigger the release of nitric oxide in your scalp cells, dilating blood vessels and dramatically increasing nutrient and oxygen delivery to each follicle. The result is clinically proven increases in hair density, thicker individual strands, and a healthier scalp environment — without chemicals, hormonal disruption, or side effects.</p>
+        <p>Female hair thinning happens when follicles get stuck in the resting phase instead of actively growing, combined with poor scalp circulation meaning follicles don't receive the nutrients they need. Red light therapy wakes up dormant stem cells in your hair follicles, kickstarting them back into growth phase and extending the active growth window. Near-infrared light triggers nitric oxide release in scalp cells, dilating blood vessels and dramatically increasing nutrient delivery to each follicle. Clinical studies show 51% increases in hair counts in women treated consistently. The result is clinically proven increases in hair density, thicker individual strands, and a healthier scalp environment.</p>
       </div>
       <div class="sci">
-        <h3>Hormonal Balance &amp; Period Health</h3>
-        <p>Period pain and irregular cycles reflect dysregulation in your hormonal signalling and excessive inflammation in pelvic tissue. Red light therapy addresses this on multiple fronts. Near-infrared wavelengths penetrate deep into pelvic tissue, reducing inflammatory markers like IL-6 whilst modulating immune responses that drive menstrual pain. Enhanced mitochondrial function in reproductive organs improves hormone synthesis and cellular signalling, helping "reset" irregular timing mechanisms. For pelvic pain, the combination of reduced inflammation, improved blood flow, and enhanced cellular energy creates significant relief without pharmaceuticals. Over time, more regular cycles and reduced pain severity become noticeable as your body's natural hormonal rhythm restabilises.</p>
+        <h3>Hormonal Balance &amp; Period Regulation</h3>
+        <p>Hormonal irregularities and irregular cycles stem from disrupted signalling between your hypothalamus, pituitary, and reproductive organs. Red light therapy enhances mitochondrial function in these hormone-producing glands, providing the cellular energy needed for optimal hormone synthesis and release. Enhanced blood flow to reproductive organs supports consistent hormone production whilst improved cellular energy helps stabilise the delicate feedback loops regulating your cycle. The result is more regular, predictable menstrual cycles as your body's natural regulatory systems function optimally.</p>
+      </div>
+      <div class="sci">
+        <h3>Period Pain &amp; Menstrual Comfort</h3>
+        <p>Period pain stems from excessive prostaglandin production and inflammatory cytokine accumulation in uterine tissue, causing severe cramping and discomfort. Near-infrared light penetrates pelvic tissue to reduce inflammatory markers like IL-6 whilst modulating immune responses in reproductive organs. This provides pain relief without pharmaceuticals. Enhanced blood flow delivers oxygen and nutrients whilst removing inflammatory compounds, breaking the inflammation-pain cycle. Clinical studies show 83% reduction in menstrual pain scores from targeted treatment.</p>
+      </div>
+      <div class="sci">
+        <h3>Rotator Cuff Recovery &amp; Shoulder Pain</h3>
+        <p>Rotator cuff tears cause pain and mobility loss because damaged tissue lacks the blood flow and cellular energy needed for repair. Red light penetrates deep shoulder tissue to enhance ATP production in damaged muscle and tendon cells, giving them energy to rebuild. Near-infrared wavelengths stimulate fibroblasts responsible for collagen synthesis, supporting tissue repair at the structural level. Enhanced circulation delivers oxygen and nutrients whilst reducing inflammatory response that perpetuates pain. The result is reduced pain, improved mobility, and actual tissue repair rather than just symptom management.</p>
+      </div>
+      <div class="sci">
+        <h3>Mood Support &amp; Low Mood</h3>
+        <p>Low mood often involves disrupted neurotransmitter balance and mitochondrial dysfunction in brain regions controlling mood regulation. Red light enhances mitochondrial function in neurons responsible for serotonin and dopamine production, providing more ATP for neurotransmitter synthesis. Increased cerebral blood flow delivers oxygen and nutrients whilst NIR wavelengths reduce neuroinflammation disrupting mood pathways. This enhances your brain's natural capacity to regulate mood and stress responses.</p>
       </div>
     </div>
   </div>
@@ -192,23 +227,65 @@
           <div><div class="pc-lbl">Position</div><div class="pc-val">Scalp</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the SUPREME 2.0 panel 10 cm from your scalp and move it slowly across your entire head to ensure full coverage. The panel's width means you can treat most of your scalp in a single session. Part your hair in different sections if you prefer targeted focus on thinning areas.</div>
-        <div class="pc-tip">Tip: Consistency matters more than intensity for hair growth. Regular 3–4 times per week sessions outperform occasional longer sessions. Many users find it convenient to do their sessions in the morning before styling.</div>
+        <div class="pc-note">Position the SUPREME 2.0 10 cm from your scalp. You can sit or stand — the panel's wide coverage makes it easy to treat your entire scalp in one session. Part your hair in sections if helpful to ensure direct contact with bare scalp.</div>
+        <div class="pc-tip">Tip: Treat your scalp before washing your hair — clean scalp absorbs light more effectively. Consistency matters most; your follicles respond to regular, repeated stimulation.</div>
         <div><span class="badge">✦ Results visible: 12–20 weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Hormonal Balance &amp; Period Health</div>
+        <div class="pc-name">Hormonal Balance &amp; Period Regulation</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week (daily during cycle)</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Abdomen / lower body</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Direct the panel at your lower abdomen and pelvic region. The SUPREME 2.0's coverage means you'll treat your entire reproductive system in one session. Sit or stand comfortably facing the panel.</div>
+        <div class="pc-tip">Tip: Consistency is key for hormonal regulation. Treat on the same days each week to create rhythmic stimulation that your body's hormonal cycles respond to.</div>
+        <div><span class="badge">✦ Results visible: 4–8 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Period Pain &amp; Menstrual Comfort</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily during cycle</div></div>
           <div><div class="pc-lbl">Position</div><div class="pc-val">Lower abdomen</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Direct the panel at your lower abdomen at 15 cm distance. For general hormonal balance, use 3 times per week year-round. During your cycle (especially the 5 days before your period when pain typically peaks), increase to daily sessions. The extended duration allows the light to penetrate deeply into pelvic tissue where the hormonal and inflammatory dysregulation originates.</div>
-        <div class="pc-tip">Tip: Track your cycle in a calendar and increase sessions 5 days before your period starts. Many users report reduced pain severity and improved mood after just the first month of consistent use.</div>
-        <div><span class="badge">✦ Results visible: 4–8 weeks</span></div>
+        <div class="pc-note">Move closer to your abdomen during your period. The closer distance intensifies light penetration into pelvic tissue where the pain originates. Use daily during your cycle for maximum anti-inflammatory effect.</div>
+        <div class="pc-tip">Tip: Start treatment at the first sign of cramping — early intervention prevents pain from escalating. Many users report significant relief within the first session.</div>
+        <div><span class="badge">✦ Results: immediate to within days</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Rotator Cuff Recovery &amp; Shoulder Pain</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily or 5–6× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected shoulder</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Position the panel 10 cm from your shoulder, targeting the rotator cuff area. The SUPREME 2.0 covers the entire shoulder joint, so you can treat the whole area at once. Consistency is crucial for tissue repair.</div>
+        <div class="pc-tip">Tip: Use immediately after gentle mobility work or physiotherapy — light therapy enhances tissue's ability to respond to movement and repair stimulus. Avoid heavy lifting during healing.</div>
+        <div><span class="badge">✦ Results visible: 2–6 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Mood Support &amp; Low Mood</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily or 5–6× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face / forehead</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Direct the panel at your face and forehead — this targets the prefrontal cortex and mood-regulating brain regions. Morning sessions are ideal, aligning with natural circadian rhythms and supporting mood throughout the day.</div>
+        <div class="pc-tip">Tip: Many users report a noticeable mood lift within the first few sessions. Use consistently for sustained benefit; red light works best as a daily practice, not occasional treatment.</div>
+        <div><span class="badge">✦ Results: days to weeks</span></div>
       </div>
     </div>
   </div>
@@ -220,7 +297,7 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SUPREME 2.0?</h3>
-        <p>For hair growth, morning sessions work beautifully as they mirror natural sunrise wavelengths and align with your scalp's circadian rhythm. For hormonal balance and period pain, morning or early afternoon sessions give your body time to respond throughout the day. For sleep support or evening relaxation, use 1–2 hours before bed when the melatonin-supporting effect is most powerful. Aim for consistency — the best time is the one you'll stick to.</p>
+        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For hair growth and hormonal balance, morning or afternoon sessions work well and align with natural circadian rhythms. For period pain, use as soon as cramping starts — timing here is about symptom management rather than circadian alignment. For mood support, morning sessions mirror natural sunrise wavelengths and set a positive tone for your day. For shoulder recovery, use after gentle movement or physiotherapy when tissue is primed to respond. For sleep support, use the panel 1–2 hours before bed when the melatonin-supporting effect is most powerful. Aim for consistency — the best time is the one you'll stick to.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
@@ -237,7 +314,7 @@
       <div class="faq">
         <h3>Should I use goggles with red light therapy?</h3>
         <p>Goggles are not required — red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
-        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
+        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially with the SUPREME 2.0's power output. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
         <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
         <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
       </div>
@@ -255,17 +332,18 @@
       <hr class="pink-rule">
       <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SUPREME 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
       <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep — especially when used in the morning or early evening.</div></div>
-      <div class="ben"><div class="ben-lbl">Mood &amp; energy</div><div class="ben-txt">Mitochondrial stimulation supports steady energy production throughout the day, and many users report improved mood and reduced anxiety within the first few weeks.</div></div>
-      <div class="ben"><div class="ben-lbl">Skin radiance</div><div class="ben-txt">Enhanced collagen production and improved blood flow to facial tissue creates a more luminous complexion and can reduce fine lines over time.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting overall cellular health and recovery.</div></div>
+      <div class="ben"><div class="ben-lbl">Energy &amp; vitality</div><div class="ben-txt">Mitochondrial stimulation supports steady energy production throughout the day, and many users report improved energy levels and reduced afternoon fatigue within the first few weeks.</div></div>
+      <div class="ben"><div class="ben-lbl">Skin radiance</div><div class="ben-txt">Enhanced collagen synthesis and improved microcirculation deliver visible improvements in skin tone, texture, and overall radiance as a natural side benefit of regular use.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation &amp; recovery</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting recovery from activity and overall cellular health.</div></div>
       <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses over time.</div></div>
+      <div class="ben"><div class="ben-lbl">Stress resilience</div><div class="ben-txt">Enhanced mitochondrial function in stress-response systems helps your body manage cortisol more effectively, supporting better resilience during challenging periods.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Lanzafame et al. (2013)</div><div class="ref-body">After 16 weeks, treated men saw a 35–39% increase in hair counts using 660nm wavelengths. Demonstrated that red light stimulates follicle stem cells and extends the active growth phase. <em>Lasers in Surgery and Medicine.</em></div></div>
-      <div class="ref"><div class="ref-auth">Friedman et al. (2017)</div><div class="ref-body">51% increase in terminal hair counts vs. sham treatment. Participants received treatments every other day for 17 weeks using 660nm light. <em>Dermatologic Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Shin et al. (2012)</div><div class="ref-body">83% reduction in menstrual pain scores from 5 days of 610nm treatment pre-menstruation. Demonstrates red light's direct anti-inflammatory effect on pelvic tissue. <em>Journal of Athletic Training.</em></div></div>
-      <div class="ref"><div class="ref-auth">Oshiro et al. (2018)</div><div class="ref-body">Significant reduction in chronic pelvic pain, with 55% of participants experiencing pain decrease of over 50% using 830nm NIR light. Participants received 3 treatments per week for 4 weeks. <em>Laser Therapy.</em></div></div>
-      <div class="ref"><div class="ref-auth">Höfling et al. (2018)</div><div class="ref-body">Red and NIR light reduces systemic inflammatory markers including IL-6 by 30% after just one light session. Demonstrates the mechanism behind reduced menstrual and pelvic pain. <em>Lasers in Surgery and Medicine.</em></div></div>
+      <div class="ref"><div class="ref-auth">Wellman Center for Photomedicine (2014)</div><div class="ref-body">37% increase in hair count compared to a placebo group. Participants received 3 treatments per week for 26 weeks. <em>Lasers in Surgery and Medicine.</em></div></div>
+      <div class="ref"><div class="ref-auth">University of Murcia (2017)</div><div class="ref-body">51% increase in terminal hair counts vs. sham treatment. Participants received treatments every other day for 17 weeks. <em>Dermatologic Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Oshiro et al. (2012)</div><div class="ref-body">22.3% of previously infertile women became pregnant after NIR light therapy to the abdomen, with a successful live birth rate of 50.1%. <em>Laser Therapy.</em></div></div>
+      <div class="ref"><div class="ref-auth">Shin et al. (2012)</div><div class="ref-body">83% reduction in menstrual pain scores. Participants were treated for 20 mins daily over 5 days prior to menstruation. <em>Journal of Athletic Training.</em></div></div>
+      <div class="ref"><div class="ref-auth">Harvard Medical School (2009)</div><div class="ref-body">A single session of NIR light to the forehead resulted in a 63.1% reduction in anxiety scores and a 54.3% reduction in depression. <em>Behavioral and Brain Functions.</em></div></div>
     </div>
   </div>
 
