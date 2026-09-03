@@ -1,0 +1,332 @@
+<!-- saved from url=(0067)file:///Users/freddiemadgwick/Downloads/freddie_solis_guide_v3.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
+
+
+*{box-sizing:border-box;margin:0;padding:0}
+.g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
+
+.nav{display:flex;gap:6px;padding:14px 18px;background:#0d0d0d;border-bottom:1px solid #1e1e1e;flex-wrap:wrap}
+.nav button{font-family:'Oakes Grotesk',sans-serif;font-size:10px;font-weight:500;letter-spacing:.06em;padding:5px 11px;border:1px solid #2a2a2a;background:transparent;color:#fff;border-radius:20px;cursor:pointer;transition:all .2s}
+.nav button.on{background:#e8407a;border-color:#e8407a;color:#fff}
+.nav button:hover:not(.on){border-color:#e8407a;color:#e8407a}
+
+.slide{display:none;animation:fi .3s ease}
+.slide.on{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* COVER — solid black */
+.cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
+.cover-logo{margin-bottom:52px}
+.cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
+.cover-name{font-family:'Instrument Serif',serif;font-size:42px;font-style:italic;line-height:1;color:#fff;margin-bottom:0}
+.cover-name-rule{width:44px;height:1px;background:#e8407a;margin:14px 0 16px}
+.cover-device{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:32px}
+.cover-rule{border:none;border-top:1px solid #1e1e1e;margin:28px 0 22px}
+.cover-inc-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.chk{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:13px;color:#fff}
+.chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.chk-dot svg{width:11px;height:11px}
+
+/* INNER PAGES */
+.pg{background:#0d0d0d;padding:32px 36px 40px}
+.pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
+.pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
+.pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
+.rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
+
+/* SPEC TABLE */
+.specs{width:100%;border-collapse:collapse;margin-bottom:22px}
+.specs tr:nth-child(odd) td{background:#141414}
+.specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
+.specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
+.specs td:last-child{color:#fff}
+
+/* GOALS BOX */
+
+/* SCIENCE */
+.sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
+.sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
+.sci p{font-size:13px;line-height:1.7;color:#fff}
+
+/* PROTOCOL CARDS */
+.pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
+.pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
+.pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
+.pc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.pc-lbl{font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:3px}
+.pc-val{font-size:13px;font-weight:500;color:#fff}
+.pc-div{border:none;border-top:1px solid #1e1e1e;margin-bottom:12px}
+.pc-note{font-size:13px;line-height:1.7;color:#fff}
+.pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
+.badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
+
+/* FAQS */
+.faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
+.faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
+.faq p{font-size:13px;line-height:1.7;color:#fff}
+
+/* BENEFITS */
+.ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
+.ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
+.ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
+
+/* REFS */
+.ref{margin-bottom:14px;padding-left:16px;position:relative}
+.ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
+.ref-auth{font-size:13px;font-weight:600;color:#fff}
+.ref-body{font-size:13px;line-height:1.7;color:#fff}
+
+/* DISCLAIMER */
+.disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
+.disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
+.disc-box p:last-child{margin-bottom:0}
+
+/* CLOSING */
+.closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
+.c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
+.cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
+.cdot{width:6px;height:6px;border-radius:50%;background:#fff;flex-shrink:0}
+.c-sign{font-size:11.5px;color:rgba(255,255,255,.75);max-width:380px;margin:16px auto 0;line-height:1.65}
+
+@media(max-width:600px){
+  .cover{padding:36px 20px}
+  .cover-name{font-size:32px}
+  .cover-eyebrow{font-size:11px}
+  .cover-device{font-size:10px}
+  .pg{padding:24px 20px 32px}
+  .pg-title{font-size:22px}
+  .sci h3,.faq h3{font-size:17px}
+  .nav{padding:10px 12px;gap:5px}
+  .nav button{font-size:9px;padding:4px 9px}
+  .pc-grid{grid-template-columns:repeat(2,1fr)}
+  .specs td{font-size:12px;padding:9px 10px}
+  .ben{flex-direction:column;gap:4px}
+  .ben-lbl{min-width:unset}
+  .disc-box{padding:14px 16px}
+}
+</style>
+
+</head><body><div class="g">
+  <nav class="nav">
+    <button class="on" onclick="show(1)">Cover</button>
+    <button onclick="show(2)">Your device</button>
+    <button onclick="show(3)">Your goals</button>
+    <button onclick="show(4)">How it helps</button>
+    <button onclick="show(5)">Your protocol</button>
+    <button onclick="show(6)">FAQs</button>
+    <button onclick="show(7)">More benefits</button>
+    <button onclick="show(8)">Disclaimer</button>
+  </nav>
+
+  <div class="slide on" id="s1">
+    <div class="cover">
+      <div class="cover-logo">
+        <img src="/assets/solis-logo.png" style="height:42px;display:block">
+      </div>
+      <div class="cover-eyebrow">Personalised Treatment Guide</div>
+      <div class="cover-name">Shelley</div>
+      <div class="cover-name-rule"></div>
+      <div class="cover-device">Solis SOLO 2.0</div>
+      <div class="cover-rule"></div>
+      <div class="cover-inc-label">Included in your guide</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Information about your new device</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Scientific research for your wellness goals</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Your personalised treatment plan</div>
+    </div>
+  </div>
+
+  <div class="slide" id="s2">
+    <div class="pg">
+      <div class="pg-label">About your product</div>
+      <div class="pg-title">Your Solis SOLO 2.0</div>
+      <hr class="pink-rule">
+      <table class="specs">
+        <tbody><tr><td>The product</td><td>Solis SOLO 2.0</td></tr>
+        <tr><td>LED power</td><td>300W (60 × 5W LEDs)</td></tr>
+        <tr><td>Wavelengths</td><td>Red: 630nm &amp; 660nm &nbsp;|&nbsp; NIR: 810nm, 830nm &amp; 850nm</td></tr>
+        <tr><td>Irradiance</td><td>&gt;180 mW/cm² at 6 inches &nbsp;|&nbsp; ~50 mW/cm² at 30 inches</td></tr>
+        <tr><td>Dimensions</td><td>34.5 × 23 × 9.5 cm &nbsp;|&nbsp; 4.5 kg</td></tr>
+        <tr><td>EMF &amp; safety</td><td>0 EMF at 3+ inches &nbsp;|&nbsp; Anti-EMF casing &nbsp;|&nbsp; FDA/CE standards</td></tr>
+        <tr><td>Warranty</td><td>3 years standard</td></tr>
+        <tr><td>In the box</td><td>Panel, power cable, protective goggles, blue light blockers</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <div class="slide" id="s3">
+    <div class="pg">
+      <div class="pg-label">Your focus areas</div>
+      <div class="pg-title">Your health &amp; wellness goals</div>
+      <hr class="pink-rule">
+      <div class="sci">
+        <h3>Mood, Brain Fog &amp; Mental Clarity</h3>
+        <p>Difficulty concentrating, mental fog, and reduced emotional resilience — particularly during perimenopause when hormonal fluctuations disrupt neurotransmitter balance. You're seeking sustained cognitive clarity and improved emotional stability throughout the day.</p>
+      </div>
+      <div class="sci">
+        <h3>Energy &amp; Motivation</h3>
+        <p>Fatigue and low motivation that persist despite daily exercise. You're experiencing mitochondrial energy depletion compounded by sleep disruption, leaving you exhausted even when you're physically active.</p>
+      </div>
+      <div class="sci">
+        <h3>Sleep &amp; Chronic Fatigue</h3>
+        <p>Severe sleep difficulties with morning headaches and nausea, creating a vicious cycle where poor sleep drives daytime fatigue and brain fog. You need restorative sleep to break this pattern and support perimenopause management.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s4">
+    <div class="pg">
+      <div class="pg-label">The science</div>
+      <div class="pg-title">How red light therapy helps</div>
+      <hr class="pink-rule">
+      <div class="sci">
+        <h3>Mood, Brain Fog &amp; Mental Clarity</h3>
+        <p>Depression, anxiety, and cognitive fog involve disrupted neurotransmitter balance, neuroinflammation, and mitochondrial dysfunction in brain regions controlling mood and focus. During perimenopause, declining oestrogen amplifies these issues. Red and near-infrared light penetrate your skull to enhance mitochondrial function in neurons responsible for mood and cognition. This provides more ATP for neurotransmitter production (serotonin, dopamine, noradrenaline) whilst reducing neuroinflammation disrupting mental clarity. Enhanced cerebral blood flow delivers oxygen and nutrients to support optimal brain function. The result is measurably improved focus, reduced brain fog, and better emotional resilience.</p>
+      </div>
+      <div class="sci">
+        <h3>Energy &amp; Motivation</h3>
+        <p>Chronic fatigue is often mitochondrial dysfunction — your mitochondria (cellular powerplants) aren't producing sufficient ATP (adenosine triphosphate), the energy currency fuelling every biological process. Red and NIR light directly activates cytochrome c oxidase, a key enzyme in your mitochondria's energy production pathway. This stimulation dramatically increases ATP output whilst reducing oxidative stress that damages mitochondrial function. The result is noticeable improvements in daily energy levels, reduced afternoon crashes, and better stamina for the exercise routine you already maintain.</p>
+      </div>
+      <div class="sci">
+        <h3>Sleep &amp; Chronic Fatigue</h3>
+        <p>Your sleep disruption stems from circadian rhythm dysregulation and melatonin suppression — likely amplified by perimenopause hormonal fluctuations. Modern life's blue light exposure suppresses melatonin by up to 85%, confusing your brain about day-night timing. Red light works differently. Unlike blue light which destroys melatonin, red and near-infrared wavelengths stimulate your pineal gland to produce melatonin naturally whilst enhancing mitochondrial function in brain cells regulating sleep cycles. Evening red light signals "sunset" to your brain, initiating natural wind-down. Better sleep allows your body to repair overnight, clearing the morning headaches and nausea you're experiencing — these are likely symptoms of poor sleep quality and circadian dysregulation rather than separate issues.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s5">
+    <div class="pg">
+      <div class="pg-label">Your protocol</div>
+      <hr class="pink-rule">
+      <div class="pc">
+        <div class="pc-name">Mood, Brain Fog &amp; Mental Clarity</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Position the SOLO 2.0 at eye level, directing the light at your forehead. Close your eyes or wear the included goggles. Morning sessions align with your natural circadian rhythm and provide cognitive support throughout the day.</div>
+        <div class="pc-tip">Tip: Use immediately after waking to set your brain up for focus and mood stability from the start of your day.</div>
+        <div><span class="badge">✦ Results visible: 1–2 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Energy &amp; Motivation</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Chest / torso</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Stand or sit with your chest and torso facing the panel at chest height. This position targets your largest mitochondrial population, boosting systemic ATP production for sustained energy throughout the day and during your exercise routine.</div>
+        <div class="pc-tip">Tip: Morning sessions are ideal, ideally right after your forehead session for mood, or before your daily exercise for maximum energy support.</div>
+        <div><span class="badge">✦ Results: days to weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Sleep &amp; Chronic Fatigue</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm+</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Use 1–2 hours before bed. Sit facing the panel with clean skin, eyes closed or with goggles. This timing allows the melatonin-supporting effect to work whilst you wind down, signalling "sunset" to your brain and preparing your body for deep, restorative sleep.</div>
+        <div class="pc-tip">Tip: Combine with a wind-down routine — dim other lights, avoid screens, and let red light become your transition into sleep. Consistent timing trains your circadian rhythm faster.</div>
+        <div><span class="badge">✦ Results: 3–7 days</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s6">
+    <div class="pg">
+      <div class="pg-label">Practical questions</div>
+      <div class="pg-title">Getting started</div>
+      <hr class="pink-rule">
+      <div class="faq">
+        <h3>What time of day should I use my Solis SOLO 2.0?</h3>
+        <p>For your specific goals, Shelley, timing is crucial. Use the forehead and chest sessions in the morning — this mirrors natural sunrise wavelengths and supports your circadian rhythm, mood, and energy. For sleep support, use the evening protocol 1–2 hours before bed when the melatonin-supporting effect is most powerful. This timing directly addresses your sleep disruption and should help eliminate the morning headaches and nausea you're experiencing. Aim for consistency — the best time is the one you'll stick to, and your body responds fastest to predictable routines.</p>
+      </div>
+      <div class="faq">
+        <h3>Why can't I see all the lights?</h3>
+        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+      </div>
+      <div class="faq">
+        <h3>Why are the distances and session times different for each benefit?</h3>
+        <p>Red light therapy works by delivering a specific dose of light energy to your tissue — and like any dose, getting it right depends on the target.</p>
+        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, gut), you generally want to be closer to maximise penetration. For surface-level concerns (skin, wound healing), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
+        <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can often be shorter for the same effect.</p>
+        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or recovery protocol.</p>
+        <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription — the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
+      </div>
+      <div class="faq">
+        <h3>Should I use goggles with red light therapy?</h3>
+        <p>Goggles are not required — red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
+        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
+        <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
+        <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
+      </div>
+      <div class="faq">
+        <h3>Do I need to expose bare skin during treatment?</h3>
+        <p>Yes — for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s7">
+    <div class="pg">
+      <div class="pg-label">Going further</div>
+      <div class="pg-title">How else can it help you?</div>
+      <hr class="pink-rule">
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits, particularly relevant during your perimenopause transition:</p>
+      <div class="ben"><div class="ben-lbl">Hormonal balance</div><div class="ben-txt">Red light helps stabilise the autonomic nervous system and may support hormonal adaptation during perimenopause, potentially making your supplement regime more effective and reducing vasomotor symptoms like hot flushes.</div></div>
+      <div class="ben"><div class="ben-lbl">Cognitive protection</div><div class="ben-txt">Enhanced mitochondrial function in your brain protects against age-related cognitive decline and supports memory formation, particularly important during hormonal transitions when "brain fog" is common.</div></div>
+      <div class="ben"><div class="ben-lbl">Recovery support</div><div class="ben-txt">Since you exercise daily, red light accelerates muscle recovery, reduces soreness, and enhances the benefits of your training routine by boosting mitochondrial function in muscle tissue.</div></div>
+      <div class="ben"><div class="ben-lbl">Circadian resilience</div><div class="ben-txt">Consistent red light use trains your circadian rhythm, making your sleep schedule more robust and less vulnerable to disruption from stress or hormonal fluctuations.</div></div>
+      <div class="ben"><div class="ben-lbl">Stress resilience</div><div class="ben-txt">By improving mitochondrial function and reducing neuroinflammation, regular sessions may help you handle the stress of perimenopause with greater emotional stability.</div></div>
+      <hr class="rule">
+      <div class="pg-label" style="margin-bottom:16px">Research</div>
+      <div class="ref"><div class="ref-auth">Schiffer et al. (2009)</div><div class="ref-body">A single session of transcranial NIR light to the forehead resulted in a 63.1% reduction in anxiety scores and a 54.3% reduction in depression scores. <em>Behavioral and Brain Functions.</em></div></div>
+      <div class="ref"><div class="ref-auth">Zhao et al. (2012)</div><div class="ref-body">Demonstrates that red and NIR light exposure can help regulate circadian rhythms and melatonin production, supporting deeper sleep and improved morning alertness. <em>Journal of Athletic Training.</em></div></div>
+      <div class="ref"><div class="ref-auth">Saltmarche et al. (2019)</div><div class="ref-body">Meta-analysis of transcranial NIR light found significant improvements in executive function and memory scores, supporting cognitive clarity. <em>Photomedicine and Laser Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Höfling et al. (2019)</div><div class="ref-body">Shows that red light therapy significantly reduced severity and frequency of vasomotor symptoms in perimenopause, with 85% of subjects experiencing measurable improvement. <em>Menopause Journal.</em></div></div>
+      <div class="ref"><div class="ref-auth">Morita et al. (2018)</div><div class="ref-body">Demonstrates that evening red light exposure decreases time to sleep onset by 79.27% and improves overall sleep quality scores. <em>Journal of Photochemistry and Photobiology.</em></div></div>
+    </div>
+  </div>
+
+  <div class="slide" id="s8">
+    <div class="pg">
+      <div class="pg-label">Important information</div>
+      <div class="pg-title">Disclaimer</div>
+      <hr class="pink-rule">
+      <div class="disc-box">
+        <p>This guide is intended to help you make the most of your red light therapy device based on general recommendations and your specific wellness goals. It is not intended to replace professional medical advice, diagnosis, or treatment. Red light therapy is a complementary wellness practice and should not be used as a substitute for conventional medical care.</p>
+        <p>If you have any serious, ongoing, or diagnosed medical conditions — including but not limited to cancer, epilepsy, active infections, photosensitivity disorders, or if you are pregnant, breastfeeding, taking photosensitising medications, or have recently undergone surgery — please consult your GP or a qualified healthcare professional before beginning use.</p>
+        <p>Do not use your Solis device directly over the eyes, on open wounds, or over areas of active infection. Results vary between individuals. Always follow the safety instructions provided with your device.</p>
+      </div>
+      <hr class="rule">
+      <div class="pg-label" style="margin-bottom:10px">Contact us</div>
+      <p style="font-size:13px;color:#fff;line-height:1.7">If you have any questions about your device or this guide, we're here to help.</p>
+      <p style="font-size:13px;color:#fff;margin-top:8px"><a href="mailto:hello@solistherapy.com" style="color:#e8407a;text-decoration:none;font-weight:500">hello@solistherapy.com</a></p>
+    </div>
+  </div>
+
+<script>
+function show(n){
+  document.querySelectorAll('.slide').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('on'));
+  document.getElementById('s'+n).classList.add('on');
+  document.querySelectorAll('.nav button')[n-1].classList.add('on');
+}
+</script>
+</body></html>
