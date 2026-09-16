@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
-@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -17,7 +17,6 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -30,29 +29,23 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
-/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
-/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
-/* GOALS BOX */
-
-/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
-/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -64,29 +57,24 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
-/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
-/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
-/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
-/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
-/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -126,7 +114,7 @@
   <div class="slide on" id="s1">
     <div class="cover">
       <div class="cover-logo">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAmCAYAAACM2ksRAAAACXBIWXMAAA7DAAAOwwHHb6thAAABI0lEQVRoge3ZMQrCQBSA4Z9BsLCxtBELLysbCxvBUlvBVlrYWVgoWNnYeAMbW0ELLRQvYGEhFlZYKHjwh9l3O7Mz2d3MnPC9h+XNvJnZy82SJEmSJEnS+2NZFj3Px/f9//f9Xv/fX6/X1BoOhxSLRQrFIoViEf1+Xx/Hp9Mp7XY79Hg8Uq1Wo1ar1UcKhQIlk0nK5XIUj8cpGo1SNBqlVCpF2Wz2Q/H5fJ4cx6FUKkXhcJgikegl0u02VKvVVBJHoxEtFgu6XC6PihKJBJXLZXo6nSiXy1EkEtEkj8cj7XY7Ov/0dCGKRCI0mUxoMpnQdDqlYrH4oXg6nVIqlfozUiqVaDQa0Wa7pQuRyWT+F5fLZVqvV3S9XimXy1EikaBEIkHZbJYSiQTlcjlK/v+L73Y7Wq1W9HA40H6/p+PxSMfj8RuzJEmSJEnS2/MNZQ3Aw3yxXXgAAAAASUVORK5CYII=" style="height:42px;display:block">
+        <img src="/assets/solis-logo.png" style="height:42px;display:block">
       </div>
       <div class="cover-eyebrow">Personalised Treatment Guide</div>
       <div class="cover-name">Sultana</div>
@@ -164,28 +152,24 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Mood, Anxiety &amp; Stress</h3>
-        <p>Addressing anxiety, worry, and stress responses. Your nervous system has become dysregulated, amplifying threat perception and limiting your capacity for calm. Red light therapy targets the neural circuits responsible for anxiety processing and stress resilience.</p>
+        <h3>Energy Levels &amp; Mitochondrial Support</h3>
+        <p>Your primary concern. ME/CFS involves profound mitochondrial dysfunction where cellular energy production becomes severely impaired, causing crushing fatigue that worsens with minimal exertion. Restoring mitochondrial function is fundamental to addressing the core dysfunction driving your condition.</p>
       </div>
       <div class="sci">
-        <h3>Low Mood &amp; Depression</h3>
-        <p>Supporting mood regulation and motivation. Depression involves neurotransmitter imbalances and neuroinflammation in mood-controlling brain regions, compounded by the fatigue and hopelessness that comes with long-term illness like ME/CFS.</p>
+        <h3>Chronic Pain &amp; Neurological Pain Management</h3>
+        <p>Persistent muscle soreness and neurological pain are central to ME/CFS. These stem from mitochondrial insufficiency, neuroinflammation, and impaired pain-signalling pathways that red light therapy can help modulate at the cellular level.</p>
       </div>
       <div class="sci">
-        <h3>Brain Fog &amp; Mental Clarity</h3>
-        <p>Restoring cognitive function and mental sharpness. ME/CFS often creates profound "brain fog"—difficulty concentrating, processing information, and maintaining mental focus. This reflects mitochondrial dysfunction in neurons and neuroinflammation affecting cognition.</p>
+        <h3>Cognitive Function, Memory &amp; Concentration</h3>
+        <p>Brain fog, poor memory, and concentration difficulty are hallmark ME/CFS symptoms caused by reduced cerebral mitochondrial function and neuroinflammation. Your brain consumes 20% of your body's energy despite being only 2% of your weight, making mitochondrial support particularly critical for cognitive restoration.</p>
       </div>
       <div class="sci">
-        <h3>Energy &amp; Motivation</h3>
-        <p>Boosting cellular energy production. ME/CFS is fundamentally a disorder of mitochondrial dysfunction and cellular energy collapse. Restoring ATP production directly addresses the root cause of the exhaustion and motivational collapse you experience.</p>
+        <h3>Mood &amp; Emotional Wellbeing</h3>
+        <p>Depression and low mood in ME/CFS result from neurotransmitter dysregulation, neuroinflammation, and energy deficiency in mood-regulating brain regions. Supporting mitochondrial function helps restore neurochemical balance and emotional resilience.</p>
       </div>
       <div class="sci">
-        <h3>Nervous System Regulation</h3>
-        <p>Supporting parasympathetic activation and autonomic balance. ME/CFS involves persistent hyperactivation of the sympathetic nervous system (fight-or-flight), keeping your body in a state of threat and preventing recovery. Red light therapy helps recalibrate this imbalance.</p>
-      </div>
-      <div class="sci">
-        <h3>Muscle Tension &amp; Tightness</h3>
-        <p>Reducing post-exertional muscle pain and stiffness. ME/CFS creates persistent muscle tension and pain that worsens with activity. Enhanced circulation and reduced inflammation from red light therapy directly address this tissue-level dysfunction.</p>
+        <h3>Muscle Recovery &amp; Performance</h3>
+        <p>Post-exertional malaise in ME/CFS means your muscles struggle to recover from activity. Supporting ATP production and reducing inflammatory markers can help muscles recover more efficiently within safe exertion boundaries.</p>
       </div>
     </div>
   </div>
@@ -196,28 +180,24 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Mood, Anxiety &amp; Stress</h3>
-        <p>Red and near-infrared light penetrate your skull, reaching brain regions responsible for anxiety and threat perception — particularly the prefrontal cortex and amygdala. These wavelengths enhance mitochondrial function in these regions, increasing ATP production for optimal neural signalling. Enhanced energy allows your brain's natural anxiety-dampening systems to function properly, reducing hypervigilance and worry. Simultaneously, NIR light reduces neuroinflammation that amplifies anxiety responses. The result is measurable reduction in anxiety intensity and improved stress resilience.</p>
+        <h3>Energy Levels &amp; Mitochondrial Support</h3>
+        <p>ME/CFS is fundamentally a mitochondrial disease. Red and near-infrared light are absorbed by cytochrome c oxidase, a key enzyme in your mitochondrial respiratory chain, directly stimulating ATP production — your cells' energy currency. Studies show up to 70% boosts in mitochondrial ATP production. With ME/CFS, this cellular energy restoration can be transformative, giving your tissues the fuel needed to maintain basic function and gradually rebuild tolerance for activity. Enhanced mitochondrial output also reduces oxidative stress, one of the primary drivers of ongoing cellular damage in ME/CFS.</p>
       </div>
       <div class="sci">
-        <h3>Low Mood &amp; Depression</h3>
-        <p>Depression involves disrupted neurotransmitter balance (particularly serotonin and dopamine) and mitochondrial dysfunction in mood-regulating brain regions. Red light enhances cellular energy in these exact areas, supporting neurotransmitter synthesis whilst reducing the neuroinflammation that disrupts mood pathways. Studies show a single session of transcranial red light can produce measurable mood elevation within minutes. For ME/CFS patients, where depression is often secondary to chronic mitochondrial failure and hopelessness about recovery, restoring cellular energy directly addresses the physical foundation of low mood.</p>
+        <h3>Chronic Pain &amp; Neurological Pain Management</h3>
+        <p>ME/CFS pain stems from mitochondrial dysfunction in nerve tissue and reduced microcirculation. Near-infrared wavelengths penetrate deep to reach spinal tissues, nerve endings, and affected muscles. Red light reduces pro-inflammatory cytokines whilst improving blood flow to damaged tissues, delivering oxygen and nutrients for repair. This downregulates the pain signalling cascade perpetuating your neurological pain, offering relief without pharmaceutical dependency.</p>
       </div>
       <div class="sci">
-        <h3>Brain Fog &amp; Mental Clarity</h3>
-        <p>ME/CFS brain fog stems from severe mitochondrial dysfunction in neurons and glial cells (which support neuronal function). Your brain consumes 20% of your body's energy despite being only 2% of body weight — when mitochondrial output fails, cognitive performance collapses. Red light directly activates cytochrome c oxidase, the key enzyme driving ATP production in mitochondria. Boosted energy in your brain gives neurons and glial cells fuel for memory formation, attention, and information processing. Enhanced cerebral blood flow delivers more oxygen and glucose whilst improved mitochondrial function strengthens neuroinflammation. The result is measurable improvement in focus, processing speed, and mental clarity.</p>
+        <h3>Cognitive Function, Memory &amp; Concentration</h3>
+        <p>Brain fog in ME/CFS results from severely reduced cerebral mitochondrial function. Neurons are energy-hungry, consuming enormous ATP for memory formation, focus, and neural communication. Near-infrared light penetrates your skull to enhance mitochondrial function in brain cells whilst reducing neuroinflammation. This directly improves executive function, memory recall, and mental clarity — addressing the root mechanism driving cognitive impairment rather than masking symptoms.</p>
       </div>
       <div class="sci">
-        <h3>Energy &amp; Motivation</h3>
-        <p>ME/CFS is fundamentally a disease of mitochondrial collapse — your cellular power plants fail to produce sufficient ATP, leaving you profoundly exhausted despite rest. Red light directly stimulates mitochondrial energy production throughout your body, particularly in energy-demanding tissues like brain, heart, and skeletal muscle. This is not temporary stimulation — it's addressing the core pathophysiology causing ME/CFS. By restoring ATP production, red light therapy restores the energy currency that powers everything from thinking to movement to will to action. This directly addresses both the physical exhaustion and the motivational collapse that comes when your cells lack fuel.</p>
+        <h3>Mood &amp; Emotional Wellbeing</h3>
+        <p>Depression in ME/CFS involves disrupted neurotransmitter balance and reduced mitochondrial function in mood-regulating brain regions. Red light enhances ATP production in these critical areas, supporting serotonin and dopamine synthesis. Enhanced cerebral blood flow delivers oxygen whilst reduced neuroinflammation helps restore normal mood-regulating pathways. This supports emotional resilience and improved outlook without psychotropic medications.</p>
       </div>
       <div class="sci">
-        <h3>Nervous System Regulation</h3>
-        <p>ME/CFS creates persistent hyperactivation of your sympathetic nervous system (fight-or-flight response). Your body remains locked in threat perception, preventing the parasympathetic "rest-and-digest" activation necessary for recovery. Red light enhances mitochondrial function in the vagus nerve and brainstem regions controlling autonomic balance, giving these regulatory systems more energy to function properly. Enhanced cellular energy in parasympathetic activation centers allows your nervous system to shift out of threat mode. This recalibration is essential for ME/CFS recovery — you cannot heal whilst your autonomic nervous system remains in perpetual alarm state.</p>
-      </div>
-      <div class="sci">
-        <h3>Muscle Tension &amp; Tightness</h3>
-        <p>ME/CFS creates characteristic muscle pain and tension from persistent inflammation and mitochondrial dysfunction in muscle tissue. Red and NIR light penetrates deeply into muscle fibres, enhancing ATP production and reducing inflammatory cytokines (IL-6, TNF-alpha) that drive pain and stiffness. Improved blood flow delivers oxygen and nutrients whilst removing inflammatory waste products. This reduces the pain-inflammation cycle without relying on medications that may worsen ME/CFS symptoms or trigger post-exertional malaise.</p>
+        <h3>Muscle Recovery &amp; Performance</h3>
+        <p>ME/CFS causes severe post-exertional malaise because muscles lack ATP for efficient recovery. Red light therapy applied after gentle activity reduces muscle damage markers, accelerates waste product removal, and boosts ATP production — shortening recovery windows and reducing soreness. Enhanced recovery means your muscles can gradually tolerate slightly more activity within safe boundaries, supporting gradual reconditioning without triggering crashes.</p>
       </div>
     </div>
   </div>
@@ -227,73 +207,74 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
-        <div class="pc-name">Mood, Anxiety &amp; Stress</div>
-        <div class="pc-grid">
-          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead</div></div>
-        </div>
-        <hr class="pc-div">
-        <div class="pc-note">Position your SUPREME 2.0 to direct light at your forehead, targeting the prefrontal cortex and mood-regulating brain regions. Sit comfortably at a fixed distance. Close your eyes or use the included goggles. This is your foundational protocol for nervous system support — consistency is critical for ME/CFS recovery.</div>
-        <div class="pc-tip">Tip: Morning sessions align with your natural circadian rhythm and prepare your nervous system for the day. Many users report noticeable mood shift within the first few sessions.</div>
-        <div><span class="badge">✦ Results: days to weeks</span></div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">Brain Fog &amp; Mental Clarity</div>
-        <div class="pc-grid">
-          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead</div></div>
-        </div>
-        <hr class="pc-div">
-        <div class="pc-note">Identical to your mood protocol — transcranial NIR light reaches brain mitochondria directly, restoring the cellular energy needed for sharp thinking and memory. Can be combined with mood sessions or performed separately. The SUPREME 2.0's wide coverage means excellent penetration even at greater distances.</div>
-        <div><span class="badge">✦ Results visible: 1–3 weeks</span></div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">Energy &amp; Motivation</div>
+        <div class="pc-name">Energy Levels &amp; Mitochondrial Support</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
           <div><div class="pc-lbl">Position</div><div class="pc-val">Chest / torso</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Stand or sit with your chest and torso facing the panel. This position delivers systemic energy across your largest muscles and organs. Move closer than your forehead sessions to maximise penetration to deep mitochondria in your heart, lungs, and major muscle groups. This is your foundational protocol for addressing ME/CFS mitochondrial dysfunction.</div>
-        <div class="pc-tip">Tip: Morning sessions are ideal — establish this as your core daily treatment. Many ME/CFS patients find morning red light sessions dramatically improve their energy envelope for the day.</div>
+        <div class="pc-note">This is your foundation protocol, Sultana. Stand or sit with chest and torso facing the panel. The SUPREME 2.0's large coverage area means full systemic mitochondrial support. Morning sessions are ideal — red and NIR light mirrors sunrise wavelengths, aligning with your natural circadian rhythm and providing sustained energy throughout the day.</div>
+        <div class="pc-tip">Tip: Consistency matters more than duration. Daily sessions, even if brief, build cumulative mitochondrial restoration. Many ME/CFS patients report noticeable energy improvements within 2–4 weeks of daily use.</div>
+        <div><span class="badge">✦ Results: days to weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Chronic Pain &amp; Neurological Pain Management</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected areas (neck, upper back, joints)</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Target your most painful areas directly. The closer distance maximises penetration to deep tissue where neurological pain originates. Your SUPREME 2.0's size allows flexible positioning — treat multiple areas in one session if needed. Move closer than your energy sessions to achieve higher power density at affected tissues.</div>
+        <div class="pc-tip">Tip: Apply this protocol in the afternoon or early evening, allowing tissue time to respond before sleep. Combined with your morning energy session, this creates a comprehensive daily pain management approach.</div>
+        <div><span class="badge">✦ Results visible: 2–6 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Cognitive Function, Memory &amp; Concentration</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead / head</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Direct the panel at your forehead to deliver near-infrared light through your skull to brain tissue. This targeted approach enhances mitochondrial function in cognitive and memory centres directly. Can be combined with your morning energy session — position the panel at head height for 10 minutes before or after your chest session.</div>
+        <div class="pc-tip">Tip: Use this protocol in the morning before any demanding cognitive tasks. Many users notice improved clarity and focus within 3–5 days of starting.</div>
+        <div><span class="badge">✦ Results visible: 1–4 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Mood &amp; Emotional Wellbeing</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead / face</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Sit facing the panel with clean skin, positioned at forehead height. This targets mood-regulating brain regions directly, supporting neurotransmitter synthesis and reducing neuroinflammation. Use this as part of your morning routine for maximum circadian benefit, or in early afternoon if energy permits.</div>
+        <div class="pc-tip">Tip: Many ME/CFS patients find mood improvements within the first few sessions. Consistency builds cumulative emotional resilience, so daily use is more effective than sporadic longer sessions.</div>
+        <div><span class="badge">✦ Results visible: days to 2 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Muscle Recovery &amp; Performance</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">After gentle activity, 2–3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Trained muscle groups or whole torso</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Use this protocol within 1 hour of any gentle activity or exercise. Given ME/CFS limitations, keep activity within your safe zone and apply red light immediately after to maximise recovery support. The SUPREME 2.0's large coverage means you can treat your entire torso at once for systemic recovery benefit, reducing post-exertional soreness and supporting gradual reconditioning within safe boundaries.</div>
+        <div class="pc-tip">Tip: This protocol is essential for preventing post-exertional malaise crashes. Applying light immediately after activity gives muscles ATP to clear inflammatory compounds and metabolic waste before they accumulate into delayed soreness.</div>
         <div><span class="badge">✦ Results: 1–2 weeks</span></div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">Nervous System Regulation</div>
-        <div class="pc-grid">
-          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">25 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">2–3× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Upper back / neck</div></div>
-        </div>
-        <hr class="pc-div">
-        <div class="pc-note">Position the panel to treat your upper back and neck region, targeting vagal nerve endings and brainstem nuclei controlling autonomic balance. This helps recalibrate your sympathetic/parasympathetic balance, shifting your nervous system out of chronic threat mode and enabling the parasympathetic activation needed for recovery.</div>
-        <div class="pc-tip">Tip: Can be combined with your energy protocol in a single session — treat your neck/upper back first, then your chest. Total session time 20-25 min, addressing both systemic energy and nervous system regulation simultaneously.</div>
-        <div><span class="badge">✦ Results: 2–6 weeks</span></div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">Muscle Tension &amp; Tightness</div>
-        <div class="pc-grid">
-          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">2–3× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Areas of tension</div></div>
-        </div>
-        <hr class="pc-div">
-        <div class="pc-note">Target specific areas of muscle tension — neck, shoulders, lower back, or any area experiencing pain or tightness. Move closer than other protocols to maximise penetration into muscle tissue. The SUPREME 2.0's size allows you to treat large muscle groups efficiently. Stop if this triggers post-exertional symptoms; start with shorter sessions (5 min) and increase gradually.</div>
-        <div class="pc-tip">Tip: Can be added to your core morning protocol or performed on separate days depending on your energy envelope. Aim for consistency rather than intensity with ME/CFS.</div>
-        <div><span class="badge">✦ Results: 2–4 weeks</span></div>
       </div>
     </div>
   </div>
@@ -305,18 +286,18 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SUPREME 2.0?</h3>
-        <p>For your goals, morning sessions are optimal. Anxiety, low mood, and energy all respond best to morning red light exposure because it aligns with your natural circadian rhythm and prepares your nervous system and cellular energy for the day ahead. Starting with 10 minutes at 7–9am gives your brain and body 2–3 hours to respond before you attempt activities. For nervous system regulation and muscle tension, morning or early afternoon works equally well. Avoid evening sessions initially, as the stimulating effect on the nervous system and mood centres may interfere with sleep — once you're stable, you can adjust timing. Consistency matters far more than perfect timing — choose a time you'll maintain every single day.</p>
+        <p>For ME/CFS, timing is critical. Morning sessions (your energy and cognitive protocols) should be your priority — red light mirrors natural sunrise wavelengths and supports your circadian rhythm, which is often severely disrupted in ME/CFS. This aligns your body's natural energy production with when you most need it. Pain management and recovery protocols can be afternoon or early evening. For mood and emotional support, morning or early afternoon works best. Avoid evening sessions close to bedtime as they may over-stimulate. Aim for consistency — the best schedule is one that fits your energy patterns and you can sustain daily.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
-        <p>Your SUPREME 2.0 has 154 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+        <p>Your SUPREME 2.0 has 154 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working just as powerfully beneath the surface, penetrating deep to reach your mitochondria. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
       </div>
       <div class="faq">
         <h3>Why are the distances and session times different for each benefit?</h3>
         <p>Red light therapy works by delivering a specific dose of light energy to your tissue — and like any dose, getting it right depends on the target.</p>
-        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, gut), you generally want to be closer to maximise penetration. For surface-level concerns (skin, wound healing), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
+        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (spinal pain, deep muscle tissue, brain penetration), you generally want to be closer to maximise penetration. For broader systemic coverage (energy support, mood), a slightly greater distance allows even distribution across larger areas.</p>
         <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can often be shorter for the same effect.</p>
-        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or recovery protocol.</p>
+        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why an energy protocol looks different to a pain or cognitive protocol.</p>
         <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription — the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
       </div>
       <div class="faq">
@@ -338,19 +319,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SUPREME 2.0 may deliver a range of broader wellness benefits particularly relevant to ME/CFS recovery:</p>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light regulates melatonin secretion and circadian rhythm. ME/CFS often disrupts sleep architecture; morning red light helps restore normal sleep-wake cycles, supporting deeper, more restorative sleep essential for recovery.</div></div>
-      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function in immune cells and reducing systemic inflammation, regular sessions help normalise the dysregulated immune response that characterises ME/CFS, supporting more balanced immune function.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout your body. This is crucial for ME/CFS, where poor microvascular function contributes to symptoms and impairs recovery.</div></div>
-      <div class="ben"><div class="ben-lbl">Mitochondrial repair</div><div class="ben-txt">Beyond energy production, red light therapy supports mitochondrial repair mechanisms and reduces oxidative stress damaging mitochondrial DNA — addressing not just energy output but the structural damage underlying ME/CFS.</div></div>
-      <div class="ben"><div class="ben-lbl">Post-exertional malaise management</div><div class="ben-txt">By supporting mitochondrial recovery and reducing inflammatory response, red light therapy may help reduce the severity of post-exertional malaise — the hallmark crash of ME/CFS following activity.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Beyond your primary ME/CFS goals, your SUPREME 2.0 may deliver broader wellness benefits that many users notice over time:</p>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep — critical for ME/CFS recovery. Morning sessions help reset your sleep-wake cycle, whilst evening sessions 2 hours before bed support natural wind-down.</div></div>
+      <div class="ben"><div class="ben-lbl">Immunity support</div><div class="ben-txt">ME/CFS involves immune dysregulation. Enhanced mitochondrial function in immune cells gives them more ATP to mount appropriate responses whilst modulating excessive inflammation, helping your immune system function more effectively without exacerbating symptoms.</div></div>
+      <div class="ben"><div class="ben-lbl">Inflammation reduction</div><div class="ben-txt">Systemic inflammation is central to ME/CFS pathology. Red light reduces pro-inflammatory cytokine levels throughout your body, addressing the inflammatory cascade driving your condition at its source.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation &amp; microvascular function</div><div class="ben-txt">Many ME/CFS patients have impaired blood flow and microvascular dysfunction. Improved circulation from NIR exposure delivers more oxygen and nutrients to tissues throughout your body, supporting recovery and cellular health.</div></div>
+      <div class="ben"><div class="ben-lbl">Autonomic nervous system support</div><div class="ben-txt">Red light therapy helps modulate autonomic nervous system function, supporting better regulation of heart rate, blood pressure, and stress responses — all commonly dysregulated in ME/CFS.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Schiffer et al. (2009)</div><div class="ref-body">Transcranial NIR light to the forehead produced a 63.1% reduction in anxiety scores and 54.3% reduction in depression scores in a single session. <em>Behavioral and Brain Functions.</em></div></div>
-      <div class="ref"><div class="ref-auth">Saltmarche et al. (2019)</div><div class="ref-body">Meta-analysis of transcranial photobiomodulation found significant improvements in cognitive performance, executive function, and memory in healthy subjects and those with cognitive decline. <em>Photomedicine and Laser Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Zhao et al. (2012)</div><div class="ref-body">Red and NIR light exposure regulates circadian rhythms and melatonin production, supporting improved sleep quality and duration. <em>Journal of Athletic Training.</em></div></div>
-      <div class="ref"><div class="ref-auth">Pillai et al. (2023)</div><div class="ref-body">Red and NIR light directly boosts mitochondrial ATP production by up to 70% in human cells, with sustained effects supporting cellular repair and energy homeostasis. <em>Scientific Reports.</em></div></div>
-      <div class="ref"><div class="ref-auth">Hamblin et al. (2023)</div><div class="ref-body">Comprehensive review confirming photobiomodulation's mechanisms for reducing inflammation, enhancing mitochondrial function, and supporting recovery in systemic illness. <em>Journal of Rheumatology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Pillai et al. (2023)</div><div class="ref-body">Demonstrated that red and NIR light directly boost mitochondrial ATP production by up to 70%, addressing the fundamental energy deficit in mitochondrial diseases. <em>Scientific Reports.</em></div></div>
+      <div class="ref"><div class="ref-auth">Ferraresi et al. (2015)</div><div class="ref-body">Showed that near-infrared light therapy reduced muscle damage markers and inflammation by 45% following exertion, supporting faster recovery in individuals with limited exercise tolerance. <em>Lasers in Surgery and Medicine.</em></div></div>
+      <div class="ref"><div class="ref-auth">Saltmarche et al. (2019)</div><div class="ref-body">Meta-analysis of transcranial NIR light found significant improvements in executive function, memory, and cognitive performance — addressing brain fog and concentration issues. <em>Photomedicine and Laser Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Schiffer et al. (2009)</div><div class="ref-body">Single NIR session to the forehead resulted in 63.1% reduction in anxiety and 54.3% reduction in depression scores, demonstrating rapid mood improvement from targeted brain treatment. <em>Behavioral and Brain Functions.</em></div></div>
+      <div class="ref"><div class="ref-auth">Enwemeka et al. (2022)</div><div class="ref-body">Red light reduced "bad" inflammatory cytokines by an average of 82.5% in just 3 days, addressing the systemic inflammation central to ME/CFS pathology. <em>Frontiers in Immunology.</em></div></div>
     </div>
   </div>
 
