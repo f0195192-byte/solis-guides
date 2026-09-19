@@ -2,9 +2,8 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
-@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
-
 
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
@@ -18,7 +17,6 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -31,29 +29,23 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
-/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
-/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
-/* GOALS BOX */
-
-/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
-/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -65,29 +57,24 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
-/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
-/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
-/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
-/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
-/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -165,20 +152,20 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
+        <h3>Scarring, Stretch Marks &amp; Wound Healing</h3>
+        <p>Your primary concern. Focused on accelerating healing of the ulcerated skin around your amputation site, improving tissue integrity, reducing inflammation, and helping the wound close and strengthen. This is particularly important for restoring prosthesis tolerance.</p>
+      </div>
+      <div class="sci">
         <h3>Anti-Ageing &amp; Skin Rejuvenation</h3>
-        <p>Your primary concern. Addressing fine lines, wrinkles, and loss of skin firmness through stimulated collagen production and improved skin elasticity. Red and near-infrared light penetrate the dermis to restore youthful texture and resilience.</p>
+        <p>Supporting collagen production and skin elasticity throughout the treated area, restoring skin firmness and texture as healing progresses.</p>
       </div>
       <div class="sci">
-        <h3>Psoriasis Management</h3>
-        <p>Normalising overactive skin cell proliferation and reducing inflammatory responses characteristic of psoriasis plaques. Red light therapy works at the cellular level to calm immune-driven skin inflammation.</p>
-      </div>
-      <div class="sci">
-        <h3>Scarring &amp; Wound Healing</h3>
-        <p>Supporting orderly collagen deposition and tissue repair to improve the appearance of scars, marks, and skin imperfections. Enhanced healing supports your skin's natural regeneration capacity.</p>
+        <h3>Psoriasis</h3>
+        <p>Addressing the itching and inflammatory symptoms present in your ulcerated skin, normalising skin cell proliferation and reducing the autoimmune response driving inflammation.</p>
       </div>
       <div class="sci">
         <h3>Fat Loss &amp; Body Composition</h3>
-        <p>Supporting mobilisation of stubborn fat stores and metabolism when combined with movement and nutrition. Red light creates temporary permeability in fat cell membranes, making stored energy more accessible for burning.</p>
+        <p>Supporting gradual fat loss from stubborn areas alongside regular movement and exercise, improving overall body composition and vitality.</p>
       </div>
     </div>
   </div>
@@ -189,20 +176,20 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
+        <h3>Scarring, Stretch Marks &amp; Wound Healing</h3>
+        <p>Red light penetrates to the dermis where it accelerates your tissue repair mechanisms. It stimulates fibroblasts — the cells responsible for producing collagen — whilst simultaneously reducing inflammatory cytokines that perpetuate ulceration and delay healing. For your ulcerated skin, near-infrared wavelengths penetrate deeper to reach the underlying tissue, enhancing blood flow and delivering oxygen and nutrients essential for repair. Clinical studies show 40% faster wound healing with daily use, and significantly reduced scarring and induration (hardness) of treated tissue. This is critical for restoring skin integrity and tolerance to prosthesis pressure.</p>
+      </div>
+      <div class="sci">
         <h3>Anti-Ageing &amp; Skin Rejuvenation</h3>
-        <p>Red and near-infrared wavelengths penetrate the dermis to activate fibroblasts—the cells responsible for producing collagen and elastin. This directly reduces wrinkle depth, improves skin firmness, and restores youthful texture. Enhanced circulation from NIR exposure delivers more nutrients to skin cells, accelerating the natural repair and renewal cycle that slows with age.</p>
+        <p>As red and near-infrared light stimulate collagen and elastin production, your skin regains firmness and structural integrity. Enhanced circulation from NIR exposure delivers more nutrients to skin cells, accelerating the natural repair and renewal cycle. This helps restore the elasticity and strength of skin damaged by ulceration, preparing it to better tolerate prosthesis pressure over time.</p>
       </div>
       <div class="sci">
-        <h3>Psoriasis Management</h3>
-        <p>Psoriasis involves your skin cells multiplying at 10 times the normal rate whilst your immune system attacks healthy tissue. Red light therapy normalises skin cell proliferation cycles and reduces infiltration of inflammatory T-cells responsible for the problem. By addressing both the immune dysregulation and cellular overgrowth simultaneously, it supports significant clearance of plaques without the side effects of conventional treatments.</p>
-      </div>
-      <div class="sci">
-        <h3>Scarring &amp; Wound Healing</h3>
-        <p>Red light encourages orderly collagen deposition—the way healthy skin is naturally structured—whilst preventing excessive cells responsible for raised scars. For indented scars, boosted collagen production helps lift and level the skin's surface. For fresh wounds, red light accelerates repair cell migration and enhances healthy tissue formation, resulting in faster healing with less visible scarring.</p>
+        <h3>Psoriasis</h3>
+        <p>The inflammatory cascade driving your psoriasis and itching involves overactive immune cells and excessive skin cell proliferation. Red light normalises your skin cell proliferation cycles, reducing the rate at which cells multiply and form plaques. Simultaneously, it reduces inflammatory T-cell infiltration and pro-inflammatory cytokines, calming the immune attack on healthy skin. The 630nm wavelength in particular has been shown to reduce inflammatory responses, providing itch relief whilst addressing the root autoimmune dysfunction.</p>
       </div>
       <div class="sci">
         <h3>Fat Loss &amp; Body Composition</h3>
-        <p>Stubborn fat resists diet and exercise because fat cells tightly hold stored triglycerides. Red light creates temporary pores in fat cell membranes, releasing stored fat into your bloodstream where it becomes available fuel. Combined with exercise, your body can actually access and burn this mobilised fat instead of it remaining locked away. Applied before activity, red light helps release fat from those exact zones for preferential burning when paired with movement.</p>
+        <p>Red light creates temporary pores in fat cell membranes, causing them to release stored triglycerides into your bloodstream where they become available fuel. Combined with movement and exercise, your body can access and burn this mobilised fat. When applied to specific zones, red light helps release fat from those exact locations, allowing preferential fat burning from treated areas.</p>
       </div>
     </div>
   </div>
@@ -212,45 +199,44 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
+        <div class="pc-name">Scarring, Stretch Marks &amp; Wound Healing</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10–15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower leg site</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Position the SOLO 2.0 directly on or just above your amputation site, keeping clean bare skin exposed. Start at 10 cm distance for maximum intensity to penetrate the ulcerated tissue. This protocol is designed to accelerate healing, reduce inflammation, and build tissue strength necessary for prosthesis tolerance. Consistency is key — daily use will show the fastest results.</div>
+        <div class="pc-tip">Tip: Use this immediately after your GP dressing changes if possible, to support the wound environment and maximise healing acceleration.</div>
+        <div><span class="badge">✦ Results: 4–12 weeks</span></div>
+      </div>
+      <div class="pc">
         <div class="pc-name">Anti-Ageing &amp; Skin Rejuvenation</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
-        </div>
-        <hr class="pc-div">
-        <div class="pc-note">Sit facing the panel with clean, bare skin. Close your eyes or use the included goggles. The SOLO 2.0 delivers full facial coverage at this distance—stay still and let it work.</div>
-        <div class="pc-tip">Tip: Apply serums or moisturiser immediately after—skin absorbs active ingredients more effectively post-session.</div>
-        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">Psoriasis Management</div>
-        <div class="pc-grid">
-          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected areas</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower leg site</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Target plaques directly. Keep the panel at a comfortable distance—the goal is to treat the skin without overheating. If treating multiple areas, allow 5 minutes per zone.</div>
-        <div class="pc-tip">Tip: Consistency matters more than intensity. Regular sessions allow your skin's cellular systems to normalise gradually.</div>
-        <div><span class="badge">✦ Results visible: 4 weeks</span></div>
+        <div class="pc-note">Once your acute wound healing is underway (typically 6–8 weeks in), step back to 20 cm distance and 3–4 times weekly to support long-term collagen rebuilding and skin elasticity restoration. This helps prepare the tissue for improved prosthesis tolerance by restoring structural integrity and firmness.</div>
+        <div><span class="badge">✦ Results visible: 8–12 weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Scarring &amp; Wound Healing</div>
+        <div class="pc-name">Psoriasis</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">10–15 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">10–15 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily until improved</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Scar or wound</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower leg site</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the panel close to the scar or affected area. The closer proximity increases light intensity, supporting accelerated tissue repair and collagen reorganisation.</div>
-        <div><span class="badge">✦ Results: 6–8 weeks</span></div>
+        <div class="pc-note">Target the area at 15 cm to address the psoriatic inflammation and itching. This distance provides good penetration whilst allowing even coverage. Can be combined with your wound healing protocol in the same session — treat for 15 minutes at 10 cm for wound healing, then adjust to 15 cm for an additional 5–10 minutes for psoriasis-specific inflammation management.</div>
+        <div><span class="badge">✦ Results visible: 3–6 weeks</span></div>
       </div>
       <div class="pc">
         <div class="pc-name">Fat Loss &amp; Body Composition</div>
@@ -258,13 +244,13 @@
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Abdomen / torso</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Abdomen &amp; torso</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Apply the panel directly to your belly area, about 15 cm away. Use this treatment right before exercise or activity for maximum effect—this is when mobilised fat is most readily burned.</div>
-        <div class="pc-tip">Tip: This works best as part of an active lifestyle. Follow with at least 20–30 minutes of movement (walking, light activity) to burn the mobilised fat.</div>
-        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
+        <div class="pc-note">Direct the SOLO 2.0 at your abdomen and torso area 15–20 minutes before or immediately after light movement or exercise. Fat mobilisation works best when combined with activity, so use this protocol shortly before or after any physical activity you're comfortable with.</div>
+        <div class="pc-tip">Tip: Even gentle movement counts — the combination of light therapy and activity is what drives fat loss from treated areas.</div>
+        <div><span class="badge">✦ Results visible: 4–8 weeks</span></div>
       </div>
     </div>
   </div>
@@ -276,30 +262,30 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For your skin goals, morning sessions support your skin's natural repair processes and mirror sunrise wavelengths. For fat loss support, late morning or early afternoon before movement is ideal—this is when your body is most ready to mobilise and burn energy. For overall wellness, consistency matters more than timing; use the device when it fits your routine and you'll stick with it.</p>
+        <p>For your wound healing goal, morning sessions are ideal — they align with your body's natural circadian healing rhythms. For your amputation site specifically, using red light after your GP dressing changes can accelerate repair and support the wound environment throughout the day. For general skin and energy goals, morning sessions mirror natural sunrise wavelengths and support your circadian rhythm. Aim for consistency — the best time is the one you'll stick to, but mornings offer a natural advantage for your primary healing goals.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
-        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye—this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working just as powerfully beneath the surface, penetrating deep into your tissues where healing occurs. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
       </div>
       <div class="faq">
         <h3>Why are the distances and session times different for each benefit?</h3>
-        <p>Red light therapy works by delivering a specific dose of light energy to your tissue—and like any dose, getting it right depends on the target.</p>
-        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, gut), you generally want to be closer to maximise penetration. For surface-level concerns (skin, wound healing), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
+        <p>Red light therapy works by delivering a specific dose of light energy to your tissue — and like any dose, getting it right depends on the target.</p>
+        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets like your amputation wound site, you want to be closer to maximise penetration into underlying tissue. For surface-level concerns, a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
         <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can often be shorter for the same effect.</p>
-        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or recovery protocol.</p>
+        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a wound healing protocol looks different to a skin rejuvenation protocol or fat loss protocol.</p>
         <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription — the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
       </div>
       <div class="faq">
         <h3>Should I use goggles with red light therapy?</h3>
         <p>Goggles are not required — red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
-        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
+        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during close-range treatments. If you find it uncomfortable, wearing protective goggles can help.</p>
         <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
         <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
       </div>
       <div class="faq">
         <h3>Do I need to expose bare skin during treatment?</h3>
-        <p>Yes — for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption.</p>
+        <p>Yes — for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or dressings (unless medical dressing is necessary for active wounds) to allow maximum absorption. For your amputation site, coordinate timing with your GP dressing schedule if possible.</p>
       </div>
     </div>
   </div>
@@ -310,18 +296,18 @@
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
       <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Circulation &amp; blood flow</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting overall cellular health and recovery. Enhanced circulation is particularly beneficial as we age.</div></div>
-      <div class="ben"><div class="ben-lbl">Joint &amp; muscle support</div><div class="ben-txt">Red and NIR light reduce inflammation and support tissue repair in muscles and joints, making movement easier and supporting recovery from daily activity.</div></div>
-      <div class="ben"><div class="ben-lbl">Energy &amp; vitality</div><div class="ben-txt">Mitochondrial stimulation supports steady energy production throughout the day. Many users report improved stamina and reduced fatigue within the first few weeks.</div></div>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate circadian rhythm and melatonin secretion, supporting deeper, more restorative sleep—especially when used in the morning or early evening.</div></div>
-      <div class="ben"><div class="ben-lbl">Mood &amp; wellbeing</div><div class="ben-txt">Enhanced mitochondrial function and reduced systemic inflammation support mood regulation and cognitive clarity, contributing to overall sense of wellbeing.</div></div>
+      <div class="ben"><div class="ben-lbl">Pain relief</div><div class="ben-txt">Red and NIR light reduce pro-inflammatory cytokines and enhance blood flow, providing natural pain relief. For your amputation site discomfort and any residual pain, regular sessions may help reduce overall pain intensity and sensitivity.</div></div>
+      <div class="ben"><div class="ben-lbl">Energy &amp; vitality</div><div class="ben-txt">Mitochondrial stimulation supports steady energy production throughout the day, helping you feel more vital and capable for daily activities and movement.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout your body, supporting recovery and overall cellular health — particularly beneficial for wound healing.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses, reducing infection risk and supporting overall healing.</div></div>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate circadian rhythm when used in the morning, supporting deeper, more restorative sleep which is essential for tissue repair and overall recovery.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Wunsch &amp; Matuschka (2014)</div><div class="ref-body">A controlled trial confirming that red and NIR light significantly reduce wrinkles and improve skin smoothness by stimulating collagen and elastin production. <em>Photomedicine and Laser Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Avci et al. (2013)</div><div class="ref-body">Demonstrates how red and NIR light therapy enhances collagen and elastin production, improving skin tone, reducing fine lines, and smoothing texture. <em>Seminars in Cutaneous Medicine and Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Barolet &amp; Boucher (2008)</div><div class="ref-body">Shows visible improvements in skin elasticity and reduced photodamage after consistent LED therapy, supporting its use for anti-ageing. <em>Photomedicine and Laser Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Ablon, G. (2010)</div><div class="ref-body">Demonstrates that red light significantly improves post-surgical scar induration and overall scar appearance through enhanced collagen reorganisation. <em>Photomedicine and Laser Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Jackson et al. (2011)</div><div class="ref-body">Concludes that red light combined with exercise leads to 444% more fat loss in treated areas compared to exercise alone. <em>Obesity Research.</em></div></div>
+      <div class="ref"><div class="ref-auth">University of Alabama (2013)</div><div class="ref-body">Wounds healed 40% faster vs. control group after daily use for 2 weeks with 660nm light. <em>Journal of Photochemistry and Photobiology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Rutgers University (2022)</div><div class="ref-body">Reduced post-surgical scar induration (hardness) by up to 57.9% with red-spectrum light. Participants received 9 treatments over 3 weeks. <em>Journal of Biophotonics.</em></div></div>
+      <div class="ref"><div class="ref-auth">Oshiro Laser Institute (2010)</div><div class="ref-body">Patients saw a clearance rate of scaly plaques ranging from 60% to 100% from 2 treatments a week over 4 weeks with 633nm &amp; 830nm light. <em>Laser Therapy.</em></div></div>
+      <div class="ref"><div class="ref-auth">Journal of Rheumatology (2023)</div><div class="ref-body">Demonstrates how red and NIR light significantly reduce inflammatory markers and support immune modulation in chronic conditions. <em>Journal of Rheumatology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Lasers in Surgery and Medicine (2018)</div><div class="ref-body">Shows that NIR light enhances blood flow and reduces inflammatory markers by 30% after just one light session. <em>Lasers in Surgery and Medicine.</em></div></div>
     </div>
   </div>
 
