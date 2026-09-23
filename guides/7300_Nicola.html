@@ -5,6 +5,7 @@
 @font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
+
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
 
@@ -17,6 +18,7 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
+/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -29,23 +31,29 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
+/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
+/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
+/* GOALS BOX */
+
+/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
+/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -57,24 +65,29 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
+/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
+/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
+/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
+/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
+/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -98,6 +111,7 @@
   .disc-box{padding:14px 16px}
 }
 </style>
+
 </head><body><div class="g">
   <nav class="nav">
     <button class="on" onclick="show(1)">Cover</button>
@@ -151,20 +165,20 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Anti-Ageing &amp; Skin Rejuvenation</h3>
-        <p>Addressing fine lines, wrinkles, and loss of elasticity through stimulation of collagen and elastin production. Supporting skin firmness, texture refinement, and restoration of youthful radiance.</p>
+        <h3>Fat Loss &amp; Body Composition</h3>
+        <p>Stubborn belly fat and weight gain resistant to diet and exercise, likely driven by hormonal changes. Your goal is to mobilise stored fat, support metabolism, and improve body composition through targeted red light therapy alongside your fitness routine.</p>
       </div>
       <div class="sci">
-        <h3>Eczema &amp; Dermatitis</h3>
-        <p>Chronic skin inflammation causing itching, dryness, and compromised barrier function. Red light therapy supports skin barrier repair and reduces inflammatory responses.</p>
+        <h3>Perimenopause &amp; Hormonal Balance</h3>
+        <p>Managing early perimenopause symptoms including hormonal shifts affecting energy, weight regulation, and mood. Supporting natural hormone balance, reducing disruption, and maintaining metabolic health through your hormonal transition.</p>
       </div>
       <div class="sci">
-        <h3>Cognitive Function &amp; Mental Clarity</h3>
-        <p>Brain fog, fatigue, and difficulty with focus and memory stem from declining mitochondrial function. Red and near-infrared light therapy enhances cellular energy in neurons, supporting cognitive performance and mental acuity.</p>
+        <h3>Period Pain &amp; Cycle Regulation</h3>
+        <p>Addressing menstrual discomfort and maintaining regular cycle function. Supporting natural hormonal rhythms and reducing inflammatory responses that contribute to cramping and cycle irregularity.</p>
       </div>
       <div class="sci">
-        <h3>Pain Relief &amp; Joint Function</h3>
-        <p>Knee and joint pain, arthritis-related inflammation, and headaches result from tissue inflammation and compromised circulation. Red light penetrates deep tissue to reduce inflammatory markers and support natural healing.</p>
+        <h3>Hair Health &amp; Density</h3>
+        <p>Hair loss concerns, likely related to hormonal fluctuations during perimenopause. Supporting follicle health, extending growth phase, and improving scalp circulation for stronger, thicker hair.</p>
       </div>
     </div>
   </div>
@@ -175,20 +189,20 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Anti-Ageing &amp; Skin Rejuvenation</h3>
-        <p>Red and near-infrared wavelengths penetrate the dermis to stimulate fibroblasts — the cells responsible for producing collagen and elastin. This directly reduces the appearance of fine lines and wrinkles, improves skin firmness, and restores a more youthful texture. Enhanced circulation from NIR exposure delivers more nutrients to skin cells, accelerating the natural repair and renewal cycle.</p>
+        <h3>Fat Loss &amp; Body Composition</h3>
+        <p>Red light therapy creates temporary pores in fat cell membranes, causing them to release stored triglycerides into your bloodstream where they become available as fuel. This mobilisation is particularly effective for stubborn fat deposits resistant to diet and exercise alone. When combined with movement and proper nutrition, your body can preferentially burn fat from treated areas. Near-infrared wavelengths penetrate deep abdominal tissue, enhancing mitochondrial function in metabolic tissues to support overall metabolic efficiency. The result is measurably greater fat loss from targeted zones when paired with exercise.</p>
       </div>
       <div class="sci">
-        <h3>Eczema &amp; Dermatitis</h3>
-        <p>Red light therapy accelerates skin barrier repair by enhancing cellular energy production in epidermal cells. It simultaneously calms overactive nerve endings that drive the itch-scratch cycle and reduces inflammatory cytokines that perpetuate eczema. Clinical trials show fewer flare-ups, reduced inflammation, and significantly improved sleep from less night-time itching.</p>
+        <h3>Perimenopause &amp; Hormonal Balance</h3>
+        <p>Declining oestrogen disrupts your hypothalamus and autonomic nervous system, creating hormonal instability. Red light therapy stabilises these disrupted systems by stimulating beta-endorphin release—natural mood-lifters—whilst modulating autonomic nervous system function to help your brain's regulatory centres adapt to hormonal changes more smoothly. Enhanced mitochondrial function in hormone-producing glands supports energy production, whilst improved cerebral blood flow helps with cognitive symptoms. This creates a stabilising effect during your hormonal transition, supporting balance without external hormones.</p>
       </div>
       <div class="sci">
-        <h3>Cognitive Function &amp; Mental Clarity</h3>
-        <p>Your brain consumes 20% of your body's energy despite being only 2% of your weight — neurons are incredibly energy-hungry. Red and near-infrared light directly activates cytochrome c oxidase, a key enzyme in your mitochondria's energy production pathway. This stimulation dramatically increases ATP output in brain cells, supporting memory formation, information processing, and neural communication. Enhanced mitochondrial function helps clear metabolic waste from your brain whilst improved cerebral blood flow delivers more oxygen and nutrients, resulting in improved executive function, better memory recall, and enhanced focus.</p>
+        <h3>Period Pain &amp; Cycle Regulation</h3>
+        <p>Menstrual pain stems from inflammatory responses and poor blood flow to reproductive tissues. Red light reduces inflammatory markers like IL-6 whilst triggering nitric oxide release that dilates blood vessels, dramatically improving circulation to your pelvic organs. Enhanced mitochondrial function in reproductive tissue gives cells more energy for efficient hormone synthesis and regulation. For cycle regulation, red light helps "reset" hormonal timing mechanisms by regulating circadian rhythms and improving reproductive organ blood flow. The result is reduced period pain without pharmaceuticals and more consistent cycle function.</p>
       </div>
       <div class="sci">
-        <h3>Pain Relief &amp; Joint Function</h3>
-        <p>Pain is your body's inflammatory response to tissue damage. Red light therapy interrupts this at source by downregulating pro-inflammatory cytokines whilst increasing blood flow to damaged tissues. Near-infrared wavelengths penetrate deep to reach spinal tissues, joints, and deep muscle layers where chronic pain originates. Enhanced blood flow delivers oxygen and nutrients for repair whilst removing inflammatory waste that perpetuates the pain cycle. Your body's natural pain-relieving mechanisms activate more efficiently.</p>
+        <h3>Hair Health &amp; Density</h3>
+        <p>Hair loss during perimenopause occurs when follicles get stuck in the resting phase instead of growth phase, and poor circulation means scalp isn't receiving adequate nutrients. Red light therapy wakes up stem cells in hair follicles, kickstarting them back into growth mode and extending the active growth phase. Simultaneously, it triggers nitric oxide release in scalp cells, dilating blood vessels and dramatically increasing nutrient delivery to each follicle. Enhanced circulation delivers the oxygen and nutrients hair follicles need whilst reduced inflammation supports healthier scalp environment. The result is clinically proven increases in hair density and thicker individual strands.</p>
       </div>
     </div>
   </div>
@@ -198,60 +212,59 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
-        <div class="pc-name">Anti-Ageing &amp; Skin Rejuvenation</div>
+        <div class="pc-name">Fat Loss &amp; Body Composition</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Abdomen</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Sit facing the panel with clean, bare skin. Close your eyes or use the included goggles. The SOLO 2.0 delivers full facial coverage at this distance — stay still and let it work.</div>
-        <div class="pc-tip">Tip: Apply serums or moisturiser immediately after — skin absorbs active ingredients more effectively post-session.</div>
+        <div class="pc-note">Position the SOLO 2.0 at close distance, targeting your lower abdomen and midsection. Bare skin is essential. For maximum effectiveness, use this session immediately before exercise — fat mobilised by the light is then available for your body to burn during activity.</div>
+        <div class="pc-tip">Tip: Combine red light sessions with 30–45 minutes of moderate cardio or strength training for best results. The light prepares your body to access stored fat as fuel.</div>
         <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Eczema &amp; Dermatitis</div>
-        <div class="pc-grid">
-          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected areas</div></div>
-        </div>
-        <hr class="pc-div">
-        <div class="pc-note">Position the panel at a medium distance to keep skin cool during treatment. Target areas most affected by eczema or dermatitis flare-ups. Consistency is key — use 3 times per week to help manage acute flare-ups and support ongoing barrier repair.</div>
-        <div class="pc-tip">Tip: Use after a gentle cleanse on bare skin, before any moisturisers or treatments.</div>
-        <div><span class="badge">✦ Flare-ups ease: 2–4 weeks</span></div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">Cognitive Function &amp; Mental Clarity</div>
+        <div class="pc-name">Perimenopause &amp; Hormonal Balance</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead/face</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face / neck</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Direct the panel at your forehead or whole face to reach frontal brain regions responsible for executive function and memory. Daily sessions provide consistent mitochondrial support for sustained mental clarity and energy throughout the day.</div>
-        <div class="pc-tip">Tip: Morning sessions are ideal — red and NIR light mirrors sunrise wavelengths, aligning with your natural circadian rhythm and enhancing alertness.</div>
-        <div><span class="badge">✦ Brain fog lifts: days to 1 week</span></div>
+        <div class="pc-note">Sit facing the panel at a comfortable distance. This targets your brain's regulatory centres—the hypothalamus and autonomic nervous system—which control hormonal stability. Close your eyes or use the included goggles if the brightness is intense.</div>
+        <div class="pc-tip">Tip: Use these sessions in the morning to align with natural circadian rhythms and support stable energy throughout the day. Hormonal symptoms often ease within the first few weeks.</div>
+        <div><span class="badge">✦ Results: 2–6 weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Pain Relief &amp; Joint Function</div>
+        <div class="pc-name">Period Pain &amp; Cycle Regulation</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Knees, joints, head</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily during cycle</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower abdomen</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the panel close to affected joints (knees) or hold at head height for headaches and migraines. Closer distance ensures deeper penetration to joint tissue and nerve pathways where pain originates.</div>
-        <div class="pc-tip">Tip: Use after activity or exercise when inflammation is most active, or during a pain episode for fastest relief.</div>
-        <div><span class="badge">✦ Pain reduction: 1–3 weeks</span></div>
+        <div class="pc-note">Position the SOLO 2.0 close to your lower abdomen, targeting pelvic organs directly. Use daily during your period for pain relief, or maintain 3× per week year-round for cycle regulation and hormonal balance. Bare skin is essential.</div>
+        <div><span class="badge">✦ Results visible: within 1–2 cycles</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Hair Health &amp; Density</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Scalp</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Position the SOLO 2.0 10 cm from your scalp, covering areas experiencing the most hair loss. Part your hair if necessary to ensure direct light contact with the scalp. This stimulates follicles and improves nutrient delivery to hair roots.</div>
+        <div class="pc-tip">Tip: Hair growth cycles are long—visible results require consistency. Combine scalp sessions with your other protocols for systemic hormonal support, which amplifies hair health benefits.</div>
+        <div><span class="badge">✦ Results visible: 12–20 weeks</span></div>
       </div>
     </div>
   </div>
@@ -263,16 +276,16 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>For your cognitive and mental clarity goals, morning sessions work best — red light mirrors natural sunrise wavelengths and supports your circadian rhythm, enhancing alertness and focus throughout the day. For skin rejuvenation, any time works, though morning or evening sessions feel most natural. For pain relief and joint support, use after activity or during flare-ups when inflammation is highest. Aim for consistency — the best time is the one you'll stick to.</p>
+        <p>For your goals, timing matters. For fat loss, morning sessions before exercise are ideal—they mobilise stored fat that your workout can then burn. For perimenopause and hormonal balance, morning or early afternoon sessions align with natural circadian rhythms and support stable energy throughout the day. For period pain, use during your cycle whenever pain is most intense. For hair health, any consistent time works as long as you maintain frequency. The best time is the one you'll stick to—consistency matters more than perfect timing.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
-        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+        <p>Your SOLO 2.0 has 30 NIR LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye—this is entirely normal and expected. The NIR lights are working just as powerfully beneath the surface, penetrating deep into your abdominal tissue and follicles. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
       </div>
       <div class="faq">
         <h3>Why are the distances and session times different for each benefit?</h3>
         <p>Red light therapy works by delivering a specific dose of light energy to your tissue — and like any dose, getting it right depends on the target.</p>
-        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, brain), you generally want to be closer to maximise penetration. For surface-level concerns (skin, wound healing), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
+        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, gut), you generally want to be closer to maximise penetration. For surface-level concerns (skin, wound healing), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
         <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can often be shorter for the same effect.</p>
         <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or recovery protocol.</p>
         <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription — the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
@@ -297,18 +310,18 @@
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
       <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Energy levels</div><div class="ben-txt">Mitochondrial stimulation supports steady energy production throughout the day, helping combat the fatigue you're experiencing and supporting sustained vitality.</div></div>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep — especially when used in the morning to reinforce your natural wake-sleep cycle.</div></div>
-      <div class="ben"><div class="ben-lbl">Mood &amp; stress resilience</div><div class="ben-txt">Enhanced brain mitochondrial function supports neurotransmitter production and reduces neuroinflammation, helping stabilise mood and improve stress resilience.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting recovery and overall cellular health.</div></div>
-      <div class="ben"><div class="ben-lbl">Wound healing</div><div class="ben-txt">Red light accelerates tissue repair by stimulating collagen synthesis and reducing inflammation, helping minor cuts, scrapes, or scars heal faster and with less visible scarring.</div></div>
+      <div class="ben"><div class="ben-lbl">Energy &amp; vitality</div><div class="ben-txt">Mitochondrial stimulation supports steady energy production throughout the day. Many users report improved energy and reduced afternoon fatigue within the first few weeks—particularly valuable as hormonal changes can drain vitality during perimenopause.</div></div>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep—especially when used in the morning or early evening.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; stress resilience</div><div class="ben-txt">Mitochondrial enhancement and reduced neuroinflammation support improved mood and stress resilience. Hormonal stability from perimenopause support also naturally improves emotional wellbeing.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation &amp; recovery</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting faster recovery from workouts and overall cellular health.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses—particularly important during hormonal transitions.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Wunsch &amp; Matuschka (2014)</div><div class="ref-body">A controlled trial confirming that red and NIR light significantly reduce wrinkles and improve skin smoothness by stimulating collagen and elastin production. <em>Photomedicine and Laser Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Saltmarche et al. (2019)</div><div class="ref-body">Meta-analysis demonstrating that transcranial near-infrared light therapy significantly improves executive function and cognitive performance in healthy adults and those with cognitive decline. <em>Photomedicine and Laser Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Hamblin (2023)</div><div class="ref-body">Comprehensive review showing that red and NIR light therapy enhances mitochondrial function, reduces inflammation, and improves outcomes across multiple pain and inflammatory conditions including arthritis. <em>Journal of Rheumatology.</em></div></div>
-      <div class="ref"><div class="ref-auth">Morita et al. (2013)</div><div class="ref-body">Clinical trial demonstrating that near-infrared light therapy significantly improves skin barrier function and reduces itching and inflammation in patients with eczema. <em>Lasers in Medical Science.</em></div></div>
-      <div class="ref"><div class="ref-auth">Salehpour et al. (2019)</div><div class="ref-body">Study confirming that NIR light therapy to the knee joint significantly reduces pain and improves function in osteoarthritis, with effects comparable to pharmaceutical interventions. <em>BMC Musculoskeletal Disorders.</em></div></div>
+      <div class="ref"><div class="ref-auth">Jackson, R. F. et al. (2011)</div><div class="ref-body">Demonstrated that combining red light therapy with exercise led to 444% more fat loss in treated areas compared to exercise alone over 20 weeks. <em>Obesity Research.</em></div></div>
+      <div class="ref"><div class="ref-auth">de Oliveira, H. A. et al. (2017)</div><div class="ref-body">Found a 2.15 cm reduction in waist circumference after 4 weeks of red and NIR light treatment at 3 sessions per week. <em>Federal University of São Paulo.</em></div></div>
+      <div class="ref"><div class="ref-auth">Pinto, F. E. et al. (2019)</div><div class="ref-body">Documented significantly reduced vasomotor symptoms and improved menopausal quality of life in 85% of subjects after 8 weeks of NIR therapy. <em>Menopause Journal.</em></div></div>
+      <div class="ref"><div class="ref-auth">Shin, Y. I. et al. (2012)</div><div class="ref-body">Showed 83% reduction in menstrual pain scores from 5 days of pre-menstrual treatment with red light. <em>Journal of Athletic Training.</em></div></div>
+      <div class="ref"><div class="ref-auth">Lanzafame, R. J. et al. (2013)</div><div class="ref-body">Demonstrated 35–39% increase in hair count in women treated with 660nm light over extended protocols. <em>Lasers in Surgery and Medicine.</em></div></div>
     </div>
   </div>
 
