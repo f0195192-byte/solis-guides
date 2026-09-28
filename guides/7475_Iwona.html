@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
+
+*{box-sizing:border-box;margin:0;padding:0}
+.g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
+
+.nav{display:flex;gap:6px;padding:14px 18px;background:#0d0d0d;border-bottom:1px solid #1e1e1e;flex-wrap:wrap}
+.nav button{font-family:'Oakes Grotesk',sans-serif;font-size:10px;font-weight:500;letter-spacing:.06em;padding:5px 11px;border:1px solid #2a2a2a;background:transparent;color:#fff;border-radius:20px;cursor:pointer;transition:all .2s}
+.nav button.on{background:#e8407a;border-color:#e8407a;color:#fff}
+.nav button:hover:not(.on){border-color:#e8407a;color:#e8407a}
+
+.slide{display:none;animation:fi .3s ease}
+.slide.on{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+.cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
+.cover-logo{margin-bottom:52px}
+.cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
+.cover-name{font-family:'Instrument Serif',serif;font-size:42px;font-style:italic;line-height:1;color:#fff;margin-bottom:0}
+.cover-name-rule{width:44px;height:1px;background:#e8407a;margin:14px 0 16px}
+.cover-device{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:32px}
+.cover-rule{border:none;border-top:1px solid #1e1e1e;margin:28px 0 22px}
+.cover-inc-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.chk{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:13px;color:#fff}
+.chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.chk-dot svg{width:11px;height:11px}
+
+.pg{background:#0d0d0d;padding:32px 36px 40px}
+.pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
+.pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
+.pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
+.rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
+
+.specs{width:100%;border-collapse:collapse;margin-bottom:22px}
+.specs tr:nth-child(odd) td{background:#141414}
+.specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
+.specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
+.specs td:last-child{color:#fff}
+
+.sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
+.sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
+.sci p{font-size:13px;line-height:1.7;color:#fff}
+
+.pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
+.pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
+.pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
+.pc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.pc-lbl{font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:3px}
+.pc-val{font-size:13px;font-weight:500;color:#fff}
+.pc-div{border:none;border-top:1px solid #1e1e1e;margin-bottom:12px}
+.pc-note{font-size:13px;line-height:1.7;color:#fff}
+.pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
+.badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
+
+.faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
+.faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
+.faq p{font-size:13px;line-height:1.7;color:#fff}
+
+.ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
+.ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
+.ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
+
+.ref{margin-bottom:14px;padding-left:16px;position:relative}
+.ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
+.ref-auth{font-size:13px;font-weight:600;color:#fff}
+.ref-body{font-size:13px;line-height:1.7;color:#fff}
+
+.disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
+.disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
+.disc-box p:last-child{margin-bottom:0}
+
+.closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
+.c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
+.cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
+.cdot{width:6px;height:6px;border-radius:50%;background:#fff;flex-shrink:0}
+.c-sign{font-size:11.5px;color:rgba(255,255,255,.75);max-width:380px;margin:16px auto 0;line-height:1.65}
+
+@media(max-width:600px){
+  .cover{padding:36px 20px}
+  .cover-name{font-size:32px}
+  .cover-eyebrow{font-size:11px}
+  .cover-device{font-size:10px}
+  .pg{padding:24px 20px 32px}
+  .pg-title{font-size:22px}
+  .sci h3,.faq h3{font-size:17px}
+  .nav{padding:10px 12px;gap:5px}
+  .nav button{font-size:9px;padding:4px 9px}
+  .pc-grid{grid-template-columns:repeat(2,1fr)}
+  .specs td{font-size:12px;padding:9px 10px}
+  .ben{flex-direction:column;gap:4px}
+  .ben-lbl{min-width:unset}
+  .disc-box{padding:14px 16px}
+}
+</style>
+
+</head><body><div class="g">
+  <nav class="nav">
+    <button class="on" onclick="show(1)">Cover</button>
+    <button onclick="show(2)">Twoje urządzenie</button>
+    <button onclick="show(3)">Twoje cele</button>
+    <button onclick="show(4)">Jak to działa</button>
+    <button onclick="show(5)">Twój protokół</button>
+    <button onclick="show(6)">FAQs</button>
+    <button onclick="show(7)">Więcej korzyści</button>
+    <button onclick="show(8)">Zastrzeżenie</button>
+  </nav>
+
+  <div class="slide on" id="s1">
+    <div class="cover">
+      <div class="cover-logo">
+        <img src="/assets/solis-logo.png" style="height:42px;display:block">
+      </div>
+      <div class="cover-eyebrow">Spersonalizowany przewodnik terapii</div>
+      <div class="cover-name">Iwona</div>
+      <div class="cover-name-rule"></div>
+      <div class="cover-device">Solis SOLO 2.0</div>
+      <div class="cover-rule"></div>
+      <div class="cover-inc-label">Zawarte w Twoim przewodniku</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Informacje o Twoim urządzeniu</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Badania naukowe dotyczące Twoich celów zdrowotnych</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Spersonalizowany plan leczenia</div>
+    </div>
+  </div>
+
+  <div class="slide" id="s2">
+    <div class="pg">
+      <div class="pg-label">O Twoim urządzeniu</div>
+      <div class="pg-title">Twój Solis SOLO 2.0</div>
+      <hr class="pink-rule">
+      <table class="specs">
+        <tbody><tr><td>Urządzenie</td><td>Solis SOLO 2.0</td></tr>
+        <tr><td>Moc LED</td><td>300W (60 × 5W LED)</td></tr>
+        <tr><td>Długości fal</td><td>Czerwone: 630nm i 660nm | Bliskie podczerwone: 810nm, 830nm i 850nm</td></tr>
+        <tr><td>Natężenie promieniowania</td><td>&gt;180 mW/cm² w odległości 6 cali | ~50 mW/cm² w odległości 30 cali</td></tr>
+        <tr><td>Wymiary</td><td>34,5 × 23 × 9,5 cm | 4,5 kg</td></tr>
+        <tr><td>EMF i bezpieczeństwo</td><td>0 EMF w odległości 3+ cali | Ochrona przed EMF | Normy FDA/CE</td></tr>
+        <tr><td>Gwarancja</td><td>3 lata standardowa</td></tr>
+        <tr><td>W zestawie</td><td>Panel, kabel zasilający, ochronne okulary, filtry światła niebieskiego</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <div class="slide" id="s3">
+    <div class="pg">
+      <div class="pg-label">Twoje obszary fokus</div>
+      <div class="pg-title">Twoje cele zdrowotne i wellnessu</div>
+      <hr class="pink-rule">
+      <div class="sci">
+        <h3>Zdrowie oczu i wzrok</h3>
+        <p>Ochrona i wspieranie funkcji wzroku po operacjach oka, redukcja ryzyka degeneracji siatkówki i wspieranie naturalnych procesów naprawczych w tkankach ocznych.</p>
+      </div>
+      <div class="sci">
+        <h3>Nastrój i energia</h3>
+        <p>Podniesienie obniżonego nastroju, redukcja stanów depresyjnych i zwiększenie energii do codziennych czynności poprzez wsparcie funkcji mitochondrialnej.</p>
+      </div>
+      <div class="sci">
+        <h3>Wzrost włosów i grubość</h3>
+        <p>Zmniejszenie wypadania włosów i wspieranie ich naturalnego wzrostu poprzez stymulację folikułów włosowych i poprawę krążenia w skórze głowy.</p>
+      </div>
+      <div class="sci">
+        <h3>Odmłodzenie skóry i elastyczność</h3>
+        <p>Redukcja zmarszczek na szyi, twarzy i ciele, przywrócenie elastyczności skóry i poprawę tekstury poprzez stymulację produkcji kolagenu i elastyny.</p>
+      </div>
+      <div class="sci">
+        <h3>Łagodzenie bólu</h3>
+        <p>Zmniejszenie bólu stopy (neurak Mortona), bólów głowy i bólów kręgosłupa poprzez zmniejszenie zapalenia i wsparcie naturalnych procesów gojenia.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s4">
+    <div class="pg">
+      <div class="pg-label">Nauka</div>
+      <div class="pg-title">Jak terapia światłem wspiera Twoje cele</div>
+      <hr class="pink-rule">
+      <div class="sci">
+        <h3>Zdrowie oczu i wzrok</h3>
+        <p>Światło czerwone i bliskie podczerwone penetrują tkankę oczną, wzmacniając funkcję mitochondrialną w fotoreceptorach i komórkach siatkówki. Bogate w energię komórki mogą lepiej wspierać naturalnie procesy naprawcze. Ulepszona perfuzja tkanek wspiera gojenie po operacjach i może zmniejszać postęp degeneracji siatkówki. Bliskie podczerwone fale mogą również wspierać zmniejszanie płynących muszek poprzez zmniejszenie zapalenia i wspieranie zdrowia naczyń krwionośnych w oku.</p>
+      </div>
+      <div class="sci">
+        <h3>Nastrój i energia</h3>
+        <p>Światło czerwone i bliskie podczerwone są bezpośrednio absorbowane przez cytochronem c oksydazę – kluczowy enzym w łańcuchu oddechowym mitochondrialnym. Bezpośrednio wspomaga produkcję ATP (adenozyny trifosforanu), waluty energetycznej komórek, zasilając każdy proces biologiczny. Zwiększona energetyka komórkowa wspiera syntezę neurotransmiterów odpowiedzialnych za regulację nastroju. Bliskie podczerwone światło również zmniejsza zapalenie w mózgu i wspomaga krążenie mózgowe, łagodząc objawy depresji i zespoły sezonowe. Efekt ten rozwija się w ciągu dni do tygodni spójnego użytkowania.</p>
+      </div>
+      <div class="sci">
+        <h3>Wzrost włosów i grubość</h3>
+        <p>Wypadanie włosów następuje, gdy folikuły zatrzymują się w fazie spoczynkowej zamiast fazy wzrostu, a słabe krążenie oznacza, że skóra głowy nie otrzymuje potrzebnych składników odżywczych. Światło czerwone i bliskie podczerwone budzi komórki macierzyste w folikułach włosów, wznawiaając je do trybu wzrostu. Jednocześnie wspomaga uwalnianie tlenku azotu w komórkach skóry głowy, który rozszerzaczy naczynia krwionośne i dramatycznie zwiększa dostarczanie składników odżywczych do każdego folikułu. Badania wykazują wzrost gęstości włosów i grubości poszczególnych pasm w ciągu 12-20 tygodni spójnego użytkowania.</p>
+      </div>
+      <div class="sci">
+        <h3>Odmłodzenie skóry i elastyczność</h3>
+        <p>Świetliste fale czerwone i bliskie podczerwone penetrują do skóry właściwej (dermy), aby stymulować fibroblasty – komórki odpowiedzialne za produkcję kolagenu i elastyny. Wspomaga to bezpośrednio zmniejszenie vidoczności zmarszczek i drobnych linii, poprawę elastyczności skóry i przywrócenie młodej tekstury. Ulepszone krążenie dostarczające światła bliskiego podczerwienionego przynosi więcej składników odżywczych do komórek skóry, przyspieszając cyklus naturalnej naprawy i odnowy. Efekt jest szczególnie zauważalny na szyi, gdzie skóra jest cieńsza i bardziej narażona na starzenie się.</p>
+      </div>
+      <div class="sci">
+        <h3>Łagodzenie bólu</h3>
+        <p>Ból wynika z zapalenia tkanek – cytokiny pro-zapalne zalęgają obszar, tworząc obrzęk, ograniczając przepływ krwi i czułość nerwów. Światło bliskie podczerwone penetruje głęboko w tkankę mięśniową i nerwową, zmniejszając cytokiny pro-zapalne podczas zwiększania przepływu krwi do uszkodzonych tkanek. Bliskie podczerwone fale osiągają głębokie warstwy, gdzie pochodzi chroniczny ból (staw stopy, czaszkę dla bólów głowy, kręgosłup). Ulepszone krążenie dostarcza tlen i składniki odżywcze dla naprawy, jednocześnie usuwając szkodliwe starzejące się odpady, które utrzymują cykl bólu. Twoje naturalne mechanizmy łagodzenia bólu aktywują się bardziej efektywnie.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s5">
+    <div class="pg">
+      <div class="pg-label">Twój protokół</div>
+      <hr class="pink-rule">
+      <div class="pc">
+        <div class="pc-name">Zdrowie oczu i wzrok</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Tryb</div><div class="pc-val">Czerwone i bliskie podczerwone</div></div>
+          <div><div class="pc-lbl">Odległość</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Czas trwania</div><div class="pc-val">3 min</div></div>
+          <div><div class="pc-lbl">Częstotliwość</div><div class="pc-val">Codziennie</div></div>
+          <div><div class="pc-lbl">Pozycja</div><div class="pc-val">Przed zamkniętymi oczami</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Kieruj panel na twarz z zamkniętymi oczami lub w okulary ochronne. Bliskie podczerwone światło przenika tkankę oczną i wspomaga funkcję retiny. WAŻNE: Skonsultuj się ze swoim okulistą przed użyciem, szczególnie biorąc pod uwagę Twoją historię operacji. Podczas gojenia mogą być wskazane okresy przerwania.</div>
+        <div class="pc-tip">Porada: Poranne sesje są idealne – światło czerwone i bliskie podczerwone jest podobne do naturalnych fal wschodu słońca.</div>
+        <div><span class="badge">✦ Wsparcie: Codziennie</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Nastrój i energia</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Tryb</div><div class="pc-val">Czerwone i bliskie podczerwone</div></div>
+          <div><div class="pc-lbl">Odległość</div><div class="pc-val">20 cm</div></div>
+          <div><div class="pc-lbl">Czas trwania</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Częstotliwość</div><div class="pc-val">Codziennie</div></div>
+          <div><div class="pc-lbl">Pozycja</div><div class="pc-val">Klatka piersiowa / tułów</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Stoj lub siedź z klatkąpiersią i tułowiem skierowanym na panel. Promienie przenikają głębokie tkanki, wspierając produkcję ATP w mitochondriach całego ciała. Sesja poranna jest najlepsza dla wsparcia naturalnego rytmu cyrkadialnego i zwiększenia zdolności funkcjonalnej przez cały dzień.</div>
+        <div class="pc-tip">Porada: Kombinuj z lekkimi ćwiczeniami lub spacerami – energia ze wspomaganej produkcji ATP wspomaga aktywność fizyczną.</div>
+        <div><span class="badge">✦ Odczuwalne efekty: kilka dni do tygodni</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Wzrost włosów i grubość</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Tryb</div><div class="pc-val">Czerwone i bliskie podczerwone</div></div>
+          <div><div class="pc-lbl">Odległość</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Czas trwania</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Częstotliwość</div><div class="pc-val">3× w tygodniu</div></div>
+          <div><div class="pc-lbl">Pozycja</div><div class="pc-val">Skóra głowy</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Kieruj panel bezpośrednio na obszary wypadania włosów. Trzymaj blisko skóry głowy, aby zmaksymalizować penetrację i stymulację folikułów. Sesje mogą być wykonywane na czystej lub lekko wilgotnej skórze głowy dla optymalnych wyników.</div>
+        <div class="pc-tip">Porada: Wykonuj sesje w godzinach porannych, gdy naturalny rytm cyrkadialny wspomaga wzrost włosów.</div>
+        <div><span class="badge">✦ Pierwsze rezultaty: 12–20 tygodni</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Odmłodzenie skóry i elastyczność</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Tryb</div><div class="pc-val">Czerwone i bliskie podczerwone</div></div>
+          <div><div class="pc-lbl">Odległość</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Czas trwania</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Częstotliwość</div><div class="pc-val">3× w tygodniu</div></div>
+          <div><div class="pc-lbl">Pozycja</div><div class="pc-val">Twarz i szyja</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Siedź twarzą do panelu ze czystą, nagą skórą. Zamknij oczy lub użyj okulary ochronne. Panel pokrywa całą twarz i szyję w tej odległości – pozostań nieruchoma i pozwól aby działo swoją pracę. Możesz również zbliżyć się na 15 cm na 5–10 minut dla bardziej intensywnego gojenia szyi.</div>
+        <div class="pc-tip">Porada: Nanoś serum lub nawilżający krem bezpośrednio po sesji – skóra wchłania aktywne składniki bardziej efektywnie po ekspozycji na światło.</div>
+        <div><span class="badge">✦ Widoczne rezultaty: 4–6 tygodni</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Łagodzenie bólu (stopa, głowa, kręgosłup)</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Tryb</div><div class="pc-val">Czerwone i bliskie podczerwone</div></div>
+          <div><div class="pc-lbl">Odległość</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Czas trwania</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Częstotliwość</div><div class="pc-val">Codziennie</div></div>
+          <div><div class="pc-lbl">Pozycja</div><div class="pc-val">Bezpośrednio na obszarze bólu</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Kieruj panel bezpośrednio na bolesne obszary. Dla stopy: umieść panel pod lub obok stopy (neurak Mortona) w śródstopiu. Dla głowy: kieruj na prawe skronie i obszar za okiem. Dla kręgosłupa: skieruj na dolny odcinek lędźwiowy. Bliskie podczerwone Light penetruje głęboko w tkankę, zmniejszając zapalenie.</div>
+        <div class="pc-tip">Porada: Wykonuj sesje codziennie dla najlepszych wyników w zmniejszaniu bólu – konsystencja jest kluczowa dla redukcji zapalenia.</div>
+        <div><span class="badge">✦ Łagodzenie bólu: 2–6 tygodni</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s6">
+    <div class="pg">
+      <div class="pg-label">Praktyczne pytania</div>
+      <div class="pg-title">Pierwsze kroki</div>
+      <hr class="pink-rule">
+      <div class="faq">
+        <h3>O jakiej porze dnia powinienem używać Solis SOLO 2.0?</h3>
+        <p>Terapię światłem czerwonym można stosować o każdej porze dnia, ale timing wzmacnia określone korzyści. Dla celów nastroju i energii sesje poranne odbijają naturalne długości fal wschodu słońca i wspierają Twój naturalny rytm cyrkadialny. Dla redukcji bólu i wsparcia gojenia sesje rano lub na początku popołudnia dają tkankom czas na odpowiedź przed aktywnością. Dla wsparcia snu stosuj panel 1–2 godziny przed snem, kiedy efekt wspierający melatoninę jest najpotężniejszy. Dążyć do spójności – najlepszy moment to ten, do którego będziesz się trzymać.</p>
+      </div>
+      <div class="faq">
+        <h3>Dlaczego nie widzę wszystkich świateł?</h3>
+        <p>Twój SOLO 2.0 ma 30 diod LED emitujących bliskie podczerwone światło (810nm, 830nm, 850nm), które są całkowicie niewidoczne dla ludzkiego oka – jest to całkowicie normalne. Światła bliskie podczerwone działają równie potężnie pod powierzchnią. Skieruj kamerę smartfona na panel, aby zobaczyć słabozłote światło potwierdzające, że są aktywne.</p>
+      </div>
+      <div class="faq">
+        <h3>Dlaczego odległości i czasy sesji są różne dla każdej korzyści?</h3>
+        <p>Terapia światłem czerwonym działa poprzez dostarczanie określonej dawki energii światła Twojej tkance – i jak każda dawka, prawidłowe dostosowanie zależy od celu.</p>
+        <p style="margin-top:10px"><strong>Odległość wpływa na intensywność.</strong> Im dalej jesteś od urządzenia, tym bardziej światło rozprzestrzenia się i słabnie. Dla głębszych celów (stawy, mięśnie, jelita) generalnie chcesz być bliżej, aby zmaksymalizować penetrację. Dla obaw powierzchownych (skóra, gojenie ran) nieco większa odległość może być bardziej efektywna, ponieważ pozwala na równomierne pokrycie bez przesycenia.</p>
+        <p style="margin-top:8px"><strong>Czas kompensuje intensywność.</strong> Jeśli jesteś dalej i otrzymujesz mniej mocy na centymetr kwadratowy, potrzebujesz więcej czasu, aby zgromadzić tę samą terapeutyczną dawkę. Sesje bliżej mogą być często krótsze dla tego samego efektu.</p>
+        <p style="margin-top:8px"><strong>Obowiązuje również zasada „złota środka"</strong> – terapia światłem czerwonym podlega bifazycznej odpowiedzi na dawkę, co oznacza, że zbyt mało nie ma efektu, właściwa ilość działa, a zbyt wiele może faktycznie zmniejszyć wyniki. Różne tkanki i procesy biologiczne mają różne optymalnych okna dawkowania, dlatego protokół skóry wygląda inaczej niż protokół stawu lub gojenia.</p>
+        <p style="margin-top:8px">Myśl o tym mniej jako „więcej to lepiej" i bardziej jak przepis – celem jest trafienie właściwego celu energetycznego dla tej konkretnej korzyści, a odległość i czas to zaledwie dwa pokrętła, które stosujesz, aby się tam dostać.</p>
+      </div>
+      <div class="faq">
+        <h3>Czy powinienem używać okularów ochronnych z terapią światłem czerwonym?</h3>
+        <p>Okulary nie są wymagane – światło czerwone i bliskie podczerwone (NIR) nie są szkodliwe dla oczu, gdy są stosowane prawidłowo. Istnieje jednak kilka czynników do rozważenia:</p>
+        <p style="margin-top:10px"><strong>Jasność:</strong> Światło może być dość intensywne, szczególnie podczas leczenia twarzy. Jeśli uznasz to za niekomfortowe, noszenie okularów ochronnych lub zamknięcie oczu może pomóc.</p>
+        <p style="margin-top:8px"><strong>Przedłużona ekspozycja:</strong> Chociaż okazjonalna ekspozycja jest bezpieczna, unikaj bezpośredniego wpatrywania się w diody LED przez przedłużony czas.</p>
+        <p style="margin-top:8px"><strong>Osobiste preferencje:</strong> Jeśli jesteś wrażliwy na światło, noszenie okularów może zwiększyć komfort podczas sesji.</p>
+      </div>
+      <div class="faq">
+        <h3>Czy muszę mieć nagą skórę podczas leczenia?</h3>
+        <p>Tak – aby uzyskać najlepsze wyniki, terapię światłem czerwonym należy stosować na czystej, nagiej skórze. Odzież może blokować penetrację światła, dlatego upewnij się, że leczone obszary są wolne od ubrania, kosmetyków lub kremów przeciwsłonecznych, aby umożliwić maksymalną absorpcję.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s7">
+    <div class="pg">
+      <div class="pg-label">Idąc dalej</div>
+      <div class="pg-title">Jak jeszcze może Ci to pomóc?</div>
+      <hr class="pink-rule">
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Oprócz Twoich głównych celów, regularne stosowanie Twojego SOLO 2.0 może przynieść szereg dodatkowych korzyści zdrowotnych i wellnessu, które wielu użytkowników zauważa z czasem:</p>
+      <div class="ben"><div class="ben-lbl">Jakość snu</div><div class="ben-txt">Światło czerwone i bliskie podczerwone może wspomóc regulację sekrecji melatoniny i rytmu cyrkadialnego, wspierając głębszy, bardziej regeneracyjny sen – szczególnie w przypadku poranka lub wczesnego wieczoru.</div></div>
+      <div class="ben"><div class="ben-lbl">Nastrój i energia</div><div class="ben-txt">Stymulacja mitochondrialna wspomaga stałą produkcję energii przez cały dzień, a wielu użytkowników donosi o poprawie nastroju i zmniejszeniu zmęczenia popołudniowego w ciągu pierwszych kilku tygodni.</div></div>
+      <div class="ben"><div class="ben-lbl">Gojenie ran</div><div class="ben-txt">Światło czerwone przyspiesza naprawę tkanek poprzez stymulację syntezy kolagenu i zmniejszenie zapalenia, pomagając drobnym skaleczeniom, otarciom lub bliźniom gojić się szybciej i z mniejszym widocznym bliznowaceniem.</div></div>
+      <div class="ben"><div class="ben-lbl">Krążenie</div><div class="ben-txt">Ulepszone mikrokrążenie od ekspozycji na bliskie podczerwone dostarcza więcej tlenu i składników odżywczych do tkanek w całym ciele, wspierając regenerację i ogólne zdrowie komórkowe.</div></div>
+      <div class="ben"><div class="ben-lbl">Wsparcie odpornościowe</div><div class="ben-txt">Poprzez poprawę funkcji mitochondrialnej i zmniejszenie zapalenia systemowego, regularne sesje mogą wspomóc naturalne odpowiedzi odpornościowe Twojego ciała w czasie.</div></div>
+      <hr class="rule">
+      <div class="pg-label" style="margin-bottom:16px">Badania</div>
+      <div class="ref"><div class="ref-auth">Wunsch &amp; Matuschka (2014)</div><div class="ref-body">Kontrolne badanie potwierdzające, że światło czerwone i bliskie podczerwone znacznie zmniejsza zmarszczki i poprawia gładkość skóry poprzez stymulację produkcji kolagenu i elastyny. <em>Photomedicine and Laser Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Avci et al. (2013)</div><div class="ref-body">Wykazuje, jak terapia światłem czerwonym i bliskim podczerwonym ulepsza produkcję kolagenu i elastyny, poprawiając ton skóry, zmniejszając drobne linie i wygładzając teksturę. <em>Seminars in Cutaneous Medicine and Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Chung-Ang University (2007)</div><div class="ref-body">90% badanych wykazało zmniejszenie głębokości zmarszczek po zaledwie 8 sesjach (4 tygodnie). <em>Journal of Photochemistry and Photobiology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Zhao et al. (2012)</div><div class="ref-body">Wykazuje, że ekspozycja na światło czerwone i bliskie podczerwone może wspomóc regulację rytmu cyrkadialnego i produkcję melatoniny, wspierając głębszy sen. <em>Lasers in Medical Science.</em></div></div>
+      <div class="ref"><div class="ref-auth">Hamblin et al. (2023)</div><div class="ref-body">Obszerne przeglądy potwierdzają, że terapia światłem wspomaga redukcję bólu poprzez zmniejszenie zapalenia i wspieranie gojenia tkanek. <em>Journal of Rheumatology.</em></div></div>
+    </div>
+  </div>
+
+  <div class="slide" id="s8">
+    <div class="pg">
+      <div class="pg-label">Ważne informacje</div>
+      <div class="pg-title">Zastrzeżenie</div>
+      <hr class="pink-rule">
+      <div class="disc-box">
+        <p>Niniejszy przewodnik ma na celu pomóc Ci osiągnąć maksymalne korzyści z urządzenia do terapii światłem czerwonym w oparciu o ogólne rekomendacje i Twoje specyficzne cele zdrowotne. Nie ma on na celu zastępienia profesjonalnej porady medycznej, diagnozy ani leczenia. Terapia światłem czerwonym jest praktyka uzupełniającą wellness i nie powinna być używana jako substytut konwencjonalnej opieki medycznej.</p>
+        <p>Jeśli masz jakiekolwiek poważne, trwałe lub zdiagnozowane warunki medyczne – w tym m.in. raka, epilepsji, aktywne infekcje, zaburzenia fotoczułości lub jeśli jesteś w ciąży, karmiąc piersią, biorąc leki fotoczułe lub niedawno poddał się operacji – skonsultuj się ze swoim lekarzem lub wykwalifikowanym pracownikiem opieki zdrowotnej przed rozpoczęciem użytkowania.</p>
+        <p>WAŻNE DLA PACJENTÓW OD OCZY: Biorąc pod uwagę Twoją historię operacji retiny (wiwektomia) i obecne warunki oka (zaćma, degeneracja siatkówki, muszki latające), zdecydowanie zalecam się skonsultować ze swoim okulistą przed rozpoczęciem protokołu terapii ocznej. Może on zalecić okresy obserwacji lub modyfikacje protokołu dostosowane do Twojego indywidualnego stanu gojenia. Krótkie sesje (3 minuty dziennie) są konwencjonalne, ale niestandardowe dla Twoim oczami wymagają nadzoru specjalisty.</p>
+        <p>Nie używaj urządzenia Solis bezpośrednio ponad oczami, na otwartych ranach lub na obszarach aktywnych infekcji. Wyniki różnią się między osobami. Zawsze postępuj zgodnie z instrukcjami bezpieczeństwa zawartymi w Twoim urządzeniu.</p>
+      </div>
+      <hr class="rule">
+      <div class="pg-label" style="margin-bottom:10px">Skontaktuj się z nami</div>
+      <p style="font-size:13px;color:#fff;line-height:1.7">Jeśli masz jakiekolwiek pytania dotyczące Twojego urządzenia lub tego przewodnika, jesteśmy tutaj, aby Ci pomóc.</p>
+      <p style="font-size:13px;color:#fff;margin-top:8px"><a href="mailto:hello@solistherapy.com" style="color:#e8407a;text-decoration:none;font-weight:500">hello@solistherapy.com</a></p>
+    </div>
+  </div>
+
+<script>
+function show(n){
+  document.querySelectorAll('.slide').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('on'));
+  document.getElementById('s'+n).classList.add('on');
+  document.querySelectorAll('.nav button')[n-1].classList.add('on');
+}
+</script>
+</body></html>
