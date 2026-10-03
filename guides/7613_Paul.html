@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
-@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -17,7 +17,6 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -30,27 +29,23 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
-/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
-/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
-/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
-/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -62,29 +57,24 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
-/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
-/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
-/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
-/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
-/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -162,16 +152,28 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Mood, Anxiety, Depression &amp; SAD Support</h3>
-        <p>Your primary goal. Addressing seasonal affective disorder, stress-driven anxiety, and low mood through mitochondrial support and nervous system regulation. Red light therapy works at the cellular level to restore mood-regulating neurotransmitter balance.</p>
+        <h3>Mood, Anxiety &amp; Stress</h3>
+        <p>Managing everyday stress, anxiety symptoms, and mood fluctuations. You're looking to build resilience and emotional stability through natural, cellular-level support.</p>
+      </div>
+      <div class="sci">
+        <h3>Seasonal Affective Disorder (SAD)</h3>
+        <p>Combating seasonal mood dips and low energy during darker months by supporting your body's natural light-dependent regulatory systems.</p>
+      </div>
+      <div class="sci">
+        <h3>Brain Fog &amp; Mental Clarity</h3>
+        <p>Improving cognitive function, focus, and information processing. Clearing mental sluggishness and restoring sharp mental performance.</p>
       </div>
       <div class="sci">
         <h3>Energy &amp; Motivation</h3>
-        <p>Boosting ATP production and mitochondrial efficiency to combat fatigue, improve mental clarity, and restore sustained motivation throughout the day and across seasons.</p>
+        <p>Boosting sustained energy levels and the drive to take action, without caffeine dependency or afternoon crashes.</p>
       </div>
       <div class="sci">
-        <h3>Hair Growth &amp; Thickness</h3>
-        <p>Supporting male pattern baldness through enhanced cellular energy in hair follicles and improved scalp circulation to promote hair density and thickness.</p>
+        <h3>Nervous System Regulation</h3>
+        <p>Supporting your autonomic nervous system's ability to shift between activation and rest, promoting calm alertness and recovery.</p>
+      </div>
+      <div class="sci">
+        <h3>Hair Growth &amp; Male Pattern Baldness</h3>
+        <p>Stimulating hair follicles and improving scalp circulation to support thicker, healthier hair growth and slow hair loss progression.</p>
       </div>
     </div>
   </div>
@@ -182,16 +184,28 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Mood, Anxiety, Depression &amp; SAD Support</h3>
-        <p>Depression and seasonal affective disorder involve disrupted neurotransmitter balance, neuroinflammation, and mitochondrial dysfunction in brain regions controlling mood. Red light enhances mitochondrial function in neurons responsible for mood regulation, providing more ATP for neurotransmitter production including serotonin. Increased cerebral blood flow delivers oxygen and nutrients whilst near-infrared wavelengths reduce neuroinflammation disrupting mood pathways. For SAD, red and NIR light helps regulate circadian rhythms and supports serotonin synthesis when daylight is limited, addressing the root cause rather than masking symptoms.</p>
+        <h3>Mood, Anxiety &amp; Stress</h3>
+        <p>Anxiety and depression involve disrupted neurotransmitter balance and neuroinflammation in mood-controlling brain regions. Red and near-infrared light penetrate your skull to enhance mitochondrial function in neurons responsible for serotonin and dopamine production — the neurotransmitters controlling mood. Increased ATP production gives these cells more energy to synthesise mood-supporting chemicals. Simultaneously, NIR light reduces neuroinflammation disrupting mood pathways whilst enhancing cerebral blood flow to deliver oxygen and nutrients. The result is measurably improved mood stability and reduced anxiety intensity without pharmaceutical side effects.</p>
+      </div>
+      <div class="sci">
+        <h3>Seasonal Affective Disorder (SAD)</h3>
+        <p>SAD emerges when reduced winter daylight disrupts circadian rhythms and serotonin synthesis. Your brain depends on light signals to regulate sleep-wake cycles and mood. Red light therapy mimics the therapeutic wavelengths of sunrise and sunset, helping your brain's light-sensing systems signal proper circadian timing. This stimulates serotonin production and restores melatonin regulation, addressing SAD's root cause rather than just symptom suppression. Morning red light exposure particularly powerful for resetting circadian rhythms and boosting mood-regulating neurotransmitters.</p>
+      </div>
+      <div class="sci">
+        <h3>Brain Fog &amp; Mental Clarity</h3>
+        <p>Brain fog results from mitochondrial dysfunction in neurons — your brain consumes 20% of your body's energy despite being only 2% of weight. When cellular energy production declines, cognitive performance suffers: memory weakens, focus deteriorates, processing slows. Red and NIR light penetrate your skull to directly enhance mitochondrial function in neurons and glial cells. Boosted ATP production supports memory formation, information processing, and neural communication. Enhanced cerebral blood flow delivers more oxygen and nutrients whilst improved mitochondrial efficiency helps your brain's clearance systems remove metabolic waste. The result is sharper focus, better information recall, and sustained mental clarity.</p>
       </div>
       <div class="sci">
         <h3>Energy &amp; Motivation</h3>
-        <p>Chronic low energy isn't laziness—it's often mitochondrial dysfunction. Your mitochondria produce ATP (adenosine triphosphate), the energy currency fuelling every biological process. When mitochondrial efficiency declines due to age, stress, or seasonal factors, ATP production drops and you feel exhausted. Red light therapy directly activates cytochrome c oxidase, a key enzyme in your mitochondria's energy production pathway. This stimulation dramatically increases ATP output whilst reducing oxidative stress that damages mitochondrial function. The result is noticeable improvements in daily energy, reduced afternoon crashes, and sustained motivation throughout the day.</p>
+        <p>Chronic fatigue and low motivation stem from mitochondrial dysfunction. Red light directly activates cytochrome c oxidase — a key enzyme in your mitochondria's energy production pathway. This stimulation dramatically increases ATP output (your cells' energy currency) whilst reducing oxidative stress damaging mitochondrial function. Your cells simply have more fuel to power physical and mental activities. The result is noticeable improvements in daily energy levels, reduced afternoon crashes, and better motivation to engage in activities — your cellular powerplants working more efficiently.</p>
       </div>
       <div class="sci">
-        <h3>Hair Growth &amp; Thickness</h3>
-        <p>Male pattern baldness happens when follicles get stuck in the resting phase instead of the growth phase, and when poor circulation means your scalp isn't getting the nutrients it needs. Red light therapy tackles both problems. First, it wakes up the stem cells in your hair follicles, essentially kickstarting them back into growth mode and extending the active growth phase of your hair cycle. Second, it triggers the release of nitric oxide in your scalp cells, which dilates blood vessels and dramatically increases nutrient delivery to each follicle. Clinically proven increases in hair density and thicker individual strands occur without chemicals, side effects, or hormonal disruption.</p>
+        <h3>Nervous System Regulation</h3>
+        <p>Dysregulation of your autonomic nervous system — the system controlling stress response and recovery — underlies anxiety and emotional volatility. Red light enhances mitochondrial function in brain regions regulating autonomic balance (particularly the prefrontal cortex and vagus nerve), giving these regulatory systems more energy to function properly. Enhanced energy production helps your nervous system shift more smoothly between activation (fight-or-flight) and rest (parasympathetic) states. The result is improved stress resilience, better recovery capacity, and genuine calm alertness — your nervous system operating in optimal balance.</p>
+      </div>
+      <div class="sci">
+        <h3>Hair Growth &amp; Male Pattern Baldness</h3>
+        <p>Hair loss happens when follicles get stuck in the resting phase instead of the growth phase, and poor circulation means your scalp isn't receiving the nutrients it needs. Red light therapy tackles both problems. First, it activates stem cells in your hair follicles, kickstarting them back into growth mode and extending the active growth phase. Second, it triggers nitric oxide release in scalp cells, dilating blood vessels and dramatically increasing nutrient delivery to each follicle. Enhanced ATP production gives hair follicles the energy needed for growth. The result is clinically proven increases in hair density, thicker individual strands, and a healthier scalp environment.</p>
       </div>
     </div>
   </div>
@@ -201,7 +215,7 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
-        <div class="pc-name">Mood, Anxiety, Depression &amp; SAD Support</div>
+        <div class="pc-name">Mood, Anxiety &amp; Stress</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
@@ -210,9 +224,37 @@
           <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Direct the panel at your forehead with eyes closed or using the included goggles. The SOLO 2.0 delivers precise coverage at this distance, reaching the brain regions responsible for mood regulation. Consistency is key for mood support — daily sessions work best.</div>
-        <div class="pc-tip">Tip: Morning sessions mirror natural sunrise wavelengths and align with your circadian rhythm for optimal mood benefit. Many users feel a mood lift within the first few sessions.</div>
-        <div><span class="badge">✦ Results felt: days to weeks</span></div>
+        <div class="pc-note">Direct the panel at your forehead, allowing light to penetrate to brain regions responsible for mood regulation. Morning sessions are optimal — red light mirrors sunrise wavelengths, supporting your circadian rhythm and setting positive mood tone for the day. Close your eyes or use the included goggles.</div>
+        <div class="pc-tip">Tip: Many users report a noticeable mood lift within the first few sessions. Consistency is key — daily use amplifies stress resilience and anxiety reduction over time.</div>
+        <div><span class="badge">✦ Results visible: days to weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Seasonal Affective Disorder (SAD)</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily (especially autumn/winter)</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face &amp; forehead</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Use first thing in the morning to reset circadian rhythms and stimulate serotonin production. Position the panel at face level, allowing light to reach both your forehead (brain) and eyes (circadian regulators). This timing mimics sunrise and signals proper time-of-day to your brain's light-sensing systems.</div>
+        <div class="pc-tip">Tip: Morning consistency is critical for SAD — use daily throughout autumn and winter months when natural daylight is limited. Many users notice mood improvement within the first week of morning sessions.</div>
+        <div><span class="badge">✦ Results visible: 1–2 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Brain Fog &amp; Mental Clarity</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–5× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Direct the panel at your forehead to enhance mitochondrial function in prefrontal cortex neurons responsible for focus and working memory. Morning or early afternoon sessions work best — avoid late evening as this can be cognitively stimulating. Close your eyes comfortably during treatment.</div>
+        <div class="pc-tip">Tip: Combine with adequate hydration and movement for optimal cognitive results. Many users report sharper thinking and better information recall within 2–3 weeks of consistent use.</div>
+        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
       </div>
       <div class="pc">
         <div class="pc-name">Energy &amp; Motivation</div>
@@ -224,22 +266,36 @@
           <div><div class="pc-lbl">Position</div><div class="pc-val">Chest / torso</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Stand or sit with chest and torso facing the panel. The SOLO 2.0 covers a focused area, so position it at chest height for a systemic energy effect. This works synergistically with your mood protocol — you can combine both in one session: 10 minutes forehead, then reposition to chest for 10 minutes.</div>
-        <div class="pc-tip">Tip: Morning sessions are ideal — red and NIR light mirrors sunrise wavelengths, aligning with your natural circadian rhythm and setting you up for sustained energy throughout the day.</div>
+        <div class="pc-note">Stand or sit with your chest and torso facing the panel at chest height. This position maximises systemic energy production by allowing light to reach the largest muscle mass and organs responsible for ATP generation. Morning sessions ideal for setting energy tone for the day ahead.</div>
+        <div class="pc-tip">Tip: Morning use mirrors natural sunrise wavelengths and supports your circadian rhythm for sustained energy throughout the day. Most users notice improved stamina and reduced afternoon fatigue within days.</div>
         <div><span class="badge">✦ Results: days to weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Hair Growth &amp; Thickness</div>
+        <div class="pc-name">Nervous System Regulation</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–5× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Direct the panel at your forehead to support autonomic nervous system regulation. Morning sessions promote balanced activation and resilience. Evening sessions (2 hours before bed) can support parasympathetic tone and recovery. The SOLO 2.0 at this distance delivers optimal intensity for nervous system modulation.</div>
+        <div class="pc-tip">Tip: Use morning sessions to build stress resilience throughout the day, and evening sessions to support recovery. Many users report noticeably calmer reactions to stressors within 2–4 weeks.</div>
+        <div><span class="badge">✦ Results visible: 2–6 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Hair Growth &amp; Male Pattern Baldness</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Scalp</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Scalp (affected areas)</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the panel 10 cm from your scalp, scanning slowly across the treatment areas. The SOLO 2.0 provides excellent coverage for targeted scalp work. Hair growth is a longer-term benefit, so consistency matters more than frequency, though 3–4 times weekly accelerates visible results.</div>
-        <div class="pc-tip">Tip: You can easily combine this with your mood and energy protocols in one morning session: start with forehead (mood), then chest (energy), then scalp (hair). Total time: 30 minutes for all three benefits.</div>
+        <div class="pc-note">Position the SOLO 2.0 close to your scalp, targeting areas of thinning or hair loss. Bare scalp contact is optimal — avoid using through hats or thick hair. The panel can be angled to cover the frontal, crown, or side areas. Consistency is critical for hair growth, as the full growth cycle spans months.</div>
+        <div class="pc-tip">Tip: Results take time — hair growth cycles are slow. Most users notice thicker hair texture and reduced shedding within 8–12 weeks, with visible density changes by 16–20 weeks. Daily scalp massage post-session can further enhance circulation.</div>
         <div><span class="badge">✦ Results visible: 12–20 weeks</span></div>
       </div>
     </div>
@@ -252,7 +308,7 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>For your mood and energy goals, morning sessions are ideal. Red light therapy mirrors natural sunrise wavelengths and supports your circadian rhythm, setting you up for improved mood and sustained energy throughout the day. Morning light exposure is particularly powerful for seasonal affective disorder and stress-driven anxiety. Evening sessions can also support mood, but morning consistency will give you the strongest foundation. The best time is the one you'll stick to — aim for the same time each day for maximum circadian alignment.</p>
+        <p>For your mood and SAD goals, morning is ideal — red light therapy mirrors sunrise wavelengths, supporting your circadian rhythm and setting positive mood tone for the day. Morning sessions between 6–9 AM have the strongest effect on serotonin production and circadian reset. For nervous system regulation and stress management, morning sessions build resilience throughout the day, whilst evening sessions (1–2 hours before bed) can support parasympathetic recovery. For hair growth, any consistent time works, though morning gives you the whole day to support circulation. The best time is ultimately the one you'll stick to consistently.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
@@ -269,7 +325,7 @@
       <div class="faq">
         <h3>Should I use goggles with red light therapy?</h3>
         <p>Goggles are not required — red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
-        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
+        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial or forehead treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
         <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
         <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
       </div>
@@ -286,18 +342,18 @@
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
       <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep—especially when used in the morning or early evening.</div></div>
-      <div class="ben"><div class="ben-lbl">Stress resilience</div><div class="ben-txt">Enhanced mitochondrial function supports your nervous system's ability to regulate stress responses, helping you manage anxiety and adapt more easily to challenging situations.</div></div>
-      <div class="ben"><div class="ben-lbl">Cognitive function</div><div class="ben-txt">Improved brain mitochondrial efficiency supports memory, focus, and mental clarity—particularly valuable for combating the cognitive fog associated with seasonal depression.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting overall recovery and cellular health.</div></div>
-      <div class="ben"><div class="ben-lbl">Recovery &amp; pain relief</div><div class="ben-txt">Reduced inflammation and enhanced cellular energy support faster recovery from stress and physical activity, with users often reporting reduced muscle tension and joint discomfort.</div></div>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep — especially when used in the morning or early evening.</div></div>
+      <div class="ben"><div class="ben-lbl">Pain relief &amp; recovery</div><div class="ben-txt">Enhanced cellular energy and reduced inflammation support faster muscle recovery, reduced chronic pain, and improved joint mobility — beneficial for active individuals and training recovery.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation &amp; cardiovascular</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting cardiovascular health and overall vitality.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses over time.</div></div>
+      <div class="ben"><div class="ben-lbl">Resilience &amp; adaptation</div><div class="ben-txt">Enhanced cellular energy and nervous system regulation support your body's ability to adapt to stress, building genuine physiological resilience beyond temporary mood relief.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Schiffer et al. (2009)</div><div class="ref-body">A single session of transcranial near-infrared light to the forehead resulted in a 63.1% reduction in anxiety (HAM-A) scores and 54.3% reduction in depression. <em>Harvard Medical School, Behavioral and Brain Functions.</em></div></div>
-      <div class="ref"><div class="ref-auth">Jahan et al. (2020)</div><div class="ref-body">Significantly improved stress resilience and reduced anxiety scores by approximately 50% with transcranial NIR light. Participants received 3 treatments per week for 4 weeks. <em>Frontiers in Psychiatry.</em></div></div>
-      <div class="ref"><div class="ref-auth">Zhao et al. (2012)</div><div class="ref-body">Demonstrates that red and NIR light exposure can help regulate circadian rhythms and melatonin production, supporting deeper sleep and improved mood stability. <em>Journal of Athletic Training.</em></div></div>
-      <div class="ref"><div class="ref-auth">Lanzafame et al. (2013)</div><div class="ref-body">After 16 weeks of red light therapy, male subjects saw a 35–39% increase in hair counts, with continued improvements in hair density and thickness. <em>Lasers in Surgery and Medicine.</em></div></div>
-      <div class="ref"><div class="ref-auth">Wellman Center for Photomedicine (2014)</div><div class="ref-body">37% increase in hair count compared to a placebo group. Participants received 3 treatments per week for 26 weeks, demonstrating consistent, clinically significant hair growth support. <em>Lasers in Surgery and Medicine.</em></div></div>
+      <div class="ref"><div class="ref-auth">Schiffer et al. (2009)</div><div class="ref-body">Single session of transcranial NIR light therapy to the forehead resulted in 63.1% reduction in anxiety scores and 54.3% reduction in depression scores. <em>Behavioral and Brain Functions.</em></div></div>
+      <div class="ref"><div class="ref-auth">Jahan et al. (2020)</div><div class="ref-body">Significantly improved stress resilience and reduced anxiety scores by approximately 50% in participants receiving 3 treatments per week over 4 weeks. <em>Frontiers in Psychiatry.</em></div></div>
+      <div class="ref"><div class="ref-auth">Saltmarche et al. (2019)</div><div class="ref-body">Meta-analysis found that transcranial NIR light significantly improved executive function and memory scores in 9,000 subjects, demonstrating cognitive enhancement benefits. <em>Photomedicine and Laser Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Zhao et al. (2012)</div><div class="ref-body">Demonstrated that red and NIR light exposure can help regulate circadian rhythms and melatonin production, supporting sleep quality and daily energy patterns. <em>Journal of Athletic Training.</em></div></div>
+      <div class="ref"><div class="ref-auth">Lanzafame et al. (2013)</div><div class="ref-body">After 16 weeks of treatment, participants saw a 35–39% increase in hair counts, demonstrating clinically significant effects on male pattern hair loss. <em>Lasers in Surgery and Medicine.</em></div></div>
     </div>
   </div>
 
