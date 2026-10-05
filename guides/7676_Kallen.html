@@ -2,7 +2,8 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
-@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
@@ -16,7 +17,6 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -29,29 +29,23 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
-/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
-/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
-/* GOALS BOX */
-
-/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
-/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -63,29 +57,24 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
-/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
-/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
-/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
-/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
-/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -163,12 +152,12 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Eczema &amp; Atopic Dermatitis</h3>
-        <p>You've been managing eczema on your hands and ankles for 11 years, and it's taking a real toll. Red light therapy targets the broken skin barrier and overactive inflammatory response that drive the itch-scratch cycle and painful cracking.</p>
+        <h3>Eczema &amp; Dermatitis</h3>
+        <p>You've been managing eczema for 11 years, particularly on your hands and ankles. The persistent cracking, itching, and inflammation are affecting your daily life. Red light therapy targets the root causes: rebuilding your skin barrier, calming overactive nerve endings, and reducing the inflammatory cycle driving flare-ups.</p>
       </div>
       <div class="sci">
         <h3>Rosacea &amp; Redness</h3>
-        <p>Facial redness and reactive skin that flares up from triggers. Red light therapy works to calm overactive blood vessel reactivity and reduce inflammatory mediators responsible for persistent flushing and discomfort.</p>
+        <p>Facial redness and reactive skin can worsen alongside eczema, creating persistent inflammation and sensitivity. Red light therapy works to reduce inflammatory mediators, calm reactive blood vessels, and support more resilient skin tone.</p>
       </div>
     </div>
   </div>
@@ -179,12 +168,12 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Eczema &amp; Atopic Dermatitis</h3>
-        <p>Eczema is fundamentally a broken skin barrier problem — your skin can't hold moisture, inflammatory signals run wild, and hypersensitive nerve endings create the relentless itch-scratch cycle that perpetuates damage. Red light therapy tackles this on multiple fronts. It accelerates skin barrier repair, helping rebuild your protective "shield" to retain moisture effectively. It also calms overactive nerve endings, directly reducing itching and breaking the scratch reflex that worsens eczema. Enhanced blood flow delivers nutrients for repair while reduced inflammation creates an environment where your skin can actually heal. Clinical trials show fewer flare-ups, reduced severity scores, and significantly improved sleep from less night-time itching.</p>
+        <h3>Eczema &amp; Dermatitis</h3>
+        <p>Eczema is fundamentally a broken skin barrier problem. Your skin can't hold moisture, inflammatory signals run wild, and hypersensitive nerve endings create that relentless itch-scratch cycle that's been affecting you for years. Red light therapy tackles this directly. It accelerates skin barrier repair by stimulating fibroblasts to rebuild protective proteins, helping your skin retain moisture more effectively. Simultaneously, red light calms overactive nerve endings, reducing itching and breaking the scratch reflex that worsens eczema. The result is fewer flare-ups, reduced inflammation, and genuine healing of the cracking and damaged skin you've been dealing with—not just temporary relief.</p>
       </div>
       <div class="sci">
         <h3>Rosacea &amp; Redness</h3>
-        <p>Rosacea means your facial blood vessels are hyper-reactive, dilating excessively in response to triggers, creating persistent redness, visible capillaries, and that uncomfortable burning sensation. Red light therapy is uniquely suited for this because it's a "cold" therapy — no heat, no thermal damage, no aggravating already-sensitive skin. Instead, it works at the cellular level by balancing reactive oxygen species and modulating the inflammatory mediators responsible for flaring. The result? Reduced persistent redness, calmer blood vessel reactivity, and fewer trigger responses. Your skin's inflammatory threshold increases, meaning everyday things that used to cause flare-ups have less impact.</p>
+        <p>Rosacea means your facial blood vessels are hyper-reactive, dilating excessively in response to triggers and creating persistent redness. Red light therapy is uniquely suited for this because it's a "cold" therapy with no heat generation. It works at the cellular level by balancing reactive oxygen species and modulating the inflammatory mediators responsible for flaring. This calms your immune response, reduces persistent facial redness, and increases your skin's inflammatory threshold—meaning everyday triggers have less impact on your complexion over time.</p>
       </div>
     </div>
   </div>
@@ -194,7 +183,7 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
-        <div class="pc-name">Eczema &amp; Atopic Dermatitis</div>
+        <div class="pc-name">Eczema &amp; Dermatitis</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
@@ -203,9 +192,9 @@
           <div><div class="pc-lbl">Position</div><div class="pc-val">Hands &amp; ankles</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Target the affected areas directly — hands and ankles. Keep your skin clean and bare. Position the panel to ensure even coverage. The cool light won't irritate your skin, unlike heat which aggravates eczema.</div>
-        <div class="pc-tip">Tip: Apply moisturiser immediately after your session — red light preps your skin to absorb actives more effectively, and hydration locks in the healing benefits.</div>
-        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
+        <div class="pc-note">Treat your affected areas—hands and ankles—with bare skin exposed. Keep the area still and let the light work for the full 10 minutes. If skin is very irritated, the cool red light won't cause additional irritation; it's actually helping to calm inflammation.</div>
+        <div class="pc-tip">Tip: Treat straight after a gentle wash before applying any creams or moisturisers. This gives your skin barrier a direct boost to repair itself more effectively.</div>
+        <div><span class="badge">✦ Results visible: 3–8 weeks</span></div>
       </div>
       <div class="pc">
         <div class="pc-name">Rosacea &amp; Redness</div>
@@ -217,8 +206,8 @@
           <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Keep the panel further away for facial redness to provide gentle, even coverage without overwhelming reactive skin. Close your eyes or wear the included goggles for comfort. The further distance reduces intensity, which is ideal for sensitive, inflamed skin.</div>
-        <div class="pc-tip">Tip: Use red light before your skin reacts to triggers if possible — prevention is easier than recovery. Morning sessions work well as they align with your natural circadian rhythm.</div>
+        <div class="pc-note">Position the panel slightly further away to gently treat your whole face without overstimulation. The greater distance means softer, even coverage—exactly what reactive skin needs. Close your eyes or use the included goggles for comfort.</div>
+        <div class="pc-tip">Tip: Use this in the morning or early afternoon when you're less likely to have triggers (heat, stress) affecting your skin during the session.</div>
         <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
       </div>
     </div>
@@ -231,11 +220,11 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For your eczema and rosacea, morning sessions work well as they align with your natural circadian rhythm and reduce reactive flare-ups throughout the day. Aim for consistency — the best time is the one you'll stick to. If evening works better for your routine, that's perfectly fine too.</p>
+        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For eczema and skin conditions, morning or early afternoon sessions work well before stress or heat triggers of the day intensify symptoms. Avoid using close to bedtime if you find the light stimulating. Aim for consistency—the best time is the one you'll stick to regularly, as steady weekly use is what delivers results for skin barrier repair.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
-        <p>Your SOLO 2.0 has 30 NIR LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+        <p>Your SOLO 2.0 has 30 NIR LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye—this is entirely normal and means they're working. The red lights you can see are doing their job on the surface, while the NIR lights you can't see are penetrating deeper into your skin layers to reduce inflammation and support healing. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
       </div>
       <div class="faq">
         <h3>Why are the distances and session times different for each benefit?</h3>
@@ -264,18 +253,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Wound healing</div><div class="ben-txt">Red light accelerates tissue repair by stimulating collagen synthesis and reducing inflammation, helping the cracks and breaks from your eczema heal faster with less scarring.</div></div>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">By reducing night-time itching and calming inflammation, red light helps you sleep deeper and more restfully — crucial for skin repair which happens during sleep.</div></div>
-      <div class="ben"><div class="ben-lbl">Mood &amp; confidence</div><div class="ben-txt">Chronic skin conditions take an emotional toll. As your skin improves, you'll likely notice better mood, reduced anxiety about your appearance, and restored confidence.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to affected tissues, supporting overall skin health and faster healing.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Beyond treating your eczema and rosacea, regular use of your SOLO 2.0 may deliver broader wellness benefits that many users notice over time:</p>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Better skin healing and reduced itching often translate to improved sleep—particularly important since eczema flare-ups often disrupt sleep at night. Red light supports natural melatonin production when used in the evening.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; confidence</div><div class="ben-txt">As visible skin improvements develop over weeks, many users report improved mood and confidence—especially important for young people managing a chronic condition like eczema.</div></div>
+      <div class="ben"><div class="ben-lbl">Wound healing</div><div class="ben-txt">Red light accelerates tissue repair and reduces scarring, which can help if your eczema has caused any scarring or cracked areas that need faster healing.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to skin throughout your body, supporting faster recovery and healthier skin overall.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural ability to regulate immune responses—important for autoimmune-driven conditions like eczema.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Morita et al. (1993)</div><div class="ref-body">Japanese Journal of Clinical Dermatology found that 79% of eczema patients reported reduced itching and 62% showed visible improvement in symptoms after red light therapy. <em>Japanese Journal of Clinical Dermatology.</em></div></div>
-      <div class="ref"><div class="ref-auth">Kyoto University (2013)</div><div class="ref-body">Demonstrated 47% reduction in eczema severity scores (SCORAD) and significantly decreased leathery skin patches following consistent LED therapy. <em>Journal of Dermatological Treatment.</em></div></div>
-      <div class="ref"><div class="ref-auth">Pusan National University (2017)</div><div class="ref-body">Found 34% reduction in eczema area severity index (EASI) scores after just 3 sessions of red and NIR light treatment. <em>Dermatologic Therapy.</em></div></div>
-      <div class="ref"><div class="ref-auth">Weiss et al. (2005)</div><div class="ref-body">Laser Medical Science demonstrated that 75% of rosacea patients experienced significant reduction in facial redness after 10 treatments over 5 weeks. <em>Laser Medical Science.</em></div></div>
-      <div class="ref"><div class="ref-auth">Shahid Beheshti University (2019)</div><div class="ref-body">Showed over 50% reduction in the intensity of facial burning and persistent erythema within a month using red light therapy 3 times per week. <em>Lasers in Medical Science.</em></div></div>
+      <div class="ref"><div class="ref-auth">Japanese Journal of Clinical Dermatology (1993)</div><div class="ref-body">79% of eczema patients reported reduced itching, and 62% showed visible improvement in symptoms after red light therapy treatment.</div></div>
+      <div class="ref"><div class="ref-auth">Kyoto University (2013)</div><div class="ref-body">47% reduction in eczema severity scores (SCORAD) and significantly decreased leathery skin patches after consistent LED therapy.</div></div>
+      <div class="ref"><div class="ref-auth">Pusan National University (2017)</div><div class="ref-body">Red and NIR light lowered eczema area severity scores by 34% after just 3 sessions, supporting rapid symptom improvement.</div></div>
+      <div class="ref"><div class="ref-auth">Laser Medical Science (2005)</div><div class="ref-body">75% of rosacea patients experienced significant reduction in facial redness after 10 red light treatments over 5 weeks.</div></div>
+      <div class="ref"><div class="ref-auth">Shahid Beheshti University (2019)</div><div class="ref-body">Red light reduced the intensity of facial burning and persistent erythema by more than 50% within a month of consistent treatment.</div></div>
     </div>
   </div>
 
