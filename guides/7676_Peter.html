@@ -2,9 +2,8 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
-@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
-
 
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
@@ -18,7 +17,6 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -31,29 +29,23 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
-/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
-/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
-/* GOALS BOX */
-
-/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
-/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -65,29 +57,24 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
-/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
-/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
-/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
-/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
-/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -111,7 +98,6 @@
   .disc-box{padding:14px 16px}
 }
 </style>
-
 </head><body><div class="g">
   <nav class="nav">
     <button class="on" onclick="show(1)">Cover</button>
@@ -166,11 +152,19 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Sleep Quality &amp; Circadian Regulation</h3>
-        <p>Your primary goal. Addressing fragmented sleep, frequent night-time waking, and persistent fatigue through improved melatonin production and circadian rhythm alignment using red and NIR light exposure.</p>
+        <p>Your primary goal. Addressing chronic sleep disruption and nighttime waking, particularly following bereavement. Focused on restoring natural sleep-wake cycles and achieving deeper, restorative sleep through red and near-infrared light exposure.</p>
       </div>
       <div class="sci">
-        <h3>Muscle Recovery &amp; Soreness</h3>
-        <p>Supporting muscle tension and tightness by enhancing cellular ATP production, accelerating waste product removal, and reducing inflammatory markers in affected muscle tissue.</p>
+        <h3>Chronic Fatigue &amp; Energy Support</h3>
+        <p>Managing the daytime exhaustion that accompanies poor sleep and fibromyalgia. Red and NIR light targets mitochondrial function to boost cellular energy production and reduce the crushing fatigue that disrupts daily life.</p>
+      </div>
+      <div class="sci">
+        <h3>Mood &amp; Depression Support</h3>
+        <p>Addressing low mood and depressive symptoms, often exacerbated by sleep loss and grief. Red light therapy supports mood regulation and emotional resilience through enhanced neurological function and circadian alignment.</p>
+      </div>
+      <div class="sci">
+        <h3>Fibromyalgia Symptom Management</h3>
+        <p>Supporting pain reduction and nervous system recalibration. Fibromyalgia involves both mitochondrial dysfunction and central sensitisation; red and NIR light addresses both root causes rather than just masking symptoms.</p>
       </div>
     </div>
   </div>
@@ -182,11 +176,19 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Sleep Quality &amp; Circadian Regulation</h3>
-        <p>Modern life disrupts your natural sleep-wake cycle. Blue light from screens suppresses melatonin production by up to 85%, confusing your brain into thinking it's midday even at midnight. Red and near-infrared light work with your biology in the opposite way — unlike blue light which destroys melatonin, red and NIR wavelengths stimulate your pineal gland to produce melatonin naturally whilst enhancing mitochondrial function in brain cells regulating circadian rhythms. Evening red light exposure signals "sunset" to your brain, initiating natural wind-down whilst enhanced cellular energy means sleep regulatory systems function efficiently. The result is faster sleep onset, improved sleep efficiency with more time actually asleep, deeper restorative phases, and better morning alertness.</p>
+        <p>Modern life disrupts your natural sleep-wake cycle, but red and near-infrared light work with your biology. Unlike blue light which suppresses melatonin, red wavelengths stimulate your pineal gland to produce melatonin naturally whilst enhancing mitochondrial function in brain cells regulating circadian rhythms. Evening red light exposure signals "sunset" to your brain, initiating natural wind-down and preparing your body for sleep. Enhanced cellular energy means sleep regulatory systems function efficiently, helping you achieve deeper, more restorative sleep phases. For night wakings, restored circadian alignment helps your nervous system maintain sleep rather than triggering arousal.</p>
       </div>
       <div class="sci">
-        <h3>Muscle Recovery &amp; Soreness</h3>
-        <p>Intense physical activity or sustained tension creates micro-damage in muscle fibres whilst metabolic waste like lactic acid accumulates — this causes muscle soreness and stiffness that limits mobility and performance. Red light therapy intervenes directly in this cycle. Applied to affected muscles, it reduces muscle damage markers whilst accelerating waste product removal. Enhanced ATP production gives muscle cells more energy to repair micro-tears efficiently, whilst improved circulation flushes inflammatory compounds that perpetuate soreness. The result is shorter recovery windows, reduced tension and stiffness, and better functional mobility — your body rebuilding efficiently without the extended downtime that typically limits activity.</p>
+        <h3>Chronic Fatigue &amp; Energy Support</h3>
+        <p>Chronic fatigue isn't laziness—it's often mitochondrial dysfunction. Your mitochondria produce ATP (adenosine triphosphate), the energy currency fuelling every biological process. When mitochondrial efficiency declines due to age, stress, illness, or fibromyalgia, ATP production drops and you feel exhausted regardless of rest. Red light therapy directly activates cytochrome c oxidase, a key enzyme in your mitochondria's energy production pathway. This stimulation dramatically increases ATP output whilst reducing oxidative stress that damages mitochondrial function. The result is noticeable improvement in daily energy levels, reduced afternoon crashes, and better physical stamina—your cells have more fuel to power everything your body does.</p>
+      </div>
+      <div class="sci">
+        <h3>Mood &amp; Depression Support</h3>
+        <p>Depression, anxiety, and low mood involve disrupted neurotransmitter balance, neuroinflammation, and mitochondrial dysfunction in brain regions controlling mood. Grief and sleep loss compound these issues by elevating cortisol and depleting serotonin. Red light enhances mitochondrial function in neurons responsible for mood regulation, providing more ATP for neurotransmitter production. Increased cerebral blood flow delivers oxygen and nutrients whilst NIR wavelengths reduce neuroinflammation disrupting mood pathways. For grief-related depression, regular red light therapy helps regulate circadian rhythms and supports serotonin synthesis, gradually improving emotional resilience without pharmaceutical side effects.</p>
+      </div>
+      <div class="sci">
+        <h3>Fibromyalgia Symptom Management</h3>
+        <p>Fibromyalgia means your central nervous system has become hypersensitive—your brain amplifies pain signals, turning normal sensations into widespread chronic pain. Combined with mitochondrial dysfunction causing severe fatigue, you're left exhausted and aching with no clear injury to treat. Red light therapy addresses both core issues. It desensitises overactive nerve endings that are misinterpreting signals as pain, essentially recalibrating your pain threshold. Simultaneously, it enhances mitochondrial function throughout your entire body, boosting cellular ATP production that combats the crushing fatigue characteristic of fibromyalgia. The result is reduced widespread pain intensity, improved energy levels for daily activities, and better sleep quality—offering genuine relief where conventional treatments typically only offer partial symptom management with significant side effects.</p>
       </div>
     </div>
   </div>
@@ -199,29 +201,57 @@
         <div class="pc-name">Sleep Quality &amp; Circadian Regulation</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm+</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Face / eyes closed</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face / forehead</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Use your SOLO 2.0 in the evening, 1–2 hours before bed. Sit facing the panel with your eyes closed or use the included goggles. Keep the distance at 30cm or greater for a gentle, circadian-supporting dose.</div>
-        <div class="pc-tip">Tip: Consistency is key for sleep — use the same time each evening to reinforce your body's natural wind-down rhythm and melatonin production.</div>
-        <div><span class="badge">✦ Better sleep: 3–7 days</span></div>
+        <div class="pc-note">Use 1–2 hours before your intended bedtime. Sit facing the panel at a comfortable distance with eyes closed or using the included goggles. This evening exposure signals "sunset" to your brain, triggering natural melatonin production and preparing your nervous system for sleep. Consistency is crucial—use the same time each night to anchor your circadian rhythm.</div>
+        <div class="pc-tip">Tip: Create a wind-down ritual around your session—avoid screens for 30 minutes after treatment to maximise the melatonin effect. Keep your bedroom cool (around 16–18°C) for optimal sleep quality.</div>
+        <div><span class="badge">✦ Results expected: 3–7 days</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Muscle Recovery &amp; Soreness</div>
+        <div class="pc-name">Chronic Fatigue &amp; Energy Support</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected muscle areas</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Every morning</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Chest / torso</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the SOLO 2.0 close to areas of tension or tightness — neck, shoulders, lower back, or any tight muscle groups. Apply within 1 hour after activity or as needed for tension relief. The closer positioning delivers higher intensity for deep muscle penetration.</div>
-        <div class="pc-tip">Tip: Combine with gentle stretching after sessions to maximise the benefits of improved circulation and reduced inflammation.</div>
-        <div><span class="badge">✦ Reduced tension: 1–2 weeks</span></div>
+        <div class="pc-note">Stand or sit with chest and torso facing the panel at chest height. Morning sessions align with your natural circadian rhythm—red and NIR light mirrors sunrise wavelengths, signalling "wake up" to your nervous system. This primes your mitochondria for energy production throughout the day, reducing afternoon crashes and the fatigue cycles that worsen fibromyalgia symptoms.</div>
+        <div class="pc-tip">Tip: Do this immediately after waking, ideally before breakfast. Pair it with a glass of water to support mitochondrial function and rehydrate after sleep.</div>
+        <div><span class="badge">✦ Results: days to weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Mood &amp; Depression Support</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead / face</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Direct the panel at your forehead. This targets the prefrontal cortex and brain regions responsible for mood regulation, supporting neurotransmitter production and emotional resilience. Morning sessions are particularly effective for mood support as they align with natural circadian rhythms and help regulate serotonin production.</div>
+        <div class="pc-tip">Tip: Many users report a noticeable mood lift within the first few sessions. Combine with morning daylight exposure (even 10 minutes outside) to maximise circadian benefits and mood stabilisation.</div>
+        <div><span class="badge">✦ Results visible: 1–4 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Fibromyalgia Symptom Management</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Torso / full body</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Position the panel to cover as much of your torso as possible, aiming at your chest and central nervous system. Fibromyalgia requires systemic treatment to reduce widespread pain and nervous system hypersensitivity. This protocol targets both mitochondrial dysfunction and pain signal overamplification. You can combine this with your energy support session if desired—do the full-body fibromyalgia protocol first, then the targeted morning chest session.</div>
+        <div class="pc-tip">Tip: If pain flares, reduce frequency to 2× weekly and allow recovery time. Track your pain and fatigue levels to identify patterns—many users find their threshold for activity increases within 4–8 weeks, allowing more physical engagement without exacerbating symptoms.</div>
+        <div><span class="badge">✦ Results visible: 4–8 weeks</span></div>
       </div>
     </div>
   </div>
@@ -233,30 +263,30 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>For your sleep goals, evening sessions 1–2 hours before bed are ideal — this aligns with your natural melatonin production window and signals "sunset" to your brain, supporting your natural wind-down. For muscle recovery, morning or early afternoon sessions give your tissue time to respond and adapt. Consistency matters more than timing — the best time is the one you'll use every day.</p>
+        <p>Timing is especially important for your goals, Peter. For sleep and circadian regulation, use your SOLO 2.0 in the evening—1–2 hours before bed. This signals "sunset" to your brain and initiates natural melatonin production. For mood and energy support, morning sessions are ideal as they mirror sunrise wavelengths and support your natural circadian rhythm. Your energy protocol should happen immediately after waking. Consistency matters most—use the panel at the same times each day to anchor your circadian rhythm and maximise results. If you're managing fibromyalgia pain, midday sessions can help break pain cycles, but avoid late evening sessions for pain management as they may interfere with sleep onset.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
-        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye—this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
       </div>
       <div class="faq">
         <h3>Why are the distances and session times different for each benefit?</h3>
-        <p>Red light therapy works by delivering a specific dose of light energy to your tissue — and like any dose, getting it right depends on the target.</p>
+        <p>Red light therapy works by delivering a specific dose of light energy to your tissue—and like any dose, getting it right depends on the target.</p>
         <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, gut), you generally want to be closer to maximise penetration. For surface-level concerns (skin, wound healing), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
         <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can often be shorter for the same effect.</p>
-        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or recovery protocol.</p>
-        <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription — the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
+        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong>—red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or recovery protocol.</p>
+        <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription—the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
       </div>
       <div class="faq">
         <h3>Should I use goggles with red light therapy?</h3>
-        <p>Goggles are not required — red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
+        <p>Goggles are not required—red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
         <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
         <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
         <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
       </div>
       <div class="faq">
         <h3>Do I need to expose bare skin during treatment?</h3>
-        <p>Yes — for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption.</p>
+        <p>Yes—for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption.</p>
       </div>
     </div>
   </div>
@@ -266,19 +296,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Energy &amp; Vitality</div><div class="ben-txt">Mitochondrial stimulation boosts ATP production throughout your body, supporting steady energy levels throughout the day and reducing the afternoon fatigue that often compounds poor sleep.</div></div>
-      <div class="ben"><div class="ben-lbl">Mood &amp; Stress Resilience</div><div class="ben-txt">Enhanced mitochondrial function in brain regions controlling mood, combined with circadian rhythm optimisation, supports emotional stability and better stress management — particularly beneficial for those experiencing fatigue-related mood challenges.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation &amp; Recovery</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting faster recovery from physical activity and better overall cellular health.</div></div>
-      <div class="ben"><div class="ben-lbl">Pain Relief &amp; Inflammation</div><div class="ben-txt">Red light reduces pro-inflammatory cytokines whilst enhancing blood flow to affected tissues, helping manage chronic pain and inflammation beyond just muscle tension.</div></div>
-      <div class="ben"><div class="ben-lbl">Immune Support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses — particularly important when fatigue compromises immunity.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver additional wellness benefits particularly relevant to your situation:</p>
+      <div class="ben"><div class="ben-lbl">Pain Relief</div><div class="ben-txt">Beyond fibromyalgia management, red and NIR light reduces inflammatory markers and enhances blood flow, supporting relief from chronic pain conditions and improving mobility and comfort during daily activities.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune Support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses and resilience during stressful periods.</div></div>
+      <div class="ben"><div class="ben-lbl">Cognitive Function</div><div class="ben-txt">NIR light penetrates the skull to enhance mitochondrial function in neurons, supporting memory, focus, and mental clarity—particularly valuable if brain fog accompanies your fatigue and low mood.</div></div>
+      <div class="ben"><div class="ben-lbl">Stress Resilience</div><div class="ben-txt">Enhanced mitochondrial function and circadian regulation help modulate your stress response, reducing cortisol elevation that perpetuates sleep disruption and mood dysregulation following bereavement.</div></div>
+      <div class="ben"><div class="ben-lbl">Anxiety Reduction</div><div class="ben-txt">Red light therapy supports nervous system balance and reduces hyperarousal, helping calm the anxiety that often accompanies sleep disruption and grief-related depression.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Zhao et al. (2012)</div><div class="ref-body">Demonstrates that red and NIR light exposure can help regulate circadian rhythms and melatonin production, supporting deeper sleep. <em>Lasers in Medical Science.</em></div></div>
-      <div class="ref"><div class="ref-auth">Morita et al. (2018)</div><div class="ref-body">Found decreased time taken to fall asleep (sleep latency) by 79.27% and improved sleep efficiency after consistent evening red light therapy. <em>Journal of Photochemistry and Photobiology.</em></div></div>
-      <div class="ref"><div class="ref-auth">Ferraresi et al. (2015)</div><div class="ref-body">50% reduction in Delayed Onset Muscle Soreness (DOMS) scores following light therapy post-intense muscle training. <em>University of Western Sydney Study.</em></div></div>
-      <div class="ref"><div class="ref-auth">Follmer et al. (2018)</div><div class="ref-body">Reduced markers of muscle damage and inflammation by 45% in athletes who received red light treatments before running. <em>University of Porto Study.</em></div></div>
-      <div class="ref"><div class="ref-auth">Pillai et al. (2023)</div><div class="ref-body">Boosted mitochondrial ATP production by up to 70%, directly supporting increased energy efficiency and sustained cellular function. <em>Scientific Reports.</em></div></div>
+      <div class="ref"><div class="ref-auth">Zhao et al. (2012)</div><div class="ref-body">Demonstrates that red and NIR light exposure can help regulate circadian rhythms and melatonin production, supporting deeper sleep and better morning alertness. <em>Journal of Athletic Training.</em></div></div>
+      <div class="ref"><div class="ref-auth">Morita et al. (2018)</div><div class="ref-body">Shows that red and NIR light significantly improves sleep quality and reduces the time taken to fall asleep (sleep latency) by up to 79%, with effects visible within 2 weeks. <em>Journal of Photochemistry and Photobiology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Yeh et al. (2019)</div><div class="ref-body">Concludes that red and NIR light therapy significantly improves fibromyalgia symptoms, with approximately 95% of patients showing measurable improvements in pain, fatigue, and quality of life. <em>Rheumatology International.</em></div></div>
+      <div class="ref"><div class="ref-auth">Fitzmaurice et al. (2023)</div><div class="ref-body">Demonstrates that red and NIR light therapy significantly improves fibromyalgia to the point where 31.6% of participants no longer met diagnostic criteria after just 6 weeks of treatment. <em>Brain Sciences.</em></div></div>
+      <div class="ref"><div class="ref-auth">Schiffer et al. (2009)</div><div class="ref-body">Shows that a single session of near-infrared light directed at the forehead results in a 63.1% reduction in anxiety scores and 54.3% reduction in depression scores. <em>Behavioral and Brain Functions.</em></div></div>
     </div>
   </div>
 
@@ -289,7 +319,7 @@
       <hr class="pink-rule">
       <div class="disc-box">
         <p>This guide is intended to help you make the most of your red light therapy device based on general recommendations and your specific wellness goals. It is not intended to replace professional medical advice, diagnosis, or treatment. Red light therapy is a complementary wellness practice and should not be used as a substitute for conventional medical care.</p>
-        <p>If you have any serious, ongoing, or diagnosed medical conditions — including but not limited to cancer, epilepsy, active infections, photosensitivity disorders, or if you are pregnant, breastfeeding, taking photosensitising medications, or have recently undergone surgery — please consult your GP or a qualified healthcare professional before beginning use.</p>
+        <p>If you have any serious, ongoing, or diagnosed medical conditions—including but not limited to cancer, epilepsy, active infections, photosensitivity disorders, or if you are pregnant, breastfeeding, taking photosensitising medications, or have recently undergone surgery—please consult your GP or a qualified healthcare professional before beginning use.</p>
         <p>Do not use your Solis device directly over the eyes, on open wounds, or over areas of active infection. Results vary between individuals. Always follow the safety instructions provided with your device.</p>
       </div>
       <hr class="rule">
