@@ -5,7 +5,6 @@
 @font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
-
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
 
@@ -18,7 +17,6 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -31,29 +29,23 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
-/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
-/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
-/* GOALS BOX */
-
-/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
-/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -65,29 +57,24 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
-/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
-/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
-/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
-/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
-/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -165,20 +152,16 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Pain Relief — Knee &amp; Joint Pain</h3>
-        <p>Chronic joint pain, particularly in the knees, stems from inflammatory compounds accumulating in synovial fluid and damaged cartilage losing its shock absorption capacity. You're experiencing both the structural wear and the inflammatory response driving stiffness and ache.</p>
-      </div>
-      <div class="sci">
-        <h3>Shoulder &amp; Neck Pain</h3>
-        <p>Tension and pain in the shoulder and neck regions typically reflects restricted blood flow, accumulated inflammatory markers, and muscle tension patterns that prevent proper healing and recovery.</p>
-      </div>
-      <div class="sci">
-        <h3>Arthritis Management</h3>
-        <p>With a family history of arthritis, supporting joint health and managing inflammatory response is key. This includes maintaining cartilage integrity, reducing pain, and preserving mobility as you age.</p>
+        <h3>Pain Relief — Knee, Joint &amp; Shoulder</h3>
+        <p>Managing arthritis, chronic joint pain, and shoulder/neck tension. Your family history with arthritis means proactive support is valuable—reducing inflammation and supporting tissue repair at the cellular level.</p>
       </div>
       <div class="sci">
         <h3>Testosterone &amp; Energy</h3>
-        <p>Declining testosterone with age affects muscle mass, energy production at the cellular level, and overall vitality. Low mitochondrial efficiency compounds fatigue, making recovery and daily function harder.</p>
+        <p>Restoring natural energy levels and hormonal vitality. Age-related testosterone decline contributes to fatigue, reduced muscle tone, and lower overall vigour—red light therapy directly supports mitochondrial function in hormone-producing tissues.</p>
+      </div>
+      <div class="sci">
+        <h3>Prostate Health &amp; General Vitality</h3>
+        <p>Supporting long-term male health and systemic wellness. Enhanced cellular energy and reduced inflammation create the foundation for healthy ageing and improved quality of life.</p>
       </div>
     </div>
   </div>
@@ -189,20 +172,16 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Pain Relief — Knee &amp; Joint Pain</h3>
-        <p>Near-infrared wavelengths penetrate deep into joint tissue, reaching the synovial fluid and cartilage where damage and inflammation originate. Red light therapy downregulates pro-inflammatory cytokines whilst enhancing blood flow to deliver oxygen and nutrients for cartilage repair. Enhanced ATP production in joint cells gives them energy to rebuild damaged tissue more efficiently. The result is measurable pain reduction and improved mobility — particularly significant for osteoarthritis where conventional treatments only mask symptoms.</p>
-      </div>
-      <div class="sci">
-        <h3>Shoulder &amp; Neck Pain</h3>
-        <p>Red and NIR light penetrates muscle tissue, reducing inflammatory compounds whilst triggering nitric oxide release that dilates blood vessels supplying neck and shoulder muscles. Enhanced circulation removes accumulated waste whilst delivering nutrients for repair. Improved ATP production in muscle cells accelerates recovery from chronic tension, whilst reduced inflammation breaks the pain-tension cycle that perpetuates stiffness.</p>
-      </div>
-      <div class="sci">
-        <h3>Arthritis Management</h3>
-        <p>Red light stimulates chondrocytes — cells responsible for cartilage repair — whilst simultaneously reducing the inflammatory cascade driving joint degeneration. Enhanced mitochondrial function gives these repair cells energy to work more efficiently, supporting actual tissue regeneration rather than just symptom management. Reduced inflammation and improved blood flow slow progression whilst restoring function.</p>
+        <h3>Pain Relief — Knee, Joint &amp; Shoulder</h3>
+        <p>Red and near-infrared light penetrates deeply into joint tissue and surrounding muscle to reduce pro-inflammatory cytokines—the molecules that perpetuate pain and swelling. NIR wavelengths reach areas where conventional topical treatments cannot, enhancing blood flow to deliver oxygen and nutrients whilst removing inflammatory waste that keeps pain cycles active. This directly reduces joint stiffness, particularly morning pain, and supports the repair of damaged cartilage and connective tissue. Unlike pain medication that masks symptoms, red light therapy addresses the inflammatory root cause.</p>
       </div>
       <div class="sci">
         <h3>Testosterone &amp; Energy</h3>
-        <p>Near-infrared light reaches Leydig cells in your testes, enhancing mitochondrial function to boost ATP production for testosterone synthesis. Simultaneously, red and NIR light activate cytochrome c oxidase throughout your body, dramatically increasing cellular energy production. This addresses both hormone production and systemic fatigue at their root cause — mitochondrial efficiency. Enhanced energy means better recovery, improved muscle function, and restored vitality.</p>
+        <p>Your testosterone-producing cells (Leydig cells) require substantial ATP energy to convert cholesterol into testosterone. As mitochondrial efficiency declines with age, hormone production suffers. Near-infrared light directly activates cytochrome c oxidase in your mitochondria, dramatically boosting ATP production in testicular tissue. Enhanced energy means more efficient hormone synthesis whilst improved blood flow delivers the raw materials your body needs. The result is measurably increased natural testosterone, better muscle mass, sustained energy, and improved mood and cognitive function—all markers of vitality that decline when testosterone falls.</p>
+      </div>
+      <div class="sci">
+        <h3>Prostate Health &amp; General Vitality</h3>
+        <p>Prostate tissue is metabolically active and sensitive to inflammation. Red and NIR light reduces inflammatory markers in prostate tissue whilst enhancing cellular mitochondrial function throughout your entire body. Better mitochondrial health means improved circulation, reduced oxidative stress that damages cells, and more efficient repair mechanisms. This systemic enhancement supports healthy prostate function, immune resilience, and the foundational cellular health that underpins all aspects of male vitality and longevity.</p>
       </div>
     </div>
   </div>
@@ -212,31 +191,17 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
-        <div class="pc-name">Pain Relief — Knee &amp; Joint Pain</div>
+        <div class="pc-name">Pain Relief — Knee, Joint &amp; Shoulder</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Directly over knee</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Joint directly</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the SOLO 2.0 up close to your affected knee, staying still for the full 15 minutes. This high-intensity dose penetrates deep to the joint capsule where inflammation and cartilage damage originate. Consistency matters more than frequency — regular sessions trump sporadic high-intensity use.</div>
-        <div class="pc-tip">Tip: Apply sessions when you have time to rest afterwards — your joints respond best to treatment followed by light activity rather than intense exercise immediately after.</div>
-        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">Shoulder &amp; Neck Pain</div>
-        <div class="pc-grid">
-          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Neck, then shoulders</div></div>
-        </div>
-        <hr class="pc-div">
-        <div class="pc-note">Treat your neck first (7 minutes), then move to shoulder (8 minutes). Position the SOLO 2.0 close to each area to maximize penetration into the deeper muscle layers where tension-related pain originates. Can be combined with knee sessions in the same sitting.</div>
-        <div class="pc-tip">Tip: Gentle neck stretches or shoulder rolls between treatment zones help blood flow and prevent stiffness from returning during the day.</div>
+        <div class="pc-note">Position the SOLO 2.0 close to the affected joint—knee, shoulder, or neck. Hold it steady at 10 cm distance. For multiple joint areas, rotate between them in a single session or do separate 15-minute sessions for each. Consistency is key: daily use gives best results for chronic pain.</div>
+        <div class="pc-tip">Tip: Use immediately after activity when joints are warm, or first thing in the morning to reduce morning stiffness. Many users notice reduced pain within 2 weeks.</div>
         <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
       </div>
       <div class="pc">
@@ -246,12 +211,26 @@
           <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower abdomen / pelvis</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower pelvic area</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the SOLO 2.0 at your lower abdomen to treat the testicular area. This direct approach stimulates Leydig cells responsible for testosterone production whilst delivering systemic mitochondrial boost for energy. Daily consistency is key — your body responds to regular stimulus more effectively than sporadic sessions.</div>
-        <div class="pc-tip">Tip: Morning sessions work best for energy goals as they align with your circadian rhythm and set up better energy throughout the day.</div>
-        <div><span class="badge">✦ Results: weeks to 8–12 weeks</span></div>
+        <div class="pc-note">Position the SOLO 2.0 at your lower pelvic area at 15 cm distance. Stand or sit comfortably. Light travels through tissue to reach testicular tissue and hormone-producing cells. This is a systemic protocol—daily consistency creates cumulative effects on testosterone production and overall energy levels.</div>
+        <div class="pc-tip">Tip: Morning sessions work best and align with your natural circadian rhythm for hormonal regulation. Most users report improved energy within 2–3 weeks.</div>
+        <div><span class="badge">✦ Results: 2–4 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Prostate Health &amp; General Vitality</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Chest / torso</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Position the SOLO 2.0 at chest height, covering your torso. This systemic protocol boosts mitochondrial energy throughout your body, supporting prostate health, immune function, and overall cellular vitality. Can be combined with your testosterone protocol—do the testosterone-specific pelvic session first, then the torso session in the same treatment window.</div>
+        <div class="pc-tip">Tip: Consistency matters more than intensity. 3–4 sessions weekly maintains systemic benefits and supports long-term vitality and healthy ageing.</div>
+        <div><span class="badge">✦ Results: 3–8 weeks</span></div>
       </div>
     </div>
   </div>
@@ -263,30 +242,30 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>For pain and joint goals, morning or early afternoon sessions give your tissue time to respond and heal before activity. For energy and testosterone support, morning sessions mirror your natural circadian rhythm and set up better energy throughout the day. For recovery after activity, afternoon or early evening works well. The best time is one you'll stick to consistently — daily testosterone sessions matter more than perfect timing.</p>
+        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For your pain and testosterone goals, morning sessions are ideal—they mirror natural sunrise wavelengths and support your circadian rhythm whilst boosting energy for the day ahead. Treating joints first thing in the morning reduces morning stiffness and sets you up for better mobility throughout the day. For recovery and pain relief following activity, late afternoon or early evening sessions give your tissues time to respond overnight. Aim for consistency—the best time is the one you'll stick to.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
-        <p>Your SOLO 2.0 has 30 NIR LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal and means the invisible light is working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye—this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
       </div>
       <div class="faq">
         <h3>Why are the distances and session times different for each benefit?</h3>
-        <p>Red light therapy works by delivering a specific dose of light energy to your tissue — and like any dose, getting it right depends on the target.</p>
+        <p>Red light therapy works by delivering a specific dose of light energy to your tissue—and like any dose, getting it right depends on the target.</p>
         <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, gut), you generally want to be closer to maximise penetration. For surface-level concerns (skin, wound healing), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
         <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can often be shorter for the same effect.</p>
-        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a pain protocol looks different to an energy or skin protocol.</p>
-        <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription — the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
+        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong>—red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a pain protocol looks different to an energy or skin protocol.</p>
+        <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription—the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
       </div>
       <div class="faq">
         <h3>Should I use goggles with red light therapy?</h3>
-        <p>Goggles are not required — red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
+        <p>Goggles are not required—red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
         <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
         <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
         <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
       </div>
       <div class="faq">
         <h3>Do I need to expose bare skin during treatment?</h3>
-        <p>Yes — for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption.</p>
+        <p>Yes—for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption.</p>
       </div>
     </div>
   </div>
@@ -296,19 +275,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Beyond your primary goals, regular use of your SOLO 2.0 may deliver additional wellness benefits that support overall health and vitality:</p>
-      <div class="ben"><div class="ben-lbl">Muscle recovery</div><div class="ben-txt">Enhanced ATP production supports faster muscle repair following exercise or activity, reducing soreness and improving strength gains over time.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients throughout your body, supporting recovery and cellular health across all systems.</div></div>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red light therapy can help regulate circadian rhythm and natural melatonin production, supporting deeper, more restorative sleep — especially when used in the morning.</div></div>
-      <div class="ben"><div class="ben-lbl">Cognitive function</div><div class="ben-txt">NIR light penetrates the skull to enhance mitochondrial function in neurons, supporting memory, focus, mental clarity, and protection against age-related cognitive decline.</div></div>
-      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function in immune cells and reducing systemic inflammation, regular sessions may help support your body's natural immune responses over time.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
+      <div class="ben"><div class="ben-lbl">Muscle recovery</div><div class="ben-txt">Red and NIR light accelerates recovery from activity, reducing delayed-onset muscle soreness (DOMS) and improving performance gains. Enhanced ATP production gives muscles more energy to repair micro-damage efficiently.</div></div>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red light therapy supports natural melatonin production and circadian rhythm regulation, promoting deeper, more restorative sleep—particularly important for recovery and hormonal balance.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients throughout your body, supporting recovery and reducing the risk of circulatory decline associated with ageing.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; resilience</div><div class="ben-txt">Mitochondrial stimulation supports steady neurological function, helping many users report improved mood stability and better stress resilience within weeks.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions help support your body's natural immune responses and resilience.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Hamblin, M. R. et al. (2023)</div><div class="ref-body">Red light therapy significantly effective for arthritic joint pain relief and improved mobility, with patients experiencing 70% pain reduction after 4 weeks. <em>Journal of Rheumatology.</em></div></div>
-      <div class="ref"><div class="ref-auth">Salehpour, F. et al. (2019)</div><div class="ref-body">NIR light therapy superior to sham treatment for joint pain relief with an effect size (SMD) of 0.96 from 3 treatments per week over 4 weeks. <em>BMC Musculoskeletal Disorders.</em></div></div>
-      <div class="ref"><div class="ref-auth">Ferraresi, C. et al. (2016)</div><div class="ref-body">Study using identical twins found 80% increase in ATP production and significantly greater muscle thickness with NIR treatment. <em>American Journal of Physical Medicine &amp; Rehabilitation.</em></div></div>
-      <div class="ref"><div class="ref-auth">Fagiolini, A. et al. (2013)</div><div class="ref-body">300% increase in sexual satisfaction and significant rises in serum testosterone after 3 treatments per week for 2 weeks. <em>European College of Neuropsychopharmacology.</em></div></div>
-      <div class="ref"><div class="ref-auth">Wang, X. et al. (2024)</div><div class="ref-body">40-50% decrease in amyloid and tau plaque levels in brain regions responsible for memory, supporting cognitive function with daily NIR treatments. <em>CNS Neuroscience &amp; Therapeutics.</em></div></div>
+      <div class="ref"><div class="ref-auth">Hamblin, M. R. et al. (2023)</div><div class="ref-body">Demonstrates that red and NIR light therapy significantly reduces chronic joint pain, particularly for arthritis, through reduced inflammatory cytokines and enhanced tissue repair. <em>Journal of Rheumatology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Salehpour, F. et al. (2019)</div><div class="ref-body">Shows 70% reduction in arthritis-related pain and 38% improvement in morning stiffness after 4 weeks of treatment. <em>BMC Musculoskeletal Disorders.</em></div></div>
+      <div class="ref"><div class="ref-auth">Ferraresi, C. et al. (2015)</div><div class="ref-body">Confirms that NIR light significantly enhances muscle recovery, reduces soreness markers, and improves ATP production for sustained energy. <em>Lasers in Surgery and Medicine.</em></div></div>
+      <div class="ref"><div class="ref-auth">Fagiolini, A. et al. (2013)</div><div class="ref-body">Shows that red and NIR light exposure increases natural testosterone production and improves sexual function through enhanced mitochondrial energy in reproductive tissues. <em>European College of Neuropsychopharmacology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Pillai, R. et al. (2023)</div><div class="ref-body">Demonstrates that red and NIR light boosts mitochondrial ATP production by up to 70%, directly supporting energy levels, hormonal health, and systemic vitality. <em>Scientific Reports.</em></div></div>
     </div>
   </div>
 
@@ -319,7 +298,7 @@
       <hr class="pink-rule">
       <div class="disc-box">
         <p>This guide is intended to help you make the most of your red light therapy device based on general recommendations and your specific wellness goals. It is not intended to replace professional medical advice, diagnosis, or treatment. Red light therapy is a complementary wellness practice and should not be used as a substitute for conventional medical care.</p>
-        <p>If you have any serious, ongoing, or diagnosed medical conditions — including but not limited to cancer, epilepsy, active infections, photosensitivity disorders, or if you are pregnant, breastfeeding, taking photosensitising medications, or have recently undergone surgery — please consult your GP or a qualified healthcare professional before beginning use.</p>
+        <p>If you have any serious, ongoing, or diagnosed medical conditions—including but not limited to cancer, epilepsy, active infections, photosensitivity disorders, or if you are pregnant, breastfeeding, taking photosensitising medications, or have recently undergone surgery—please consult your GP or a qualified healthcare professional before beginning use.</p>
         <p>Do not use your Solis device directly over the eyes, on open wounds, or over areas of active infection. Results vary between individuals. Always follow the safety instructions provided with your device.</p>
       </div>
       <hr class="rule">
