@@ -5,6 +5,7 @@
 @font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
+
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
 
@@ -17,6 +18,7 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
+/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -29,23 +31,29 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
+/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
+/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
+/* GOALS BOX */
+
+/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
+/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -57,24 +65,29 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
+/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
+/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
+/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
+/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
+/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -98,6 +111,7 @@
   .disc-box{padding:14px 16px}
 }
 </style>
+
 </head><body><div class="g">
   <nav class="nav">
     <button class="on" onclick="show(1)">Cover</button>
@@ -151,16 +165,16 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Fat Loss &amp; Body Composition</h3>
-        <p>Your primary goal. Red light therapy mobilises stored fat from targeted areas, making it available as fuel during exercise. When combined with training and nutrition, this accelerates fat loss from stubborn zones where diet and exercise alone often plateau.</p>
+        <h3>Fat Loss & Body Composition</h3>
+        <p>Your primary goal. Focused on releasing stored fat from stubborn areas and improving how your body mobilises energy during exercise and rest.</p>
       </div>
       <div class="sci">
         <h3>Metabolism Support</h3>
-        <p>Enhanced mitochondrial function increases cellular energy production (ATP), which directly supports a more efficient metabolic rate and better capacity to utilise stored fat as fuel throughout the day.</p>
+        <p>Enhancing your cellular energy production to support faster metabolic rate and more efficient calorie utilisation throughout the day.</p>
       </div>
       <div class="sci">
-        <h3>Energy &amp; Athletic Performance</h3>
-        <p>Boosted ATP production provides more cellular energy for training intensity and recovery, supporting better workout performance and faster adaptation to training stimulus.</p>
+        <h3>Weight Loss with Exercise</h3>
+        <p>Optimising recovery and mitochondrial function to maximise the fat-burning effects of your training whilst supporting muscle retention and performance gains.</p>
       </div>
     </div>
   </div>
@@ -171,16 +185,16 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Fat Loss &amp; Body Composition</h3>
-        <p>Red and near-infrared light creates temporary pores in fat cell membranes, causing them to release stored triglycerides into your bloodstream where they become available fuel. This mobilisation is passive — the fat is simply accessible now. Combined with exercise, your body can actually access and burn this freed energy from those specific zones instead of it remaining locked away. Applied to stubborn fat areas before training, red light therapy enhances preferential fat loss from treated locations when paired with physical activity and proper nutrition.</p>
+        <h3>Fat Loss & Body Composition</h3>
+        <p>Red light therapy creates temporary pores in fat cell membranes, causing them to release stored triglycerides into your bloodstream where they become available as fuel. When combined with exercise, your body can actually access and burn this mobilised fat instead of it remaining locked away in stubborn areas. Applied to specific zones, this targeted effect allows preferential fat burning from those exact locations — not magic spot reduction, but genuine cellular membrane permeability that works when paired with movement.</p>
       </div>
       <div class="sci">
         <h3>Metabolism Support</h3>
-        <p>Your metabolic rate is fundamentally driven by mitochondrial efficiency. Red and NIR wavelengths are absorbed by cytochrome c oxidase, a key enzyme in your cells' energy production pathway, directly boosting ATP output. Higher cellular energy production means your resting metabolic rate increases — you burn more calories even at rest. This enhanced metabolic efficiency is particularly valuable during fat loss phases where caloric restriction often suppresses metabolism.</p>
+        <p>Red and near-infrared wavelengths penetrate deep into muscle tissue and mitochondria, directly activating cytochrome c oxidase — a key enzyme in your cell's energy production pathway. This stimulation dramatically increases ATP output whilst reducing oxidative stress that damages mitochondrial function. Enhanced mitochondrial efficiency means your body produces more cellular energy more efficiently, supporting a naturally faster metabolic rate throughout the day without artificial stimulants.</p>
       </div>
       <div class="sci">
-        <h3>Energy &amp; Athletic Performance</h3>
-        <p>Increased ATP production provides muscles with more energy for training intensity, allowing better performance during workouts. Enhanced mitochondrial function also accelerates waste product removal from muscles, reducing fatigue and supporting faster recovery between sessions. This means you can train harder, more frequently, with less soreness — driving better results from your training stimulus.</p>
+        <h3>Weight Loss with Exercise</h3>
+        <p>Red light therapy accelerates muscle recovery by reducing exercise-induced inflammation and flushing metabolic waste like lactic acid. Enhanced ATP production gives your muscle cells more energy to repair micro-tears efficiently, allowing you to train more frequently and intensely. Simultaneously, improved circulation delivers oxygen and nutrients that support lean muscle preservation whilst your body preferentially burns fat — maximising the results of your training by optimising what your body does with the energy demand exercise creates.</p>
       </div>
     </div>
   </div>
@@ -195,13 +209,12 @@
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–5× / week</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
           <div><div class="pc-lbl">Position</div><div class="pc-val">Abdomen / torso</div></div>
-          <div><div class="pc-lbl">Timing</div><div class="pc-val">Before exercise</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Apply the SUPREME 2.0 to your torso and target areas (abdomen, sides, back) immediately before training. Bare skin contact is essential. The fat mobilisation effect peaks during exercise, so training within 30 minutes of treatment maximises fat utilisation. Your SUPREME provides excellent full-torso coverage at 15 cm.</div>
-        <div class="pc-tip">Tip: Consistency matters more than intensity. Regular 3–5× weekly sessions compound over time. Combine with solid nutrition and progressive training for optimal results.</div>
+        <div class="pc-note">Use your SUPREME 2.0's coverage to target problem areas — abdomen, flanks, thighs. Position the panel 15 cm from your bare skin and keep still. The SUPREME's size allows full-torso treatment in one session, making this highly efficient.</div>
+        <div class="pc-tip">Tip: Use this immediately before your workout or cardio session — fat mobilised by red light is most effectively burned during exercise that follows.</div>
         <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
       </div>
       <div class="pc">
@@ -212,27 +225,25 @@
           <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
           <div><div class="pc-lbl">Position</div><div class="pc-val">Chest / torso</div></div>
-          <div><div class="pc-lbl">Timing</div><div class="pc-val">Morning</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Morning sessions work best — red and NIR light align with sunrise wavelengths, supporting your circadian rhythm and morning metabolic activation. Position the SUPREME at chest height. This daily habit keeps your mitochondrial engine running efficiently.</div>
-        <div class="pc-tip">Tip: Morning red light signals your body to "wake up" metabolically, setting a higher baseline metabolic rate for the entire day.</div>
-        <div><span class="badge">✦ Results: Days to weeks</span></div>
+        <div class="pc-note">Stand facing the panel with your chest and torso exposed. This systemic mitochondrial boost works throughout your body, supporting steady energy production and metabolic efficiency all day. Daily consistency is key here.</div>
+        <div class="pc-tip">Tip: Morning sessions mirror natural sunrise wavelengths and help align your circadian rhythm with your metabolic clock.</div>
+        <div><span class="badge">✦ Results: days to weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Energy &amp; Athletic Performance</div>
+        <div class="pc-name">Weight Loss with Exercise</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Post-exercise</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Trained muscles</div></div>
-          <div><div class="pc-lbl">Timing</div><div class="pc-val">Within 1 hour after</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">After training</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Full torso / legs</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Apply directly to the muscle groups you trained. The SUPREME's size means excellent coverage of large muscle groups (chest, back, legs). Position as close as 10 cm for maximum recovery effect. This enhances ATP production for tissue repair and reduces soreness.</div>
-        <div class="pc-tip">Tip: Pre- and post-workout red light creates a "bookend" effect — mobilisation before training, recovery and adaptation after. This combination maximises training results.</div>
-        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
+        <div class="pc-note">Use immediately after resistance or cardio training, positioned close to trained muscle groups. The SUPREME's width allows rapid full-torso coverage. This accelerates recovery, reduces soreness, and primes your muscles for next session — maximising training frequency.</div>
+        <div class="pc-tip">Tip: You can do your fat-loss protocol immediately before training, then this recovery protocol after — synergistic effect in one session window.</div>
+        <div><span class="badge">✦ Results visible: 8 weeks</span></div>
       </div>
     </div>
   </div>
@@ -244,7 +255,7 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SUPREME 2.0?</h3>
-        <p>For your fat loss and energy goals, timing is strategic. Morning sessions (5–10 minutes) activate your metabolism for the day ahead, aligning with natural sunrise wavelengths and supporting your circadian rhythm. For fat loss specifically, use the panel 15–30 minutes before your main training session — this is when the fat mobilisation effect is most powerful during exercise. If you train in the afternoon or evening, apply the panel then. For recovery, use it within 1 hour post-workout on trained muscles. Consistency matters more than perfect timing — the best schedule is one you'll stick to daily.</p>
+        <p>For fat loss and metabolism support, timing enhances results. Morning sessions for your daily metabolic protocol mirror natural sunrise wavelengths and support your circadian rhythm and energy production. For your fat-loss protocol, immediately before exercise maximises the fat-mobilisation effect — your body will preferentially burn the fat you've just released during the workout that follows. Your post-exercise recovery session should happen within 1 hour after training when muscles are most responsive. The best time is the one you'll stick to consistently — Alex, aim for daily mornings and then pre/post-workout sessions 3–4× weekly.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
@@ -261,7 +272,7 @@
       <div class="faq">
         <h3>Should I use goggles with red light therapy?</h3>
         <p>Goggles are not required — red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
-        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
+        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially with the SUPREME's power output. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
         <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
         <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
       </div>
@@ -277,19 +288,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary fat loss goals, regular use of your SUPREME 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Muscle recovery</div><div class="ben-txt">Reduced DOMS (delayed onset muscle soreness) and faster tissue repair between training sessions, allowing more frequent training without excessive fatigue.</div></div>
-      <div class="ben"><div class="ben-lbl">Energy levels</div><div class="ben-txt">Sustained ATP production throughout the day supports consistent energy and reduces afternoon crashes, helping you maintain training intensity even during caloric deficit phases.</div></div>
-      <div class="ben"><div class="ben-lbl">Athletic performance</div><div class="ben-txt">Enhanced cellular energy and faster waste product removal support better workout performance, stronger contractions, and improved training adaptations over time.</div></div>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light support melatonin production and circadian regulation when used in the evening, enabling deeper sleep for recovery — critical for both fat loss and training progress.</div></div>
-      <div class="ben"><div class="ben-lbl">Mood &amp; motivation</div><div class="ben-txt">Improved mitochondrial function supports neurotransmitter balance and mood regulation, helping maintain motivation and mental clarity during training and fat loss phases.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SUPREME 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
+      <div class="ben"><div class="ben-lbl">Muscle Recovery</div><div class="ben-txt">Accelerated repair from training means reduced soreness and faster adaptation — you'll be ready for next session sooner, allowing higher training frequency and better progress.</div></div>
+      <div class="ben"><div class="ben-lbl">Energy &amp; Stamina</div><div class="ben-txt">Enhanced mitochondrial output supports sustained energy throughout training sessions and daily life, reducing fatigue that limits workout intensity and consistency.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; Motivation</div><div class="ben-txt">Improved mitochondrial function in brain tissue and enhanced circulation support better mood regulation and motivation — key drivers of consistency with training and nutrition.</div></div>
+      <div class="ben"><div class="ben-lbl">Sleep Quality</div><div class="ben-txt">Red and NIR light can help regulate circadian rhythm and melatonin production, supporting deeper sleep that's essential for recovery, hormone balance, and sustainable weight loss.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients throughout your body, supporting performance during training and recovery between sessions.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Jackson, R. F. et al. (2011)</div><div class="ref-body">Combining red light therapy with exercise led to 444% more fat loss in treated areas compared to exercise alone over 20 weeks. <em>Obesity Research.</em></div></div>
-      <div class="ref"><div class="ref-auth">de Oliveira, H. A. et al. (2017)</div><div class="ref-body">Found a 2.15 cm reduction in waist circumference after 4 weeks of red and NIR light treatment combined with exercise, 3 treatments per week. <em>Federal University of São Paulo.</em></div></div>
-      <div class="ref"><div class="ref-auth">Ferraresi, C. et al. (2015)</div><div class="ref-body">Demonstrates 50% reduction in Delayed Onset Muscle Soreness (DOMS) following light therapy post-intense muscle training. <em>Lasers in Surgery and Medicine.</em></div></div>
-      <div class="ref"><div class="ref-auth">Zhao, J. et al. (2012)</div><div class="ref-body">Shows 30% increase in energy efficiency and morning alertness from red light exposure. <em>Journal of Athletic Training.</em></div></div>
-      <div class="ref"><div class="ref-auth">Pillai, R. et al. (2023)</div><div class="ref-body">Demonstrates up to 70% boost in mitochondrial ATP production from red and NIR light exposure. <em>Scientific Reports.</em></div></div>
+      <div class="ref"><div class="ref-auth">Jackson, R. F. et al. (2011)</div><div class="ref-body">Combining red light therapy with exercise led to 444% more fat loss in treated areas compared to exercise alone. Participants received 3 treatments per week for 20 weeks. <em>Obesity Research.</em></div></div>
+      <div class="ref"><div class="ref-auth">de Oliveira, H. A. et al. (2017)</div><div class="ref-body">Found a 2.15 cm reduction in waist circumference after 4 weeks of treatment with 3 treatments per week, demonstrating significant fat loss in stubborn zones. <em>Federal University of São Paulo.</em></div></div>
+      <div class="ref"><div class="ref-auth">Ferraresi, C. et al. (2015)</div><div class="ref-body">Demonstrated 50% reduction in Delayed Onset Muscle Soreness (DOMS) scores following light therapy post-intense muscle training, enabling faster recovery and higher training frequency. <em>University of Western Sydney.</em></div></div>
+      <div class="ref"><div class="ref-auth">Pillai, R. et al. (2023)</div><div class="ref-body">Boosted mitochondrial ATP production by up to 70% in human immune cell samples, directly supporting energy production and metabolic efficiency. <em>Scientific Reports.</em></div></div>
+      <div class="ref"><div class="ref-auth">Zhao, J. et al. (2012)</div><div class="ref-body">Demonstrates that red and NIR light exposure can help regulate circadian rhythms and melatonin production, supporting deeper, more restorative sleep essential for recovery and weight management. <em>Journal of Athletic Training.</em></div></div>
     </div>
   </div>
 
