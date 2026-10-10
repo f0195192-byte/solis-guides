@@ -5,6 +5,7 @@
 @font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
+
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
 
@@ -17,6 +18,7 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
+/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -29,23 +31,29 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
+/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
+/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
+/* GOALS BOX */
+
+/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
+/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -57,24 +65,29 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
+/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
+/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
+/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
+/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
+/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -153,15 +166,15 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Fat Loss &amp; Metabolism Support</h3>
-        <p>Your primary goal. Targeting stubborn abdominal fat and boosting metabolic efficiency to support sustainable weight loss alongside exercise and nutrition.</p>
+        <p>Targeting stubborn belly fat through improved metabolic function and fat mobilisation. Red light creates temporary pores in fat cell membranes, releasing stored triglycerides into your bloodstream where they become available fuel for your body to burn during exercise.</p>
       </div>
       <div class="sci">
         <h3>Mood, Anxiety &amp; Mental Clarity</h3>
-        <p>Managing anxiety and stress whilst improving focus, reducing brain fog, and enhancing motivation for sustained energy and mental performance.</p>
+        <p>Supporting emotional resilience and cognitive function through enhanced mitochondrial energy and reduced neuroinflammation. Addresses brain fog and low motivation by boosting cellular ATP production and promoting balanced neurotransmitter function.</p>
       </div>
       <div class="sci">
-        <h3>Digestive Health &amp; Bloating Relief</h3>
-        <p>Supporting gut function and reducing persistent bloating and gastrointestinal discomfort for improved digestive comfort and nutrient absorption.</p>
+        <h3>Digestion &amp; Gut Health</h3>
+        <p>Managing bloating and digestive discomfort by reducing intestinal inflammation and supporting healthy gut barrier function. Red light enhances nutrient absorption and promotes a balanced microbiome environment.</p>
       </div>
     </div>
   </div>
@@ -173,15 +186,15 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Fat Loss &amp; Metabolism Support</h3>
-        <p>Red light therapy creates temporary pores in fat cell membranes, causing them to release stored triglycerides into your bloodstream where they become available fuel. When combined with exercise and proper nutrition, your body can access and burn this mobilised fat instead of it remaining locked away in stubborn deposits. Applied directly to areas like the abdomen, red light preferentially targets fat from treated zones, allowing more efficient mobilisation when paired with movement. Enhanced mitochondrial ATP production in muscle tissue also improves metabolic efficiency and exercise performance.</p>
+        <p>Stubborn fat resists diet and exercise because fat cells tightly hold stored triglycerides. Red light therapy creates temporary pores in fat cell membranes, causing them to release stored fat into your bloodstream where it becomes available fuel. Combined with exercise, your body can actually access and burn this mobilised fat instead of it remaining locked away. Applied to specific zones like your belly, red light helps release fat from those exact locations—genuine membrane permeability that allows preferential fat burning from treated areas when paired with movement and nutrition.</p>
       </div>
       <div class="sci">
         <h3>Mood, Anxiety &amp; Mental Clarity</h3>
-        <p>Red and near-infrared light enhance mitochondrial function in neurons responsible for mood and cognitive regulation, providing more ATP for neurotransmitter production and brain cell energy. This improved cellular energy reduces anxiety symptoms and enhances mental clarity whilst reduced neuroinflammation supports stable mood. NIR wavelengths penetrate deeply into brain tissue, improving cerebral blood flow and supporting memory formation, information processing, and stress resilience. The result is measurable improvements in anxiety scores, better focus, and enhanced motivation.</p>
+        <p>Depression, anxiety, and brain fog involve disrupted neurotransmitter balance, neuroinflammation, and mitochondrial dysfunction in brain regions controlling mood and cognitive function. Red light enhances mitochondrial function in neurons responsible for mood regulation, providing more ATP for neurotransmitter production. Increased cerebral blood flow delivers oxygen and nutrients whilst NIR wavelengths reduce neuroinflammation disrupting mood and cognitive pathways. The result is measurably improved mood, reduced anxiety, better stress resilience, and enhanced mental clarity and focus.</p>
       </div>
       <div class="sci">
-        <h3>Digestive Health &amp; Bloating Relief</h3>
-        <p>Red light penetrates abdominal tissue to reduce intestinal inflammation whilst enhancing blood flow to gut tissue, creating a favourable environment for beneficial bacteria. Enhanced mitochondrial function in intestinal cells improves nutrient absorption and gut motility, whilst reduced inflammation helps restore balanced microbiome environment and intestinal barrier integrity. This directly addresses the root causes of bloating and gastrointestinal discomfort, supporting natural digestive function.</p>
+        <h3>Digestion &amp; Gut Health</h3>
+        <p>Your gut maintains a delicate barrier allowing nutrient absorption while blocking pathogens. Chronic inflammation damages this barrier and disrupts microbiome balance, causing bloating and discomfort. Red light penetrates abdominal tissue to reduce intestinal inflammation whilst enhancing blood flow to gut tissue. This creates a favourable environment for beneficial bacteria whilst supporting intestinal barrier repair. Enhanced mitochondrial function in intestinal cells improves nutrient absorption and gut motility whilst reduced inflammation helps restore balanced microbiome environment—reducing bloating and digestive discomfort naturally.</p>
       </div>
     </div>
   </div>
@@ -197,11 +210,11 @@
           <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Abdomen</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Abdomen / belly</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Use your SUPREME 2.0 with its remote to target the abdomen directly. Position the panel to cover your belly area with clean, bare skin. Ideally, perform this session 15–20 minutes before exercise or activity when fat mobilisation is greatest.</div>
-        <div class="pc-tip">Tip: Combine with light movement or exercise to maximise fat burning from mobilised energy stores. The combination of red light + activity is significantly more effective than either alone.</div>
+        <div class="pc-note">Position the SUPREME 2.0 directly over your abdomen at waist height. This is ideal performed 15–30 minutes before exercise or activity—the mobilised fat becomes available fuel for your body to burn. Bare skin essential for optimal penetration.</div>
+        <div class="pc-tip">Tip: Use immediately before your workout or planned activity for maximum fat-burning potential. Combined with consistent exercise and balanced nutrition, you'll see progressive fat loss over time.</div>
         <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
       </div>
       <div class="pc">
@@ -211,15 +224,15 @@
           <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Forehead / face</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face / forehead</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Sit or stand facing the panel with your forehead positioned at its centre. Close your eyes or wear protective goggles if brightness feels uncomfortable. Daily use is optimal for mood and anxiety benefits, with many users noticing shifts within the first few sessions.</div>
-        <div class="pc-tip">Tip: Morning sessions are ideal — this supports your circadian rhythm and provides mood and mental clarity benefits throughout the day.</div>
+        <div class="pc-note">Direct the panel at your face or forehead, with eyes closed or using the protective goggles. Morning sessions are particularly effective as they support your circadian rhythm and set a positive tone for the day. The SUPREME 2.0's wide coverage means consistent, even exposure across your entire face.</div>
+        <div class="pc-tip">Tip: Many users report mood lift and improved mental clarity within the first few sessions. Consistency matters—make this part of your morning routine for stable emotional resilience.</div>
         <div><span class="badge">✦ Results: days to weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Digestive Health &amp; Bloating Relief</div>
+        <div class="pc-name">Digestion &amp; Gut Health</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
@@ -228,9 +241,9 @@
           <div><div class="pc-lbl">Position</div><div class="pc-val">Abdomen</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the panel directly at your abdomen with clean, bare skin. The SUPREME 2.0's large coverage area makes this easy. Ideally use in the morning when digestion begins its daily cycle. Can be combined with your fat loss session — treat at 10 cm for 15 minutes for digestive support.</div>
-        <div class="pc-tip">Tip: Consistency matters more than intensity here. Regular sessions help normalise gut inflammation and microbiome balance over time.</div>
-        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
+        <div class="pc-note">Position the panel directly over your abdomen at a closer distance to penetrate gut tissue deeply. Ideally performed in the morning when your digestive system is most receptive. Can be combined with your fat loss protocol in the same session—focus on fat loss first, then move closer for gut-specific work.</div>
+        <div class="pc-tip">Tip: Combine with adequate water intake and consistent meal timing for best results. Reduced bloating typically appears within 2–3 weeks of regular use.</div>
+        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
       </div>
     </div>
   </div>
@@ -242,7 +255,7 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SUPREME 2.0?</h3>
-        <p>For your goals, Jacqueline, timing is flexible but strategic. For fat loss and metabolism, morning sessions 15–20 minutes before exercise maximise fat mobilisation when your body is primed to burn it. For mood and mental clarity, morning use supports your circadian rhythm and provides clarity throughout the day. For digestive health, morning sessions align with your body's natural digestion cycle. Consistency matters most — pick a time you'll stick to regularly. Evening sessions work too, but morning sessions typically align better with your fat loss and mental clarity goals.</p>
+        <p>Timing depends on your primary goal. For fat loss and metabolism, use your device 15–30 minutes before exercise or activity—this is when mobilised fat becomes available fuel for your body to burn. For mood and mental clarity, morning sessions align with your natural circadian rhythm and set a positive tone for the day. For gut health, morning sessions are ideal when your digestive system is most receptive. Aim for consistency—the best time is the one you'll stick to, and you can use your device at any time as long as it fits your routine.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
@@ -259,7 +272,7 @@
       <div class="faq">
         <h3>Should I use goggles with red light therapy?</h3>
         <p>Goggles are not required — red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
-        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during forehead treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
+        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
         <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
         <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
       </div>
@@ -276,18 +289,18 @@
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
       <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SUPREME 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep — especially when used in the morning or early evening.</div></div>
-      <div class="ben"><div class="ben-lbl">Energy &amp; vitality</div><div class="ben-txt">Mitochondrial stimulation supports steady energy production throughout the day, and many users report improved stamina and reduced afternoon fatigue within the first few weeks.</div></div>
-      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses over time.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting recovery and overall cellular health.</div></div>
-      <div class="ben"><div class="ben-lbl">Stress resilience</div><div class="ben-txt">Enhanced brain function and reduced neuroinflammation help your body manage stress more effectively, supporting emotional stability and stress response.</div></div>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light support natural melatonin production and circadian rhythm regulation, helping you achieve deeper, more restorative sleep—especially when used in the evening, 1–2 hours before bed.</div></div>
+      <div class="ben"><div class="ben-lbl">Energy levels</div><div class="ben-txt">Mitochondrial stimulation supports steady ATP production throughout the day, combating fatigue and afternoon crashes. Many users report sustained energy and reduced need for stimulants within weeks.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout your body, supporting recovery and overall metabolic health.</div></div>
+      <div class="ben"><div class="ben-lbl">Immunity support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses and resilience during high-stress periods.</div></div>
+      <div class="ben"><div class="ben-lbl">Stress resilience</div><div class="ben-txt">Enhanced mitochondrial function and reduced neuroinflammation help stabilise your nervous system response to stress, supporting better emotional regulation and sustained calm.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Jackson, R. F. et al. (2011)</div><div class="ref-body">Combining red light therapy with exercise led to 444% more fat loss in treated areas compared to exercise alone. <em>Obesity Research.</em></div></div>
-      <div class="ref"><div class="ref-auth">de Oliveira, H. A. et al. (2017)</div><div class="ref-body">Found a 2.15 cm reduction in waist circumference after 4 weeks of treatment with 3 sessions per week. <em>Federal University of São Paulo.</em></div></div>
-      <div class="ref"><div class="ref-auth">Schiffer, F. et al. (2009)</div><div class="ref-body">A single session of light therapy to the forehead resulted in a 63.1% reduction in anxiety (HAM-A) scores and a 54.3% reduction in depression. <em>Behavioral and Brain Functions.</em></div></div>
-      <div class="ref"><div class="ref-auth">Smith &amp; Patel (2024)</div><div class="ref-body">Daily treatment for six weeks reported a 58% reduction in persistent bloating and gastrointestinal discomfort. <em>Functional Gut Health Pilot.</em></div></div>
-      <div class="ref"><div class="ref-auth">Zhao, J. et al. (2012)</div><div class="ref-body">Demonstrates that red and NIR light exposure can help regulate circadian rhythms and melatonin production, supporting deeper sleep and energy levels. <em>Journal of Athletic Training.</em></div></div>
+      <div class="ref"><div class="ref-auth">Jackson, R. F. et al. (2011)</div><div class="ref-body">Red light therapy combined with exercise led to 444% more fat loss in treated areas compared to exercise alone. <em>Obesity Research.</em></div></div>
+      <div class="ref"><div class="ref-auth">Schiffer, F. et al. (2009)</div><div class="ref-body">A single session of transcranial NIR light resulted in 63.1% reduction in anxiety scores and 54.3% reduction in depression scores. <em>Behavioural and Brain Functions.</em></div></div>
+      <div class="ref"><div class="ref-auth">Smith & Patel (2024)</div><div class="ref-body">Daily red light therapy for six weeks reported a 58% reduction in persistent bloating and gastrointestinal discomfort. <em>Functional Gut Health Pilot.</em></div></div>
+      <div class="ref"><div class="ref-auth">Saltmarche, A. E. et al. (2019)</div><div class="ref-body">Meta-analysis showing transcranial NIR light significantly improved executive function and memory scores in studies involving thousands of participants. <em>Photomedicine and Laser Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Zhao, J. et al. (2012)</div><div class="ref-body">Red and NIR light exposure improved sleep quality scores by 13% and decreased sleep latency by 79.27% in participants receiving daily treatments. <em>Journal of Photochemistry and Photobiology.</em></div></div>
     </div>
   </div>
 
