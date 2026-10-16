@@ -17,7 +17,6 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -30,27 +29,23 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
-/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
-/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
-/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
-/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -62,27 +57,29 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
-/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
-/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
-/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
-/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
+
+.closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
+.c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
+.cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
+.cdot{width:6px;height:6px;border-radius:50%;background:#fff;flex-shrink:0}
+.c-sign{font-size:11.5px;color:rgba(255,255,255,.75);max-width:380px;margin:16px auto 0;line-height:1.65}
 
 @media(max-width:600px){
   .cover{padding:36px 20px}
@@ -126,7 +123,7 @@
       <div class="cover-rule"></div>
       <div class="cover-inc-label">Included in your guide</div>
       <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Information about your new device</div>
-      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Scientific research for your pain relief goals</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Scientific research for your wellness goals</div>
       <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Your personalised treatment plan</div>
     </div>
   </div>
@@ -156,15 +153,15 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Pain Relief &amp; Inflammation Reduction</h3>
-        <p>Low back discogenic pain with degenerative disc disease, currently in a 4-month flare. Your goal is to reduce pain intensity, improve mobility, and break the inflammatory cycle that's limiting your ability to return to movement and activity.</p>
+        <p>Chronic back and spinal pain driven by tissue inflammation and restricted blood flow. Red light therapy works to reduce inflammatory markers, improve circulation to affected areas, and support your body's natural pain management mechanisms without reliance on pain medication.</p>
       </div>
       <div class="sci">
-        <h3>Fibromyalgia &amp; Chronic Pain</h3>
-        <p>Managing chronic pain patterns alongside your back condition. Your focus is on reducing widespread pain signals, boosting cellular energy to combat fatigue, and restoring quality of life for gentle yoga, pilates, and strength training.</p>
+        <h3>Fibromyalgia &amp; Chronic Pain Syndromes</h3>
+        <p>Widespread chronic pain combined with fatigue and central nervous system hypersensitivity. This requires addressing both mitochondrial dysfunction fueling fatigue and the nerve sensitisation amplifying pain signals throughout your body.</p>
       </div>
       <div class="sci">
-        <h3>Nerve Pain &amp; Neuropathy</h3>
-        <p>Addressing any nerve-related symptoms contributing to your current pain presentation. Your goal is to reduce burning or radiating sensations, improve nerve function, and support your return to previously active movement patterns.</p>
+        <h3>Neuropathy &amp; Nerve-Related Pain</h3>
+        <p>Nerve damage causing burning, tingling, or shooting sensations. Red light therapy stimulates nerve regeneration while improving microcirculation to damaged nerve tissue, delivering the oxygen and nutrients needed for recovery.</p>
       </div>
     </div>
   </div>
@@ -176,15 +173,15 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Pain Relief &amp; Inflammation Reduction</h3>
-        <p>Chronic back pain from degenerative disc disease stems from inflammatory cytokines flooding the area, restricting blood flow, and sensitising nerve endings. Near-infrared light penetrates deep into spinal tissues and discs where conventional treatments cannot reach. Red light therapy downregulates pro-inflammatory markers like IL-6 and TNF-alpha whilst dramatically increasing blood flow to damaged tissue. Enhanced circulation delivers oxygen and nutrients for repair whilst removing inflammatory waste products that perpetuate pain cycles. Your body's natural pain-relieving mechanisms activate more efficiently, breaking the inflammation-pain feedback loop.</p>
+        <p>Pain is fundamentally an inflammatory response to tissue damage. Pro-inflammatory cytokines flood the affected area, creating swelling, restricting blood flow, and sensitising nerve endings. Red and near-infrared light penetrate deep into spinal tissues and muscle layers to downregulate these pro-inflammatory cytokines whilst simultaneously increasing blood flow to damaged areas. Enhanced circulation delivers oxygen and nutrients for repair whilst removing inflammatory waste that perpetuates the pain cycle. This addresses pain at its source rather than simply masking symptoms.</p>
       </div>
       <div class="sci">
-        <h3>Fibromyalgia &amp; Chronic Pain</h3>
-        <p>Fibromyalgia involves both central nervous system hypersensitivity and mitochondrial dysfunction — your brain amplifies pain signals whilst your cells lack energy for proper function. Red light therapy addresses both issues simultaneously. It desensitises overactive nerve endings that misinterpret sensations as pain, essentially recalibrating your pain threshold. Simultaneously, enhanced mitochondrial function throughout your body boosts ATP production, combating the crushing fatigue characteristic of chronic pain conditions. This dual mechanism provides genuine relief where conventional treatments typically offer only partial symptom management.</p>
+        <h3>Fibromyalgia &amp; Chronic Pain Syndromes</h3>
+        <p>Fibromyalgia involves two core problems: your central nervous system has become hypersensitive (amplifying pain signals), and mitochondrial dysfunction creates the crushing fatigue that compounds suffering. Red and NIR light addresses both. It desensitises overactive nerve endings that misinterpret normal sensations as pain, essentially recalibrating your pain threshold. Simultaneously, it enhances mitochondrial function throughout your body, boosting cellular ATP production that combats fatigue. The result is reduced widespread pain intensity, improved energy levels, and better sleep quality.</p>
       </div>
       <div class="sci">
-        <h3>Nerve Pain &amp; Neuropathy</h3>
-        <p>Nerve pain results from damaged nerve fibres sending faulty signals and poor microcirculation starving nerves of oxygen and nutrients. Near-infrared light stimulates regeneration of damaged nerve axons whilst triggering nitric oxide release that dilates tiny blood vessels feeding nerve tissue. Enhanced circulation delivers the oxygen and nutrients nerves need for repair whilst removing inflammatory compounds perpetuating pain signals. The result is reduced burning and tingling sensations and improved nerve function — particularly significant for pain linked to disc degeneration affecting nerve roots.</p>
+        <h3>Neuropathy &amp; Nerve-Related Pain</h3>
+        <p>Damaged nerve fibres send faulty signals creating burning, tingling, or numbness. Poor microcirculation compounds the problem by starving nerves of oxygen and nutrients needed for repair. Near-infrared light stimulates regeneration of damaged nerve axons whilst triggering nitric oxide release that dilates tiny blood vessels feeding nerve tissue. Enhanced circulation delivers oxygen and nutrients nerves need whilst removing inflammatory compounds perpetuating pain signals. This supports actual nerve tissue repair rather than temporary symptom management.</p>
       </div>
     </div>
   </div>
@@ -200,40 +197,40 @@
           <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower back</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower back / spine</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the SOLO 2.0 directly over your lower back where pain is greatest. You can sit facing away from the panel or lie face-down on a comfortable surface. Keep the device close (10 cm) to maximise NIR penetration into deep spinal tissues and discs. Consistent daily use is critical during your current flare to break the inflammatory cycle.</div>
-        <div class="pc-tip">Tip: Red light therapy works synergistically with heat — you can use a heating pad or warm compress immediately after your session to enhance circulation further, combining the two methods you already find beneficial.</div>
-        <div><span class="badge">✦ Relief typically felt: 1–3 weeks</span></div>
+        <div class="pc-note">Position the panel 10 cm from your lower back, targeting the area of greatest pain. The SOLO 2.0 has excellent depth penetration at this close distance, reaching spinal tissue and deep muscle layers where chronic back pain originates. You can sit or stand comfortably during treatment.</div>
+        <div class="pc-tip">Tip: Daily consistency is key for pain relief. Morning sessions establish a routine you'll stick to, and the cumulative effect builds stronger pain reduction over time.</div>
+        <div><span class="badge">✦ Results: 2–4 weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Fibromyalgia &amp; Chronic Pain</div>
+        <div class="pc-name">Fibromyalgia &amp; Chronic Pain Syndromes</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Torso / chest</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Torso / full body</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Stand or sit with your chest and torso facing the panel. This position targets broader systemic benefits — boosting mitochondrial energy production throughout your body to combat fatigue and recalibrate your central nervous system's pain sensitivity. Can be combined with your back protocol: treat your back daily (10 cm for 15 min), then add torso sessions 3–4× weekly for systemic support.</div>
-        <div class="pc-tip">Tip: Morning sessions are ideal for fibromyalgia-related fatigue — red light mirrors sunrise wavelengths and supports your natural circadian rhythm and energy production for the day ahead.</div>
-        <div><span class="badge">✦ Results visible: 4–8 weeks</span></div>
+        <div class="pc-note">For fibromyalgia's widespread pain, treat your entire torso to boost systemic mitochondrial function. Sit facing the panel at 20 cm distance. Fibromyalgia requires addressing your whole-body fatigue and nervous system sensitisation, so full torso exposure is more effective than targeting single areas.</div>
+        <div class="pc-tip">Tip: Fibromyalgia fatigue means energy varies day to day. Treat on your better-energy days and listen to your body—consistency matters more than pushing through low-energy periods.</div>
+        <div><span class="badge">✦ Results: 4–8 weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Nerve Pain &amp; Neuropathy</div>
+        <div class="pc-name">Neuropathy &amp; Nerve-Related Pain</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower back &amp; affected areas</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected nerve area</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Direct the SOLO 2.0 at your lower back where nerve roots may be affected by disc degeneration. If you experience radiating pain or tingling in legs or feet, you can also treat those areas at 10 cm distance. This targets the specific nerve tissue damage and inflammation driving your neuropathic symptoms.</div>
-        <div class="pc-tip">Tip: This protocol can overlap with your pain relief sessions — treat your back daily for general pain management, and extend sessions to 20 minutes 3–4× weekly when focusing on nerve-specific symptoms.</div>
-        <div><span class="badge">✦ Relief typically expected: 2–6 weeks</span></div>
+        <div class="pc-note">Position the panel 10 cm from the area experiencing nerve pain (hands, feet, or anywhere neuropathy is active). The longer 20-minute duration allows deep NIR penetration to reach nerve tissue. Neuropathy requires consistency and longer sessions to stimulate nerve regeneration effectively.</div>
+        <div class="pc-tip">Tip: Nerve regeneration takes time—neuropathy relief is often gradual. Stay patient and consistent; improvements compound over weeks and months as nerve tissue responds.</div>
+        <div><span class="badge">✦ Results: 2–6 weeks</span></div>
       </div>
     </div>
   </div>
@@ -245,11 +242,11 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For your pain and fibromyalgia goals, morning sessions mirror natural sunrise wavelengths and support your circadian rhythm whilst boosting energy for the day ahead. Daily back pain sessions can be morning, afternoon, or evening — consistency matters more than timing. For recovery and mobility, using the panel after gentle movement or stretching gives your tissue time to respond. Aim for consistency — the best time is the one you'll stick to.</p>
+        <p>For pain relief and fibromyalgia support, morning sessions work beautifully. Red light mirrors natural sunrise wavelengths and aligns with your circadian rhythm, giving you an energy boost for the day ahead while supporting pain management. For neuropathy, any time works, but consistency matters more than timing. Choose a time you can commit to daily or several times weekly. The best time is the one you'll stick to reliably.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
-        <p>Your SOLO 2.0 has 30 NIR LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working just as powerfully beneath the surface, penetrating deep into your spinal tissues where pain originates. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
       </div>
       <div class="faq">
         <h3>Why are the distances and session times different for each benefit?</h3>
@@ -262,13 +259,13 @@
       <div class="faq">
         <h3>Should I use goggles with red light therapy?</h3>
         <p>Goggles are not required — red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
-        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during close-range treatments. If you find it uncomfortable, you can wear the protective goggles included with your device or close your eyes.</p>
+        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
         <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
         <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
       </div>
       <div class="faq">
         <h3>Do I need to expose bare skin during treatment?</h3>
-        <p>Yes — for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure your lower back (for back pain treatment) is free from clothing to allow maximum absorption. If that's not comfortable, thin fabric allows some penetration, but bare skin will always yield superior results.</p>
+        <p>Yes — for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption.</p>
       </div>
     </div>
   </div>
@@ -278,19 +275,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Beyond your primary pain management goals, regular use of your SOLO 2.0 may deliver additional benefits that support your broader recovery and return to activity:</p>
-      <div class="ben"><div class="ben-lbl">Muscle recovery</div><div class="ben-txt">By reducing soreness and accelerating tissue repair, red light therapy helps your muscles bounce back faster from gentle yoga, pilates, and strength training — supporting your goal of returning to previous activity levels.</div></div>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Chronic pain disrupts sleep, but red light therapy helps regulate melatonin and circadian rhythms whilst reducing pain-related sleep disruption — supporting deeper, more restorative rest needed for healing.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout your body, supporting recovery and overall cellular health — particularly beneficial for healing damaged discs and nerve tissue.</div></div>
-      <div class="ben"><div class="ben-lbl">Mood &amp; energy</div><div class="ben-txt">Chronic pain often comes with low mood and fatigue. Mitochondrial stimulation supports steady energy production and improved mood, helping you feel more like yourself during recovery.</div></div>
-      <div class="ben"><div class="ben-lbl">Immunity support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses — important when managing chronic conditions.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Beyond your primary pain-relief goals, regular use of your SOLO 2.0 can deliver additional benefits many users discover over time:</p>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Chronic pain often disrupts sleep, creating a vicious cycle of poor rest and increased pain sensitivity. By reducing pain intensity and supporting melatonin production, red light therapy can help you achieve deeper, more restorative sleep—essential for pain recovery.</div></div>
+      <div class="ben"><div class="ben-lbl">Energy &amp; fatigue</div><div class="ben-txt">Red and NIR light enhance mitochondrial ATP production, directly boosting cellular energy. For fibromyalgia sufferers especially, this translates to reduced afternoon crashes and improved stamina for daily activities.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; anxiety</div><div class="ben-txt">Chronic pain and fatigue often coexist with depression and anxiety. Enhanced mitochondrial function in brain regions controlling mood, combined with improved sleep, supports better emotional resilience and stress response.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients throughout your body, supporting recovery in all affected tissues and enhancing your body's natural healing capacity.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses, particularly beneficial for autoimmune-related pain conditions.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Gale et al. (2006)</div><div class="ref-body">50% reduction in chronic back pain intensity compared to a placebo group. Participants received 1 treatment per week for 6 weeks. <em>Pain Research Management.</em></div></div>
-      <div class="ref"><div class="ref-auth">Pinto et al. (2018)</div><div class="ref-body">Systemic levels of inflammatory marker IL-6 were reduced by 30% after just one light session, demonstrating immediate anti-inflammatory effects. <em>Lasers in Surgery and Medicine.</em></div></div>
-      <div class="ref"><div class="ref-auth">Salehpour et al. (2019)</div><div class="ref-body">RLT significantly effective in improving fibromyalgia pain scores, "fibro-fog," and quality of life with approximately 95% of patients showing measurable improvements. <em>Rheumatology International.</em></div></div>
-      <div class="ref"><div class="ref-auth">Fitzmaurice et al. (2023)</div><div class="ref-body">31.6% of fibromyalgia participants improved so significantly that they no longer met diagnostic criteria after just 6 weeks of treatment. <em>Brain Sciences.</em></div></div>
-      <div class="ref"><div class="ref-auth">Salehpour et al. (2019)</div><div class="ref-body">Near-infrared light significantly increased nerve conduction velocities and reduced neuropathic pain index scores by 63.2%. Participants received 3 treatments per week over 6 weeks. <em>Journal of Neurological Sciences.</em></div></div>
+      <div class="ref"><div class="ref-auth">Gale et al. (2006)</div><div class="ref-body">Demonstrated 50% reduction in chronic back pain intensity compared to placebo group. Participants received 1 treatment per week for 6 weeks. <em>Pain Research and Management.</em></div></div>
+      <div class="ref"><div class="ref-auth">Pinto et al. (2018)</div><div class="ref-body">Found systemic levels of the inflammatory marker IL-6 were reduced by 30% after just one light session, showing rapid anti-inflammatory effects. <em>Lasers in Surgery and Medicine.</em></div></div>
+      <div class="ref"><div class="ref-auth">Yeh et al. (2019)</div><div class="ref-body">Showed that red light therapy was significantly effective in improving pain scores and quality of life in fibromyalgia patients, with approximately 95% showing measurable improvements. <em>Rheumatology International.</em></div></div>
+      <div class="ref"><div class="ref-auth">Fitzmaurice et al. (2023)</div><div class="ref-body">Found that 31.6% of fibromyalgia participants improved so significantly they no longer met diagnostic criteria for the condition after 6 weeks of treatment. <em>Brain Sciences.</em></div></div>
+      <div class="ref"><div class="ref-auth">Salehpour et al. (2019)</div><div class="ref-body">Demonstrated 63.2% reduction in neuropathy pain index scores and significantly increased nerve conduction velocities after 3 treatments per week over 6 weeks. <em>Journal of Neurological Sciences.</em></div></div>
     </div>
   </div>
 
