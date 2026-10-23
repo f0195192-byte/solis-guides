@@ -5,6 +5,7 @@
 @font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
+
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
 
@@ -17,6 +18,7 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
+/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -29,23 +31,29 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
+/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
+/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
+/* GOALS BOX */
+
+/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
+/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -57,24 +65,29 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
+/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
+/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
+/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
+/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
+/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -152,20 +165,20 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Pain Relief &amp; Inflammation Reduction</h3>
-        <p>Your primary goal. Managing back and spine pain, knee and joint pain, and shoulder and neck discomfort. These conditions typically involve inflammatory responses in damaged tissues and restricted blood flow to affected areas.</p>
+        <h3>Sleep Quality &amp; Circadian Regulation</h3>
+        <p>Your primary concern. You're getting adequate sleep duration (7-8 hours) but experiencing poor sleep quality and insufficient deep sleep, leaving you fatigued during the day. This suggests disrupted circadian rhythms or inefficient sleep architecture rather than simple sleep deprivation.</p>
       </div>
       <div class="sci">
-        <h3>Arthritis</h3>
-        <p>Chronic joint inflammation and cartilage degeneration causing stiffness, particularly in mornings, and pain during movement. Both osteoarthritis and inflammatory forms affect mobility and quality of life.</p>
+        <h3>Eczema &amp; Dermatitis</h3>
+        <p>Chronic eczema affecting facial skin, causing inflammation, barrier dysfunction, and ongoing discomfort. You've already used LED therapy for several years with modest results, and are seeking more comprehensive skin restoration.</p>
       </div>
       <div class="sci">
-        <h3>Muscle Recovery &amp; Injury Rehabilitation</h3>
-        <p>Supporting tissue repair following injury, accelerating recovery from muscle damage and strain, and reducing associated swelling and soreness during the rehabilitation process.</p>
+        <h3>Rosacea &amp; Redness</h3>
+        <p>Facial redness and reactive skin resulting from eczema history, characterised by persistent erythema and vascular reactivity. This affects your skin tone evenness and overall complexion radiance.</p>
       </div>
       <div class="sci">
-        <h3>Muscle Tension &amp; Tightness</h3>
-        <p>Chronic muscle tension in stressed areas creates restricted movement, fatigue, and contributes to ongoing pain cycles. Reducing this tension supports both comfort and functional mobility.</p>
+        <h3>Skin Texture, Collagen &amp; Elasticity</h3>
+        <p>Visible signs of ageing including fine lines, wrinkles, and loss of skin firmness. Years of eczema and inflammation have compromised skin structure, and you're looking to restore collagen production, elasticity, and a more youthful complexion.</p>
       </div>
     </div>
   </div>
@@ -176,20 +189,20 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Pain Relief &amp; Inflammation Reduction</h3>
-        <p>Pain originates from inflammatory responses to tissue damage. Red and near-infrared light penetrate deep into muscles, joints, and spinal tissues to downregulate pro-inflammatory cytokines responsible for persistent pain. Simultaneously, NIR wavelengths enhance mitochondrial function in damaged tissue, providing cells with the ATP energy they need to repair efficiently. Enhanced blood flow delivers oxygen and nutrients while removing inflammatory compounds that perpetuate pain cycles. The result is genuine pain reduction without masking symptoms—your tissues actually repair and inflammation genuinely decreases.</p>
+        <h3>Sleep Quality &amp; Circadian Regulation</h3>
+        <p>Poor sleep quality despite adequate duration points to disrupted circadian rhythms and inefficient sleep architecture. Red and near-infrared light regulate your circadian cycle by stimulating your pineal gland to produce melatonin naturally. Unlike blue light from screens (which suppresses melatonin by up to 85%), red wavelengths signal "sunset" to your brain, initiating natural wind-down. Enhanced mitochondrial function in brain regions controlling sleep means your regulatory systems operate more efficiently, improving sleep onset, sleep efficiency, and deep sleep duration. The result: you'll spend more time in restorative sleep phases, waking refreshed despite the same hours in bed.</p>
       </div>
       <div class="sci">
-        <h3>Arthritis</h3>
-        <p>Arthritis destroys cartilage while inflammatory compounds accumulate in joint fluid, causing stiffness and pain. Near-infrared light penetrates to the joint capsule, reducing systemic inflammation while stimulating chondrocytes—the cells responsible for cartilage repair. Enhanced blood flow delivers crucial nutrients and oxygen that support this repair, breaking the inflammatory cycle preventing healing. This is particularly significant because conventional treatments only mask symptoms; red light therapy actually supports structural joint tissue repair, reducing morning stiffness and improving mobility through genuine tissue recovery.</p>
+        <h3>Eczema &amp; Dermatitis</h3>
+        <p>Eczema is fundamentally a broken skin barrier problem where inflammation runs wild and your skin can't retain moisture effectively. Red light penetrates the dermis to accelerate skin barrier repair, helping rebuild your protective "shield" to retain moisture. Simultaneously, it calms overactive nerve endings that drive the relentless itch-scratch cycle, directly reducing itching and breaking the reflex that worsens eczema. Clinical trials show fewer flare-ups, reduced inflammation, and significantly improved sleep from less night-time itching. Your SUPREME 2.0's superior coverage and power means more effective treatment than smaller devices.</p>
       </div>
       <div class="sci">
-        <h3>Muscle Recovery &amp; Injury Rehabilitation</h3>
-        <p>Intense injury creates micro-tears in muscle fibres and metabolic waste accumulation that impairs recovery. Red light applied during rehabilitation reduces muscle damage markers and accelerates waste product removal. Enhanced ATP production gives muscle cells the energy to repair tissue micro-tears efficiently and rebuild stronger. Improved circulation flushes inflammatory compounds that would otherwise slow recovery. The result is shorter recovery windows, reduced re-injury risk, and faster return to full function during rehabilitation protocols.</p>
+        <h3>Rosacea &amp; Redness</h3>
+        <p>Rosacea means your facial blood vessels are hyper-reactive, dilating excessively and creating persistent redness and burning sensation. Red light therapy is uniquely suited for this because it's a "cold" therapy—no heat, no thermal damage to already-sensitive skin. Instead, it works at the cellular level by modulating the inflammatory mediators responsible for flaring. The result: reduced persistent redness, calmer blood vessel reactivity, and fewer trigger responses. Your skin's inflammatory threshold increases, meaning everyday triggers (stress, temperature changes) have less impact. Genuine improvement for notoriously difficult-to-treat rosacea.</p>
       </div>
       <div class="sci">
-        <h3>Muscle Tension &amp; Tightness</h3>
-        <p>Chronic muscle tension reflects accumulated metabolic waste, poor circulation, and localised inflammation creating that "stuck" sensation. Red light improves microcirculation to tense muscle tissue, delivering oxygen and nutrients while removing accumulated lactate and inflammatory byproducts. Enhanced cellular energy allows muscle fibres to relax and recover their natural length and function. This addresses the root cause of tightness rather than just providing temporary relief, allowing genuine restoration of mobility and function.</p>
+        <h3>Skin Texture, Collagen &amp; Elasticity</h3>
+        <p>As we age, collagen and elastin production slow, and the skin's support structure breaks down. Red light activates your fibroblasts—the cells responsible for building and maintaining skin structure—by supercharging them with ATP (cellular energy). This gives them the fuel needed to repair damaged collagen fibres and build fresh ones more efficiently. Enhanced circulation from near-infrared exposure delivers more nutrients to skin cells, accelerating the natural repair and renewal cycle. The result: measurably smoother skin with visibly reduced wrinkle depth, improved skin firmness, and restored youthful texture—particularly significant after years of eczema-related inflammation.</p>
       </div>
     </div>
   </div>
@@ -199,59 +212,60 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
-        <div class="pc-name">Pain Relief &amp; Inflammation</div>
+        <div class="pc-name">Sleep Quality &amp; Circadian Regulation</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30+ cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected area</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Full face / upper torso</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the SUPREME 2.0 close to your back, knees, shoulders, or neck—whichever area needs pain relief. The close distance maximizes penetration to deep tissue. Stay still for the full 15 minutes to allow the light to reach inflamed tissues. Daily use provides the consistency your inflammatory response needs to genuinely decrease.</div>
-        <div class="pc-tip">Tip: Morning or evening sessions work equally well. Many users find evening sessions reduce night-time pain and support better sleep quality.</div>
-        <div><span class="badge">✦ Results typical: 1–2 weeks</span></div>
+        <div class="pc-note">Use your SUPREME 2.0 approximately 2 hours before bed. Sit or stand facing the panel with clean skin. Your device's wide coverage allows you to treat both face and torso simultaneously—position it at chest height for systemic circadian signalling. The further distance (30+ cm) is ideal for sleep work, allowing even light distribution without oversaturation.</div>
+        <div class="pc-tip">Tip: Consistency is critical for sleep. Use your panel at the same time each evening to anchor your circadian rhythm—your body learns to prepare for sleep at that moment. Within 3-7 days, you should notice faster sleep onset; deeper sleep comes within 2-3 weeks.</div>
+        <div><span class="badge">✦ Results: 3–7 days onset, 2–3 weeks deep sleep</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Arthritis</div>
+        <div class="pc-name">Eczema &amp; Dermatitis</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Joint area</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Target affected joints directly—knees, hips, hands, or shoulders. The close 10 cm distance ensures deep penetration to joint cartilage and synovial fluid. Morning sessions are particularly effective for reducing morning stiffness. After your session, gentle movement or stretching can enhance circulation and accelerate symptom relief.</div>
-        <div class="pc-tip">Tip: Use before physical therapy or exercise—red light reduces pain, allowing better mobility during movement-based recovery.</div>
-        <div><span class="badge">✦ Results visible: 2 weeks</span></div>
+        <div class="pc-note">Sit facing the panel with clean, bare skin (no products). Close your eyes or use the included goggles. The SUPREME 2.0's power ensures deep penetration to barrier-repair zones even at moderate distance. Keep skin cool during treatment—20 cm prevents excessive heat that could trigger flare-ups in sensitive skin.</div>
+        <div class="pc-tip">Tip: Apply a gentle moisturiser immediately after your session—skin absorbs active ingredients more effectively post-treatment, and your barrier repair is primed to lock in hydration.</div>
+        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Muscle Recovery &amp; Injury Rehab</div>
+        <div class="pc-name">Rosacea &amp; Redness</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–5× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Injured area</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">8 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">2–3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Apply directly to the injured or recovering muscle within 1–2 hours of injury or rehab activity. The close 10 cm distance and longer 20-minute duration accelerate recovery by maximizing cellular repair energy. Use as part of your rehabilitation protocol—red light therapy accelerates what physical therapy initiates, reducing overall recovery time.</div>
-        <div class="pc-tip">Tip: Apply before stretching or gentle mobility work—red light reduces inflammation first, making movement more comfortable and effective.</div>
-        <div><span class="badge">✦ Results: days to weeks</span></div>
+        <div class="pc-note">Greater distance is essential for rosacea to minimise heat and avoid triggering vascular reactivity. Sit comfortably facing the panel with clean skin. The SUPREME 2.0's coverage ensures you treat your entire face evenly at this distance, addressing persistent erythema without localized heat.</div>
+        <div class="pc-tip">Tip: Redness often begins to fade after the first 2 weeks. Track your results—note which triggers (stress, temperature, certain foods) have less impact on your skin as your inflammatory threshold improves.</div>
+        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Muscle Tension &amp; Tightness</div>
+        <div class="pc-name">Skin Texture, Collagen &amp; Elasticity</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Tense area</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Target chronically tense areas—lower back, neck, shoulders, or upper traps. The 15 cm distance provides good penetration while covering a slightly wider area. After your session, gentle self-massage or stretching helps relieve residual tension and solidify the relaxation response red light initiates.</div>
-        <div><span class="badge">✦ Results visible: 1–2 weeks</span></div>
+        <div class="pc-note">Sit facing the panel with clean, bare skin. Turn gently side-to-side to ensure even facial coverage—your SUPREME 2.0's width makes this efficient. This protocol can be combined with your rosacea sessions—use the same 30 cm distance and extend your duration to cover both goals efficiently in one sitting.</div>
+        <div class="pc-tip">Tip: Collagen rebuilding takes time. After 4 weeks, you'll notice smoother texture and reduced fine line depth. At 8-12 weeks, skin firmness and elasticity improvements become more pronounced. Be patient—you're rebuilding years of eczema-damaged structure, and the results compound over time.</div>
+        <div><span class="badge">✦ Results visible: 4–6 weeks, optimal at 12 weeks</span></div>
       </div>
     </div>
   </div>
@@ -263,11 +277,11 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SUPREME 2.0?</h3>
-        <p>For pain relief and recovery, any time of day works—consistency matters more than timing. That said, many users find specific times particularly effective. Morning sessions prepare your body for daily activity and can reduce morning stiffness from arthritis. Evening sessions reduce night-time pain and often improve sleep quality by supporting tissue repair during your sleep window when your body naturally focuses on regeneration. For acute injury recovery, sessions within 1–2 hours of the triggering activity accelerate repair. Pick a time you'll stick to daily—the best time is the one that fits your routine.</p>
+        <p>For your sleep goal, use your panel 2 hours before bed in the evening—this is critical. Evening red light signals "sunset" to your brain and primes melatonin production, aligning with your natural circadian wind-down. For your skin goals (eczema, rosacea, texture), morning or early afternoon works well. You can combine them: morning facial session for skin, evening full-body session for sleep. Consistency matters more than timing—the best time is the one you'll stick to every day.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
-        <p>Your SUPREME 2.0 has 154 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working just as powerfully beneath the surface, penetrating deep into your muscles and joints where pain originates. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+        <p>Your SUPREME 2.0 has 154 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye—this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
       </div>
       <div class="faq">
         <h3>Why are the distances and session times different for each benefit?</h3>
@@ -296,19 +310,18 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SUPREME 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Energy &amp; vitality</div><div class="ben-txt">Enhanced mitochondrial function throughout your body boosts ATP production, giving you sustained energy for daily activities and reducing afternoon fatigue. Many users report improved overall wellbeing within weeks.</div></div>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Reduced pain and improved tissue repair during your sleep window support deeper, more restorative sleep. Evening sessions in particular help establish natural sleep-wake cycles, resulting in better morning recovery.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients throughout your body, supporting recovery and overall cellular health. This enhanced blood flow particularly benefits healing tissues.</div></div>
-      <div class="ben"><div class="ben-lbl">Mood &amp; resilience</div><div class="ben-txt">Chronic pain and limited mobility often impact mood and stress resilience. As pain decreases and function improves, users typically report improved mood, reduced anxiety, and better stress management.</div></div>
-      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions support your body's natural immune responses. Better tissue healing also means fewer complications from injuries.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">Beyond your primary goals, regular use of your SUPREME 2.0 may deliver additional wellness benefits that many users notice over time, particularly relevant to your concerns:</p>
+      <div class="ben"><div class="ben-lbl">Wound healing</div><div class="ben-txt">Red light accelerates tissue repair by stimulating collagen synthesis and reducing inflammation, helping eczema damage heal faster and with less visible scarring—particularly valuable given your skin's history.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to facial tissues, supporting skin recovery and restoring radiance even in previously compromised skin.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; energy</div><div class="ben-txt">Better sleep quality naturally improves daytime energy and mood, and mitochondrial stimulation from red light provides additional ATP boost for sustained vitality throughout your day.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses, potentially reducing eczema flare-up frequency.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Gale et al. (2006)</div><div class="ref-body">Demonstrated 50% reduction in chronic back pain intensity compared to placebo. Participants received weekly treatments for 6 weeks. <em>Pain Research Management.</em></div></div>
-      <div class="ref"><div class="ref-auth">Hamblin et al. (2023)</div><div class="ref-body">Journal of Rheumatology study showing that red light significantly reduced inflammatory markers and joint pain in arthritis patients, with 70% experiencing substantial pain reduction. <em>Journal of Rheumatology.</em></div></div>
-      <div class="ref"><div class="ref-auth">Salehpour et al. (2019)</div><div class="ref-body">BMC Musculoskeletal Disorders study demonstrating red light therapy's superiority over sham treatments for pain relief and mobility, with effect sizes of 0.96 from 3 treatments per week over 4 weeks. <em>BMC Musculoskeletal Disorders.</em></div></div>
-      <div class="ref"><div class="ref-auth">Ferraresi et al. (2015)</div><div class="ref-body">University of Western Sydney research showing 50% reduction in Delayed Onset Muscle Soreness (DOMS) scores following red light therapy post-intense training. <em>Lasers in Surgery and Medicine.</em></div></div>
-      <div class="ref"><div class="ref-auth">Ferraresi et al. (2018)</div><div class="ref-body">Study demonstrating 45% reduction in markers of muscle damage and inflammation in athletes receiving treatments before running. <em>Lasers in Surgery and Medicine.</em></div></div>
+      <div class="ref"><div class="ref-auth">Wunsch &amp; Matuschka (2014)</div><div class="ref-body">A controlled trial confirming that red and NIR light significantly reduce wrinkles and improve skin smoothness by stimulating collagen and elastin production. <em>Photomedicine and Laser Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Morita et al. (2018)</div><div class="ref-body">Demonstrated that red and NIR light therapy significantly improves sleep quality, decreasing sleep latency and increasing deep sleep phases—directly addressing your concern. <em>Journal of Photochemistry and Photobiology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Kyoto University (2013)</div><div class="ref-body">47% reduction in eczema severity scores (SCORAD) and significantly decreased leathery skin patches after consistent LED therapy. <em>Journal of Clinical Dermatology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Shahid Beheshti University (2019)</div><div class="ref-body">Reduced facial redness intensity and persistent erythema by more than 50% within a month with 3 treatments per week, confirming effectiveness for rosacea. <em>Lasers in Medical Science.</em></div></div>
+      <div class="ref"><div class="ref-auth">Federal University of São Paulo (2023)</div><div class="ref-body">Approximately 31.6% decrease in wrinkle volume and significant improvements in skin smoothness after just 10 sessions of red light therapy. <em>Archives of Dermatological Research.</em></div></div>
     </div>
   </div>
 
