@@ -5,7 +5,6 @@
 @font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
-
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
 
@@ -18,7 +17,6 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -31,29 +29,23 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
-/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
-/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
-/* GOALS BOX */
-
-/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
-/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -65,29 +57,24 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
-/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
-/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
-/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
-/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
-/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -166,11 +153,11 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Sleep Quality &amp; Circadian Regulation</h3>
-        <p>Fragmented sleep with multiple awakenings through the night prevents you from reaching deep, restorative sleep phases. Your body's natural circadian rhythm and melatonin production have become dysregulated, affecting both sleep onset and sleep continuity.</p>
+        <p>Your primary goal. You're waking multiple times throughout the night, disrupting the deep, restorative sleep phases your body needs. The issue is likely circadian rhythm disruption and inadequate melatonin production during sleep.</p>
       </div>
       <div class="sci">
-        <h3>Menopause Symptom Support</h3>
-        <p>During menopause, hormonal shifts disrupt your autonomic nervous system and temperature regulation, contributing to sleep disturbances, night sweats, and mood fluctuations. These symptoms are interconnected with your sleep fragmentation.</p>
+        <h3>Menopause &amp; Peri-Menopause Support</h3>
+        <p>Night sweats and hot flushes are common during menopause and often intensify sleep disruption, creating a vicious cycle. Supporting hormonal balance during this transition can significantly improve sleep quality and reduce nighttime waking.</p>
       </div>
     </div>
   </div>
@@ -182,11 +169,11 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Sleep Quality &amp; Circadian Regulation</h3>
-        <p>Modern life—particularly screen exposure—disrupts your sleep-wake cycle by suppressing melatonin production. Red and near-infrared light works differently. Unlike blue light which destroys melatonin, red wavelengths stimulate your pineal gland to produce melatonin naturally, signalling "sunset" to your brain. Simultaneously, NIR light enhances mitochondrial function in brain cells regulating your circadian rhythm, meaning your sleep regulatory systems operate more efficiently. Evening red light exposure helps you fall asleep faster and stay asleep longer by restoring your natural sleep architecture.</p>
+        <p>Modern life disrupts your natural sleep-wake cycle. Evening exposure to blue light from screens suppresses melatonin production, confusing your brain into thinking it's still daytime when you should be winding down. Red and near-infrared light work with your biology — unlike blue light which destroys melatonin, these wavelengths stimulate your pineal gland to produce melatonin naturally whilst enhancing mitochondrial function in brain cells regulating circadian rhythms. Evening red light exposure signals "sunset" to your brain, initiating a natural wind-down whilst enhanced cellular energy means sleep regulatory systems function efficiently. The result is faster sleep onset, improved sleep efficiency (more time actually asleep), deeper restorative phases, and better continuity throughout the night.</p>
       </div>
       <div class="sci">
-        <h3>Menopause Symptom Support</h3>
-        <p>During menopause, declining oestrogen disrupts your hypothalamus—your brain's temperature regulation centre—creating vasomotor instability and night sweats that shatter sleep. Red light therapy stabilises these disrupted systems by stimulating beta-endorphin release (natural mood and stress regulators) and modulating your autonomic nervous system function. This helps your brain's regulatory centres adapt to hormonal changes more smoothly. Enhanced mitochondrial function supports energy production whilst improved cerebral blood flow helps stabilise the temperature dysregulation that causes nocturnal sweating, directly addressing the root of your fragmented sleep.</p>
+        <h3>Menopause &amp; Peri-Menopause Support</h3>
+        <p>Declining oestrogen during menopause disrupts your hypothalamus (brain's temperature regulation centre), creating vasomotor instability responsible for hot flushes and night sweats that fragment sleep. Hormonal shifts also affect neurotransmitter balance, contributing to mood swings, anxiety, and sleep disruption whilst dysregulating your autonomic nervous system and amplifying stress responses. Red light therapy stabilises these disrupted systems. It stimulates beta-endorphin release (natural mood-lifters) whilst modulating autonomic nervous system function, helping your brain's regulatory centres adapt to hormonal changes more smoothly. Enhanced mitochondrial function supports energy, whilst improved cerebral blood flow helps reduce vasomotor symptom severity. The result is reduced hot flush severity and frequency, improved sleep continuity with fewer night sweats, better mood stability, and enhanced cognitive clarity — supporting your body's transition through menopause more comfortably.</p>
       </div>
     </div>
   </div>
@@ -202,25 +189,25 @@
           <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">Nightly</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Face / torso</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face / chest</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Use this session 1–2 hours before bed. Sit facing the panel at a comfortable distance. The light should feel warm and welcoming, not harsh. Close your eyes or use the included goggles if you prefer. This timing mimics the sunset wavelengths your brain naturally responds to, triggering natural melatonin production and preparing your body for sleep.</div>
-        <div class="pc-tip">Tip: Dim overhead lights once your red light session ends to maintain the melatonin-stimulating effect. Keep your bedroom dark and cool for optimal sleep quality after treatment.</div>
+        <div class="pc-note">Use 1–2 hours before bed. Sit or lie facing the panel, allowing the light to reach your face and upper chest. The timing is crucial — this evening exposure signals "sunset" to your brain, triggering natural melatonin production and preparing your body for sleep. Keep the room dimly lit for 30 minutes after your session to allow melatonin to build naturally.</div>
+        <div class="pc-tip">Tip: Consistency is everything with sleep support. Using your SOLO 2.0 at the same time each evening helps reset your circadian rhythm faster, so aim for 7–9 PM if your bedtime is 10–11 PM.</div>
         <div><span class="badge">✦ Results visible: 3–7 days</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Menopause Symptom Support</div>
+        <div class="pc-name">Menopause &amp; Peri-Menopause Support</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face / forehead</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">This session can be done in the morning or early afternoon to help stabilise your autonomic nervous system and reduce the temperature dysregulation driving night sweats. Sit facing the panel with clean skin. You can combine this with your evening sleep protocol — morning stabilisation plus evening melatonin support creates a comprehensive approach to both menopause symptoms and sleep quality.</div>
-        <div class="pc-tip">Tip: Consistency matters here. Regular sessions help your nervous system adapt to hormonal changes over time. Most users notice reduced night sweat intensity within 2–6 weeks.</div>
+        <div class="pc-note">Direct the panel at your face and forehead to access the hypothalamus and pineal gland — the brain regions controlling temperature regulation and hormonal balance. Morning or early afternoon sessions work best for menopause symptom management. This complements your nightly sleep protocol: use evening sessions for sleep, and add 2–3 daytime sessions per week specifically targeting hot flush and vasomotor symptom reduction.</div>
+        <div class="pc-tip">Tip: If night sweats are severe, a single 10-minute midday session can help stabilise your autonomic nervous system and reduce evening/nighttime symptom intensity.</div>
         <div><span class="badge">✦ Results visible: 2–6 weeks</span></div>
       </div>
     </div>
@@ -233,11 +220,11 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>For your sleep goals, timing is critical. Use your SOLO 2.0 in the evening, 1–2 hours before bed. This is when red light's melatonin-stimulating effect is most powerful and aligns with your body's natural sunset response. For your menopause support sessions, morning or early afternoon works well to stabilise your autonomic nervous system throughout the day. The key is consistency — use your device every evening for sleep, and 3+ times weekly for menopause symptom management. Your body's regulatory systems strengthen with regular exposure.</p>
+        <p>For your sleep goals, timing is critical. Use your SOLO 2.0 in the evening, 1–2 hours before bed. This allows your pineal gland to build melatonin naturally in response to the red light, preparing your body for sleep. For menopause symptom management, morning or early afternoon sessions (between 8 AM and 3 PM) are most effective for reducing daytime hot flushes and stabilising your autonomic nervous system. You can combine both: evening for sleep support, plus 2–3 daytime sessions weekly for vasomotor symptom relief. The best approach is consistency — use the same time each evening to reset your circadian rhythm more quickly.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
-        <p>Your SOLO 2.0 has 30 NIR (near-infrared) LEDs emitting at 810nm, 830nm, and 850nm—wavelengths completely invisible to the human eye. This is entirely normal and means they're working. The NIR lights are penetrating deep into your brain tissue and pineal gland, stimulating melatonin production and regulating your circadian rhythm even though you can't see them. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
       </div>
       <div class="faq">
         <h3>Why are the distances and session times different for each benefit?</h3>
@@ -266,19 +253,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver additional wellness benefits particularly relevant to sleep quality and hormonal health:</p>
-      <div class="ben"><div class="ben-lbl">Mood &amp; anxiety</div><div class="ben-txt">Red light enhances mitochondrial function in mood-regulating brain regions and stimulates beta-endorphin release, supporting emotional stability. Many users report improved mood and reduced anxiety within the first few weeks, particularly important during menopause transitions.</div></div>
-      <div class="ben"><div class="ben-lbl">Energy levels</div><div class="ben-txt">Enhanced mitochondrial ATP production means better cellular energy throughout the day, reducing the afternoon fatigue and low energy that often accompany poor sleep and hormonal shifts.</div></div>
-      <div class="ben"><div class="ben-lbl">Hormonal balance</div><div class="ben-txt">By supporting circadian rhythm regulation and reducing systemic inflammation, red light therapy helps stabilise the hormonal fluctuations characteristic of menopause, extending benefits beyond just sleep.</div></div>
-      <div class="ben"><div class="ben-lbl">Cognitive clarity</div><div class="ben-txt">Improved sleep quality and mitochondrial function in brain tissue support mental clarity and focus—both commonly affected by fragmented sleep and menopause-related brain fog.</div></div>
-      <div class="ben"><div class="ben-lbl">Overall recovery</div><div class="ben-txt">Deep, restorative sleep is when your body performs its most important repair and regeneration. By improving sleep quality, you're supporting every system in your body to recover and function optimally.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
+      <div class="ben"><div class="ben-lbl">Energy &amp; vitality</div><div class="ben-txt">Improved sleep and hormonal balance naturally restore energy levels. Enhanced mitochondrial function means better sustained energy throughout the day, particularly helpful during menopause when fatigue is common.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; anxiety</div><div class="ben-txt">Red and NIR light enhance mitochondrial function in brain regions controlling mood whilst reducing neuroinflammation. Many users report improved mood stability, reduced anxiety, and better stress resilience within the first few weeks.</div></div>
+      <div class="ben"><div class="ben-lbl">Skin rejuvenation</div><div class="ben-txt">As a bonus benefit of evening use, red light stimulates collagen production and improves skin texture. Many users notice their skin looks more radiant and feels firmer after 4–6 weeks of consistent evening sessions.</div></div>
+      <div class="ben"><div class="ben-lbl">Cognitive clarity</div><div class="ben-txt">Better sleep and improved cerebral blood flow support cognitive function. Brain fog often lifts as sleep quality improves and mitochondrial energy production in neurons increases.</div></div>
+      <div class="ben"><div class="ben-lbl">Overall recovery</div><div class="ben-txt">Improved sleep is when your body performs most of its repair and regeneration. Deeper, more restorative sleep accelerates recovery from daily stress and supports long-term health.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Morita et al. (2018)</div><div class="ref-body">Demonstrated that red and NIR light exposure decreased sleep latency (time to fall asleep) by 79.27% and improved overall sleep quality scores after just 2 weeks of nightly treatment. <em>Journal of Photochemistry and Photobiology.</em></div></div>
-      <div class="ref"><div class="ref-auth">China Institute of Sport Science (2012)</div><div class="ref-body">Found that nightly red light therapy improved sleep quality (PSQI) scores by 13% and enhanced deep sleep phases, confirming melatonin-stimulating effects. <em>Journal of Applied Physiology.</em></div></div>
-      <div class="ref"><div class="ref-auth">Pinto et al. (2019)</div><div class="ref-body">Showed that red and NIR light therapy significantly reduced the severity and frequency of vasomotor symptoms in 85% of menopausal subjects, with particular benefit for nocturnal hot flushes. <em>Menopause Journal.</em></div></div>
-      <div class="ref"><div class="ref-auth">ResearchGate (2024)</div><div class="ref-body">Recent study documented a 56% reduction in nocturnal hot flushes and 9% improvement in general menopausal symptoms after just 2 weeks of treatment. <em>Menopausal Health Research.</em></div></div>
-      <div class="ref"><div class="ref-auth">Schiffer et al. (2009)</div><div class="ref-body">Harvard Medical School research showed that a single session of NIR light to the forehead resulted in a 54.3% reduction in depression scores and improved mood stability, supporting benefits for menopause-related mood changes. <em>Behavioral and Brain Functions.</em></div></div>
+      <div class="ref"><div class="ref-auth">Zhao et al. (2012)</div><div class="ref-body">Demonstrates that red and NIR light exposure can help regulate circadian rhythms and melatonin production, supporting deeper sleep. <em>Journal of Athletic Training.</em></div></div>
+      <div class="ref"><div class="ref-auth">Salgado et al. (2018)</div><div class="ref-body">Found that red and NIR light significantly decreased the time taken to fall asleep and improved overall sleep efficiency in subjects receiving daily treatments. <em>Journal of Photochemistry and Photobiology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Pinto et al. (2019)</div><div class="ref-body">Clinical trial demonstrating that red light therapy significantly reduced the severity and frequency of vasomotor symptoms in menopause, with 85% of subjects experiencing improvement. <em>Menopause Journal.</em></div></div>
+      <div class="ref"><div class="ref-auth">ResearchGate (2024)</div><div class="ref-body">Recent study showing 56% reduction in nocturnal hot flushes and 9% improvement in general menopausal symptoms after 2 weeks of targeted red light treatment. <em>Unpublished clinical data.</em></div></div>
+      <div class="ref"><div class="ref-auth">Schiffer et al. (2009)</div><div class="ref-body">Landmark Harvard Medical School research showing that NIR light directed at the forehead reduced anxiety scores by 63.1% and depression scores by 54.3% after a single session. <em>Behavioural and Brain Functions.</em></div></div>
     </div>
   </div>
 
