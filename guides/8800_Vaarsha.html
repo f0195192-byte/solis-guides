@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
+
+*{box-sizing:border-box;margin:0;padding:0}
+.g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
+
+.nav{display:flex;gap:6px;padding:14px 18px;background:#0d0d0d;border-bottom:1px solid #1e1e1e;flex-wrap:wrap}
+.nav button{font-family:'Oakes Grotesk',sans-serif;font-size:10px;font-weight:500;letter-spacing:.06em;padding:5px 11px;border:1px solid #2a2a2a;background:transparent;color:#fff;border-radius:20px;cursor:pointer;transition:all .2s}
+.nav button.on{background:#e8407a;border-color:#e8407a;color:#fff}
+.nav button:hover:not(.on){border-color:#e8407a;color:#e8407a}
+
+.slide{display:none;animation:fi .3s ease}
+.slide.on{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+.cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
+.cover-logo{margin-bottom:52px}
+.cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
+.cover-name{font-family:'Instrument Serif',serif;font-size:42px;font-style:italic;line-height:1;color:#fff;margin-bottom:0}
+.cover-name-rule{width:44px;height:1px;background:#e8407a;margin:14px 0 16px}
+.cover-device{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:32px}
+.cover-rule{border:none;border-top:1px solid #1e1e1e;margin:28px 0 22px}
+.cover-inc-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.chk{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:13px;color:#fff}
+.chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.chk-dot svg{width:11px;height:11px}
+
+.pg{background:#0d0d0d;padding:32px 36px 40px}
+.pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
+.pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
+.pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
+.rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
+
+.specs{width:100%;border-collapse:collapse;margin-bottom:22px}
+.specs tr:nth-child(odd) td{background:#141414}
+.specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
+.specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
+.specs td:last-child{color:#fff}
+
+.sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
+.sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
+.sci p{font-size:13px;line-height:1.7;color:#fff}
+
+.pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
+.pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
+.pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
+.pc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.pc-lbl{font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:3px}
+.pc-val{font-size:13px;font-weight:500;color:#fff}
+.pc-div{border:none;border-top:1px solid #1e1e1e;margin-bottom:12px}
+.pc-note{font-size:13px;line-height:1.7;color:#fff}
+.pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
+.badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
+
+.faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
+.faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
+.faq p{font-size:13px;line-height:1.7;color:#fff}
+
+.ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
+.ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
+.ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
+
+.ref{margin-bottom:14px;padding-left:16px;position:relative}
+.ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
+.ref-auth{font-size:13px;font-weight:600;color:#fff}
+.ref-body{font-size:13px;line-height:1.7;color:#fff}
+
+.disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
+.disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
+.disc-box p:last-child{margin-bottom:0}
+
+.closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
+.c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
+.cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
+.cdot{width:6px;height:6px;border-radius:50%;background:#fff;flex-shrink:0}
+.c-sign{font-size:11.5px;color:rgba(255,255,255,.75);max-width:380px;margin:16px auto 0;line-height:1.65}
+
+@media(max-width:600px){
+  .cover{padding:36px 20px}
+  .cover-name{font-size:32px}
+  .cover-eyebrow{font-size:11px}
+  .cover-device{font-size:10px}
+  .pg{padding:24px 20px 32px}
+  .pg-title{font-size:22px}
+  .sci h3,.faq h3{font-size:17px}
+  .nav{padding:10px 12px;gap:5px}
+  .nav button{font-size:9px;padding:4px 9px}
+  .pc-grid{grid-template-columns:repeat(2,1fr)}
+  .specs td{font-size:12px;padding:9px 10px}
+  .ben{flex-direction:column;gap:4px}
+  .ben-lbl{min-width:unset}
+  .disc-box{padding:14px 16px}
+}
+</style>
+</head>
+<body>
+<div class="g">
+  <nav class="nav">
+    <button class="on" onclick="show(1)">Cover</button>
+    <button onclick="show(2)">Your device</button>
+    <button onclick="show(3)">Your goals</button>
+    <button onclick="show(4)">How it helps</button>
+    <button onclick="show(5)">Your protocol</button>
+    <button onclick="show(6)">FAQs</button>
+    <button onclick="show(7)">More benefits</button>
+    <button onclick="show(8)">Disclaimer</button>
+  </nav>
+
+  <div class="slide on" id="s1">
+    <div class="cover">
+      <div class="cover-logo">
+        <img src="/assets/solis-logo.png" style="height:42px;display:block">
+      </div>
+      <div class="cover-eyebrow">Personalised Treatment Guide</div>
+      <div class="cover-name">Vaarsha</div>
+      <div class="cover-name-rule"></div>
+      <div class="cover-device">Solis SOLO 2.0</div>
+      <div class="cover-rule"></div>
+      <div class="cover-inc-label">Included in your guide</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Information about your new device</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Scientific research for your wellness goals</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Your personalised treatment plan</div>
+    </div>
+  </div>
+
+  <div class="slide" id="s2">
+    <div class="pg">
+      <div class="pg-label">About your product</div>
+      <div class="pg-title">Your Solis SOLO 2.0</div>
+      <hr class="pink-rule">
+      <table class="specs">
+        <tbody><tr><td>The product</td><td>Solis SOLO 2.0</td></tr>
+        <tr><td>LED power</td><td>300W (60 × 5W LEDs)</td></tr>
+        <tr><td>Wavelengths</td><td>Red: 630nm &amp; 660nm &nbsp;|&nbsp; NIR: 810nm, 830nm &amp; 850nm</td></tr>
+        <tr><td>Irradiance</td><td>&gt;180 mW/cm² at 6 inches &nbsp;|&nbsp; ~50 mW/cm² at 30 inches</td></tr>
+        <tr><td>Dimensions</td><td>34.5 × 23 × 9.5 cm &nbsp;|&nbsp; 4.5 kg</td></tr>
+        <tr><td>EMF &amp; safety</td><td>0 EMF at 3+ inches &nbsp;|&nbsp; Anti-EMF casing &nbsp;|&nbsp; FDA/CE standards</td></tr>
+        <tr><td>Warranty</td><td>3 years standard</td></tr>
+        <tr><td>In the box</td><td>Panel, power cable, protective goggles, blue light blockers</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <div class="slide" id="s3">
+    <div class="pg">
+      <div class="pg-label">Your focus areas</div>
+      <div class="pg-title">Your health &amp; wellness goals</div>
+      <hr class="pink-rule">
+      <div class="sci">
+        <h3>Fibromyalgia & Chronic Pain Management</h3>
+        <p>Recently diagnosed fibromyalgia with widespread muscle and joint pain, severe chronic fatigue, low immunity, and cognitive symptoms including depression, brain fog, and memory issues. Your central nervous system has become hypersensitive, amplifying pain signals, while mitochondrial dysfunction drives exhaustion that affects every daily activity.</p>
+      </div>
+      <div class="sci">
+        <h3>Lower Back Pain & Joint Inflammation</h3>
+        <p>Chronic lower back pain affecting basic daily tasks like standing and washing dishes. Combined with ankle instability, persistent swelling, and fluid retention in both feet, particularly your left ankle. Movement becomes increasingly limited and painful after 30+ minutes of activity.</p>
+      </div>
+      <div class="sci">
+        <h3>Fat Loss & Muscle Recovery</h3>
+        <p>Supporting your fat loss journey while building lean muscle, minimising post-workout soreness (DOMS), accelerating recovery between sessions, preventing loose skin and new stretch marks during weight loss, and improving overall body composition through targeted red light support.</p>
+      </div>
+      <div class="sci">
+        <h3>Scalp Health & Hair Restoration</h3>
+        <p>Scalp eczema/psoriasis with scabs and itching, combined with overall hair thinning, heavy shedding, receding hairline, and early balding spots. Long thick hair requires specific positioning to ensure light reaches the scalp effectively.</p>
+      </div>
+      <div class="sci">
+        <h3>Skin Rejuvenation & Pigmentation</h3>
+        <p>Lichen Simplex Chronicus on the chin (raised, leathery, dark patch previously unresponsive to steroid ointments), hyperpigmentation including underarm darkening, existing stretch marks, and general anti-ageing benefits. Early grey hairs and loss of radiance from chronic condition and fatigue.</p>
+      </div>
+      <div class="sci">
+        <h3>Sleep Quality & Hormonal Balance</h3>
+        <p>Severe difficulty both falling asleep and staying asleep. Suspected hormonal imbalances causing excess facial hair growth on chin and neck, bloating, and PMS symptoms. Preparing ahead for potential life changes after discontinuing Cerazette (progesterone-only pill).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s4">
+    <div class="pg">
+      <div class="pg-label">The science</div>
+      <div class="pg-title">How red light therapy helps</div>
+      <hr class="pink-rule">
+      <div class="sci">
+        <h3>Fibromyalgia & Chronic Pain Management</h3>
+        <p>Fibromyalgia involves both hypersensitive nerve endings misinterpreting normal sensations as pain, and profound mitochondrial dysfunction. Red and near-infrared light addresses both root causes. The wavelengths penetrate deep to reach spinal tissues and nerve cells, desensitising overactive nerve endings that amplify pain signals. Simultaneously, they enhance mitochondrial function throughout your entire body, boosting ATP production that combat the crushing fatigue characteristic of fibromyalgia. This recalibrates your pain threshold while restoring energy production, allowing your nervous system to function normally again rather than remaining stuck in hypersensitivity mode.</p>
+      </div>
+      <div class="sci">
+        <h3>Lower Back Pain & Joint Inflammation</h3>
+        <p>Back and joint pain stem from inflammatory compounds accumulating in affected tissues while protective structures lose mobility and strength. Red light penetrates deep to reach spinal tissues and joint capsules, reducing pro-inflammatory cytokines while stimulating repair cells. Near-infrared wavelengths reach deep muscle layers and connective tissue, enhancing blood flow for nutrient and oxygen delivery. This combination interrupts the inflammatory cycle preventing healing, restores tissue repair capability, and significantly improves mobility—particularly for conditions where conventional treatments only mask symptoms rather than supporting actual tissue recovery.</p>
+      </div>
+      <div class="sci">
+        <h3>Fat Loss & Muscle Recovery</h3>
+        <p>Red light creates temporary pores in fat cell membranes, releasing stored triglycerides into your bloodstream where they become available fuel for your body to burn, particularly when combined with exercise. When applied before workouts, it enhances ATP production in muscles, giving them energy to perform efficiently. Post-workout, it accelerates waste product removal and reduces muscle damage markers, shortening recovery windows and reducing soreness (DOMS). Enhanced mitochondrial function supports efficient fat mobilisation from stubborn areas while simultaneously building and preserving lean muscle, achieving better body composition without the extensive downtime that typically limits training frequency.</p>
+      </div>
+      <div class="sci">
+        <h3>Scalp Health & Hair Restoration</h3>
+        <p>Hair loss occurs when follicles get stuck in the resting phase instead of growth phase, combined with poor circulation starving scalp of nutrients. Red light wakes up stem cells in hair follicles, kickstarting them into growth mode and extending the active growth phase. The wavelengths trigger nitric oxide release in scalp cells, dilating blood vessels and dramatically increasing nutrient delivery to each follicle. For scalp inflammation (eczema/psoriasis), red light accelerates barrier repair and calms overactive nerve endings, reducing itching and breaking the scratch reflex. The result is clinically proven increases in hair density, thicker strands, and a healthier scalp environment.</p>
+      </div>
+      <div class="sci">
+        <h3>Skin Rejuvenation & Pigmentation</h3>
+        <p>Your Lichen Simplex Chronicus patch responds to the same collagen-stimulating mechanism that improves scarring and skin texture. Red light activates fibroblasts to build fresh collagen while reducing inflammatory cytokines that maintain the leathery appearance. For hyperpigmentation and uneven tone, improved microcirculation and accelerated cellular turnover help even out uneven pigmentation. The 630nm wavelength reduces inflammatory compounds contributing to redness and blotchiness. Simultaneously, enhanced cellular energy and circulation support your body's natural healing of stretch marks through collagen remodelling and skin regeneration.</p>
+      </div>
+      <div class="sci">
+        <h3>Sleep Quality & Hormonal Balance</h3>
+        <p>Modern life disrupts circadian rhythms through blue light exposure suppressing melatonin production. Red and near-infrared wavelengths work with your biology by stimulating your pineal gland to produce melatonin naturally, signalling "sunset" to your brain and initiating natural wind-down. Enhanced cellular energy means sleep regulatory systems function efficiently for deeper restorative phases. For hormonal balance, red light modulates your autonomic nervous system and enhances mitochondrial function in hormone-producing glands, supporting smoother hormonal transitions and reduced PMS severity. The combined effect restores natural sleep-wake cycles and hormonal equilibrium without pharmaceutical intervention.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s5">
+    <div class="pg">
+      <div class="pg-label">Your protocol</div>
+      <hr class="pink-rule">
+      <div class="pc">
+        <div class="pc-name">Fibromyalgia & Chronic Pain Management</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Chest / torso</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Stand or sit with chest and torso facing the panel at chest height. This positions the SOLO 2.0 for maximum systemic effect, allowing deep-penetrating wavelengths to reach spinal tissues and reduce widespread pain whilst boosting mitochondrial energy production throughout your body. Consistency is crucial for fibromyalgia—regular sessions help recalibrate your nervous system more effectively than sporadic use.</div>
+        <div class="pc-tip">Tip: Morning sessions are ideal for fibromyalgia fatigue. Red and NIR light mirrors sunrise wavelengths, supporting your circadian rhythm and energy production when you need it most. Avoid late sessions (within 2 hours of bed) as the stimulating effect may interfere with the sleep support protocol listed separately.</div>
+        <div><span class="badge">✦ Results visible: 4–8 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Lower Back Pain & Joint Inflammation</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower back &amp; ankles</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Position the SOLO 2.0 close (10 cm) to your lower back for 15 minutes daily to target spinal pain and inflammatory compounds. For ankle treatment, hold the panel 10 cm from each affected ankle for 5 minutes (can be combined in the same session). The close distance maximises penetration to deep joint capsules and surrounding tissue where chronic inflammation persists. This daily protocol interrupts the pain cycle more effectively than sporadic sessions.</div>
+        <div class="pc-tip">Tip: Use this protocol right after standing or walking tasks when pain is elevated. The enhanced circulation and reduced inflammation will support improved mobility during your next activity. For swelling, the NIR wavelengths will improve lymphatic drainage, gradually reducing the persistent fluid retention in your feet and ankle.</div>
+        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Fat Loss & Muscle Recovery</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Abdomen &amp; legs</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Use the panel right before exercise, targeting your abdomen and upper legs (the most stubborn fat storage areas) for 20 minutes at 15 cm distance. This mobilises stored fat before your workout, making it available fuel for your body to burn during activity. Post-workout, treat the same areas for another 10 minutes (can extend the session or do separately) to accelerate recovery, reduce DOMS, and prevent new stretch marks during weight loss. The enhanced cellular energy supports efficient fat mobilisation while preserving lean muscle.</div>
+        <div class="pc-tip">Tip: Timing matters for fat loss—use pre-workout sessions 10–15 minutes before exercise for maximum fat mobilisation effect. Post-workout, treat within 1 hour while muscle tissue is primed for recovery. Combined with your exercise routine and nutrition, this protocol accelerates fat loss from treated areas while maintaining muscle quality and skin elasticity.</div>
+        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Scalp Health &amp; Hair Restoration</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Scalp (parted sections)</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Because you have very long, thick hair, divide your scalp into sections and part your hair in different areas across multiple sessions. For example: treat the crown/parting area one day, then part the hair differently to expose side sections and hairline areas on another session. This ensures light reaches all follicles and affected scalp areas (the scabs, itching zones, and thinning/receding areas) with direct skin contact. Close positioning (10 cm) is essential for effective scalp penetration. Each parting should receive direct light for the full 10 minutes.</div>
+        <div class="pc-tip">Tip: Do scalp treatments on days you would normally wash your hair anyway—you can shampoo afterwards if desired. The light works best on clean scalp without product buildup. For long hair management, use clips or a loose ponytail to keep hair out of the way while treating specific sections. Consistency is crucial for hair restoration—visible results require regular, dedicated scalp exposure for 12–20 weeks.</div>
+        <div><span class="badge">✦ Results visible: 12–20 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Skin Rejuvenation & Pigmentation</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">2–3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Sit facing the panel with clean, bare skin at 30 cm distance. This distance provides even coverage of your entire face without over-saturation. Close your eyes or use the included goggles. For your Lichen Simplex Chronicus patch on your chin, the light works to stimulate collagen remodelling and reduce the inflammatory response that maintains the leathery appearance. For hyperpigmentation, improved microcirculation and cellular turnover gradually even out uneven tone. Existing stretch marks and overall skin texture improve through the same collagen-stimulation mechanism.</div>
+        <div class="pc-tip">Tip: Apply serums or moisturiser immediately after sessions—your skin absorbs active ingredients more effectively post-treatment. For the chin patch specifically, consistency matters; regular sessions help normalise the tissue structure more effectively than sporadic use.</div>
+        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Sleep Quality &amp; Hormonal Balance</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm+</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Evening only</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Use ONLY in the evening, 1–2 hours before bed. Position the panel 30 cm or further from your face, with eyes closed or using the included goggles. This evening exposure stimulates your pineal gland to produce melatonin naturally, signalling "sunset" to your brain and initiating your natural wind-down. The red wavelengths support circadian rhythm regulation and hormonal balance without the circadian disruption caused by blue light. This protocol specifically supports better sleep onset, improved sleep efficiency, and more restorative phases.</div>
+        <div class="pc-tip">Tip: Keep this strictly to evening-only use (no morning sessions on the same day). The timing is critical—using red light in the morning supports energy and fibromyalgia recovery, but evening use supports sleep. Never combine morning and evening sessions on the same day, as the energy-boosting effect may counteract sleep support. If you use the morning fibromyalgia protocol, choose evening sleep protocol on separate days or alternate days.</div>
+        <div><span class="badge">✦ Results: 3–7 days</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s6">
+    <div class="pg">
+      <div class="pg-label">Practical questions</div>
+      <div class="pg-title">Getting started</div>
+      <hr class="pink-rule">
+      <div class="faq">
+        <h3>What time of day should I use my Solis SOLO 2.0?</h3>
+        <p>Timing depends on your specific goals, Vaarsha. For fibromyalgia pain management and energy boost, morning sessions (within 2 hours of waking) mirror natural sunrise wavelengths and support your circadian rhythm—critical when chronic fatigue is a major issue. For muscle recovery and fat loss, pre-workout or immediate post-workout sessions are most effective. For sleep support and hormonal balance, use red light only in the evening, 1–2 hours before bed—this is crucial for circadian alignment. Never use evening red light and morning red light on the same day, as the morning energy-boosting effect can interfere with sleep quality. Instead, alternate: morning sessions on some days, evening sessions on others, or separate them by at least 10 hours.</p>
+      </div>
+      <div class="faq">
+        <h3>Why can't I see all the lights?</h3>
+        <p>Your SOLO 2.0 has 30 NIR (near-infrared) LEDs that emit at 810nm, 830nm, and 850nm—these wavelengths are completely invisible to the human eye. The NIR lights are working just as powerfully beneath the surface, penetrating deeper into muscle, joint tissue, and bone where your pain and inflammation originate. Point a smartphone camera at the panel to see a faint purple glow confirming they're active. For your fibromyalgia, joint inflammation, and scalp treatment, those invisible NIR wavelengths are doing much of the therapeutic work.</p>
+      </div>
+      <div class="faq">
+        <h3>Why are the distances and session times different for each benefit?</h3>
+        <p>Red light therapy works by delivering a specific dose of light energy to your tissue — and like any dose, getting it right depends on the target.</p>
+        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, spine), you generally want to be closer to maximise penetration. For surface-level concerns (skin, scalp activation), a slightly greater distance can allow even coverage without oversaturation.</p>
+        <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can often be shorter for the same effect.</p>
+        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or pain protocol. Your fibromyalgia requires consistent, moderate dosing to recalibrate your nervous system without overstimulation; your back pain needs concentrated, deeper penetration; and your scalp needs close, direct contact to reach follicles through your thick hair.</p>
+        <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription — the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
+      </div>
+      <div class="faq">
+        <h3>Should I use goggles with red light therapy?</h3>
+        <p>Goggles are not required — red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
+        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
+        <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
+        <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
+      </div>
+      <div class="faq">
+        <h3>Do I need to expose bare skin during treatment?</h3>
+        <p>Yes — for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption. For your scalp treatment with long, thick hair, parting the hair to expose the scalp directly is essential for the light to reach follicles and skin. For facial treatment, cleanse your face before sessions.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s7">
+    <div class="pg">
+      <div class="pg-label">Going further</div>
+      <div class="pg-title">How else can it help you?</div>
+      <hr class="pink-rule">
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
+      <div class="ben"><div class="ben-lbl">Wound healing</div><div class="ben-txt">Red light accelerates tissue repair by stimulating collagen synthesis and reducing inflammation, helping minor cuts, scrapes, or scars heal faster and with less visible scarring—particularly important as you manage the Lichen Simplex Chronicus patch and existing stretch marks.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout your body, supporting recovery and overall cellular health. For your ankle swelling and fluid retention, enhanced circulation will gradually improve lymphatic drainage and reduce persistent puffiness.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses. This is particularly valuable for your fibromyalgia-related low immunity and tendency to catch illnesses easily.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; depression</div><div class="ben-txt">Red light enhances mitochondrial function in neurons responsible for mood regulation, providing more ATP for neurotransmitter production. Many users report improved mood and reduced depression symptoms within the first few weeks, addressing the cognitive symptoms that accompany your fibromyalgia diagnosis.</div></div>
+      <div class="ben"><div class="ben-lbl">Cognitive clarity</div><div class="ben-txt">Enhanced cellular energy and reduced neuroinflammation support executive function, memory recall, focus and mental clarity—directly addressing the brain fog and concentration issues you experience with fibromyalgia and chronic fatigue.</div></div>
+      <hr class="rule">
+      <div class="pg-label" style="margin-bottom:16px">Research</div>
+      <div class="ref"><div class="ref-auth">Yeh et al. (2019)</div><div class="ref-body">RLT significantly effective in improving pain scores, "fibro-fog," and quality of life with approximately 95% of fibromyalgia patients showing measurable improvements. <em>Rheumatology International.</em></div></div>
+      <div class="ref"><div class="ref-auth">Hamblin et al. (2023)</div><div class="ref-body">31.6% of fibromyalgia participants improved so significantly that they no longer met diagnostic criteria for the condition after 6 weeks of treatment. <em>Brain Sciences.</em></div></div>
+      <div class="ref"><div class="ref-auth">Hamblin et al. (2019)</div><div class="ref-body">Red light was superior to sham treatments for relieving arthritic-related joint pain, with 70% decrease in pain and 38% improvement in morning stiffness after 4 weeks. <em>BMC Musculoskeletal Disorders.</em></div></div>
+      <div class="ref"><div class="ref-auth">Jackson et al. (2011)</div><div class="ref-body">Combining red light therapy with exercise led to 444% more fat loss in treated areas compared to exercise alone over 20 weeks. <em>Obesity Research.</em></div></div>
+      <div class="ref"><div class="ref-auth">Lanzafame et al. (2013)</div><div class="ref-body">After 16 weeks of treatment, participants saw 35–39% increase in hair counts. Combined with scalp inflammation reduction for eczema/psoriasis cases. <em>Lasers in Surgery and Medicine.</em></div></div>
+    </div>
+  </div>
+
+  <div class="slide" id="s8">
+    <div class="pg">
+      <div class="pg-label">Important information</div>
+      <div class="pg-title">Disclaimer</div>
+      <hr class="pink-rule">
+      <div class="disc-box">
+        <p>This guide is intended to help you make the most of your red light therapy device based on general recommendations and your specific wellness goals. It is not intended to replace professional medical advice, diagnosis, or treatment. Red light therapy is a complementary wellness practice and should not be used as a substitute for conventional medical care.</p>
+        <p>If you have any serious, ongoing, or diagnosed medical conditions — including but not limited to cancer, epilepsy, active infections, photosensitivity disorders, or if you are pregnant, breastfeeding, taking photosensitising medications, or have recently undergone surgery — please consult your GP or a qualified healthcare professional before beginning use.</p>
+        <p>Do not use your Solis device directly over the eyes, on open wounds, or over areas of active infection. Results vary between individuals. Always follow the safety instructions provided with your device.</p>
+      </div>
+      <hr class="rule">
+      <div class="pg-label" style="margin-bottom:10px">Your additional questions answered</div>
+      <div class="faq" style="border-bottom:1px solid #1e1e1e;padding-bottom:20px">
+        <h3>Sauna Pairing: How to safely combine with your Solis SOLO</h3>
+        <p><strong>Timing:</strong> Use red light therapy BEFORE sauna sessions, not after. Here's why: Sauna heat dilates blood vessels and raises core body temperature. Red light therapy also enhances blood flow. Using both simultaneously can cause excessive vasodilation and overheating, potentially reducing the benefits of both therapies and causing discomfort, especially with fibromyalgia fatigue.</p>
+        <p style="margin-top:10px"><strong>Optimal protocol:</strong> Do your red light therapy first (10–20 minutes depending on the goal), then wait 15–30 minutes before entering the sauna. This spacing allows your body to process the light stimulus while avoiding overlap of intense circulatory demands.</p>
+        <p style="margin-top:8px"><strong>Frequency:</strong> On days you use your sauna pod, choose ONE therapy to prioritise. For example: Monday RLT + sauna, Wednesday RLT alone, Friday RLT + sauna. This prevents cumulative overstimulation while maintaining therapeutic benefit.</p>
+        <p style="margin-top:8px"><strong>Hydration:</strong> Sauna increases fluid loss. If combining therapies, increase water intake before and after to support optimal recovery and prevent dehydration-related fatigue worsening your fibromyalgia symptoms.</p>
+      </div>
+      <div class="faq" style="border-bottom:1px solid #1e1e1e;padding-bottom:20px">
+        <h3>Red Light Massager Pairing: Coordinating with your SOLO 2.0</h3>
+        <p><strong>Strategy:</strong> Use the handheld red light massager for targeted, intensive treatment of specific problem areas (painful joints, muscle knots, tight spots), and use the SOLO 2.0 for broader systemic or area-based treatment. Don't treat the same spot with both devices on the same day—this risks overdosing that specific tissue.</p>
+        <p style="margin-top:10px"><strong>Sample rotation:</strong> Monday: SOLO 2.0 for fibromyalgia pain (chest/torso). Tuesday: Handheld massager for lower back or ankle inflammation. Wednesday: SOLO 2.0 for scalp. Thursday: Handheld for specific joint tightness or trigger point. Friday: SOLO 2.0 for fat loss and recovery. This rotation ensures comprehensive coverage without overtreatment.</p>
+        <p style="margin-top:8px"><strong>Intensity consideration:</strong> Handheld massagers typically operate at close distance and higher intensity. Use for 5–10 minutes per area. The SOLO 2.0 at the recommended distances provides gentler, broader stimulation. Together, they offer both targeted and systemic benefit without overlap.</p>
+      </div>
+      <div class="faq" style="border-bottom:1px solid #1e1e1e;padding-bottom:20px">
+        <h3>Maximising Full-Body Benefits Without Overdoing It</h3>
+        <p><strong>Your challenge:</strong> You have deep-tissue pain goals, surface skin goals, and systemic energy needs, all while managing fibromyalgia fatigue that requires careful pacing. The key is strategic sequencing and rotating focus areas.</p>
+        <p style="margin-top:10px"><strong>Weekly structure (sample):</strong></p>
+        <p style="margin-top:8px"><strong>Monday:</strong> Morning: Fibromyalgia protocol (chest/torso, 10 min). Evening: Sleep protocol (face, 15 min). — MAXIMUM coverage, two different goals.</p>
+        <p style="margin-top:8px"><strong>Tuesday:</strong> Lower back &amp; ankle protocol (10 cm, 15 min). No other RLT this day—allow recovery.</p>
+        <p style="margin-top:8px"><strong>Wednesday:</strong> Scalp protocol (10 cm, 10 min, parted section 1). No other RLT.</p>
+        <p style="margin-top:8px"><strong>Thursday:</strong> Pre-workout fat loss protocol (abdomen/legs, 15 cm, 20 min). — Timing to exercise.</p>
+        <p style="margin-top:8px"><strong>Friday:</strong> Skin rejuvenation protocol (face, 30 cm, 10 min). No other RLT.</p>
+        <p style="margin-top:8px"><strong>Saturday/Sunday:</strong> Rest from RLT or choose one protocol based on how you're feeling. Listen to your body—fibromyalgia benefits from consistency, but overtreatment can trigger flares.</p>
+        <p style="margin-top:10px"><strong>Critical principle:</strong> You can combine morning fibromyalgia + evening sleep on the same day (different body areas, opposite time), but never layer multiple treatments on the same body area in one day. Total weekly exposure across your body should build gradually—start with 3–4 protocols per week, assess how you feel after 2 weeks, then add more if tolerated.</p>
+      </div>
+      <div class="faq" style="border-bottom:1px solid #1e1e1e;padding-bottom:20px">
+        <h3>Long Hair Application: Treating Your Scalp Effectively</h3>
+        <p><strong>The challenge:</strong> Your extremely long, thick hair blocks light from reaching your scalp. Direct skin contact is essential.</p>
+        <p style="margin-top:10px"><strong>Technique:</strong> Divide your scalp into 4–5 sections. Use claw clips or hair ties to secure most of your hair out of the way, exposing one section at a time. For example:</p>
+        <p style="margin-top:8px"><strong>Section 1 (Crown/top parting):</strong> Part hair down the middle from forehead to nape, secure sides with clips. Treat the exposed middle stripe for 10 minutes.</p>
+        <p style="margin-top:8px"><strong>Section 2 (Left side):</strong> Part hair to the right, exposing left side from temple to ear to back. Treat for 10 minutes.</p>
+        <p style="margin-top:8px"><strong>Section 3 (Right side):</strong> Part hair to the left, exposing right side similarly.</p>
+        <p style="margin-top:8px"><strong>Section 4 (Nape/back):</strong> Tie or clip most hair up high, treat the back scalp area.</p>
+        <p style="margin-top:10px"><strong>Frequency:</strong> Do one section per session, 3–4 times per week. This means you're exposing all scalp areas 3–4 times per week total (each area covered once per session rotation), which is optimal for hair restoration without overwhelming your fibromyalgia fatigue.</p>
+        <p style="margin-top:8px"><strong>Positioning:</strong> Hold the SOLO 2.0 10 cm from the scalp, angled slightly to ensure even coverage. The panel's size means you can treat a decent area in one session, so 10-minute rotations work well.</p>
+        <p style="margin-top:8px"><strong>Practical tip:</strong> Do scalp treatments after showering when your hair is clean but still damp (not soaking)—the moisture helps position your hair out of the way more easily, and cleaner scalp maximises light penetration.</p>
+      </div>
+      <div class="faq" style="border-bottom:1px solid #1e1e1e;padding-bottom:20px">
+        <h3>Family Safety & Routine Timing With Your 2-Year-Old</h3>
+        <p><strong>Eye safety:</strong> Red and NIR light are not harmful to eyes at the distances you'll use, but the brightness can be uncomfortable. Keep the SOLO 2.0 out of your son's direct line of sight during sessions. The included goggles are for your comfort, not essential protection, but do use them if it makes you feel more secure. Teach your son that the panel is "mummy's light" and not a toy. The device doesn't get hot enough to cause burns, but it's still not child-appropriate play.</p>
+        <p style="margin-top:10px"><strong>Proximity safety:</strong> The SOLO 2.0 is non-toxic and produces 0 EMF at 3+ inches. Your son can be in the same room during your sessions—he's completely safe. However, the light is intense, so if he looks directly at it repeatedly, the brightness might bother his eyes (same as looking at a bright lamp). No damage occurs, but it's uncomfortable.</p>
+        <p style="margin-top:8px"><strong>Routine efficiency:</strong> Schedule your RLT sessions during his nap time or after bedtime. For example: His bedtime 7:30 PM → You do your evening sleep protocol 8:00–8:15 PM (while he's asleep). Morning: His breakfast time → You do your morning fibromyalgia protocol while he eats (he's occupied, you're nearby but focused). This keeps your routine efficient without requiring childcare and minimises the temptation for him to explore the device.</p>
+        <p style="margin-top:8px"><strong>Storage:</strong> Store the panel in a closed cupboard or shelf he can't access. It's sturdy and non-toxic, but it's expensive equipment and a curious toddler could damage the cable or LEDs.</p>
+      </div>
+      <div class="faq" style="border-bottom:1px solid #1e1e1e;padding-bottom:20px">
+        <h3>Maximum Daily Exposure & Workout Timing</h3>
+        <p><strong>Total daily limit:</strong> There is no strict "maximum" for red light therapy, but 60–90 minutes total per day across all sessions is a sensible guideline for optimal results without risk of diminishing returns. The biphasic dose-response principle means too much reduces effectiveness, not because of toxicity, but because your cells reach saturation and stop responding as efficiently.</p>
+        <p style="margin-top:10px"><strong>Your situation (pre-workout + post-workout on same day):</strong> YES, you can safely do red light therapy during your workout and again post-workout on the same day, but here's how to structure it:</p>
+        <p style="margin-top:8px"><strong>Pre-workout (10–15 minutes before exercise):</strong> Abdomen/legs protocol at 15 cm for 20 minutes to mobilise fat. This is distinct from your post-workout recovery window.</p>
+        <p style="margin-top:8px"><strong>Post-workout (within 1 hour of exercise):</strong> Treat the same areas (abdomen/legs) for another 10 minutes at 15 cm, OR treat different areas (lower back, ankles) for 15 minutes at 10 cm for inflammation/pain relief. The key is not exceeding 60 minutes total on that body area in one day.</p>
+        <p style="margin-top:8px"><strong>Total on workout day:</strong> 20 min pre + 10–15 min post = 30–35 minutes focused on fat loss and recovery. Add your morning fibromyalgia protocol (10 min) = ~45 minutes total. This is well within safe limits and won't cause overexposure.</p>
+        <p style="margin-top:10px"><strong>Benefits of same-day pairing:</strong> Pre-workout red light prepares tissue, mobilises fat, and enhances mitochondrial energy for performance. Post-workout accelerates recovery, reduces soreness, and minimises inflammation—they're complementary, not redundant. Research shows this pairing actually enhances fat loss compared to either protocol alone.</p>
+        <p style="margin-top:8px"><strong>Caution for fibromyalgia:</strong> Do NOT do your morning fibromyalgia protocol + evening sleep protocol + workout protocols on the same day. That's ~55 minutes of RLT plus intense exercise, which could trigger a fibromyalgia flare from overstimulation. Instead, on heavy workout days, skip the morning fibromyalgia protocol and use the evening sleep protocol separately. Rotate: workout days focus on fat loss/recovery; rest days include fibromyalgia and sleep protocols.</p>
+      </div>
+    </div>
+  </div>
+
+<script>
+function show(n){
+  document.querySelectorAll('.slide').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('on'));
+  document.getElementById('s'+n).classList.add('on');
+  document.querySelectorAll('.nav button')[n-1].classList.add('on');
+}
+</script>
+</body>
+</html>
