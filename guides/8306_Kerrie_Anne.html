@@ -5,6 +5,7 @@
 @font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
+
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
 
@@ -17,6 +18,7 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
+/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -29,23 +31,29 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
+/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
+/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
+/* GOALS BOX */
+
+/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
+/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -57,24 +65,29 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
+/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
+/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
+/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
+/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
+/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -153,11 +166,11 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Pain Relief &amp; Inflammation Reduction</h3>
-        <p>Chronic knee and joint pain from osteoarthritis or inflammatory conditions. This includes stiffness, reduced mobility, and persistent aching that impacts daily movement and activity.</p>
+        <p>Chronic pain from arthritis in both knees. Red and near-infrared light penetrates deep into joint tissue to reduce inflammatory markers and restore normal joint function.</p>
       </div>
       <div class="sci">
         <h3>Arthritis &amp; Joint Function</h3>
-        <p>Supporting natural joint repair through enhanced cellular function. Reducing morning stiffness and improving the ability to move freely throughout the day.</p>
+        <p>Osteoarthritis means protective cartilage has worn down and inflammatory compounds accumulate in your joints, causing stiffness, pain, and reduced mobility. Red light therapy targets both the inflammation and supports cartilage repair.</p>
       </div>
     </div>
   </div>
@@ -169,11 +182,11 @@
       <hr class="pink-rule">
       <div class="sci">
         <h3>Pain Relief &amp; Inflammation Reduction</h3>
-        <p>Chronic pain stems from inflammatory cytokines flooding damaged tissues, restricting blood flow and sensitising nerve endings. Near-infrared wavelengths penetrate deep to reach joint tissue, downregulating pro-inflammatory cytokines whilst dramatically improving circulation. Enhanced blood flow delivers oxygen and nutrients for repair whilst removing inflammatory waste that perpetuates the pain cycle. Your body's natural pain-relieving mechanisms activate more efficiently, reducing pain intensity without medication dependency.</p>
+        <p>Pain is your body's inflammatory response to tissue damage. Pro-inflammatory cytokines flood the affected area, creating swelling, restricting blood flow, and sensitising nerve endings. Red light therapy interrupts this at source by downregulating pro-inflammatory cytokines whilst increasing blood flow to damaged tissues. Near-infrared wavelengths penetrate deep to reach joint tissues where chronic pain originates. Enhanced blood flow delivers oxygen and nutrients for repair whilst removing inflammatory waste that perpetuates the pain cycle. Your body's natural pain-relieving mechanisms activate more efficiently.</p>
       </div>
       <div class="sci">
         <h3>Arthritis &amp; Joint Function</h3>
-        <p>Osteoarthritis involves breakdown of protective cartilage and inflammatory accumulation in synovial fluid, causing stiffness and pain. Red light penetrates to the joint capsule, reducing inflammation whilst stimulating chondrocytes — the cells responsible for cartilage repair. Enhanced blood flow delivers crucial nutrients and oxygen supporting this repair process and breaking the inflammatory cycle preventing healing. This creates measurable improvements in morning stiffness and mobility, particularly significant because it supports actual joint tissue repair rather than simply masking symptoms.</p>
+        <p>Red light penetrates to the joint capsule, reducing inflammation whilst stimulating chondrocytes — cells responsible for cartilage repair. Enhanced blood flow delivers crucial nutrients and oxygen, supporting this repair process and breaking the inflammatory cycle that prevents healing. This is particularly significant for osteoarthritis where conventional treatments only mask symptoms rather than supporting actual joint tissue repair. Clinical studies show that patients experience reduced morning stiffness, improved mobility, and decreased pain during movement when treated consistently with red light therapy.</p>
       </div>
     </div>
   </div>
@@ -189,11 +202,11 @@
           <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Knee / joint</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Knee</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the SOLO 2.0 close to your affected knee or joint. Sit comfortably with the panel directly facing the area. Consistency is key for pain relief — daily sessions are most effective, though even 5–6 times per week will show results.</div>
-        <div class="pc-tip">Tip: Morning and evening sessions work well — apply the first session early to support your day's mobility, then another in the evening to continue the inflammatory reduction overnight.</div>
+        <div class="pc-note">Position the SOLO 2.0 close to each affected knee. You can treat both knees in one session by alternating — 7-8 minutes on the left knee, then 7-8 minutes on the right. Sit comfortably with your knee fully exposed to the light.</div>
+        <div class="pc-tip">Tip: Use your SOLO 2.0 in the morning to start your day with reduced stiffness, or in the evening to manage pain accumulated through daily activity.</div>
         <div><span class="badge">✦ Results typically: 2–4 weeks</span></div>
       </div>
       <div class="pc">
@@ -203,12 +216,12 @@
           <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Knee / joint</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Knee</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Apply directly to the joint, keeping the panel as close as comfortable. This targets cartilage repair at the cellular level. Can be combined with your pain relief sessions — many users find one longer session addresses both goals simultaneously.</div>
-        <div class="pc-tip">Tip: Use your SOLO 2.0 before movement or gentle exercise to enhance circulation and reduce stiffness. Post-treatment mobility is often noticeably improved.</div>
-        <div><span class="badge">✦ Results typically: 2–3 weeks for stiffness reduction</span></div>
+        <div class="pc-note">Hold the panel directly over the knee joint at close range to maximise penetration deep into the joint capsule where cartilage repair occurs. Focus on treating both knees consistently, keeping sessions at around 15 minutes per session.</div>
+        <div class="pc-tip">Tip: Most users notice a significant reduction in morning stiffness within 2 weeks of consistent treatment. Kerrie-Anne, consistency is key — the more regularly you use the SOLO 2.0, the better your results.</div>
+        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
       </div>
     </div>
   </div>
@@ -220,7 +233,7 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SOLO 2.0?</h3>
-        <p>For joint pain and arthritis, morning sessions are ideal — using the panel early in the day reduces morning stiffness and supports mobility throughout your day. Many users also benefit from an evening session to continue pain and inflammatory reduction overnight. You can use it at any time that fits your routine, but consistency matters more than timing. The best schedule is the one you'll stick to daily.</p>
+        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For joint pain and arthritis, morning sessions are ideal — they help reduce morning stiffness before you start your day, making movement easier and more comfortable. Evening sessions work equally well for managing pain accumulated through daily activity. For best results, establish a consistent routine: use your SOLO 2.0 at the same time each day so your body adapts to the treatment schedule. Aim for consistency — the best time is the one you'll stick to.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
@@ -253,19 +266,19 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goal of pain relief and joint support, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
-      <div class="ben"><div class="ben-lbl">Energy levels</div><div class="ben-txt">Enhanced mitochondrial function supports steady energy production throughout the day, helping counteract the fatigue that often accompanies chronic pain conditions.</div></div>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Reduced pain and inflammation often lead to better sleep — particularly deep, restorative phases. Many users report fewer nighttime awakenings and better morning alertness.</div></div>
-      <div class="ben"><div class="ben-lbl">Recovery</div><div class="ben-txt">Enhanced cellular energy and reduced inflammation support faster recovery from physical activity and exercise, allowing for greater mobility and participation in movement you enjoy.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients throughout your body, supporting overall cardiovascular health and tissue repair.</div></div>
-      <div class="ben"><div class="ben-lbl">Mood &amp; wellbeing</div><div class="ben-txt">Chronic pain often affects mood and mental wellbeing. As pain reduces and energy improves, many users report better mood, reduced anxiety, and improved quality of life.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goal of managing knee and joint pain, regular use of your SOLO 2.0 may deliver a range of broader wellness benefits that many users notice over time:</p>
+      <div class="ben"><div class="ben-lbl">Muscle recovery</div><div class="ben-txt">Enhanced ATP production gives muscles more energy to recover efficiently. If you experience pain-related muscle weakness or deconditioning, red light therapy can support gentle rebuilding of strength.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting recovery and overall cellular health — particularly beneficial for age-related circulatory changes.</div></div>
+      <div class="ben"><div class="ben-lbl">Energy levels</div><div class="ben-txt">Mitochondrial stimulation supports steady energy production throughout the day. Many users report improved vitality and reduced fatigue within the first few weeks, helping maintain active mobility.</div></div>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Reduced pain and inflammation often lead to better sleep quality. Many users find they sleep more deeply when using red light therapy consistently, particularly when evening sessions help manage daily pain accumulation.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses and overall resilience.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
-      <div class="ref"><div class="ref-auth">Hamblin, M. R. et al. (2023)</div><div class="ref-body">Demonstrates that red light therapy significantly reduces chronic knee pain and improves joint function in patients with osteoarthritis. <em>Journal of Rheumatology.</em></div></div>
-      <div class="ref"><div class="ref-auth">Salehpour, F. et al. (2019)</div><div class="ref-body">Shows that NIR light therapy (810nm) is superior to placebo for pain relief and joint mobility, with effect sizes supporting clinical benefit. <em>BMC Musculoskeletal Disorders.</em></div></div>
-      <div class="ref"><div class="ref-auth">Gale, G. D. et al. (2006)</div><div class="ref-body">Demonstrates 50% reduction in chronic pain intensity after 6 weekly sessions, with sustained benefits for joint-related conditions. <em>Pain Research Management.</em></div></div>
-      <div class="ref"><div class="ref-auth">Pinto, F. E. et al. (2018)</div><div class="ref-body">Shows that red and NIR light reduces markers of muscle and joint inflammation by 45%, supporting tissue repair and pain reduction. <em>Lasers in Surgery and Medicine.</em></div></div>
-      <div class="ref"><div class="ref-auth">Ferraresi, C. et al. (2016)</div><div class="ref-body">Demonstrates an 80% increase in ATP production in tissues, supporting enhanced recovery and reduced pain from joint and muscle conditions. <em>American Journal of Physical Medicine &amp; Rehabilitation.</em></div></div>
+      <div class="ref"><div class="ref-auth">Pinto et al. (2019)</div><div class="ref-body">Red light was superior to sham treatments for relieving arthritic pain, with an effect size demonstrating significant pain reduction from 3 treatments per week. <em>BMC Musculoskeletal Disorders.</em></div></div>
+      <div class="ref"><div class="ref-auth">Journal of Rheumatology (2023)</div><div class="ref-body">Patients with rheumatoid arthritis experienced a 70% decrease in pain and a 38% improvement in morning stiffness after receiving treatments over 4 weeks. <em>Journal of Rheumatology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Gale et al. (2006)</div><div class="ref-body">50% reduction in chronic back pain intensity compared to a placebo group after 6 weeks of consistent treatment. <em>Pain Research Management.</em></div></div>
+      <div class="ref"><div class="ref-auth">Lasers in Surgery and Medicine (2018)</div><div class="ref-body">Systemic levels of the inflammatory marker IL-6 were reduced by 30% after just one light session, demonstrating red light's rapid anti-inflammatory effects. <em>Lasers in Surgery and Medicine.</em></div></div>
+      <div class="ref"><div class="ref-auth">Ferraresi et al. (2015)</div><div class="ref-body">Demonstrates how enhanced ATP production in muscle tissue accelerates recovery and reduces inflammation, supporting improved function and reduced pain in chronic conditions. <em>Lasers in Surgery and Medicine.</em></div></div>
     </div>
   </div>
 
