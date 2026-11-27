@@ -5,7 +5,6 @@
 @font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-bold.woff2') format('woff2')}
 @font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
 
-
 *{box-sizing:border-box;margin:0;padding:0}
 .g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
 
@@ -18,7 +17,6 @@
 .slide.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* COVER — solid black */
 .cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
 .cover-logo{margin-bottom:52px}
 .cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
@@ -31,29 +29,23 @@
 .chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .chk-dot svg{width:11px;height:11px}
 
-/* INNER PAGES */
 .pg{background:#0d0d0d;padding:32px 36px 40px}
 .pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
 .pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
 .pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
 .rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
 
-/* SPEC TABLE */
 .specs{width:100%;border-collapse:collapse;margin-bottom:22px}
 .specs tr:nth-child(odd) td{background:#141414}
 .specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
 .specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
 .specs td:last-child{color:#fff}
 
-/* GOALS BOX */
-
-/* SCIENCE */
 .sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
 .sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .sci p{font-size:13px;line-height:1.7;color:#fff}
 
-/* PROTOCOL CARDS */
 .pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
 .pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
 .pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
@@ -65,29 +57,24 @@
 .pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
 .badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
 
-/* FAQS */
 .faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
 .faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
 .faq p{font-size:13px;line-height:1.7;color:#fff}
 
-/* BENEFITS */
 .ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
 .ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
 .ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
 
-/* REFS */
 .ref{margin-bottom:14px;padding-left:16px;position:relative}
 .ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
 .ref-auth{font-size:13px;font-weight:600;color:#fff}
 .ref-body{font-size:13px;line-height:1.7;color:#fff}
 
-/* DISCLAIMER */
 .disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
 .disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
 .disc-box p:last-child{margin-bottom:0}
 
-/* CLOSING */
 .closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
 .c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
@@ -165,28 +152,28 @@
       <div class="pg-title">Your health &amp; wellness goals</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Anti-Ageing &amp; Fine Lines</h3>
-        <p>Your primary concern. Hormone therapy and cancer medication can accelerate visible skin ageing—reduced collagen production, fine lines, and loss of firmness. Red light therapy directly stimulates collagen synthesis in the dermis to restore skin structure and reduce wrinkle depth.</p>
+        <h3>Anti-Ageing &amp; Skin Rejuvenation</h3>
+        <p>Addressing fine lines, wrinkles, and loss of skin firmness. Red and near-infrared light penetrate the dermis to stimulate collagen and elastin production, restoring the skin's structural support and improving texture over time.</p>
       </div>
       <div class="sci">
         <h3>Acne &amp; Breakouts</h3>
-        <p>Cancer medication side effects often include hormonal acne. This involves overactive sebaceous glands and deep inflammation creating painful, scarring breakouts. Red light penetrates to calm inflammatory responses and regulate oil production without harsh topicals or antibiotics.</p>
+        <p>Managing inflammatory acne and breakouts by reducing oil production and calming deep inflammation without the irritation of harsh topicals.</p>
       </div>
       <div class="sci">
         <h3>Rosacea &amp; Redness</h3>
-        <p>Medication can trigger persistent facial redness and sensitivity. This stems from hyper-reactive blood vessels and inflammation. Red light therapy balances inflammatory responses and calms reactive blood vessel responses, reducing erythema and burning sensations.</p>
+        <p>Reducing persistent facial redness and sensitivity by calming reactive blood vessels and balancing inflammatory responses in skin tissue.</p>
       </div>
       <div class="sci">
         <h3>Skin Texture &amp; Glow</h3>
-        <p>Accelerated cellular turnover and improved microcirculation from red light therapy restores luminosity, evens tone, and creates the radiant, smooth skin texture that medication side effects have compromised.</p>
+        <p>Improving microcirculation and cellular turnover to even out tone, refine pores, and restore radiance to your complexion.</p>
       </div>
       <div class="sci">
-        <h3>Muscle Tension &amp; Joint Stiffness</h3>
-        <p>Cancer treatment and neuropathy can cause aching joints and muscle tension. Near-infrared light penetrates deep to reduce inflammatory compounds in joint tissue, enhance cellular energy for repair, and support pain relief without additional medications.</p>
+        <h3>Collagen &amp; Elasticity</h3>
+        <p>Directly stimulating fibroblasts to produce fresh collagen and elastin, restoring firmness and improving skin's overall resilience and bounce.</p>
       </div>
       <div class="sci">
-        <h3>Neuropathy &amp; Nerve-Related Symptoms</h3>
-        <p>Cancer medication can damage peripheral nerves, causing burning sensations, numbness, and itching in the feet. Near-infrared light stimulates nerve regeneration, improves blood flow to affected areas, and reduces pain signal sensitisation.</p>
+        <h3>Muscle Tension &amp; Tightness</h3>
+        <p>Reducing muscle tension and stiffness through enhanced ATP production and improved circulation, supporting recovery and mobility.</p>
       </div>
     </div>
   </div>
@@ -197,28 +184,28 @@
       <div class="pg-title">How red light therapy helps</div>
       <hr class="pink-rule">
       <div class="sci">
-        <h3>Anti-Ageing &amp; Fine Lines</h3>
-        <p>Red and near-infrared wavelengths penetrate the dermis to activate fibroblasts — the cells responsible for producing collagen and elastin. This directly reduces the appearance of fine lines and wrinkles, improves skin firmness, and restores a more youthful texture. For medication-accelerated ageing, this cellular stimulation essentially "resets" skin's collagen production. Enhanced circulation from NIR exposure delivers more nutrients to skin cells, accelerating the natural repair and renewal cycle that cancer treatment may have slowed.</p>
+        <h3>Anti-Ageing &amp; Skin Rejuvenation</h3>
+        <p>Red and near-infrared wavelengths penetrate the dermis to stimulate fibroblasts—the cells responsible for producing collagen and elastin. This directly reduces the appearance of fine lines and wrinkles, improves skin firmness, and restores a more youthful texture. Enhanced circulation from NIR exposure delivers more nutrients to skin cells, accelerating the natural repair and renewal cycle.</p>
       </div>
       <div class="sci">
         <h3>Acne &amp; Breakouts</h3>
-        <p>Red light penetrates to the sebaceous glands where it downregulates excess oil production whilst modulating inflammatory responses, calming angry, painful spots from within. The 660nm wavelength is particularly effective at reducing the inflammatory cytokines that drive medication-induced acne. Unlike harsh topicals that strip skin or antibiotics that disrupt your microbiome, red light addresses deep inflammation without damage, allowing your skin to regulate itself properly whilst recovering from treatment side effects.</p>
+        <p>Red light penetrates to the sebaceous glands where it downregulates excess oil production whilst modulating inflammatory responses, calming angry, painful spots from within. Unlike harsh topicals that strip skin, red light addresses inflammation without damage, allowing faster healing with reduced scarring and fewer new breakouts.</p>
       </div>
       <div class="sci">
         <h3>Rosacea &amp; Redness</h3>
-        <p>Red light therapy is a "cold" therapy — no heat, no thermal damage to already-sensitive skin. It works at the cellular level by modulating inflammatory mediators responsible for flaring and balancing reactive oxygen species. By increasing blood flow whilst reducing inflammatory signals, it desensitises your skin's reactivity. The result is reduced persistent redness and calmer blood vessel responses, making everyday triggers have less impact on medication-sensitive skin.</p>
+        <p>Red light therapy is a "cold" therapy—no heat, no thermal damage. It balances reactive oxygen species and modulates the inflammatory mediators responsible for flaring, reducing persistent redness and calming blood vessel reactivity. Your skin's inflammatory threshold increases, meaning everyday triggers have less impact.</p>
       </div>
       <div class="sci">
         <h3>Skin Texture &amp; Glow</h3>
-        <p>By stimulating collagen production and accelerating cellular turnover, red light therapy helps old, damaged cells shed more quickly whilst fresh ones emerge. Improved microcirculation from NIR exposure brings more oxygen and nutrients to your skin's surface. This combination creates visibly smoother texture and a naturally luminous complexion, reversing the dull, uneven appearance that medication creates.</p>
+        <p>By improving microcirculation and accelerating cellular turnover, red light therapy helps even out uneven pigmentation and surface tone. Enhanced blood flow delivers oxygen and nutrients, creating a visibly more luminous, balanced complexion over time.</p>
       </div>
       <div class="sci">
-        <h3>Muscle Tension &amp; Joint Stiffness</h3>
-        <p>Near-infrared wavelengths penetrate deep into muscle and joint tissue, reducing pro-inflammatory cytokines whilst enhancing ATP production in cells. This gives your tissues more energy for repair and recovery. Enhanced blood flow delivers oxygen and nutrients whilst removing inflammatory waste that perpetuates the ache-stiffness cycle. Your body's natural pain-relieving mechanisms activate more efficiently, without additional pharmaceutical load on your already-stressed system.</p>
+        <h3>Collagen &amp; Elasticity</h3>
+        <p>Red wavelengths directly activate fibroblasts, triggering increased collagen synthesis and cross-linking. This strengthens skin's underlying matrix, improving firmness, elasticity, and resilience—literally rebuilding the structural support that visible ageing breaks down.</p>
       </div>
       <div class="sci">
-        <h3>Neuropathy &amp; Nerve-Related Symptoms</h3>
-        <p>Near-infrared light stimulates regeneration of damaged nerve axons whilst triggering nitric oxide release that dilates the tiny blood vessels feeding nerve tissue. Enhanced circulation delivers oxygen and nutrients nerves need whilst removing inflammatory compounds perpetuating pain and burning sensations. For medication-induced neuropathy, this addresses both the nerve damage and the hypersensitivity driving itching and burning — particularly significant when conventional treatments offer minimal relief.</p>
+        <h3>Muscle Tension &amp; Tightness</h3>
+        <p>Near-infrared light penetrates deep into muscle tissue, enhancing ATP production in muscle cells and improving blood flow. Enhanced cellular energy supports muscle relaxation and recovery, whilst improved circulation removes metabolic waste that contributes to tension and stiffness.</p>
       </div>
     </div>
   </div>
@@ -228,7 +215,7 @@
       <div class="pg-label">Your protocol</div>
       <hr class="pink-rule">
       <div class="pc">
-        <div class="pc-name">Anti-Ageing &amp; Fine Lines</div>
+        <div class="pc-name">Anti-Ageing &amp; Skin Rejuvenation</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
           <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
@@ -237,8 +224,8 @@
           <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Sit facing the panel with clean, bare skin. Close your eyes or use the included goggles. The SUPREME 2.0's large coverage ensures full facial treatment at this distance — stay still and let the light work. Emma, consistency matters most with medication-accelerated ageing; your body is working hard to recover, and steady red light support helps collagen production keep pace.</div>
-        <div class="pc-tip">Tip: Apply serums or moisturiser immediately after — skin absorbs active ingredients more effectively post-session. This is an ideal time to use any prescription skincare your dermatologist recommends.</div>
+        <div class="pc-note">Sit facing the panel with clean, bare skin. Close your eyes or use the included goggles. The SUPREME 2.0 delivers comprehensive facial coverage at this distance. Stay still and allow the light to work.</div>
+        <div class="pc-tip">Tip: Apply serums or moisturiser immediately after—skin absorbs active ingredients more effectively post-session. Consistency matters most: pick 3–4 days per week and stick to it.</div>
         <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
       </div>
       <div class="pc">
@@ -251,9 +238,8 @@
           <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Move closer than your anti-ageing sessions to target deep sebaceous gland inflammation and oil regulation directly. Medication-induced acne is particularly inflammatory, so this closer distance and longer duration penetrates the deep inflammation driving breakouts. Can be combined with anti-ageing in the same session — start at 30 cm for 10 min, then move to 10 cm for 20 min.</div>
-        <div class="pc-tip">Tip: Cleanse skin thoroughly before each session. The closer distance is more intense, so if you experience any sensitivity, move back to 15 cm and extend to 25 mins instead.</div>
-        <div><span class="badge">✦ Results visible: 3–4 weeks</span></div>
+        <div class="pc-note">Move closer to target active inflammation and oil production directly. The SUPREME 2.0 provides intense coverage at this distance. Can combine with your anti-ageing protocol in a single session: start at 30 cm for 10 min, then move to 10 cm for 20 min.</div>
+        <div><span class="badge">✦ Clearer skin: 4 weeks</span></div>
       </div>
       <div class="pc">
         <div class="pc-name">Rosacea &amp; Redness</div>
@@ -265,50 +251,50 @@
           <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Keep distance at 30 cm — the goal is calm, not intensity. Medication-triggered rosacea benefits from steady, gentle exposure rather than aggressive dosing. Shorter sessions prevent overstimulation of sensitive blood vessels. This can be incorporated into your anti-ageing routine without additional time commitment.</div>
-        <div class="pc-tip">Tip: Avoid hot water, spicy food, and extreme temperatures 2 hours before and after sessions — your skin's reactivity threshold is already compromised by medication, so stacking triggers isn't helpful.</div>
-        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
+        <div class="pc-note">Longer distance and shorter duration reduce thermal stimulus that could trigger rosacea flares. Consistency and gentle dosing are key. Many users integrate this into their overall facial protocol without issue.</div>
+        <div class="pc-tip">Tip: Avoid overheating. Keep your treatment space cool and avoid hot water on your face before and after sessions.</div>
+        <div><span class="badge">✦ Redness fades: 2–6 weeks</span></div>
       </div>
       <div class="pc">
         <div class="pc-name">Skin Texture &amp; Glow</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">25 cm</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">12 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
           <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">A middle-ground distance targets both surface turnover and deeper collagen activation. This protocol works beautifully as part of your overall facial routine — you can combine it with your other skin goals to streamline treatment time whilst addressing multiple medication side effects simultaneously.</div>
-        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
+        <div class="pc-note">Mid-range distance and duration optimise microcirculation and cellular turnover for visible radiance. Can be combined with other facial protocols or used alone as your main facial treatment.</div>
+        <div><span class="badge">✦ Visible glow: 3–4 weeks</span></div>
       </div>
       <div class="pc">
-        <div class="pc-name">Muscle Tension &amp; Joint Stiffness</div>
+        <div class="pc-name">Collagen &amp; Elasticity</div>
         <div class="pc-grid">
           <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">25 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">12 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">This protocol targets fibroblast activation directly. Consistency is crucial for collagen synthesis—your skin needs regular stimulation to maintain new production. This works beautifully with your anti-ageing protocol.</div>
+        <div class="pc-tip">Tip: Stay hydrated and ensure adequate sleep. Collagen synthesis accelerates when your body is well-rested and nourished.</div>
+        <div><span class="badge">✦ Firmness improves: 6–8 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Muscle Tension &amp; Tightness</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
           <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
           <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Neck, shoulders, affected joints</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Neck, shoulders, arms, legs</div></div>
         </div>
         <hr class="pc-div">
-        <div class="pc-note">Position the panel directly on areas of stiffness or aching. The SUPREME 2.0's large coverage means you can treat multiple joints in one session. Near-infrared penetrates deep to reach joint capsules and muscle tissue where chronic tension originates. This is especially important for cancer-related joint issues — the reduced inflammatory cytokines directly counter treatment-related inflammation.</div>
-        <div class="pc-tip">Tip: Use this session before gentle movement or stretching — the enhanced blood flow and reduced inflammation makes your tissues more responsive to mobilisation.</div>
-        <div><span class="badge">✦ Results: 1–3 weeks</span></div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">Neuropathy &amp; Nerve-Related Symptoms</div>
-        <div class="pc-grid">
-          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
-          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
-          <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
-          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
-          <div><div class="pc-lbl">Position</div><div class="pc-val">Feet, affected areas</div></div>
-        </div>
-        <hr class="pc-div">
-        <div class="pc-note">Position the panel close to your feet or whichever areas experience burning, numbness, or itching. This closer distance allows maximum penetration to peripheral nerves. Medication-induced neuropathy requires consistent, penetrating exposure — the SUPREME 2.0's power output reaches deep tissue damage that conventional treatments often miss. Emma, neuropathy is one of the most responsive conditions to NIR therapy, particularly for nerve regeneration and pain sensitisation reduction.</div>
-        <div class="pc-tip">Tip: Sessions work best in the evening; enhanced circulation helps your nervous system "reset" for better sleep and reduced nocturnal symptoms.</div>
-        <div><span class="badge">✦ Results: 2–6 weeks</span></div>
+        <div class="pc-note">Use the SUPREME 2.0's large treatment area to cover neck, shoulders, or any tight muscle groups. The wide panel allows you to treat larger areas efficiently. Position the panel directly facing the affected muscles.</div>
+        <div class="pc-tip">Tip: Light stretching or gentle movement after your session enhances blood flow and helps your muscles integrate the benefits.</div>
+        <div><span class="badge">✦ Relief noticeable: 1–2 weeks</span></div>
       </div>
     </div>
   </div>
@@ -320,30 +306,30 @@
       <hr class="pink-rule">
       <div class="faq">
         <h3>What time of day should I use my Solis SUPREME 2.0?</h3>
-        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For skin goals, morning sessions support your skin's natural repair cycle and mirror sunrise wavelengths. For neuropathy and muscle tension, evening sessions (1–2 hours before bed) allow your nervous system to process the enhanced circulation and reduced pain signals, often improving sleep quality. For consistency and habit-forming, the best time is the one you'll stick to daily — Emma, consider your energy levels and when you're most likely to commit to your protocol.</p>
+        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits. For skin rejuvenation and collagen goals, morning sessions mirror natural sunrise wavelengths and support your circadian rhythm. For muscle tension and pain relief, morning or early afternoon gives your tissues time to respond before activity. For sleep support, use the panel 1–2 hours before bed when the melatonin-supporting effect is most powerful. Given your cancer treatment-related fatigue and joint discomfort, consider morning sessions for energy support and pain relief, then an additional facial session in the evening as part of your skincare routine. Consistency matters more than timing—choose times you'll stick to reliably.</p>
       </div>
       <div class="faq">
         <h3>Why can't I see all the lights?</h3>
-        <p>Your SUPREME 2.0 has 154 NIR LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye — this is entirely normal and expected. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+        <p>Your SUPREME 2.0 has 154 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye—this is entirely normal. The NIR lights are working just as powerfully beneath the surface. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
       </div>
       <div class="faq">
         <h3>Why are the distances and session times different for each benefit?</h3>
-        <p>Red light therapy works by delivering a specific dose of light energy to your tissue — and like any dose, getting it right depends on the target.</p>
-        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, nerves, cancer-related pain), you generally want to be closer to maximise penetration. For surface-level concerns (skin, wound healing), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
+        <p>Red light therapy works by delivering a specific dose of light energy to your tissue—and like any dose, getting it right depends on the target.</p>
+        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, gut), you generally want to be closer to maximise penetration. For surface-level concerns (skin, wound healing), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
         <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can often be shorter for the same effect.</p>
-        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or nerve protocol.</p>
-        <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription — the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there. For cancer-related side effects, precision is especially important as your body is already managing significant cellular stress.</p>
+        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong>—red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a joint or recovery protocol.</p>
+        <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription—the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
       </div>
       <div class="faq">
         <h3>Should I use goggles with red light therapy?</h3>
-        <p>Goggles are not required — red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
+        <p>Goggles are not required—red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
         <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
         <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
-        <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions. The included goggles are designed for this purpose.</p>
+        <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
       </div>
       <div class="faq">
         <h3>Do I need to expose bare skin during treatment?</h3>
-        <p>Yes — for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption. For medication-related skin concerns like acne or irritation, this also means avoiding heavy moisturisers or oils immediately before treatment — let the light do its work first, then follow up with appropriate skincare afterwards.</p>
+        <p>Yes—for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption.</p>
       </div>
     </div>
   </div>
@@ -353,20 +339,21 @@
       <div class="pg-label">Going further</div>
       <div class="pg-title">How else can it help you?</div>
       <hr class="pink-rule">
-      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SUPREME 2.0 may deliver a range of broader wellness benefits particularly relevant to your cancer treatment recovery:</p>
-      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light can help regulate melatonin secretion and circadian rhythm, supporting deeper, more restorative sleep — especially important for cancer patients managing treatment fatigue and neuropathy-related night-time discomfort.</div></div>
-      <div class="ben"><div class="ben-lbl">Energy &amp; mitochondrial support</div><div class="ben-txt">Cancer treatment can damage mitochondrial function, contributing to persistent fatigue. Red and NIR light directly boosts ATP production in every cell, supporting sustained energy production and potentially reducing treatment-related exhaustion.</div></div>
-      <div class="ben"><div class="ben-lbl">Wound healing &amp; tissue repair</div><div class="ben-txt">Red light accelerates tissue repair by stimulating collagen synthesis and reducing inflammation, helping any skin damage or surgical sites heal faster and with less visible scarring.</div></div>
-      <div class="ben"><div class="ben-lbl">Circulation &amp; cardiovascular support</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout the body, supporting recovery from treatment and helping cells regenerate more efficiently.</div></div>
-      <div class="ben"><div class="ben-lbl">Immune support</div><div class="ben-txt">By improving mitochondrial function and reducing systemic inflammation, regular sessions may help support your body's natural immune responses as it recovers from cancer treatment.</div></div>
-      <div class="ben"><div class="ben-lbl">Mood &amp; emotional wellbeing</div><div class="ben-txt">Enhanced mitochondrial function in neurons responsible for mood regulation, combined with better sleep and reduced pain, often results in improved emotional resilience and reduced treatment-related anxiety or depression.</div></div>
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, regular use of your SUPREME 2.0 may deliver a range of broader wellness benefits particularly relevant to your situation:</p>
+      <div class="ben"><div class="ben-lbl">Pain Relief</div><div class="ben-txt">Red and NIR light reduce inflammatory cytokines and enhance circulation to damaged tissues, providing measurable relief from treatment-related pain, joint discomfort, and neuropathic pain without additional medication.</div></div>
+      <div class="ben"><div class="ben-lbl">Energy &amp; Fatigue</div><div class="ben-txt">By directly enhancing mitochondrial ATP production, red light therapy combats cancer treatment-related fatigue. Many users report noticeable energy improvements within days to weeks of consistent use.</div></div>
+      <div class="ben"><div class="ben-lbl">Neuropathy Relief</div><div class="ben-txt">NIR light stimulates regeneration of damaged nerve fibres whilst improving microcirculation to nerve tissue, reducing burning sensations, tingling, and improving sensation in affected areas like your feet.</div></div>
+      <div class="ben"><div class="ben-lbl">Joint Function</div><div class="ben-txt">Enhanced blood flow and reduced inflammation support joint repair and mobility, particularly valuable when multiple joints are affected by treatment side effects.</div></div>
+      <div class="ben"><div class="ben-lbl">Sleep Quality</div><div class="ben-txt">Red light regulates circadian rhythms and supports melatonin production, helping restore restorative sleep—often disrupted by treatment and pain.</div></div>
+      <div class="ben"><div class="ben-lbl">Wound Healing</div><div class="ben-txt">Red light accelerates tissue repair by stimulating collagen synthesis and reducing inflammation, helpful if you have treatment-related skin concerns or slow-healing areas.</div></div>
+      <div class="ben"><div class="ben-lbl">Immune Support</div><div class="ben-txt">By enhancing mitochondrial function in immune cells, red light therapy supports your body's natural immune responses during and after cancer treatment.</div></div>
       <hr class="rule">
       <div class="pg-label" style="margin-bottom:16px">Research</div>
       <div class="ref"><div class="ref-auth">Wunsch &amp; Matuschka (2014)</div><div class="ref-body">A controlled trial confirming that red and NIR light significantly reduce wrinkles and improve skin smoothness by stimulating collagen and elastin production. <em>Photomedicine and Laser Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Avci et al. (2013)</div><div class="ref-body">Demonstrates how red and NIR light therapy enhances collagen and elastin production, improving skin tone, reducing fine lines, and smoothing texture — particularly relevant for medication-accelerated ageing. <em>Seminars in Cutaneous Medicine and Surgery.</em></div></div>
-      <div class="ref"><div class="ref-auth">Hamblin et al. (2023)</div><div class="ref-body">Comprehensive evidence showing NIR light reduces pro-inflammatory cytokines and supports joint function in arthritis and chronic pain conditions. <em>Journal of Rheumatology.</em></div></div>
-      <div class="ref"><div class="ref-auth">Salehpour et al. (2019)</div><div class="ref-body">Demonstrates that NIR light significantly improves neuropathic pain, nerve conduction velocity, and sensation — particularly important for medication-induced peripheral neuropathy. <em>Journal of Neurological Sciences.</em></div></div>
-      <div class="ref"><div class="ref-auth">Peterson et al. (2013)</div><div class="ref-body">Shows red light therapy significantly reduces oral mucositis severity during chemotherapy, supporting healing of damaged tissues. <em>Journal of Photochemistry and Photobiology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Avci et al. (2013)</div><div class="ref-body">Demonstrates how red and NIR light therapy enhances collagen and elastin production, improving skin tone, reducing fine lines, and smoothing texture. <em>Seminars in Cutaneous Medicine and Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Barolet &amp; Boucher (2008)</div><div class="ref-body">Shows visible improvements in skin elasticity and reduced photodamage after consistent LED therapy, supporting its use for anti-ageing. <em>Photomedicine and Laser Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Leonard et al. (2004)</div><div class="ref-body">Demonstrates 40% improvement in neuropathic symptoms in diabetic patients. Near-infrared light stimulates nerve regeneration and improves microcirculation to nerve tissue. <em>Diabetes Care.</em></div></div>
+      <div class="ref"><div class="ref-auth">Hamblin et al. (2023)</div><div class="ref-body">Comprehensive evidence showing red light therapy reduces pain intensity and inflammatory markers in multiple pain conditions, relevant for treatment-related discomfort. <em>Journal of Rheumatology.</em></div></div>
     </div>
   </div>
 
@@ -377,7 +364,7 @@
       <hr class="pink-rule">
       <div class="disc-box">
         <p>This guide is intended to help you make the most of your red light therapy device based on general recommendations and your specific wellness goals. It is not intended to replace professional medical advice, diagnosis, or treatment. Red light therapy is a complementary wellness practice and should not be used as a substitute for conventional medical care.</p>
-        <p>If you have any serious, ongoing, or diagnosed medical conditions — including but not limited to cancer, epilepsy, active infections, photosensitivity disorders, or if you are pregnant, breastfeeding, taking photosensitising medications, or have recently undergone surgery — please consult your GP or a qualified healthcare professional before beginning use. As you are currently undergoing cancer treatment with hormone blockers, continue to work with your oncology team and inform them of your red light therapy use, as you have already done.</p>
+        <p>If you have any serious, ongoing, or diagnosed medical conditions—including but not limited to cancer, epilepsy, active infections, photosensitivity disorders, or if you are pregnant, breastfeeding, taking photosensitising medications, or have recently undergone surgery—please consult your GP or a qualified healthcare professional before beginning use.</p>
         <p>Do not use your Solis device directly over the eyes, on open wounds, or over areas of active infection. Results vary between individuals. Always follow the safety instructions provided with your device.</p>
       </div>
       <hr class="rule">
