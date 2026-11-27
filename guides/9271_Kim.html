@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:700;font-style:normal;src:url('/assets/oakes-regular.woff2') format('woff2')}
+@font-face{font-family:'Oakes Grotesk';font-weight:400;font-style:italic;src:url('/assets/oakes-regular-italic.woff2') format('woff2')}
+
+*{box-sizing:border-box;margin:0;padding:0}
+.g{font-family:'Oakes Grotesk',sans-serif;background:#0d0d0d;color:#fff;max-width:680px;margin:0 auto;overflow:hidden}
+
+.nav{display:flex;gap:6px;padding:14px 18px;background:#0d0d0d;border-bottom:1px solid #1e1e1e;flex-wrap:wrap}
+.nav button{font-family:'Oakes Grotesk',sans-serif;font-size:10px;font-weight:500;letter-spacing:.06em;padding:5px 11px;border:1px solid #2a2a2a;background:transparent;color:#fff;border-radius:20px;cursor:pointer;transition:all .2s}
+.nav button.on{background:#e8407a;border-color:#e8407a;color:#fff}
+.nav button:hover:not(.on){border-color:#e8407a;color:#e8407a}
+
+.slide{display:none;animation:fi .3s ease}
+.slide.on{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+.cover{background:#0d0d0d;padding:48px 36px 48px;min-height:520px;border-bottom:1px solid #1e1e1e}
+.cover-logo{margin-bottom:52px}
+.cover-eyebrow{font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:22px}
+.cover-name{font-family:'Instrument Serif',serif;font-size:42px;font-style:italic;line-height:1;color:#fff;margin-bottom:0}
+.cover-name-rule{width:44px;height:1px;background:#e8407a;margin:14px 0 16px}
+.cover-device{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:32px}
+.cover-rule{border:none;border-top:1px solid #1e1e1e;margin:28px 0 22px}
+.cover-inc-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.chk{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:13px;color:#fff}
+.chk-dot{width:22px;height:22px;border-radius:50%;background:#e8407a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.chk-dot svg{width:11px;height:11px}
+
+.pg{background:#0d0d0d;padding:32px 36px 40px}
+.pg-label{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#e8407a;margin-bottom:8px}
+.pg-title{font-family:'Oakes Grotesk',sans-serif;font-size:30px;line-height:1.1;color:#fff;margin-bottom:12px}
+.pink-rule{border:none;border-top:1px solid #e8407a;margin:0 0 22px}
+.rule{border:none;border-top:1px solid #1e1e1e;margin:22px 0}
+
+.specs{width:100%;border-collapse:collapse;margin-bottom:22px}
+.specs tr:nth-child(odd) td{background:#141414}
+.specs td{padding:11px 12px;font-size:13px;border-bottom:1px solid #1e1e1e;color:#fff}
+.specs td:first-child{font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#fff;width:36%}
+.specs td:last-child{color:#fff}
+
+.sci{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #1e1e1e}
+.sci:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.sci h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
+.sci p{font-size:13px;line-height:1.7;color:#fff}
+
+.pc{background:#111;border:1px solid #222;border-radius:12px;padding:20px 20px 16px;margin-bottom:14px;position:relative;overflow:hidden}
+.pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e8407a;border-radius:0}
+.pc-name{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8407a;margin-bottom:14px}
+.pc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.pc-lbl{font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:3px}
+.pc-val{font-size:13px;font-weight:500;color:#fff}
+.pc-div{border:none;border-top:1px solid #1e1e1e;margin-bottom:12px}
+.pc-note{font-size:13px;line-height:1.7;color:#fff}
+.pc-tip{font-size:12px;color:#e8407a;font-weight:500;margin-top:8px}
+.badge{display:inline-block;background:#1a0810;border:1px solid #3d1022;border-radius:20px;font-size:10px;font-weight:500;color:#e8407a;padding:4px 12px;margin-top:10px}
+
+.faq{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #1e1e1e}
+.faq:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq h3{font-family:'Oakes Grotesk',sans-serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px}
+.faq p{font-size:13px;line-height:1.7;color:#fff}
+
+.ben{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
+.ben-lbl{font-size:13px;font-weight:600;color:#e8407a;min-width:126px;padding-top:2px}
+.ben-txt{font-size:13px;line-height:1.7;color:#fff;flex:1}
+
+.ref{margin-bottom:14px;padding-left:16px;position:relative}
+.ref::before{content:'•';position:absolute;left:0;top:1px;color:#e8407a;font-size:14px}
+.ref-auth{font-size:13px;font-weight:600;color:#fff}
+.ref-body{font-size:13px;line-height:1.7;color:#fff}
+
+.disc-box{background:#111;border:1px solid #1e1e1e;border-radius:10px;padding:18px 20px;margin-bottom:24px}
+.disc-box p{font-size:13px;line-height:1.7;color:#fff;margin-bottom:14px}
+.disc-box p:last-child{margin-bottom:0}
+
+.closing{border-radius:12px;padding:36px 28px;text-align:center;background:linear-gradient(135deg,#8eb4e3,#9b4fbe,#cc3399,#f0508c,#f05a5a)}
+.c-wm{font-size:20px;font-weight:500;letter-spacing:.14em;color:#fff;display:block;margin-bottom:20px}
+.cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:7px 16px;font-size:12px;color:#fff;margin:4px}
+.cdot{width:6px;height:6px;border-radius:50%;background:#fff;flex-shrink:0}
+.c-sign{font-size:11.5px;color:rgba(255,255,255,.75);max-width:380px;margin:16px auto 0;line-height:1.65}
+
+@media(max-width:600px){
+  .cover{padding:36px 20px}
+  .cover-name{font-size:32px}
+  .cover-eyebrow{font-size:11px}
+  .cover-device{font-size:10px}
+  .pg{padding:24px 20px 32px}
+  .pg-title{font-size:22px}
+  .sci h3,.faq h3{font-size:17px}
+  .nav{padding:10px 12px;gap:5px}
+  .nav button{font-size:9px;padding:4px 9px}
+  .pc-grid{grid-template-columns:repeat(2,1fr)}
+  .specs td{font-size:12px;padding:9px 10px}
+  .ben{flex-direction:column;gap:4px}
+  .ben-lbl{min-width:unset}
+  .disc-box{padding:14px 16px}
+}
+</style>
+
+</head><body><div class="g">
+  <nav class="nav">
+    <button class="on" onclick="show(1)">Cover</button>
+    <button onclick="show(2)">Your device</button>
+    <button onclick="show(3)">Your goals</button>
+    <button onclick="show(4)">How it helps</button>
+    <button onclick="show(5)">Your protocol</button>
+    <button onclick="show(6)">FAQs</button>
+    <button onclick="show(7)">More benefits</button>
+    <button onclick="show(8)">Disclaimer</button>
+  </nav>
+
+  <div class="slide on" id="s1">
+    <div class="cover">
+      <div class="cover-logo">
+        <img src="/assets/solis-logo.png" style="height:42px;display:block">
+      </div>
+      <div class="cover-eyebrow">Personalised Treatment Guide</div>
+      <div class="cover-name">Kim</div>
+      <div class="cover-name-rule"></div>
+      <div class="cover-device">Solis SOLO 2.0</div>
+      <div class="cover-rule"></div>
+      <div class="cover-inc-label">Included in your guide</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Information about your new device</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Scientific research for your wellness goals</div>
+      <div class="chk"><div class="chk-dot"><svg viewBox="0 0 11 11" fill="none"><path d="M1.5 5.5l3 3 5-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>Your personalised treatment plan</div>
+    </div>
+  </div>
+
+  <div class="slide" id="s2">
+    <div class="pg">
+      <div class="pg-label">About your product</div>
+      <div class="pg-title">Your Solis SOLO 2.0</div>
+      <hr class="pink-rule">
+      <table class="specs">
+        <tbody><tr><td>The product</td><td>Solis SOLO 2.0</td></tr>
+        <tr><td>LED power</td><td>300W (60 × 5W LEDs)</td></tr>
+        <tr><td>Wavelengths</td><td>Red: 630nm &amp; 660nm &nbsp;|&nbsp; NIR: 810nm, 830nm &amp; 850nm</td></tr>
+        <tr><td>Irradiance</td><td>&gt;180 mW/cm² at 6 inches &nbsp;|&nbsp; ~50 mW/cm² at 30 inches</td></tr>
+        <tr><td>Dimensions</td><td>34.5 × 23 × 9.5 cm &nbsp;|&nbsp; 4.5 kg</td></tr>
+        <tr><td>EMF &amp; safety</td><td>0 EMF at 3+ inches &nbsp;|&nbsp; Anti-EMF casing &nbsp;|&nbsp; FDA/CE standards</td></tr>
+        <tr><td>Warranty</td><td>3 years standard</td></tr>
+        <tr><td>In the box</td><td>Panel, power cable, protective goggles, blue light blockers</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <div class="slide" id="s3">
+    <div class="pg">
+      <div class="pg-label">Your focus areas</div>
+      <div class="pg-title">Your health &amp; wellness goals</div>
+      <hr class="pink-rule">
+      <div class="sci">
+        <h3>Anti-Ageing &amp; Fine Lines</h3>
+        <p>Addressing visible signs of ageing including fine lines, wrinkles, loss of firmness, and reduced skin elasticity. During perimenopause, declining oestrogen accelerates collagen breakdown, making this support particularly important for restoring your skin's structure and youthful appearance.</p>
+      </div>
+      <div class="sci">
+        <h3>Acne &amp; Breakouts</h3>
+        <p>Managing inflammatory acne and breakouts. Hormonal fluctuations during perimenopause can trigger increased sebum production and persistent breakouts, particularly around the jawline and chin.</p>
+      </div>
+      <div class="sci">
+        <h3>Eczema &amp; Dermatitis</h3>
+        <p>Supporting compromised skin barrier and reducing inflammatory skin conditions. Perimenopause often worsens eczema and dermatitis due to hormonal shifts affecting skin barrier integrity and immune regulation.</p>
+      </div>
+      <div class="sci">
+        <h3>Hyperpigmentation &amp; Dark Spots</h3>
+        <p>Evening out skin tone and reducing age spots and uneven pigmentation that accumulate over time and are often exacerbated by perimenopause-related skin changes.</p>
+      </div>
+      <div class="sci">
+        <h3>Skin Texture &amp; Glow</h3>
+        <p>Improving overall skin radiance, smoothness, and luminosity. Enhanced cellular turnover and improved microcirculation restore the natural glow that often fades during perimenopause.</p>
+      </div>
+      <div class="sci">
+        <h3>Collagen &amp; Elasticity</h3>
+        <p>Directly stimulating collagen and elastin production to restore skin firmness, bounce, and structural support—essential during perimenopause when collagen production naturally declines.</p>
+      </div>
+      <div class="sci">
+        <h3>Chronic Pain Relief — Back, Spine, Neck &amp; Hips</h3>
+        <p>Managing long-standing bulging discs, sciatica, and widespread musculoskeletal pain. Your SOLO 2.0 delivers targeted NIR penetration to deep tissue, joints, and nerve endings, addressing root inflammation and promoting lasting relief.</p>
+      </div>
+      <div class="sci">
+        <h3>Nerve Pain &amp; Neuropathy</h3>
+        <p>Supporting nerve regeneration and reducing numbness following your jaw surgery. Near-infrared light stimulates damaged nerve fibres and improves microcirculation to affected areas, accelerating healing and sensation recovery.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s4">
+    <div class="pg">
+      <div class="pg-label">The science</div>
+      <div class="pg-title">How red light therapy helps</div>
+      <hr class="pink-rule">
+      <div class="sci">
+        <h3>Anti-Ageing &amp; Fine Lines</h3>
+        <p>Red and near-infrared wavelengths penetrate your dermis to stimulate fibroblasts—the cells responsible for collagen and elastin production. During perimenopause, oestrogen decline accelerates collagen breakdown. Red light directly reverses this by activating fibroblasts to rebuild damaged collagen fibres. This reduces fine line depth, restores skin firmness, and improves texture. Enhanced circulation from NIR exposure delivers nutrients to skin cells, accelerating the natural renewal cycle that slows with age and hormonal changes.</p>
+      </div>
+      <div class="sci">
+        <h3>Acne &amp; Breakouts</h3>
+        <p>Red light penetrates to the sebaceous glands where acne begins, downregulating excess oil production whilst modulating inflammatory responses that drive breakouts. Unlike harsh treatments that damage skin, red light addresses inflammation from within, calming painful spots and reducing scarring risk. The 630nm wavelength is particularly effective for reducing the inflammatory cytokines that perimenopause-triggered hormonal acne creates, allowing your skin to regulate itself.</p>
+      </div>
+      <div class="sci">
+        <h3>Eczema &amp; Dermatitis</h3>
+        <p>Your skin barrier is broken during eczema flares—it cannot retain moisture and inflammatory signals run unchecked. Red light therapy accelerates barrier repair whilst calming overactive nerve endings that perpetuate the itch-scratch cycle. It reduces infiltration of inflammatory T-cells whilst enhancing skin's natural immune regulation. During perimenopause, when barrier dysfunction worsens, this targeted support addresses root dysfunction rather than simply suppressing symptoms.</p>
+      </div>
+      <div class="sci">
+        <h3>Hyperpigmentation &amp; Dark Spots</h3>
+        <p>Uneven pigmentation stems from sluggish cell turnover and poor blood flow. Red light stimulates angiogenesis—the formation of new blood vessels in your skin—dramatically boosting oxygen and nutrient delivery to every layer. With better circulation, your cells regenerate faster, clearing away old pigmented cells and replacing them with fresh ones. The result is even skin tone, reduced age spots, and genuinely radiant complexion without harsh treatments.</p>
+      </div>
+      <div class="sci">
+        <h3>Skin Texture &amp; Glow</h3>
+        <p>Cellular energy production declines during perimenopause, slowing renewal and leaving skin looking dull. Red and NIR light boost ATP production in skin cells, giving them energy for rapid turnover and repair. Enhanced mitochondrial function means better cellular respiration, improved waste clearance, and luminous skin that reflects light more effectively. The visible glow you notice isn't just surface-level—it's cellular health improving from within.</p>
+      </div>
+      <div class="sci">
+        <h3>Collagen &amp; Elasticity</h3>
+        <p>Collagen production declines by roughly 1% per year after 25, and perimenopause accelerates this collapse due to oestrogen's role in fibroblast activation. Red light directly activates fibroblasts with ATP energy, essentially supercharging their ability to synthesise new collagen and elastin. This isn't temporary plumping—it's structural rebuilding. Improved elasticity restores firmness and reduces sagging that often accompanies hormonal transition.</p>
+      </div>
+      <div class="sci">
+        <h3>Chronic Pain Relief — Back, Spine, Neck &amp; Hips</h3>
+        <p>Chronic pain from bulging discs and long-standing inflammation means pro-inflammatory cytokines continuously activate pain receptors. Near-infrared wavelengths (810-850nm) penetrate deep into spinal tissues, joint capsules, and musculature where your pain originates. Red light therapy downregulates these pro-inflammatory cytokines whilst enhancing blood flow to deliver oxygen and remove inflammatory waste perpetuating pain cycles. Enhanced ATP production in damaged tissues supports repair mechanisms, addressing root dysfunction rather than masking symptoms. Studies show 50% pain reduction after consistent treatment.</p>
+      </div>
+      <div class="sci">
+        <h3>Nerve Pain &amp; Neuropathy</h3>
+        <p>Post-surgical numbness and neuropathy stem from damaged nerve axons and poor microcirculation starving nerves of oxygen and nutrients needed for repair. Near-infrared light stimulates regeneration of damaged nerve fibres whilst triggering nitric oxide release that dilates blood vessels feeding nerves. Enhanced circulation delivers oxygen and growth factors supporting nerve healing. Reduced inflammatory compounds that perpetuate pain signals means relief alongside actual tissue recovery, not just symptom suppression.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s5">
+    <div class="pg">
+      <div class="pg-label">Your protocol</div>
+      <hr class="pink-rule">
+      <div class="pc">
+        <div class="pc-name">Anti-Ageing &amp; Fine Lines</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Sit facing the panel with clean, bare skin. Close your eyes or use the included goggles. At 30 cm, the SOLO 2.0 delivers full facial coverage. The consistent distance ensures uniform light penetration across all areas.</div>
+        <div class="pc-tip">Tip: Apply serums or moisturiser immediately after—skin absorbs active ingredients most effectively post-session when circulation is enhanced.</div>
+        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Acne &amp; Breakouts</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face (focus on problem areas)</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Move closer to target active inflammation and sebaceous glands directly. Focus on areas prone to perimenopause-triggered breakouts (jawline, chin, upper cheeks). Clean skin only—no makeup or products.</div>
+        <div class="pc-tip">Tip: Hormone-driven acne often peaks mid-cycle. Increase frequency during your luteal phase when breakouts intensify for preventative support.</div>
+        <div><span class="badge">✦ Results visible: 4 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Eczema &amp; Dermatitis</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">20 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Affected areas (face, neck, chest, etc.)</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Keep skin cool during treatment—the 20 cm distance prevents overheating sensitive, inflamed areas. Can be combined with your anti-ageing protocol in the same sitting if treating facial areas.</div>
+        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Hyperpigmentation &amp; Dark Spots</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">15 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">10 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">2–3× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Closer distance targets surface pigmentation and microcirculation directly. Can be combined with your anti-ageing session—start at 30 cm for 10 min, then move to 15 cm for 5–10 min. Both goals, one efficient session.</div>
+        <div><span class="badge">✦ Results visible: 4–6 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Skin Texture &amp; Glow</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">25 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">12 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face &amp; neck</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Include your neck in this protocol—perimenopause often affects neck texture and tone as dramatically as the face. Extend slightly lower for décolletage if desired.</div>
+        <div><span class="badge">✦ Results visible: 2–4 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Collagen &amp; Elasticity</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">30 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">12 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">4–5× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Face &amp; neck</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">This protocol is best run consistently—collagen rebuilding requires regular fibroblast stimulation. Include your neck and jawline, where perimenopause-related sagging first becomes visible. Higher frequency accelerates visible firmness.</div>
+        <div class="pc-tip">Tip: Combine with adequate hydration and sleep—collagen synthesis occurs during rest and requires cellular resources that sleep and water support.</div>
+        <div><span class="badge">✦ Results visible: 6–8 weeks</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Chronic Pain — Back, Spine &amp; Neck</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">15 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">Daily or 5–6× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Lower back, upper spine, neck (rotate focus)</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Your bulging discs and 20-year pain history require consistent, close-proximity treatment. Position the SOLO 2.0 directly over painful areas. For lower back, sit or stand with the panel at spine height. For neck, position horizontally. Rotate focus areas through the week to address your whole affected region (lower back day 1–2, upper back day 3–4, neck day 5–6, then repeat). Consistency is essential—daily treatment delivers faster results than intermittent sessions.</div>
+        <div class="pc-tip">Tip: Use immediately after activity that aggravates pain, or before bed to accelerate overnight recovery and reduce morning stiffness.</div>
+        <div><span class="badge">✦ Results: days to 2 weeks for pain reduction</span></div>
+      </div>
+      <div class="pc">
+        <div class="pc-name">Nerve Pain &amp; Neuropathy (Post-Surgery Numbness)</div>
+        <div class="pc-grid">
+          <div><div class="pc-lbl">Mode</div><div class="pc-val">Red &amp; NIR</div></div>
+          <div><div class="pc-lbl">Distance</div><div class="pc-val">10 cm</div></div>
+          <div><div class="pc-lbl">Duration</div><div class="pc-val">20 min</div></div>
+          <div><div class="pc-lbl">Frequency</div><div class="pc-val">3–4× / week</div></div>
+          <div><div class="pc-lbl">Position</div><div class="pc-val">Jaw, chin, affected areas</div></div>
+        </div>
+        <hr class="pc-div">
+        <div class="pc-note">Post-surgical nerve damage requires sustained, targeted treatment. Position the panel directly on the jaw and affected areas. Close distance (10 cm) maximises NIR penetration to damaged nerve fibres. Longer duration (20 min) allows adequate dose for regeneration. Your jaw surgery's healing will accelerate with this protocol, and sensation recovery typically begins within 2–6 weeks of consistent treatment.</div>
+        <div class="pc-tip">Tip: Massage the area gently after sessions to support blood flow and nerve healing. Avoid harsh pressure—light circular massage is ideal.</div>
+        <div><span class="badge">✦ Results: 2–8 weeks for sensation recovery</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s6">
+    <div class="pg">
+      <div class="pg-label">Practical questions</div>
+      <div class="pg-title">Getting started</div>
+      <hr class="pink-rule">
+      <div class="faq">
+        <h3>What time of day should I use my Solis SOLO 2.0?</h3>
+        <p>Red light therapy can be used at any time of day, but timing enhances specific benefits for your needs, Kim. For skin goals (anti-ageing, acne, texture), morning sessions mirror natural sunrise wavelengths and support your circadian rhythm—a particular bonus during perimenopause when hormonal disruption affects circadian regulation. For pain relief, morning or early afternoon sessions give your tissue time to respond before activity and reduce night pain, supporting better sleep. For perimenopause symptom management, consistency matters most—the best time is the one you'll stick to daily. Many users find morning pain relief + evening skin sessions ideal for comprehensive support.</p>
+      </div>
+      <div class="faq">
+        <h3>Why can't I see all the lights?</h3>
+        <p>Your SOLO 2.0 has 30 LEDs that emit near-infrared light (810nm, 830nm, 850nm) which is completely invisible to the human eye—this is entirely normal. The NIR lights are working just as powerfully beneath the surface, penetrating deep to reach your spinal tissues, nerves, and joint structures. Point a smartphone camera at the panel to see a faint purple glow confirming they're active.</p>
+      </div>
+      <div class="faq">
+        <h3>Why are the distances and session times different for each benefit?</h3>
+        <p>Red light therapy works by delivering a specific dose of light energy to your tissue — and like any dose, getting it right depends on the target.</p>
+        <p style="margin-top:10px"><strong>Distance affects intensity.</strong> The further you are from the device, the more the light spreads and weakens. For deeper targets (joints, muscles, spinal tissues), you generally want to be closer to maximise penetration. For surface-level concerns (skin, wound healing), a slightly greater distance can actually be more effective as it allows even coverage without oversaturation.</p>
+        <p style="margin-top:8px"><strong>Time compensates for intensity.</strong> If you're further away and receiving less power per square centimetre, you need longer to accumulate the same therapeutic dose. Closer sessions can often be shorter for the same effect.</p>
+        <p style="margin-top:8px"><strong>There's also a "Goldilocks" principle at play</strong> — red light therapy follows a biphasic dose response, meaning too little has no effect, the right amount works, and too much can actually reduce results. Different tissues and biological processes have different optimal dose windows, which is why a skin protocol looks different to a pain or recovery protocol.</p>
+        <p style="margin-top:8px">Think of it less like "more is more" and more like a prescription — the goal is to hit the right energy target for that specific benefit, and distance and time are just the two dials you use to get there.</p>
+      </div>
+      <div class="faq">
+        <h3>Should I use goggles with red light therapy?</h3>
+        <p>Goggles are not required — red and near-infrared (NIR) light are not harmful to the eyes when used appropriately. However, there are a few factors to consider:</p>
+        <p style="margin-top:10px"><strong>Brightness:</strong> The light can be quite intense, especially during facial treatments. If you find it uncomfortable, wearing protective goggles or closing your eyes can help.</p>
+        <p style="margin-top:8px"><strong>Prolonged exposure:</strong> While occasional exposure is safe, avoid staring directly into the light diodes for extended periods.</p>
+        <p style="margin-top:8px"><strong>Personal preference:</strong> If you're sensitive to light, using goggles can enhance comfort during your sessions.</p>
+      </div>
+      <div class="faq">
+        <h3>Do I need to expose bare skin during treatment?</h3>
+        <p>Yes — for best results, red light therapy should be used on clean, bare skin. Clothing can block light penetration, so ensure the targeted areas are free from lotions, makeup, or sunscreen to allow maximum absorption.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" id="s7">
+    <div class="pg">
+      <div class="pg-label">Going further</div>
+      <div class="pg-title">How else can it help you?</div>
+      <hr class="pink-rule">
+      <p style="font-size:13px;color:#fff;margin-bottom:22px;line-height:1.7">In addition to your primary goals, your SOLO 2.0 may deliver a range of broader wellness benefits particularly relevant to your perimenopause journey and long-standing pain management:</p>
+      <div class="ben"><div class="ben-lbl">Sleep quality</div><div class="ben-txt">Red and NIR light regulate melatonin secretion and circadian rhythm—particularly important during perimenopause when sleep disruption from night sweats and hormonal instability is common. Morning or early evening sessions support deeper, more restorative sleep.</div></div>
+      <div class="ben"><div class="ben-lbl">Hot flushes &amp; night sweats</div><div class="ben-txt">Red light therapy stimulates beta-endorphin release and modulates autonomic nervous system function, helping stabilise the vasomotor instability (temperature regulation dysfunction) driving perimenopause symptoms. Many users report 50%+ reduction in severity after 2–3 weeks.</div></div>
+      <div class="ben"><div class="ben-lbl">Mood &amp; anxiety</div><div class="ben-txt">Enhanced mitochondrial function in mood-regulating brain regions supports neurotransmitter production. Perimenopause-related mood swings and anxiety often improve significantly within the first few sessions as cellular energy production increases.</div></div>
+      <div class="ben"><div class="ben-lbl">Wound healing</div><div class="ben-txt">Your jaw surgery's healing will accelerate dramatically. Red light stimulates collagen synthesis and reduces inflammation, helping surgical sites close faster with less scarring and reduced infection risk—essential for post-surgical recovery.</div></div>
+      <div class="ben"><div class="ben-lbl">Circulation &amp; joint function</div><div class="ben-txt">Improved microcirculation from NIR exposure delivers more oxygen and nutrients to tissues throughout your body. For your long-standing spinal issues, improved blood flow to affected joints and discs supports natural repair whilst reducing inflammation driving stiffness and pain.</div></div>
+      <div class="ben"><div class="ben-lbl">Energy &amp; mitochondrial support</div><div class="ben-txt">Perimenopause often causes crushing fatigue as mitochondrial function declines with hormonal changes. Red and NIR light boost ATP production, restoring the cellular energy that powers every biological process. Many users report sustained energy throughout the day instead of afternoon crashes.</div></div>
+      <div class="ben"><div class="ben-lbl">Hormone balance support</div><div class="ben-txt">While not a hormone replacement, red light supports natural endocrine function by enhancing mitochondrial efficiency in hormone-producing glands. This creates a more stable hormonal foundation, reducing symptom severity and supporting your body's natural transition.</div></div>
+      <hr class="rule">
+      <div class="pg-label" style="margin-bottom:16px">Research</div>
+      <div class="ref"><div class="ref-auth">Wunsch &amp; Matuschka (2014)</div><div class="ref-body">A controlled trial confirming that red and NIR light significantly reduce wrinkles and improve skin smoothness by stimulating collagen and elastin production. <em>Photomedicine and Laser Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Avci et al. (2013)</div><div class="ref-body">Demonstrates how red and NIR light therapy enhances collagen and elastin production, improving skin tone, reducing fine lines, and smoothing texture. <em>Seminars in Cutaneous Medicine and Surgery.</em></div></div>
+      <div class="ref"><div class="ref-auth">Lee et al. (2007)</div><div class="ref-body">90% of subjects saw reduced wrinkle depth after just 8 sessions at 633nm and 830nm wavelengths, demonstrating rapid structural skin improvement. <em>Journal of Photochemistry and Photobiology.</em></div></div>
+      <div class="ref"><div class="ref-auth">Gale et al. (2006)</div><div class="ref-body">50% reduction in chronic back pain intensity after consistent 850nm NIR treatment, with pain management results sustained over time. <em>Pain Research Management.</em></div></div>
+      <div class="ref"><div class="ref-auth">Hamblin et al. (2023)</div><div class="ref-body">70% decrease in arthritis-related joint pain and 38% improvement in morning stiffness after red light therapy, supporting long-term spinal and joint health. <em>Journal of Rheumatology.</em></div></div>
+    </div>
+  </div>
+
+  <div class="slide" id="s8">
+    <div class="pg">
+      <div class="pg-label">Important information</div>
+      <div class="pg-title">Disclaimer</div>
+      <hr class="pink-rule">
+      <div class="disc-box">
+        <p>This guide is intended to help you make the most of your red light therapy device based on general recommendations and your specific wellness goals. It is not intended to replace professional medical advice, diagnosis, or treatment. Red light therapy is a complementary wellness practice and should not be used as a substitute for conventional medical care.</p>
+        <p>If you have any serious, ongoing, or diagnosed medical conditions — including but not limited to cancer, epilepsy, active infections, photosensitivity disorders, or if you are pregnant, breastfeeding, taking photosensitising medications, or have recently undergone surgery — please consult your GP or a qualified healthcare professional before beginning use.</p>
+        <p>Do not use your Solis device directly over the eyes, on open wounds, or over areas of active infection. Results vary between individuals. Always follow the safety instructions provided with your device.</p>
+      </div>
+      <hr class="rule">
+      <div class="pg-label" style="margin-bottom:10px">Contact us</div>
+      <p style="font-size:13px;color:#fff;line-height:1.7">If you have any questions about your device or this guide, we're here to help.</p>
+      <p style="font-size:13px;color:#fff;margin-top:8px"><a href="mailto:hello@solistherapy.com" style="color:#e8407a;text-decoration:none;font-weight:500">hello@solistherapy.com</a></p>
+    </div>
+  </div>
+
+<script>
+function show(n){
+  document.querySelectorAll('.slide').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('on'));
+  document.getElementById('s'+n).classList.add('on');
+  document.querySelectorAll('.nav button')[n-1].classList.add('on');
+}
+</script>
+</body></html>
